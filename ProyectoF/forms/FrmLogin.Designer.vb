@@ -93,10 +93,10 @@ Partial Class FrmLogin
         'LblUsuario
         '
         Me.LblUsuario.AutoSize = True
-        Me.LblUsuario.Font = New System.Drawing.Font("High Tower Text", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblUsuario.Location = New System.Drawing.Point(65, 333)
         Me.LblUsuario.Name = "LblUsuario"
-        Me.LblUsuario.Size = New System.Drawing.Size(84, 23)
+        Me.LblUsuario.Size = New System.Drawing.Size(86, 25)
         Me.LblUsuario.TabIndex = 5
         Me.LblUsuario.Text = "Usuario"
         '
@@ -117,17 +117,17 @@ Partial Class FrmLogin
         'LblPassword
         '
         Me.LblPassword.AutoSize = True
-        Me.LblPassword.Font = New System.Drawing.Font("High Tower Text", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblPassword.Location = New System.Drawing.Point(65, 424)
         Me.LblPassword.Name = "LblPassword"
-        Me.LblPassword.Size = New System.Drawing.Size(114, 23)
+        Me.LblPassword.Size = New System.Drawing.Size(124, 25)
         Me.LblPassword.TabIndex = 7
         Me.LblPassword.Text = "Contraseña"
         '
         'BtnLogin
         '
         Me.BtnLogin.BackColor = System.Drawing.Color.DodgerBlue
-        Me.BtnLogin.Font = New System.Drawing.Font("High Tower Text", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnLogin.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnLogin.Location = New System.Drawing.Point(115, 517)
         Me.BtnLogin.Name = "BtnLogin"
@@ -139,10 +139,10 @@ Partial Class FrmLogin
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("High Tower Text", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(89, 74)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(248, 28)
+        Me.Label1.Size = New System.Drawing.Size(262, 29)
         Me.Label1.TabIndex = 10
         Me.Label1.Text = "Veterinaria Los Arcos"
         '
