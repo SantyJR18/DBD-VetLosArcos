@@ -73,6 +73,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="forms\FrmRecepcionista.Designer.vb">
+      <DependentUpon>FrmRecepcionista.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FrmRecepcionista.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FrmRegistrarCliente.Designer.vb">
+      <DependentUpon>FrmRegistrarCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FrmRegistrarCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="forms\FrmSalida.Designer.vb">
       <DependentUpon>FrmSalida.vb</DependentUpon>
     </Compile>
@@ -107,6 +119,12 @@
     <EmbeddedResource Include="forms\FrmLogin.resx">
       <DependentUpon>FrmLogin.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\FrmRecepcionista.resx">
+      <DependentUpon>FrmRecepcionista.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FrmRegistrarCliente.resx">
+      <DependentUpon>FrmRegistrarCliente.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\FrmSalida.resx">
       <DependentUpon>FrmSalida.vb</DependentUpon>
     </EmbeddedResource>
@@ -131,19 +149,23 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="iconos\closeIcon.png" />
-    <Content Include="iconos\diagnostico.png" />
-    <Content Include="iconos\diagnostico24.png" />
-    <Content Include="iconos\garras.ico" />
-    <Content Include="iconos\HuellaAnimal.png" />
-    <Content Include="iconos\logoVet.jpg" />
-    <Content Include="iconos\medicina24.png" />
-    <Content Include="iconos\medicine.png" />
-    <Content Include="iconos\minusIcon.png" />
-    <Content Include="iconos\syringe.png" />
-    <Content Include="iconos\vac.png" />
-    <Content Include="iconos\vac24.png" />
-    <Content Include="iconos\volver.png" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\customer.png" />
+    <None Include="Resources\cliente.png" />
+    <None Include="Resources\logOut.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\paws.png" />
+    <None Include="Resources\bill.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\verify.png" />
+    <None Include="Resources\reject.png" />
+    <None Include="Resources\miniIcon.png" />
+    <None Include="Resources\minicon.png" />
+    <None Include="Resources\maxIcon.png" />
+    <None Include="Resources\HuellaAnimal.png" />
+    <None Include="Resources\closeIcon.png" />
+    <None Include="Resources\log-out.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
