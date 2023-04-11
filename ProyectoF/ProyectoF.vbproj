@@ -147,7 +147,36 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="iconos\closeIcon.png" />
+    <Content Include="iconos\diagnostico.png" />
+    <Content Include="iconos\diagnostico24.png" />
+    <Content Include="iconos\garras.ico" />
+    <Content Include="iconos\HuellaAnimal.png" />
+    <Content Include="iconos\logoVet.jpg" />
+    <Content Include="iconos\medicina24.png" />
+    <Content Include="iconos\medicine.png" />
+    <Content Include="iconos\minusIcon.png" />
+    <Content Include="iconos\pet %281%29.png" />
+    <Content Include="iconos\pet.png" />
+    <Content Include="iconos\syringe.png" />
+    <Content Include="iconos\vac.png" />
+    <Content Include="iconos\vac24.png" />
+    <Content Include="iconos\volver.png" />
+    <Content Include="Resources\diagnostico.png" />
+    <Content Include="Resources\diagnostico24.png" />
+    <Content Include="Resources\garras.ico" />
+    <Content Include="Resources\logoVet.jpg" />
+    <Content Include="Resources\medicina24.png" />
+    <Content Include="Resources\medicine.png" />
+    <Content Include="Resources\minusIcon.png" />
+    <Content Include="Resources\pet %281%29.png" />
+    <Content Include="Resources\pet.png" />
+    <Content Include="Resources\syringe.png" />
+    <Content Include="Resources\vac.png" />
+    <Content Include="Resources\vac24.png" />
+    <Content Include="Resources\volver.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\close.png" />
     <None Include="Resources\customer.png" />
