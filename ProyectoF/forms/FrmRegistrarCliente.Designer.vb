@@ -36,22 +36,22 @@ Partial Class FrmRegistrarCliente
         Me.Label7 = New System.Windows.Forms.Label()
         Me.TxtBxDirClient = New System.Windows.Forms.TextBox()
         Me.TxtBxEmailClient = New System.Windows.Forms.TextBox()
-        Me.BtnCancel = New System.Windows.Forms.Button()
-        Me.BtnGuardar = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PnlTitle = New System.Windows.Forms.Panel()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.BtnRestaurar = New System.Windows.Forms.PictureBox()
         Me.BtnMaximizar = New System.Windows.Forms.PictureBox()
         Me.BtnMinimizar = New System.Windows.Forms.PictureBox()
         Me.BtnCerrar = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.BtnCancel = New System.Windows.Forms.Button()
+        Me.BtnGuardar = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PnlTitle.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BtnRestaurar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BtnMaximizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BtnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BtnCerrar, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -179,37 +179,6 @@ Partial Class FrmRegistrarCliente
         Me.TxtBxEmailClient.Size = New System.Drawing.Size(306, 20)
         Me.TxtBxEmailClient.TabIndex = 7
         '
-        'BtnCancel
-        '
-        Me.BtnCancel.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.BtnCancel.Image = Global.ProyectoF.My.Resources.Resources.close
-        Me.BtnCancel.Location = New System.Drawing.Point(323, 494)
-        Me.BtnCancel.Name = "BtnCancel"
-        Me.BtnCancel.Size = New System.Drawing.Size(112, 39)
-        Me.BtnCancel.TabIndex = 9
-        Me.BtnCancel.UseVisualStyleBackColor = True
-        '
-        'BtnGuardar
-        '
-        Me.BtnGuardar.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.BtnGuardar.Image = Global.ProyectoF.My.Resources.Resources.customer
-        Me.BtnGuardar.Location = New System.Drawing.Point(172, 494)
-        Me.BtnGuardar.Name = "BtnGuardar"
-        Me.BtnGuardar.Size = New System.Drawing.Size(112, 39)
-        Me.BtnGuardar.TabIndex = 8
-        Me.BtnGuardar.UseVisualStyleBackColor = True
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(240, 44)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(127, 130)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
         'PnlTitle
         '
         Me.PnlTitle.BackColor = System.Drawing.Color.DodgerBlue
@@ -223,6 +192,16 @@ Partial Class FrmRegistrarCliente
         Me.PnlTitle.Name = "PnlTitle"
         Me.PnlTitle.Size = New System.Drawing.Size(606, 38)
         Me.PnlTitle.TabIndex = 16
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.ProyectoF.My.Resources.Resources.logoVet
+        Me.PictureBox2.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(112, 38)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 4
+        Me.PictureBox2.TabStop = False
         '
         'BtnRestaurar
         '
@@ -273,15 +252,39 @@ Partial Class FrmRegistrarCliente
         Me.BtnCerrar.TabIndex = 0
         Me.BtnCerrar.TabStop = False
         '
-        'PictureBox2
+        'BtnCancel
         '
-        Me.PictureBox2.Image = Global.ProyectoF.My.Resources.Resources.logoVet
-        Me.PictureBox2.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(112, 38)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 4
-        Me.PictureBox2.TabStop = False
+        Me.BtnCancel.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.BtnCancel.FlatAppearance.BorderSize = 0
+        Me.BtnCancel.Image = Global.ProyectoF.My.Resources.Resources.close
+        Me.BtnCancel.Location = New System.Drawing.Point(323, 494)
+        Me.BtnCancel.Name = "BtnCancel"
+        Me.BtnCancel.Size = New System.Drawing.Size(112, 39)
+        Me.BtnCancel.TabIndex = 9
+        Me.BtnCancel.UseVisualStyleBackColor = True
+        '
+        'BtnGuardar
+        '
+        Me.BtnGuardar.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.BtnGuardar.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnGuardar.FlatAppearance.BorderSize = 0
+        Me.BtnGuardar.Image = Global.ProyectoF.My.Resources.Resources.personal_data
+        Me.BtnGuardar.Location = New System.Drawing.Point(172, 494)
+        Me.BtnGuardar.Name = "BtnGuardar"
+        Me.BtnGuardar.Size = New System.Drawing.Size(112, 39)
+        Me.BtnGuardar.TabIndex = 8
+        Me.BtnGuardar.UseVisualStyleBackColor = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(240, 44)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(127, 130)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'FrmRegistrarCliente
         '
@@ -310,13 +313,13 @@ Partial Class FrmRegistrarCliente
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmRegistrarCliente"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PnlTitle.ResumeLayout(False)
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BtnRestaurar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BtnMaximizar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BtnMinimizar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BtnCerrar, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

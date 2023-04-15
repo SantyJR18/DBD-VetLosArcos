@@ -73,6 +73,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="forms\FrmPacientes.Designer.vb">
+      <DependentUpon>FrmPacientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FrmPacientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="forms\FrmRecepcionista.Designer.vb">
       <DependentUpon>FrmRecepcionista.vb</DependentUpon>
     </Compile>
@@ -119,6 +125,9 @@
     <EmbeddedResource Include="forms\FrmLogin.resx">
       <DependentUpon>FrmLogin.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\FrmPacientes.resx">
+      <DependentUpon>FrmPacientes.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\FrmRecepcionista.resx">
       <DependentUpon>FrmRecepcionista.vb</DependentUpon>
     </EmbeddedResource>
@@ -163,16 +172,23 @@
     <Content Include="iconos\vac.png" />
     <Content Include="iconos\vac24.png" />
     <Content Include="iconos\volver.png" />
+    <None Include="Resources\add-file.png" />
     <Content Include="Resources\diagnostico.png" />
     <Content Include="Resources\diagnostico24.png" />
+    <None Include="Resources\editar.png" />
     <Content Include="Resources\garras.ico" />
     <Content Include="Resources\logoVet.jpg" />
     <Content Include="Resources\medicina24.png" />
     <Content Include="Resources\medicine.png" />
     <Content Include="Resources\minusIcon.png" />
+    <None Include="Resources\personal-data.png" />
     <Content Include="Resources\pet %281%29.png" />
+    <None Include="Resources\pet-care.png" />
+    <None Include="Resources\pet-care %281%29.png" />
     <Content Include="Resources\pet.png" />
+    <None Include="Resources\search.png" />
     <Content Include="Resources\syringe.png" />
+    <None Include="Resources\trash.png" />
     <Content Include="Resources\vac.png" />
     <Content Include="Resources\vac24.png" />
     <Content Include="Resources\volver.png" />

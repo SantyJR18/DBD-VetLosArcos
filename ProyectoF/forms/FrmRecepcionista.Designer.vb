@@ -24,10 +24,6 @@ Partial Class FrmRecepcionista
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmRecepcionista))
         Me.PnlTitle = New System.Windows.Forms.Panel()
-        Me.BtnRestaurar = New System.Windows.Forms.PictureBox()
-        Me.BtnMaximizar = New System.Windows.Forms.PictureBox()
-        Me.BtnMinimizar = New System.Windows.Forms.PictureBox()
-        Me.BtnCerrar = New System.Windows.Forms.PictureBox()
         Me.PnlContainer = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
@@ -35,6 +31,7 @@ Partial Class FrmRecepcionista
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PnlContent = New System.Windows.Forms.Panel()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.BtnLogOut = New System.Windows.Forms.Button()
         Me.BtnRegPac = New System.Windows.Forms.Button()
@@ -42,14 +39,17 @@ Partial Class FrmRecepcionista
         Me.BtnEditarReg = New System.Windows.Forms.Button()
         Me.BtnRegClient = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PnlContent = New System.Windows.Forms.Panel()
+        Me.BtnRestaurar = New System.Windows.Forms.PictureBox()
+        Me.BtnMaximizar = New System.Windows.Forms.PictureBox()
+        Me.BtnMinimizar = New System.Windows.Forms.PictureBox()
+        Me.BtnCerrar = New System.Windows.Forms.PictureBox()
         Me.PnlTitle.SuspendLayout()
+        Me.PnlContainer.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BtnRestaurar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BtnMaximizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BtnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BtnCerrar, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PnlContainer.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PnlTitle
@@ -64,55 +64,6 @@ Partial Class FrmRecepcionista
         Me.PnlTitle.Name = "PnlTitle"
         Me.PnlTitle.Size = New System.Drawing.Size(826, 38)
         Me.PnlTitle.TabIndex = 0
-        '
-        'BtnRestaurar
-        '
-        Me.BtnRestaurar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnRestaurar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnRestaurar.Image = Global.ProyectoF.My.Resources.Resources.miniIcon
-        Me.BtnRestaurar.Location = New System.Drawing.Point(740, 6)
-        Me.BtnRestaurar.Name = "BtnRestaurar"
-        Me.BtnRestaurar.Size = New System.Drawing.Size(25, 25)
-        Me.BtnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.BtnRestaurar.TabIndex = 1
-        Me.BtnRestaurar.TabStop = False
-        Me.BtnRestaurar.Visible = False
-        '
-        'BtnMaximizar
-        '
-        Me.BtnMaximizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnMaximizar.Image = Global.ProyectoF.My.Resources.Resources.maxIcon
-        Me.BtnMaximizar.Location = New System.Drawing.Point(740, 6)
-        Me.BtnMaximizar.Name = "BtnMaximizar"
-        Me.BtnMaximizar.Size = New System.Drawing.Size(25, 25)
-        Me.BtnMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.BtnMaximizar.TabIndex = 3
-        Me.BtnMaximizar.TabStop = False
-        '
-        'BtnMinimizar
-        '
-        Me.BtnMinimizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnMinimizar.Image = Global.ProyectoF.My.Resources.Resources.minusIcon
-        Me.BtnMinimizar.Location = New System.Drawing.Point(699, 6)
-        Me.BtnMinimizar.Name = "BtnMinimizar"
-        Me.BtnMinimizar.Size = New System.Drawing.Size(25, 25)
-        Me.BtnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.BtnMinimizar.TabIndex = 2
-        Me.BtnMinimizar.TabStop = False
-        '
-        'BtnCerrar
-        '
-        Me.BtnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnCerrar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnCerrar.Image = Global.ProyectoF.My.Resources.Resources.reject
-        Me.BtnCerrar.Location = New System.Drawing.Point(782, 6)
-        Me.BtnCerrar.Name = "BtnCerrar"
-        Me.BtnCerrar.Size = New System.Drawing.Size(25, 25)
-        Me.BtnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.BtnCerrar.TabIndex = 0
-        Me.BtnCerrar.TabStop = False
         '
         'PnlContainer
         '
@@ -184,6 +135,15 @@ Partial Class FrmRecepcionista
         Me.Panel1.Size = New System.Drawing.Size(5, 32)
         Me.Panel1.TabIndex = 0
         '
+        'PnlContent
+        '
+        Me.PnlContent.BackColor = System.Drawing.Color.Gainsboro
+        Me.PnlContent.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PnlContent.Location = New System.Drawing.Point(220, 38)
+        Me.PnlContent.Name = "PnlContent"
+        Me.PnlContent.Size = New System.Drawing.Size(606, 509)
+        Me.PnlContent.TabIndex = 1
+        '
         'Button4
         '
         Me.Button4.FlatAppearance.BorderSize = 0
@@ -229,7 +189,7 @@ Partial Class FrmRecepcionista
         Me.BtnRegPac.Name = "BtnRegPac"
         Me.BtnRegPac.Size = New System.Drawing.Size(216, 32)
         Me.BtnRegPac.TabIndex = 2
-        Me.BtnRegPac.Text = "Registrar Paciente"
+        Me.BtnRegPac.Text = "Pacientes"
         Me.BtnRegPac.UseVisualStyleBackColor = True
         '
         'Button2
@@ -277,7 +237,7 @@ Partial Class FrmRecepcionista
         Me.BtnRegClient.Name = "BtnRegClient"
         Me.BtnRegClient.Size = New System.Drawing.Size(216, 32)
         Me.BtnRegClient.TabIndex = 1
-        Me.BtnRegClient.Text = "Registrar Cliente"
+        Me.BtnRegClient.Text = "Clientes"
         Me.BtnRegClient.UseVisualStyleBackColor = True
         '
         'PictureBox1
@@ -290,14 +250,54 @@ Partial Class FrmRecepcionista
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
-        'PnlContent
+        'BtnRestaurar
         '
-        Me.PnlContent.BackColor = System.Drawing.Color.Gainsboro
-        Me.PnlContent.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PnlContent.Location = New System.Drawing.Point(220, 38)
-        Me.PnlContent.Name = "PnlContent"
-        Me.PnlContent.Size = New System.Drawing.Size(606, 509)
-        Me.PnlContent.TabIndex = 1
+        Me.BtnRestaurar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnRestaurar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnRestaurar.Image = Global.ProyectoF.My.Resources.Resources.miniIcon
+        Me.BtnRestaurar.Location = New System.Drawing.Point(740, 6)
+        Me.BtnRestaurar.Name = "BtnRestaurar"
+        Me.BtnRestaurar.Size = New System.Drawing.Size(25, 25)
+        Me.BtnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.BtnRestaurar.TabIndex = 1
+        Me.BtnRestaurar.TabStop = False
+        Me.BtnRestaurar.Visible = False
+        '
+        'BtnMaximizar
+        '
+        Me.BtnMaximizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnMaximizar.Image = Global.ProyectoF.My.Resources.Resources.maxIcon
+        Me.BtnMaximizar.Location = New System.Drawing.Point(740, 6)
+        Me.BtnMaximizar.Name = "BtnMaximizar"
+        Me.BtnMaximizar.Size = New System.Drawing.Size(25, 25)
+        Me.BtnMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.BtnMaximizar.TabIndex = 3
+        Me.BtnMaximizar.TabStop = False
+        '
+        'BtnMinimizar
+        '
+        Me.BtnMinimizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnMinimizar.Image = Global.ProyectoF.My.Resources.Resources.minusIcon
+        Me.BtnMinimizar.Location = New System.Drawing.Point(699, 6)
+        Me.BtnMinimizar.Name = "BtnMinimizar"
+        Me.BtnMinimizar.Size = New System.Drawing.Size(25, 25)
+        Me.BtnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.BtnMinimizar.TabIndex = 2
+        Me.BtnMinimizar.TabStop = False
+        '
+        'BtnCerrar
+        '
+        Me.BtnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnCerrar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnCerrar.Image = Global.ProyectoF.My.Resources.Resources.reject
+        Me.BtnCerrar.Location = New System.Drawing.Point(782, 6)
+        Me.BtnCerrar.Name = "BtnCerrar"
+        Me.BtnCerrar.Size = New System.Drawing.Size(25, 25)
+        Me.BtnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.BtnCerrar.TabIndex = 0
+        Me.BtnCerrar.TabStop = False
         '
         'FrmRecepcionista
         '
@@ -311,12 +311,12 @@ Partial Class FrmRecepcionista
         Me.Name = "FrmRecepcionista"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.PnlTitle.ResumeLayout(False)
+        Me.PnlContainer.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BtnRestaurar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BtnMaximizar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BtnMinimizar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BtnCerrar, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PnlContainer.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

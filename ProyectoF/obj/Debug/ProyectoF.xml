@@ -42,11 +42,6 @@ ProyectoF
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:ProyectoF.My.Resources.Resources.customer">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
 <member name="P:ProyectoF.My.Resources.Resources.delete">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -63,6 +58,11 @@ ProyectoF
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.edit">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProyectoF.My.Resources.Resources.editar">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -112,6 +112,11 @@ ProyectoF
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:ProyectoF.My.Resources.Resources.personal_data">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:ProyectoF.My.Resources.Resources.pet">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -122,12 +127,27 @@ ProyectoF
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:ProyectoF.My.Resources.Resources.pet_care">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:ProyectoF.My.Resources.Resources.reject">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:ProyectoF.My.Resources.Resources.searchVet">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:ProyectoF.My.Resources.Resources.syringe">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProyectoF.My.Resources.Resources.trash">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

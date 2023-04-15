@@ -39,3 +39,4 @@ C:\Users\DELL\Desktop\DBD-ProyectoFinal\ProyectoF\obj\Debug\ProyectoF.exe
 C:\Users\DELL\Desktop\DBD-ProyectoFinal\ProyectoF\obj\Debug\ProyectoF.xml
 C:\Users\DELL\Desktop\DBD-ProyectoFinal\ProyectoF\obj\Debug\ProyectoF.pdb
 C:\Users\DELL\Desktop\DBD-ProyectoFinal\ProyectoF\obj\Debug\ProyectoF.FrmRegistrarCliente.resources
+C:\Users\DELL\Desktop\DBD-ProyectoFinal\ProyectoF\obj\Debug\ProyectoF.FrmPacientes.resources
