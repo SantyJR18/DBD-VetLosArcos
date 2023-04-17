@@ -5,18 +5,6 @@ Public Class FrmRecepcionista
         Application.Exit()
     End Sub
 
-    Private Sub BtnMaximizar_Click(sender As Object, e As EventArgs) Handles BtnMaximizar.Click
-        WindowState = FormWindowState.Maximized
-        BtnMaximizar.Visible = False
-        BtnRestaurar.Visible = True
-    End Sub
-
-    Private Sub BtnRestaurar_Click(sender As Object, e As EventArgs) Handles BtnRestaurar.Click
-        WindowState = FormWindowState.Normal
-        BtnRestaurar.Visible = False
-        BtnMaximizar.Visible = True
-    End Sub
-
     Private Sub BtnMinimizar_Click(sender As Object, e As EventArgs) Handles BtnMinimizar.Click
         WindowState = FormWindowState.Minimized
     End Sub
@@ -27,22 +15,6 @@ Public Class FrmRecepcionista
 
     Private Sub BtnCerrar_MouseLeave(sender As Object, e As EventArgs) Handles BtnCerrar.MouseLeave
         BtnCerrar.BackColor = Color.DodgerBlue
-    End Sub
-
-    Private Sub BtnMaximizar_MouseHover(sender As Object, e As EventArgs) Handles BtnMaximizar.MouseHover
-        BtnMaximizar.BackColor = Color.Red
-    End Sub
-
-    Private Sub BtnMaximizar_MouseLeave(sender As Object, e As EventArgs) Handles BtnMaximizar.MouseLeave
-        BtnMaximizar.BackColor = Color.DodgerBlue
-    End Sub
-
-    Private Sub BtnRestaurar_MouseHover(sender As Object, e As EventArgs) Handles BtnRestaurar.MouseHover
-        BtnRestaurar.BackColor = Color.Red
-    End Sub
-
-    Private Sub BtnRestaurar_MouseLeave(sender As Object, e As EventArgs) Handles BtnRestaurar.MouseLeave
-        BtnRestaurar.BackColor = Color.DodgerBlue
     End Sub
 
     Private Sub BtnMinimizar_MouseHover(sender As Object, e As EventArgs) Handles BtnMinimizar.MouseHover
@@ -63,5 +35,16 @@ Public Class FrmRecepcionista
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
 
+    Private Sub FrmRecepcionista_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        TmrFecha.Enabled = True
+        TmrTiempo.Enabled = True
+    End Sub
 
+    Private Sub TmrTiempo_Tick(sender As Object, e As EventArgs) Handles TmrTiempo.Tick
+        LblTiempo.Text = Date.Now.ToString("HH:mm:ss")
+    End Sub
+
+    Private Sub TmrFecha_Tick(sender As Object, e As EventArgs) Handles TmrFecha.Tick
+        LblFecha.Text = Date.Now.ToString("dd-MM-yyyy")
+    End Sub
 End Class

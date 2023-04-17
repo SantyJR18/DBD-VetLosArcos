@@ -23,7 +23,6 @@ C:\Users\Diego\Desktop\RepositoriosVB\Disenios\DBD-ProyectoFinal\ProyectoF\obj\D
 C:\Users\Diego\Desktop\RepositoriosVB\Disenios\DBD-ProyectoFinal\ProyectoF\obj\Debug\ProyectoF.exe
 C:\Users\Diego\Desktop\RepositoriosVB\Disenios\DBD-ProyectoFinal\ProyectoF\obj\Debug\ProyectoF.xml
 C:\Users\Diego\Desktop\RepositoriosVB\Disenios\DBD-ProyectoFinal\ProyectoF\obj\Debug\ProyectoF.pdb
-C:\Users\Diego\Desktop\RepositoriosVB\Disenios\DBD-ProyectoFinal\ProyectoF\obj\Debug\ProyectoF.FrmSalida.resources
 C:\Users\DELL\Desktop\DBD-ProyectoFinal\ProyectoF\bin\Debug\ProyectoF.exe.config
 C:\Users\DELL\Desktop\DBD-ProyectoFinal\ProyectoF\bin\Debug\ProyectoF.exe
 C:\Users\DELL\Desktop\DBD-ProyectoFinal\ProyectoF\bin\Debug\ProyectoF.pdb
@@ -71,3 +70,8 @@ C:\Users\DELL\Desktop\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.exe
 C:\Users\DELL\Desktop\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.xml
 C:\Users\DELL\Desktop\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.pdb
 C:\Users\DELL\Desktop\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.FrmClientes.resources
+C:\Users\Diego\Desktop\RepositoriosVB\Disenios\DBD-ProyectoFinal\ProyectoF\obj\Debug\ProyectoF.FrmClientes.resources
+C:\Users\Diego\Desktop\RepositoriosVB\Disenios\DBD-ProyectoFinal\ProyectoF\obj\Debug\ProyectoF.FrmPacientesM.resources
+C:\Users\Diego\Desktop\RepositoriosVB\Disenios\DBD-ProyectoFinal\ProyectoF\obj\Debug\ProyectoF.FrmPacientesR.resources
+C:\Users\Diego\Desktop\RepositoriosVB\Disenios\DBD-ProyectoFinal\ProyectoF\obj\Debug\ProyectoF.FrmRecepcionista.resources
+C:\Users\Diego\Desktop\RepositoriosVB\Disenios\DBD-ProyectoFinal\ProyectoF\obj\Debug\ProyectoF.FrmMedico.resources
