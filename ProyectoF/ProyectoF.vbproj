@@ -85,12 +85,6 @@
     <Compile Include="forms\FrmRecepcionista.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\FrmRegistrarCliente.Designer.vb">
-      <DependentUpon>FrmRegistrarCliente.vb</DependentUpon>
-    </Compile>
-    <Compile Include="forms\FrmRegistrarCliente.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="forms\FrmSalida.Designer.vb">
       <DependentUpon>FrmSalida.vb</DependentUpon>
     </Compile>
@@ -130,9 +124,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\FrmRecepcionista.resx">
       <DependentUpon>FrmRecepcionista.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\FrmRegistrarCliente.resx">
-      <DependentUpon>FrmRegistrarCliente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\FrmSalida.resx">
       <DependentUpon>FrmSalida.vb</DependentUpon>

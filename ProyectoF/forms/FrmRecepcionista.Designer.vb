@@ -23,11 +23,11 @@ Partial Class FrmRecepcionista
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.PnlTitle = New System.Windows.Forms.Panel()
-        Me.PnlContent = New System.Windows.Forms.Panel()
         Me.BtnRestaurar = New System.Windows.Forms.PictureBox()
         Me.BtnMaximizar = New System.Windows.Forms.PictureBox()
         Me.BtnMinimizar = New System.Windows.Forms.PictureBox()
         Me.BtnCerrar = New System.Windows.Forms.PictureBox()
+        Me.PnlContent = New System.Windows.Forms.Panel()
         Me.PnlTitle.SuspendLayout()
         CType(Me.BtnRestaurar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BtnMaximizar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -44,20 +44,10 @@ Partial Class FrmRecepcionista
         Me.PnlTitle.Controls.Add(Me.BtnCerrar)
         Me.PnlTitle.Dock = System.Windows.Forms.DockStyle.Top
         Me.PnlTitle.Location = New System.Drawing.Point(0, 0)
-        Me.PnlTitle.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PnlTitle.Margin = New System.Windows.Forms.Padding(4)
         Me.PnlTitle.Name = "PnlTitle"
         Me.PnlTitle.Size = New System.Drawing.Size(1101, 47)
         Me.PnlTitle.TabIndex = 0
-        '
-        'PnlContent
-        '
-        Me.PnlContent.BackColor = System.Drawing.Color.Gainsboro
-        Me.PnlContent.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PnlContent.Location = New System.Drawing.Point(0, 47)
-        Me.PnlContent.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.PnlContent.Name = "PnlContent"
-        Me.PnlContent.Size = New System.Drawing.Size(1101, 626)
-        Me.PnlContent.TabIndex = 1
         '
         'BtnRestaurar
         '
@@ -112,6 +102,16 @@ Partial Class FrmRecepcionista
         Me.BtnCerrar.TabIndex = 0
         Me.BtnCerrar.TabStop = False
         '
+        'PnlContent
+        '
+        Me.PnlContent.BackColor = System.Drawing.Color.Gainsboro
+        Me.PnlContent.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PnlContent.Location = New System.Drawing.Point(0, 47)
+        Me.PnlContent.Margin = New System.Windows.Forms.Padding(4)
+        Me.PnlContent.Name = "PnlContent"
+        Me.PnlContent.Size = New System.Drawing.Size(1101, 626)
+        Me.PnlContent.TabIndex = 1
+        '
         'FrmRecepcionista
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -120,7 +120,7 @@ Partial Class FrmRecepcionista
         Me.Controls.Add(Me.PnlContent)
         Me.Controls.Add(Me.PnlTitle)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FrmRecepcionista"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.PnlTitle.ResumeLayout(False)

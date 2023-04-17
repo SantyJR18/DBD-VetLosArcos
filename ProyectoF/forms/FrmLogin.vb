@@ -1,11 +1,36 @@
 ﻿Imports System.Runtime.InteropServices
+
 Public Class FrmLogin
+
+#Region "Botones del Formulario"
+
     Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles BtnClose.Click
         Application.Exit()
     End Sub
+
+    Private Sub BtnClose_MouseHover(sender As Object, e As EventArgs) Handles BtnClose.MouseHover
+        BtnClose.BackColor = Color.Red
+    End Sub
+
+    Private Sub BtnClose_MouseLeave(sender As Object, e As EventArgs) Handles BtnClose.MouseLeave
+        BtnClose.BackColor = Color.DodgerBlue
+    End Sub
+
     Private Sub BtnMinimize_Click(sender As Object, e As EventArgs) Handles BtnMinimize.Click
         Me.WindowState = FormWindowState.Minimized
     End Sub
+
+    Private Sub BtnMinimize_MouseHover(sender As Object, e As EventArgs) Handles BtnMinimize.MouseHover
+        BtnMinimize.BackColor = Color.Red
+    End Sub
+
+    Private Sub BtnMinimize_MouseLeave(sender As Object, e As EventArgs) Handles BtnMinimize.MouseLeave
+        BtnMinimize.BackColor = Color.DodgerBlue
+    End Sub
+
+#End Region
+
+#Region "Componentes de personalización del Form"
 
     Private Sub CustomizeComponents()
         TxtPassword.UseSystemPasswordChar = True
@@ -19,6 +44,8 @@ Public Class FrmLogin
         CustomizeComponents()
     End Sub
 
+#End Region
+
 #Region "Arrastrar/Drag Form"
 
     <DllImport("user32.DLL", EntryPoint:="ReleaseCapture")>
@@ -30,10 +57,6 @@ Public Class FrmLogin
     Private Sub titleBar_MouseDown(sender As Object, e As MouseEventArgs) Handles TitleBar.MouseDown
         ReleaseCapture()
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
-    End Sub
-
-    Private Sub FrmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
     End Sub
 
 #End Region
