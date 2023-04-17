@@ -73,10 +73,22 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="forms\FrmPacientes.Designer.vb">
-      <DependentUpon>FrmPacientes.vb</DependentUpon>
+    <Compile Include="forms\FrmClientes.Designer.vb">
+      <DependentUpon>FrmClientes.vb</DependentUpon>
     </Compile>
-    <Compile Include="forms\FrmPacientes.vb">
+    <Compile Include="forms\FrmClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FrmPacientesM.Designer.vb">
+      <DependentUpon>FrmPacientesM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FrmPacientesM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FrmPacientesR.Designer.vb">
+      <DependentUpon>FrmPacientesR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FrmPacientesR.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="forms\FrmRecepcionista.Designer.vb">
@@ -85,10 +97,10 @@
     <Compile Include="forms\FrmRecepcionista.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\FrmSalida.Designer.vb">
-      <DependentUpon>FrmSalida.vb</DependentUpon>
+    <Compile Include="forms\FrmMedico.Designer.vb">
+      <DependentUpon>FrmMedico.vb</DependentUpon>
     </Compile>
-    <Compile Include="forms\FrmSalida.vb">
+    <Compile Include="forms\FrmMedico.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="forms\FrmLogin.vb">
@@ -116,17 +128,23 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="forms\FrmClientes.resx">
+      <DependentUpon>FrmClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FrmPacientesM.resx">
+      <DependentUpon>FrmPacientesM.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\FrmLogin.resx">
       <DependentUpon>FrmLogin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\FrmPacientes.resx">
-      <DependentUpon>FrmPacientes.vb</DependentUpon>
+    <EmbeddedResource Include="forms\FrmPacientesR.resx">
+      <DependentUpon>FrmPacientesR.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\FrmRecepcionista.resx">
       <DependentUpon>FrmRecepcionista.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\FrmSalida.resx">
-      <DependentUpon>FrmSalida.vb</DependentUpon>
+    <EmbeddedResource Include="forms\FrmMedico.resx">
+      <DependentUpon>FrmMedico.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -164,6 +182,7 @@
     <Content Include="iconos\vac24.png" />
     <Content Include="iconos\volver.png" />
     <None Include="Resources\add-file.png" />
+    <None Include="Resources\addUser.png" />
     <Content Include="Resources\diagnostico.png" />
     <Content Include="Resources\diagnostico24.png" />
     <None Include="Resources\editar.png" />
@@ -178,6 +197,7 @@
     <None Include="Resources\pet-care %281%29.png" />
     <Content Include="Resources\pet.png" />
     <None Include="Resources\search.png" />
+    <None Include="Resources\searchUser.png" />
     <Content Include="Resources\syringe.png" />
     <None Include="Resources\trash.png" />
     <Content Include="Resources\vac.png" />

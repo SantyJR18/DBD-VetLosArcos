@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FrmPacientes
+Partial Class FrmPacientesR
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -26,7 +26,7 @@ Partial Class FrmPacientes
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BtnCerrar = New System.Windows.Forms.PictureBox()
         Me.TCPacientes = New System.Windows.Forms.TabControl()
-        Me.TPPac = New System.Windows.Forms.TabPage()
+        Me.TPPaciente = New System.Windows.Forms.TabPage()
         Me.BtnEliminarRegPac = New System.Windows.Forms.Button()
         Me.BtnEditarPac = New System.Windows.Forms.Button()
         Me.BtnNuevoPac = New System.Windows.Forms.Button()
@@ -35,6 +35,8 @@ Partial Class FrmPacientes
         Me.TBBuscPac = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TPDetPac = New System.Windows.Forms.TabPage()
+        Me.BtnEliminarPac = New System.Windows.Forms.Button()
+        Me.BtnGuardarPac = New System.Windows.Forms.Button()
         Me.TBNombrePac = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.TBFechaNac = New System.Windows.Forms.TextBox()
@@ -51,19 +53,17 @@ Partial Class FrmPacientes
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TBIdPac = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.BtnGuardarPac = New System.Windows.Forms.Button()
-        Me.BtnEliminarPac = New System.Windows.Forms.Button()
         Me.PnlTitle.SuspendLayout()
         CType(Me.BtnCerrar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TCPacientes.SuspendLayout()
-        Me.TPPac.SuspendLayout()
+        Me.TPPaciente.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TPDetPac.SuspendLayout()
         Me.SuspendLayout()
         '
         'PnlTitle
         '
-        Me.PnlTitle.BackColor = System.Drawing.Color.White
+        Me.PnlTitle.BackColor = System.Drawing.Color.DodgerBlue
         Me.PnlTitle.Controls.Add(Me.Label1)
         Me.PnlTitle.Controls.Add(Me.BtnCerrar)
         Me.PnlTitle.Dock = System.Windows.Forms.DockStyle.Top
@@ -96,7 +96,7 @@ Partial Class FrmPacientes
         '
         'TCPacientes
         '
-        Me.TCPacientes.Controls.Add(Me.TPPac)
+        Me.TCPacientes.Controls.Add(Me.TPPaciente)
         Me.TCPacientes.Controls.Add(Me.TPDetPac)
         Me.TCPacientes.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TCPacientes.Location = New System.Drawing.Point(0, 38)
@@ -105,22 +105,22 @@ Partial Class FrmPacientes
         Me.TCPacientes.Size = New System.Drawing.Size(794, 431)
         Me.TCPacientes.TabIndex = 3
         '
-        'TPPac
+        'TPPaciente
         '
-        Me.TPPac.Controls.Add(Me.BtnEliminarRegPac)
-        Me.TPPac.Controls.Add(Me.BtnEditarPac)
-        Me.TPPac.Controls.Add(Me.BtnNuevoPac)
-        Me.TPPac.Controls.Add(Me.DataGridView1)
-        Me.TPPac.Controls.Add(Me.BtnBuscarPac)
-        Me.TPPac.Controls.Add(Me.TBBuscPac)
-        Me.TPPac.Controls.Add(Me.Label2)
-        Me.TPPac.Location = New System.Drawing.Point(4, 22)
-        Me.TPPac.Name = "TPPac"
-        Me.TPPac.Padding = New System.Windows.Forms.Padding(3)
-        Me.TPPac.Size = New System.Drawing.Size(786, 405)
-        Me.TPPac.TabIndex = 0
-        Me.TPPac.Text = "Pacientes"
-        Me.TPPac.UseVisualStyleBackColor = True
+        Me.TPPaciente.Controls.Add(Me.BtnEliminarRegPac)
+        Me.TPPaciente.Controls.Add(Me.BtnEditarPac)
+        Me.TPPaciente.Controls.Add(Me.BtnNuevoPac)
+        Me.TPPaciente.Controls.Add(Me.DataGridView1)
+        Me.TPPaciente.Controls.Add(Me.BtnBuscarPac)
+        Me.TPPaciente.Controls.Add(Me.TBBuscPac)
+        Me.TPPaciente.Controls.Add(Me.Label2)
+        Me.TPPaciente.Location = New System.Drawing.Point(4, 22)
+        Me.TPPaciente.Name = "TPPaciente"
+        Me.TPPaciente.Padding = New System.Windows.Forms.Padding(3)
+        Me.TPPaciente.Size = New System.Drawing.Size(786, 405)
+        Me.TPPaciente.TabIndex = 0
+        Me.TPPaciente.Text = "Pacientes"
+        Me.TPPaciente.UseVisualStyleBackColor = True
         '
         'BtnEliminarRegPac
         '
@@ -218,6 +218,27 @@ Partial Class FrmPacientes
         Me.TPDetPac.TabIndex = 1
         Me.TPDetPac.Text = "Detalles"
         Me.TPDetPac.UseVisualStyleBackColor = True
+        '
+        'BtnEliminarPac
+        '
+        Me.BtnEliminarPac.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnEliminarPac.Location = New System.Drawing.Point(434, 300)
+        Me.BtnEliminarPac.Name = "BtnEliminarPac"
+        Me.BtnEliminarPac.Size = New System.Drawing.Size(82, 37)
+        Me.BtnEliminarPac.TabIndex = 18
+        Me.BtnEliminarPac.Text = "Eliminar"
+        Me.BtnEliminarPac.UseVisualStyleBackColor = True
+        '
+        'BtnGuardarPac
+        '
+        Me.BtnGuardarPac.AccessibleRole = System.Windows.Forms.AccessibleRole.None
+        Me.BtnGuardarPac.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnGuardarPac.Location = New System.Drawing.Point(271, 300)
+        Me.BtnGuardarPac.Name = "BtnGuardarPac"
+        Me.BtnGuardarPac.Size = New System.Drawing.Size(82, 37)
+        Me.BtnGuardarPac.TabIndex = 17
+        Me.BtnGuardarPac.Text = "Guardar"
+        Me.BtnGuardarPac.UseVisualStyleBackColor = True
         '
         'TBNombrePac
         '
@@ -357,27 +378,6 @@ Partial Class FrmPacientes
         Me.Label4.TabIndex = 1
         Me.Label4.Text = "ID del paciente:"
         '
-        'BtnGuardarPac
-        '
-        Me.BtnGuardarPac.AccessibleRole = System.Windows.Forms.AccessibleRole.None
-        Me.BtnGuardarPac.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnGuardarPac.Location = New System.Drawing.Point(271, 300)
-        Me.BtnGuardarPac.Name = "BtnGuardarPac"
-        Me.BtnGuardarPac.Size = New System.Drawing.Size(82, 37)
-        Me.BtnGuardarPac.TabIndex = 17
-        Me.BtnGuardarPac.Text = "Guardar"
-        Me.BtnGuardarPac.UseVisualStyleBackColor = True
-        '
-        'BtnEliminarPac
-        '
-        Me.BtnEliminarPac.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnEliminarPac.Location = New System.Drawing.Point(434, 300)
-        Me.BtnEliminarPac.Name = "BtnEliminarPac"
-        Me.BtnEliminarPac.Size = New System.Drawing.Size(82, 37)
-        Me.BtnEliminarPac.TabIndex = 18
-        Me.BtnEliminarPac.Text = "Eliminar"
-        Me.BtnEliminarPac.UseVisualStyleBackColor = True
-        '
         'FrmPacientes
         '
         Me.AccessibleRole = System.Windows.Forms.AccessibleRole.None
@@ -394,8 +394,8 @@ Partial Class FrmPacientes
         Me.PnlTitle.PerformLayout()
         CType(Me.BtnCerrar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TCPacientes.ResumeLayout(False)
-        Me.TPPac.ResumeLayout(False)
-        Me.TPPac.PerformLayout()
+        Me.TPPaciente.ResumeLayout(False)
+        Me.TPPaciente.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TPDetPac.ResumeLayout(False)
         Me.TPDetPac.PerformLayout()
@@ -406,7 +406,7 @@ Partial Class FrmPacientes
     Friend WithEvents PnlTitle As Panel
     Friend WithEvents BtnCerrar As PictureBox
     Friend WithEvents TCPacientes As TabControl
-    Friend WithEvents TPPac As TabPage
+    Friend WithEvents TPPaciente As TabPage
     Friend WithEvents TPDetPac As TabPage
     Friend WithEvents Label1 As Label
     Friend WithEvents BtnBuscarPac As Button

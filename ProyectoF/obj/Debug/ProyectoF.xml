@@ -22,6 +22,11 @@ ProyectoF
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:ProyectoF.My.Resources.Resources.addUser">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:ProyectoF.My.Resources.Resources.bill">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -133,6 +138,11 @@ ProyectoF
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.reject">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProyectoF.My.Resources.Resources.searchUser">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
