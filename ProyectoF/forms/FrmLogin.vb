@@ -32,16 +32,11 @@ Public Class FrmLogin
 
 #Region "Componentes de personalización del Form"
 
-    Private Sub CustomizeComponents()
-        TxtPassword.UseSystemPasswordChar = True
-    End Sub
-
     Public Sub New()
         ' Esta llamada es exigida por el diseñador.
         InitializeComponent()
 
         ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
-        CustomizeComponents()
     End Sub
 
 #End Region
@@ -58,7 +53,7 @@ Public Class FrmLogin
         ReleaseCapture()
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
-
 #End Region
+
 
 End Class

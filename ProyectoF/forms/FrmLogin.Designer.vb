@@ -28,16 +28,23 @@ Partial Class FrmLogin
         Me.BtnClose = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.LblUsuario = New System.Windows.Forms.Label()
-        Me.TxtUsuario = New System.Windows.Forms.TextBox()
-        Me.TxtPassword = New System.Windows.Forms.TextBox()
-        Me.LblPassword = New System.Windows.Forms.Label()
         Me.BtnLogin = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.TitleBar.SuspendLayout()
         CType(Me.BtnMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BtnClose, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'TitleBar
@@ -47,18 +54,18 @@ Partial Class FrmLogin
         Me.TitleBar.Controls.Add(Me.BtnClose)
         Me.TitleBar.Dock = System.Windows.Forms.DockStyle.Top
         Me.TitleBar.Location = New System.Drawing.Point(0, 0)
-        Me.TitleBar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TitleBar.Margin = New System.Windows.Forms.Padding(2)
         Me.TitleBar.Name = "TitleBar"
-        Me.TitleBar.Size = New System.Drawing.Size(427, 50)
+        Me.TitleBar.Size = New System.Drawing.Size(320, 41)
         Me.TitleBar.TabIndex = 0
         '
         'BtnMinimize
         '
         Me.BtnMinimize.Image = Global.ProyectoF.My.Resources.Resources.minusIcon
-        Me.BtnMinimize.Location = New System.Drawing.Point(357, 12)
-        Me.BtnMinimize.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.BtnMinimize.Location = New System.Drawing.Point(265, 10)
+        Me.BtnMinimize.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnMinimize.Name = "BtnMinimize"
-        Me.BtnMinimize.Size = New System.Drawing.Size(21, 26)
+        Me.BtnMinimize.Size = New System.Drawing.Size(19, 20)
         Me.BtnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.BtnMinimize.TabIndex = 3
         Me.BtnMinimize.TabStop = False
@@ -66,10 +73,10 @@ Partial Class FrmLogin
         'BtnClose
         '
         Me.BtnClose.Image = Global.ProyectoF.My.Resources.Resources.reject
-        Me.BtnClose.Location = New System.Drawing.Point(384, 12)
-        Me.BtnClose.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.BtnClose.Location = New System.Drawing.Point(288, 10)
+        Me.BtnClose.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnClose.Name = "BtnClose"
-        Me.BtnClose.Size = New System.Drawing.Size(25, 25)
+        Me.BtnClose.Size = New System.Drawing.Size(19, 20)
         Me.BtnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.BtnClose.TabIndex = 2
         Me.BtnClose.TabStop = False
@@ -78,107 +85,151 @@ Partial Class FrmLogin
         '
         Me.Panel2.BackColor = System.Drawing.Color.DodgerBlue
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel2.Location = New System.Drawing.Point(0, 641)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Panel2.Location = New System.Drawing.Point(0, 521)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(427, 15)
+        Me.Panel2.Size = New System.Drawing.Size(320, 12)
         Me.Panel2.TabIndex = 1
         '
         'PictureBox3
         '
         Me.PictureBox3.Image = Global.ProyectoF.My.Resources.Resources.HuellaAnimal
-        Me.PictureBox3.Location = New System.Drawing.Point(115, 117)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox3.Location = New System.Drawing.Point(87, 101)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(195, 174)
+        Me.PictureBox3.Size = New System.Drawing.Size(146, 141)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox3.TabIndex = 4
         Me.PictureBox3.TabStop = False
         '
-        'LblUsuario
-        '
-        Me.LblUsuario.AutoSize = True
-        Me.LblUsuario.Font = New System.Drawing.Font("High Tower Text", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblUsuario.Location = New System.Drawing.Point(65, 334)
-        Me.LblUsuario.Name = "LblUsuario"
-        Me.LblUsuario.Size = New System.Drawing.Size(84, 23)
-        Me.LblUsuario.TabIndex = 5
-        Me.LblUsuario.Text = "Usuario"
-        '
-        'TxtUsuario
-        '
-        Me.TxtUsuario.Location = New System.Drawing.Point(69, 370)
-        Me.TxtUsuario.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TxtUsuario.Name = "TxtUsuario"
-        Me.TxtUsuario.Size = New System.Drawing.Size(277, 22)
-        Me.TxtUsuario.TabIndex = 6
-        '
-        'TxtPassword
-        '
-        Me.TxtPassword.Location = New System.Drawing.Point(69, 463)
-        Me.TxtPassword.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TxtPassword.Name = "TxtPassword"
-        Me.TxtPassword.Size = New System.Drawing.Size(277, 22)
-        Me.TxtPassword.TabIndex = 8
-        '
-        'LblPassword
-        '
-        Me.LblPassword.AutoSize = True
-        Me.LblPassword.Font = New System.Drawing.Font("High Tower Text", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblPassword.Location = New System.Drawing.Point(65, 423)
-        Me.LblPassword.Name = "LblPassword"
-        Me.LblPassword.Size = New System.Drawing.Size(114, 23)
-        Me.LblPassword.TabIndex = 7
-        Me.LblPassword.Text = "Contraseña"
-        '
         'BtnLogin
         '
         Me.BtnLogin.BackColor = System.Drawing.Color.DodgerBlue
-        Me.BtnLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnLogin.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.BtnLogin.Location = New System.Drawing.Point(115, 517)
-        Me.BtnLogin.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.BtnLogin.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnLogin.ForeColor = System.Drawing.SystemColors.Window
+        Me.BtnLogin.Location = New System.Drawing.Point(46, 401)
+        Me.BtnLogin.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnLogin.Name = "BtnLogin"
-        Me.BtnLogin.Size = New System.Drawing.Size(177, 52)
-        Me.BtnLogin.TabIndex = 9
-        Me.BtnLogin.Text = "Entrar "
+        Me.BtnLogin.Size = New System.Drawing.Size(229, 41)
+        Me.BtnLogin.TabIndex = 3
+        Me.BtnLogin.Text = "Iniciar Sesión"
         Me.BtnLogin.UseVisualStyleBackColor = False
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("High Tower Text", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(89, 74)
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(66, 43)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(248, 28)
+        Me.Label1.Size = New System.Drawing.Size(189, 25)
         Me.Label1.TabIndex = 10
         Me.Label1.Text = "Veterinaria Los Arcos"
         '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.TextBox1)
+        Me.Panel1.Controls.Add(Me.PictureBox1)
+        Me.Panel1.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Panel1.Location = New System.Drawing.Point(46, 284)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(229, 43)
+        Me.Panel1.TabIndex = 12
+        '
+        'TextBox1
+        '
+        Me.TextBox1.BackColor = System.Drawing.Color.White
+        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(46, 12)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(180, 19)
+        Me.TextBox1.TabIndex = 1
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(3, 4)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(37, 34)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 13
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(3, 4)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(37, 34)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 14
+        Me.PictureBox2.TabStop = False
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.White
+        Me.Panel3.Controls.Add(Me.TextBox2)
+        Me.Panel3.Controls.Add(Me.PictureBox2)
+        Me.Panel3.Location = New System.Drawing.Point(46, 327)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(229, 43)
+        Me.Panel3.TabIndex = 15
+        '
+        'TextBox2
+        '
+        Me.TextBox2.BackColor = System.Drawing.Color.White
+        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.Location = New System.Drawing.Point(46, 12)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(180, 19)
+        Me.TextBox2.TabIndex = 2
+        Me.TextBox2.UseSystemPasswordChar = True
+        '
+        'BtnCancelar
+        '
+        Me.BtnCancelar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.BtnCancelar.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCancelar.ForeColor = System.Drawing.SystemColors.Window
+        Me.BtnCancelar.Location = New System.Drawing.Point(46, 447)
+        Me.BtnCancelar.Name = "BtnCancelar"
+        Me.BtnCancelar.Size = New System.Drawing.Size(229, 40)
+        Me.BtnCancelar.TabIndex = 4
+        Me.BtnCancelar.Text = "Cancelar"
+        Me.BtnCancelar.UseVisualStyleBackColor = False
+        '
         'FrmLogin
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClientSize = New System.Drawing.Size(427, 656)
+        Me.ClientSize = New System.Drawing.Size(320, 533)
+        Me.Controls.Add(Me.BtnCancelar)
+        Me.Controls.Add(Me.Panel3)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.BtnLogin)
-        Me.Controls.Add(Me.TxtPassword)
-        Me.Controls.Add(Me.LblPassword)
-        Me.Controls.Add(Me.TxtUsuario)
-        Me.Controls.Add(Me.LblUsuario)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.TitleBar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "FrmLogin"
         Me.Text = "Login"
         Me.TitleBar.ResumeLayout(False)
         CType(Me.BtnMinimize, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BtnClose, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -189,10 +240,13 @@ Partial Class FrmLogin
     Friend WithEvents BtnClose As PictureBox
     Friend WithEvents BtnMinimize As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents LblUsuario As Label
-    Friend WithEvents TxtUsuario As TextBox
-    Friend WithEvents TxtPassword As TextBox
-    Friend WithEvents LblPassword As Label
     Friend WithEvents BtnLogin As Button
     Friend WithEvents Label1 As Label
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents BtnCancelar As Button
 End Class
