@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmPacientesM
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,127 +20,125 @@ Partial Class FrmPacientesM
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.TCPacientes = New System.Windows.Forms.TabControl()
-        Me.TPMedico = New System.Windows.Forms.TabPage()
-        Me.BtnEliminarRegMedPac = New System.Windows.Forms.Button()
-        Me.BtnEditarMedPac = New System.Windows.Forms.Button()
-        Me.BtnNuevoMedPac = New System.Windows.Forms.Button()
+        Me.TCPacientesMed = New System.Windows.Forms.TabControl()
+        Me.TPPacMedico = New System.Windows.Forms.TabPage()
+        Me.BtnEliminarRegPacMed = New System.Windows.Forms.Button()
+        Me.BtnEditarPacMed = New System.Windows.Forms.Button()
+        Me.BtnNuevoPacMed = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.BtnBuscarMedPac = New System.Windows.Forms.Button()
+        Me.BtnBuscarPacMed = New System.Windows.Forms.Button()
         Me.TBBuscMedPac = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TPDetPac = New System.Windows.Forms.TabPage()
-        Me.TPMedPacientes = New System.Windows.Forms.TabControl()
-        Me.TPPaciente = New System.Windows.Forms.TabPage()
-        Me.BtnEliminarPac = New System.Windows.Forms.Button()
-        Me.BtnGuardarPac = New System.Windows.Forms.Button()
-        Me.TBNombrePac = New System.Windows.Forms.TextBox()
+        Me.TPDetPacMed = New System.Windows.Forms.TabPage()
+        Me.TPPacientesMed = New System.Windows.Forms.TabControl()
+        Me.TPPacienteMed = New System.Windows.Forms.TabPage()
+        Me.BtnCancelarPacMed = New System.Windows.Forms.Button()
+        Me.BtnGuardarPacMed = New System.Windows.Forms.Button()
+        Me.TBNombrePacMed = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.TBFechaNac = New System.Windows.Forms.TextBox()
+        Me.TBFechaNacMed = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.TBSenPar = New System.Windows.Forms.TextBox()
+        Me.TBSenParMed = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TBColorPac = New System.Windows.Forms.TextBox()
+        Me.TBColorPacMed = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.TBRazaPac = New System.Windows.Forms.TextBox()
+        Me.TBRazaPacMed = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TBSexoPac = New System.Windows.Forms.ComboBox()
+        Me.TBSexoPacMed = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TBEspeciePac = New System.Windows.Forms.TextBox()
+        Me.TBEspeciePacMed = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TBIdPac = New System.Windows.Forms.TextBox()
+        Me.TBIdPacMed = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TPExpDuenio = New System.Windows.Forms.TabPage()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.TBtelCliente = New System.Windows.Forms.TextBox()
+        Me.TBtelClienteMed = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.TBdireccionCliente = New System.Windows.Forms.TextBox()
+        Me.TBdireccionClienteMed = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.TBcorreoCliente = New System.Windows.Forms.TextBox()
+        Me.TBcorreoClienteMed = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.TBapellidoCliente = New System.Windows.Forms.ComboBox()
+        Me.TBapellidoClienteMed = New System.Windows.Forms.ComboBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.TBnombreCliente = New System.Windows.Forms.TextBox()
+        Me.TBnombreClienteMed = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.TBcedulaCliente = New System.Windows.Forms.TextBox()
+        Me.TBcedulaClienteMed = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.PnlTitle = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BtnCerrar = New System.Windows.Forms.PictureBox()
-        Me.TCPacientes.SuspendLayout()
-        Me.TPMedico.SuspendLayout()
+        Me.TCPacientesMed.SuspendLayout()
+        Me.TPPacMedico.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TPDetPac.SuspendLayout()
-        Me.TPMedPacientes.SuspendLayout()
-        Me.TPPaciente.SuspendLayout()
+        Me.TPDetPacMed.SuspendLayout()
+        Me.TPPacientesMed.SuspendLayout()
+        Me.TPPacienteMed.SuspendLayout()
         Me.TPExpDuenio.SuspendLayout()
         Me.PnlTitle.SuspendLayout()
         CType(Me.BtnCerrar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'TCPacientes
+        'TCPacientesMed
         '
-        Me.TCPacientes.Controls.Add(Me.TPMedico)
-        Me.TCPacientes.Controls.Add(Me.TPDetPac)
-        Me.TCPacientes.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TCPacientes.Location = New System.Drawing.Point(0, 38)
-        Me.TCPacientes.Name = "TCPacientes"
-        Me.TCPacientes.SelectedIndex = 0
-        Me.TCPacientes.Size = New System.Drawing.Size(794, 431)
-        Me.TCPacientes.TabIndex = 5
+        Me.TCPacientesMed.Controls.Add(Me.TPPacMedico)
+        Me.TCPacientesMed.Controls.Add(Me.TPDetPacMed)
+        Me.TCPacientesMed.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TCPacientesMed.Location = New System.Drawing.Point(0, 38)
+        Me.TCPacientesMed.Name = "TCPacientesMed"
+        Me.TCPacientesMed.SelectedIndex = 0
+        Me.TCPacientesMed.Size = New System.Drawing.Size(794, 431)
+        Me.TCPacientesMed.TabIndex = 5
         '
-        'TPMedico
+        'TPPacMedico
         '
-        Me.TPMedico.Controls.Add(Me.BtnEliminarRegMedPac)
-        Me.TPMedico.Controls.Add(Me.BtnEditarMedPac)
-        Me.TPMedico.Controls.Add(Me.BtnNuevoMedPac)
-        Me.TPMedico.Controls.Add(Me.DataGridView1)
-        Me.TPMedico.Controls.Add(Me.BtnBuscarMedPac)
-        Me.TPMedico.Controls.Add(Me.TBBuscMedPac)
-        Me.TPMedico.Controls.Add(Me.Label2)
-        Me.TPMedico.Location = New System.Drawing.Point(4, 22)
-        Me.TPMedico.Name = "TPMedico"
-        Me.TPMedico.Padding = New System.Windows.Forms.Padding(3)
-        Me.TPMedico.Size = New System.Drawing.Size(786, 405)
-        Me.TPMedico.TabIndex = 0
-        Me.TPMedico.Text = "Pacientes"
-        Me.TPMedico.UseVisualStyleBackColor = True
+        Me.TPPacMedico.Controls.Add(Me.BtnEliminarRegPacMed)
+        Me.TPPacMedico.Controls.Add(Me.BtnEditarPacMed)
+        Me.TPPacMedico.Controls.Add(Me.BtnNuevoPacMed)
+        Me.TPPacMedico.Controls.Add(Me.DataGridView1)
+        Me.TPPacMedico.Controls.Add(Me.BtnBuscarPacMed)
+        Me.TPPacMedico.Controls.Add(Me.TBBuscMedPac)
+        Me.TPPacMedico.Controls.Add(Me.Label2)
+        Me.TPPacMedico.Location = New System.Drawing.Point(4, 22)
+        Me.TPPacMedico.Name = "TPPacMedico"
+        Me.TPPacMedico.Padding = New System.Windows.Forms.Padding(3)
+        Me.TPPacMedico.Size = New System.Drawing.Size(786, 405)
+        Me.TPPacMedico.TabIndex = 0
+        Me.TPPacMedico.Text = "Pacientes"
+        Me.TPPacMedico.UseVisualStyleBackColor = True
         '
-        'BtnEliminarRegMedPac
+        'BtnEliminarRegPacMed
         '
-        Me.BtnEliminarRegMedPac.Image = Global.ProyectoF.My.Resources.Resources.trash
-        Me.BtnEliminarRegMedPac.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnEliminarRegMedPac.Location = New System.Drawing.Point(689, 178)
-        Me.BtnEliminarRegMedPac.Name = "BtnEliminarRegMedPac"
-        Me.BtnEliminarRegMedPac.Size = New System.Drawing.Size(82, 36)
-        Me.BtnEliminarRegMedPac.TabIndex = 6
-        Me.BtnEliminarRegMedPac.Text = "Eliminar"
-        Me.BtnEliminarRegMedPac.UseVisualStyleBackColor = True
+        Me.BtnEliminarRegPacMed.Image = Global.ProyectoF.My.Resources.Resources.trash
+        Me.BtnEliminarRegPacMed.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnEliminarRegPacMed.Location = New System.Drawing.Point(689, 178)
+        Me.BtnEliminarRegPacMed.Name = "BtnEliminarRegPacMed"
+        Me.BtnEliminarRegPacMed.Size = New System.Drawing.Size(82, 36)
+        Me.BtnEliminarRegPacMed.TabIndex = 6
+        Me.BtnEliminarRegPacMed.Text = "Eliminar"
+        Me.BtnEliminarRegPacMed.UseVisualStyleBackColor = True
         '
-        'BtnEditarMedPac
+        'BtnEditarPacMed
         '
-        Me.BtnEditarMedPac.Image = Global.ProyectoF.My.Resources.Resources.editar
-        Me.BtnEditarMedPac.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnEditarMedPac.Location = New System.Drawing.Point(689, 122)
-        Me.BtnEditarMedPac.Name = "BtnEditarMedPac"
-        Me.BtnEditarMedPac.Size = New System.Drawing.Size(82, 37)
-        Me.BtnEditarMedPac.TabIndex = 5
-        Me.BtnEditarMedPac.Text = "Editar"
-        Me.BtnEditarMedPac.UseVisualStyleBackColor = True
+        Me.BtnEditarPacMed.Image = Global.ProyectoF.My.Resources.Resources.editar
+        Me.BtnEditarPacMed.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnEditarPacMed.Location = New System.Drawing.Point(689, 122)
+        Me.BtnEditarPacMed.Name = "BtnEditarPacMed"
+        Me.BtnEditarPacMed.Size = New System.Drawing.Size(82, 37)
+        Me.BtnEditarPacMed.TabIndex = 5
+        Me.BtnEditarPacMed.Text = "Editar"
+        Me.BtnEditarPacMed.UseVisualStyleBackColor = True
         '
-        'BtnNuevoMedPac
+        'BtnNuevoPacMed
         '
-        Me.BtnNuevoMedPac.Image = Global.ProyectoF.My.Resources.Resources.pet_care
-        Me.BtnNuevoMedPac.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnNuevoMedPac.Location = New System.Drawing.Point(689, 67)
-        Me.BtnNuevoMedPac.Name = "BtnNuevoMedPac"
-        Me.BtnNuevoMedPac.Size = New System.Drawing.Size(82, 37)
-        Me.BtnNuevoMedPac.TabIndex = 4
-        Me.BtnNuevoMedPac.Text = "Nuevo"
-        Me.BtnNuevoMedPac.UseVisualStyleBackColor = True
+        Me.BtnNuevoPacMed.Image = Global.ProyectoF.My.Resources.Resources.pet_care
+        Me.BtnNuevoPacMed.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnNuevoPacMed.Location = New System.Drawing.Point(689, 67)
+        Me.BtnNuevoPacMed.Name = "BtnNuevoPacMed"
+        Me.BtnNuevoPacMed.Size = New System.Drawing.Size(82, 37)
+        Me.BtnNuevoPacMed.TabIndex = 4
+        Me.BtnNuevoPacMed.Text = "Nuevo"
+        Me.BtnNuevoPacMed.UseVisualStyleBackColor = True
         '
         'DataGridView1
         '
@@ -150,16 +148,16 @@ Partial Class FrmPacientesM
         Me.DataGridView1.Size = New System.Drawing.Size(666, 326)
         Me.DataGridView1.TabIndex = 3
         '
-        'BtnBuscarMedPac
+        'BtnBuscarPacMed
         '
-        Me.BtnBuscarMedPac.Image = Global.ProyectoF.My.Resources.Resources.searchVet
-        Me.BtnBuscarMedPac.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnBuscarMedPac.Location = New System.Drawing.Point(605, 38)
-        Me.BtnBuscarMedPac.Name = "BtnBuscarMedPac"
-        Me.BtnBuscarMedPac.Size = New System.Drawing.Size(75, 23)
-        Me.BtnBuscarMedPac.TabIndex = 2
-        Me.BtnBuscarMedPac.Text = "Buscar"
-        Me.BtnBuscarMedPac.UseVisualStyleBackColor = True
+        Me.BtnBuscarPacMed.Image = Global.ProyectoF.My.Resources.Resources.searchVet
+        Me.BtnBuscarPacMed.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnBuscarPacMed.Location = New System.Drawing.Point(605, 38)
+        Me.BtnBuscarPacMed.Name = "BtnBuscarPacMed"
+        Me.BtnBuscarPacMed.Size = New System.Drawing.Size(75, 23)
+        Me.BtnBuscarPacMed.TabIndex = 2
+        Me.BtnBuscarPacMed.Text = "Buscar"
+        Me.BtnBuscarPacMed.UseVisualStyleBackColor = True
         '
         'TBBuscMedPac
         '
@@ -178,82 +176,82 @@ Partial Class FrmPacientesM
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Buscar paciente:"
         '
-        'TPDetPac
+        'TPDetPacMed
         '
-        Me.TPDetPac.Controls.Add(Me.TPMedPacientes)
-        Me.TPDetPac.Location = New System.Drawing.Point(4, 22)
-        Me.TPDetPac.Name = "TPDetPac"
-        Me.TPDetPac.Padding = New System.Windows.Forms.Padding(3)
-        Me.TPDetPac.Size = New System.Drawing.Size(786, 405)
-        Me.TPDetPac.TabIndex = 1
-        Me.TPDetPac.Text = "Detalles"
-        Me.TPDetPac.UseVisualStyleBackColor = True
+        Me.TPDetPacMed.Controls.Add(Me.TPPacientesMed)
+        Me.TPDetPacMed.Location = New System.Drawing.Point(4, 22)
+        Me.TPDetPacMed.Name = "TPDetPacMed"
+        Me.TPDetPacMed.Padding = New System.Windows.Forms.Padding(3)
+        Me.TPDetPacMed.Size = New System.Drawing.Size(786, 405)
+        Me.TPDetPacMed.TabIndex = 1
+        Me.TPDetPacMed.Text = "Detalles"
+        Me.TPDetPacMed.UseVisualStyleBackColor = True
         '
-        'TPMedPacientes
+        'TPPacientesMed
         '
-        Me.TPMedPacientes.Controls.Add(Me.TPPaciente)
-        Me.TPMedPacientes.Controls.Add(Me.TPExpDuenio)
-        Me.TPMedPacientes.Location = New System.Drawing.Point(23, 45)
-        Me.TPMedPacientes.Name = "TPMedPacientes"
-        Me.TPMedPacientes.SelectedIndex = 0
-        Me.TPMedPacientes.Size = New System.Drawing.Size(733, 316)
-        Me.TPMedPacientes.TabIndex = 0
+        Me.TPPacientesMed.Controls.Add(Me.TPPacienteMed)
+        Me.TPPacientesMed.Controls.Add(Me.TPExpDuenio)
+        Me.TPPacientesMed.Location = New System.Drawing.Point(27, 45)
+        Me.TPPacientesMed.Name = "TPPacientesMed"
+        Me.TPPacientesMed.SelectedIndex = 0
+        Me.TPPacientesMed.Size = New System.Drawing.Size(733, 316)
+        Me.TPPacientesMed.TabIndex = 0
         '
-        'TPPaciente
+        'TPPacienteMed
         '
-        Me.TPPaciente.Controls.Add(Me.BtnEliminarPac)
-        Me.TPPaciente.Controls.Add(Me.BtnGuardarPac)
-        Me.TPPaciente.Controls.Add(Me.TBNombrePac)
-        Me.TPPaciente.Controls.Add(Me.Label10)
-        Me.TPPaciente.Controls.Add(Me.TBFechaNac)
-        Me.TPPaciente.Controls.Add(Me.Label9)
-        Me.TPPaciente.Controls.Add(Me.TBSenPar)
-        Me.TPPaciente.Controls.Add(Me.Label8)
-        Me.TPPaciente.Controls.Add(Me.TBColorPac)
-        Me.TPPaciente.Controls.Add(Me.Label7)
-        Me.TPPaciente.Controls.Add(Me.TBRazaPac)
-        Me.TPPaciente.Controls.Add(Me.Label6)
-        Me.TPPaciente.Controls.Add(Me.TBSexoPac)
-        Me.TPPaciente.Controls.Add(Me.Label5)
-        Me.TPPaciente.Controls.Add(Me.TBEspeciePac)
-        Me.TPPaciente.Controls.Add(Me.Label3)
-        Me.TPPaciente.Controls.Add(Me.TBIdPac)
-        Me.TPPaciente.Controls.Add(Me.Label4)
-        Me.TPPaciente.Location = New System.Drawing.Point(4, 22)
-        Me.TPPaciente.Name = "TPPaciente"
-        Me.TPPaciente.Padding = New System.Windows.Forms.Padding(3)
-        Me.TPPaciente.Size = New System.Drawing.Size(725, 290)
-        Me.TPPaciente.TabIndex = 0
-        Me.TPPaciente.Text = "Paciente"
-        Me.TPPaciente.UseVisualStyleBackColor = True
+        Me.TPPacienteMed.Controls.Add(Me.BtnCancelarPacMed)
+        Me.TPPacienteMed.Controls.Add(Me.BtnGuardarPacMed)
+        Me.TPPacienteMed.Controls.Add(Me.TBNombrePacMed)
+        Me.TPPacienteMed.Controls.Add(Me.Label10)
+        Me.TPPacienteMed.Controls.Add(Me.TBFechaNacMed)
+        Me.TPPacienteMed.Controls.Add(Me.Label9)
+        Me.TPPacienteMed.Controls.Add(Me.TBSenParMed)
+        Me.TPPacienteMed.Controls.Add(Me.Label8)
+        Me.TPPacienteMed.Controls.Add(Me.TBColorPacMed)
+        Me.TPPacienteMed.Controls.Add(Me.Label7)
+        Me.TPPacienteMed.Controls.Add(Me.TBRazaPacMed)
+        Me.TPPacienteMed.Controls.Add(Me.Label6)
+        Me.TPPacienteMed.Controls.Add(Me.TBSexoPacMed)
+        Me.TPPacienteMed.Controls.Add(Me.Label5)
+        Me.TPPacienteMed.Controls.Add(Me.TBEspeciePacMed)
+        Me.TPPacienteMed.Controls.Add(Me.Label3)
+        Me.TPPacienteMed.Controls.Add(Me.TBIdPacMed)
+        Me.TPPacienteMed.Controls.Add(Me.Label4)
+        Me.TPPacienteMed.Location = New System.Drawing.Point(4, 22)
+        Me.TPPacienteMed.Name = "TPPacienteMed"
+        Me.TPPacienteMed.Padding = New System.Windows.Forms.Padding(3)
+        Me.TPPacienteMed.Size = New System.Drawing.Size(725, 290)
+        Me.TPPacienteMed.TabIndex = 0
+        Me.TPPacienteMed.Text = "Paciente"
+        Me.TPPacienteMed.UseVisualStyleBackColor = True
         '
-        'BtnEliminarPac
+        'BtnCancelarPacMed
         '
-        Me.BtnEliminarPac.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnEliminarPac.Location = New System.Drawing.Point(403, 229)
-        Me.BtnEliminarPac.Name = "BtnEliminarPac"
-        Me.BtnEliminarPac.Size = New System.Drawing.Size(82, 37)
-        Me.BtnEliminarPac.TabIndex = 36
-        Me.BtnEliminarPac.Text = "Eliminar"
-        Me.BtnEliminarPac.UseVisualStyleBackColor = True
+        Me.BtnCancelarPacMed.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnCancelarPacMed.Location = New System.Drawing.Point(403, 229)
+        Me.BtnCancelarPacMed.Name = "BtnCancelarPacMed"
+        Me.BtnCancelarPacMed.Size = New System.Drawing.Size(82, 37)
+        Me.BtnCancelarPacMed.TabIndex = 36
+        Me.BtnCancelarPacMed.Text = "Cancelar"
+        Me.BtnCancelarPacMed.UseVisualStyleBackColor = True
         '
-        'BtnGuardarPac
+        'BtnGuardarPacMed
         '
-        Me.BtnGuardarPac.AccessibleRole = System.Windows.Forms.AccessibleRole.None
-        Me.BtnGuardarPac.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnGuardarPac.Location = New System.Drawing.Point(240, 229)
-        Me.BtnGuardarPac.Name = "BtnGuardarPac"
-        Me.BtnGuardarPac.Size = New System.Drawing.Size(82, 37)
-        Me.BtnGuardarPac.TabIndex = 35
-        Me.BtnGuardarPac.Text = "Guardar"
-        Me.BtnGuardarPac.UseVisualStyleBackColor = True
+        Me.BtnGuardarPacMed.AccessibleRole = System.Windows.Forms.AccessibleRole.None
+        Me.BtnGuardarPacMed.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnGuardarPacMed.Location = New System.Drawing.Point(240, 229)
+        Me.BtnGuardarPacMed.Name = "BtnGuardarPacMed"
+        Me.BtnGuardarPacMed.Size = New System.Drawing.Size(82, 37)
+        Me.BtnGuardarPacMed.TabIndex = 35
+        Me.BtnGuardarPacMed.Text = "Guardar"
+        Me.BtnGuardarPacMed.UseVisualStyleBackColor = True
         '
-        'TBNombrePac
+        'TBNombrePacMed
         '
-        Me.TBNombrePac.Location = New System.Drawing.Point(548, 61)
-        Me.TBNombrePac.Name = "TBNombrePac"
-        Me.TBNombrePac.Size = New System.Drawing.Size(166, 20)
-        Me.TBNombrePac.TabIndex = 30
+        Me.TBNombrePacMed.Location = New System.Drawing.Point(548, 61)
+        Me.TBNombrePacMed.Name = "TBNombrePacMed"
+        Me.TBNombrePacMed.Size = New System.Drawing.Size(166, 20)
+        Me.TBNombrePacMed.TabIndex = 30
         '
         'Label10
         '
@@ -265,12 +263,12 @@ Partial Class FrmPacientesM
         Me.Label10.TabIndex = 31
         Me.Label10.Text = "Fecha Nacimiento:"
         '
-        'TBFechaNac
+        'TBFechaNacMed
         '
-        Me.TBFechaNac.Location = New System.Drawing.Point(549, 94)
-        Me.TBFechaNac.Name = "TBFechaNac"
-        Me.TBFechaNac.Size = New System.Drawing.Size(166, 20)
-        Me.TBFechaNac.TabIndex = 32
+        Me.TBFechaNacMed.Location = New System.Drawing.Point(549, 94)
+        Me.TBFechaNacMed.Name = "TBFechaNacMed"
+        Me.TBFechaNacMed.Size = New System.Drawing.Size(166, 20)
+        Me.TBFechaNacMed.TabIndex = 32
         '
         'Label9
         '
@@ -282,13 +280,13 @@ Partial Class FrmPacientesM
         Me.Label9.TabIndex = 29
         Me.Label9.Text = "Nombre:"
         '
-        'TBSenPar
+        'TBSenParMed
         '
-        Me.TBSenPar.Location = New System.Drawing.Point(549, 129)
-        Me.TBSenPar.Multiline = True
-        Me.TBSenPar.Name = "TBSenPar"
-        Me.TBSenPar.Size = New System.Drawing.Size(166, 65)
-        Me.TBSenPar.TabIndex = 34
+        Me.TBSenParMed.Location = New System.Drawing.Point(549, 129)
+        Me.TBSenParMed.Multiline = True
+        Me.TBSenParMed.Name = "TBSenParMed"
+        Me.TBSenParMed.Size = New System.Drawing.Size(166, 65)
+        Me.TBSenParMed.TabIndex = 34
         '
         'Label8
         '
@@ -300,12 +298,12 @@ Partial Class FrmPacientesM
         Me.Label8.TabIndex = 27
         Me.Label8.Text = "Color:"
         '
-        'TBColorPac
+        'TBColorPacMed
         '
-        Me.TBColorPac.Location = New System.Drawing.Point(549, 25)
-        Me.TBColorPac.Name = "TBColorPac"
-        Me.TBColorPac.Size = New System.Drawing.Size(166, 20)
-        Me.TBColorPac.TabIndex = 28
+        Me.TBColorPacMed.Location = New System.Drawing.Point(549, 25)
+        Me.TBColorPacMed.Name = "TBColorPacMed"
+        Me.TBColorPacMed.Size = New System.Drawing.Size(166, 20)
+        Me.TBColorPacMed.TabIndex = 28
         '
         'Label7
         '
@@ -317,12 +315,12 @@ Partial Class FrmPacientesM
         Me.Label7.TabIndex = 25
         Me.Label7.Text = "Raza:"
         '
-        'TBRazaPac
+        'TBRazaPacMed
         '
-        Me.TBRazaPac.Location = New System.Drawing.Point(176, 127)
-        Me.TBRazaPac.Name = "TBRazaPac"
-        Me.TBRazaPac.Size = New System.Drawing.Size(166, 20)
-        Me.TBRazaPac.TabIndex = 26
+        Me.TBRazaPacMed.Location = New System.Drawing.Point(176, 127)
+        Me.TBRazaPacMed.Name = "TBRazaPacMed"
+        Me.TBRazaPacMed.Size = New System.Drawing.Size(166, 20)
+        Me.TBRazaPacMed.TabIndex = 26
         '
         'Label6
         '
@@ -334,13 +332,13 @@ Partial Class FrmPacientesM
         Me.Label6.TabIndex = 33
         Me.Label6.Text = "Señas particulares:"
         '
-        'TBSexoPac
+        'TBSexoPacMed
         '
-        Me.TBSexoPac.FormattingEnabled = True
-        Me.TBSexoPac.Location = New System.Drawing.Point(176, 93)
-        Me.TBSexoPac.Name = "TBSexoPac"
-        Me.TBSexoPac.Size = New System.Drawing.Size(166, 21)
-        Me.TBSexoPac.TabIndex = 24
+        Me.TBSexoPacMed.FormattingEnabled = True
+        Me.TBSexoPacMed.Location = New System.Drawing.Point(176, 93)
+        Me.TBSexoPacMed.Name = "TBSexoPacMed"
+        Me.TBSexoPacMed.Size = New System.Drawing.Size(166, 21)
+        Me.TBSexoPacMed.TabIndex = 24
         '
         'Label5
         '
@@ -352,12 +350,12 @@ Partial Class FrmPacientesM
         Me.Label5.TabIndex = 23
         Me.Label5.Text = "Sexo:"
         '
-        'TBEspeciePac
+        'TBEspeciePacMed
         '
-        Me.TBEspeciePac.Location = New System.Drawing.Point(176, 59)
-        Me.TBEspeciePac.Name = "TBEspeciePac"
-        Me.TBEspeciePac.Size = New System.Drawing.Size(166, 20)
-        Me.TBEspeciePac.TabIndex = 22
+        Me.TBEspeciePacMed.Location = New System.Drawing.Point(176, 59)
+        Me.TBEspeciePacMed.Name = "TBEspeciePacMed"
+        Me.TBEspeciePacMed.Size = New System.Drawing.Size(166, 20)
+        Me.TBEspeciePacMed.TabIndex = 22
         '
         'Label3
         '
@@ -369,12 +367,12 @@ Partial Class FrmPacientesM
         Me.Label3.TabIndex = 21
         Me.Label3.Text = "Especie:"
         '
-        'TBIdPac
+        'TBIdPacMed
         '
-        Me.TBIdPac.Location = New System.Drawing.Point(176, 26)
-        Me.TBIdPac.Name = "TBIdPac"
-        Me.TBIdPac.Size = New System.Drawing.Size(98, 20)
-        Me.TBIdPac.TabIndex = 20
+        Me.TBIdPacMed.Location = New System.Drawing.Point(176, 26)
+        Me.TBIdPacMed.Name = "TBIdPacMed"
+        Me.TBIdPacMed.Size = New System.Drawing.Size(98, 20)
+        Me.TBIdPacMed.TabIndex = 20
         '
         'Label4
         '
@@ -388,19 +386,17 @@ Partial Class FrmPacientesM
         '
         'TPExpDuenio
         '
-        Me.TPExpDuenio.Controls.Add(Me.Button1)
-        Me.TPExpDuenio.Controls.Add(Me.Button2)
-        Me.TPExpDuenio.Controls.Add(Me.TBtelCliente)
+        Me.TPExpDuenio.Controls.Add(Me.TBtelClienteMed)
         Me.TPExpDuenio.Controls.Add(Me.Label11)
-        Me.TPExpDuenio.Controls.Add(Me.TBdireccionCliente)
+        Me.TPExpDuenio.Controls.Add(Me.TBdireccionClienteMed)
         Me.TPExpDuenio.Controls.Add(Me.Label12)
-        Me.TPExpDuenio.Controls.Add(Me.TBcorreoCliente)
+        Me.TPExpDuenio.Controls.Add(Me.TBcorreoClienteMed)
         Me.TPExpDuenio.Controls.Add(Me.Label13)
-        Me.TPExpDuenio.Controls.Add(Me.TBapellidoCliente)
+        Me.TPExpDuenio.Controls.Add(Me.TBapellidoClienteMed)
         Me.TPExpDuenio.Controls.Add(Me.Label14)
-        Me.TPExpDuenio.Controls.Add(Me.TBnombreCliente)
+        Me.TPExpDuenio.Controls.Add(Me.TBnombreClienteMed)
         Me.TPExpDuenio.Controls.Add(Me.Label15)
-        Me.TPExpDuenio.Controls.Add(Me.TBcedulaCliente)
+        Me.TPExpDuenio.Controls.Add(Me.TBcedulaClienteMed)
         Me.TPExpDuenio.Controls.Add(Me.Label16)
         Me.TPExpDuenio.Location = New System.Drawing.Point(4, 22)
         Me.TPExpDuenio.Name = "TPExpDuenio"
@@ -410,126 +406,105 @@ Partial Class FrmPacientesM
         Me.TPExpDuenio.Text = "Dueño"
         Me.TPExpDuenio.UseVisualStyleBackColor = True
         '
-        'Button1
+        'TBtelClienteMed
         '
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(403, 229)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(82, 37)
-        Me.Button1.TabIndex = 28
-        Me.Button1.Text = "Eliminar"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.AccessibleRole = System.Windows.Forms.AccessibleRole.None
-        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(240, 229)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(82, 37)
-        Me.Button2.TabIndex = 27
-        Me.Button2.Text = "Guardar"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'TBtelCliente
-        '
-        Me.TBtelCliente.Location = New System.Drawing.Point(548, 61)
-        Me.TBtelCliente.Name = "TBtelCliente"
-        Me.TBtelCliente.Size = New System.Drawing.Size(166, 20)
-        Me.TBtelCliente.TabIndex = 24
+        Me.TBtelClienteMed.Location = New System.Drawing.Point(548, 114)
+        Me.TBtelClienteMed.Name = "TBtelClienteMed"
+        Me.TBtelClienteMed.Size = New System.Drawing.Size(166, 20)
+        Me.TBtelClienteMed.TabIndex = 24
         '
         'Label11
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(382, 60)
+        Me.Label11.Location = New System.Drawing.Point(382, 113)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(65, 16)
         Me.Label11.TabIndex = 23
         Me.Label11.Text = "Teléfono:"
         '
-        'TBdireccionCliente
+        'TBdireccionClienteMed
         '
-        Me.TBdireccionCliente.Location = New System.Drawing.Point(549, 94)
-        Me.TBdireccionCliente.Multiline = True
-        Me.TBdireccionCliente.Name = "TBdireccionCliente"
-        Me.TBdireccionCliente.Size = New System.Drawing.Size(166, 65)
-        Me.TBdireccionCliente.TabIndex = 26
+        Me.TBdireccionClienteMed.Location = New System.Drawing.Point(549, 147)
+        Me.TBdireccionClienteMed.Multiline = True
+        Me.TBdireccionClienteMed.Name = "TBdireccionClienteMed"
+        Me.TBdireccionClienteMed.Size = New System.Drawing.Size(166, 65)
+        Me.TBdireccionClienteMed.TabIndex = 26
         '
         'Label12
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(382, 26)
+        Me.Label12.Location = New System.Drawing.Point(382, 79)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(52, 16)
         Me.Label12.TabIndex = 21
         Me.Label12.Text = "Correo:"
         '
-        'TBcorreoCliente
+        'TBcorreoClienteMed
         '
-        Me.TBcorreoCliente.Location = New System.Drawing.Point(549, 25)
-        Me.TBcorreoCliente.Name = "TBcorreoCliente"
-        Me.TBcorreoCliente.Size = New System.Drawing.Size(166, 20)
-        Me.TBcorreoCliente.TabIndex = 22
+        Me.TBcorreoClienteMed.Location = New System.Drawing.Point(549, 78)
+        Me.TBcorreoClienteMed.Name = "TBcorreoClienteMed"
+        Me.TBcorreoClienteMed.Size = New System.Drawing.Size(166, 20)
+        Me.TBcorreoClienteMed.TabIndex = 22
         '
         'Label13
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(382, 94)
+        Me.Label13.Location = New System.Drawing.Point(382, 147)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(68, 16)
         Me.Label13.TabIndex = 25
         Me.Label13.Text = "Dirección:"
         '
-        'TBapellidoCliente
+        'TBapellidoClienteMed
         '
-        Me.TBapellidoCliente.FormattingEnabled = True
-        Me.TBapellidoCliente.Location = New System.Drawing.Point(176, 93)
-        Me.TBapellidoCliente.Name = "TBapellidoCliente"
-        Me.TBapellidoCliente.Size = New System.Drawing.Size(166, 21)
-        Me.TBapellidoCliente.TabIndex = 20
+        Me.TBapellidoClienteMed.FormattingEnabled = True
+        Me.TBapellidoClienteMed.Location = New System.Drawing.Point(176, 146)
+        Me.TBapellidoClienteMed.Name = "TBapellidoClienteMed"
+        Me.TBapellidoClienteMed.Size = New System.Drawing.Size(166, 21)
+        Me.TBapellidoClienteMed.TabIndex = 20
         '
         'Label14
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(9, 94)
+        Me.Label14.Location = New System.Drawing.Point(9, 147)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(61, 16)
         Me.Label14.TabIndex = 19
         Me.Label14.Text = "Apellido:"
         '
-        'TBnombreCliente
+        'TBnombreClienteMed
         '
-        Me.TBnombreCliente.Location = New System.Drawing.Point(176, 59)
-        Me.TBnombreCliente.Name = "TBnombreCliente"
-        Me.TBnombreCliente.Size = New System.Drawing.Size(166, 20)
-        Me.TBnombreCliente.TabIndex = 18
+        Me.TBnombreClienteMed.Location = New System.Drawing.Point(176, 112)
+        Me.TBnombreClienteMed.Name = "TBnombreClienteMed"
+        Me.TBnombreClienteMed.Size = New System.Drawing.Size(166, 20)
+        Me.TBnombreClienteMed.TabIndex = 18
         '
         'Label15
         '
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(9, 60)
+        Me.Label15.Location = New System.Drawing.Point(9, 113)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(60, 16)
         Me.Label15.TabIndex = 17
         Me.Label15.Text = "Nombre:"
         '
-        'TBcedulaCliente
+        'TBcedulaClienteMed
         '
-        Me.TBcedulaCliente.Location = New System.Drawing.Point(176, 26)
-        Me.TBcedulaCliente.Name = "TBcedulaCliente"
-        Me.TBcedulaCliente.Size = New System.Drawing.Size(98, 20)
-        Me.TBcedulaCliente.TabIndex = 16
+        Me.TBcedulaClienteMed.Location = New System.Drawing.Point(176, 79)
+        Me.TBcedulaClienteMed.Name = "TBcedulaClienteMed"
+        Me.TBcedulaClienteMed.Size = New System.Drawing.Size(98, 20)
+        Me.TBcedulaClienteMed.TabIndex = 16
         '
         'Label16
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(9, 27)
+        Me.Label16.Location = New System.Drawing.Point(9, 80)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(54, 16)
         Me.Label16.TabIndex = 15
@@ -568,24 +543,24 @@ Partial Class FrmPacientesM
         Me.BtnCerrar.TabIndex = 0
         Me.BtnCerrar.TabStop = False
         '
-        'FrmMedico
+        'FrmPacientesM
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(794, 469)
-        Me.Controls.Add(Me.TCPacientes)
+        Me.Controls.Add(Me.TCPacientesMed)
         Me.Controls.Add(Me.PnlTitle)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "FrmMedico"
+        Me.Name = "FrmPacientesM"
         Me.Text = "FrmExpedientePacientes"
-        Me.TCPacientes.ResumeLayout(False)
-        Me.TPMedico.ResumeLayout(False)
-        Me.TPMedico.PerformLayout()
+        Me.TCPacientesMed.ResumeLayout(False)
+        Me.TPPacMedico.ResumeLayout(False)
+        Me.TPPacMedico.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TPDetPac.ResumeLayout(False)
-        Me.TPMedPacientes.ResumeLayout(False)
-        Me.TPPaciente.ResumeLayout(False)
-        Me.TPPaciente.PerformLayout()
+        Me.TPDetPacMed.ResumeLayout(False)
+        Me.TPPacientesMed.ResumeLayout(False)
+        Me.TPPacienteMed.ResumeLayout(False)
+        Me.TPPacienteMed.PerformLayout()
         Me.TPExpDuenio.ResumeLayout(False)
         Me.TPExpDuenio.PerformLayout()
         Me.PnlTitle.ResumeLayout(False)
@@ -596,51 +571,49 @@ Partial Class FrmPacientesM
     End Sub
 
     Friend WithEvents BtnCerrar As PictureBox
-    Friend WithEvents BtnEliminarRegMedPac As Button
-    Friend WithEvents BtnEditarMedPac As Button
-    Friend WithEvents BtnNuevoMedPac As Button
-    Friend WithEvents BtnBuscarMedPac As Button
-    Friend WithEvents TCPacientes As TabControl
-    Friend WithEvents TPMedico As TabPage
+    Friend WithEvents BtnEliminarRegPacMed As Button
+    Friend WithEvents BtnEditarPacMed As Button
+    Friend WithEvents BtnNuevoPacMed As Button
+    Friend WithEvents BtnBuscarPacMed As Button
+    Friend WithEvents TCPacientesMed As TabControl
+    Friend WithEvents TPPacMedico As TabPage
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents TBBuscMedPac As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents TPDetPac As TabPage
+    Friend WithEvents TPDetPacMed As TabPage
     Friend WithEvents PnlTitle As Panel
     Friend WithEvents Label1 As Label
-    Friend WithEvents TPMedPacientes As TabControl
-    Friend WithEvents TPPaciente As TabPage
-    Friend WithEvents TBNombrePac As TextBox
+    Friend WithEvents TPPacientesMed As TabControl
+    Friend WithEvents TPPacienteMed As TabPage
+    Friend WithEvents TBNombrePacMed As TextBox
     Friend WithEvents Label10 As Label
-    Friend WithEvents TBFechaNac As TextBox
+    Friend WithEvents TBFechaNacMed As TextBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents TBSenPar As TextBox
+    Friend WithEvents TBSenParMed As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents TBColorPac As TextBox
+    Friend WithEvents TBColorPacMed As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents TBRazaPac As TextBox
+    Friend WithEvents TBRazaPacMed As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents TBSexoPac As ComboBox
+    Friend WithEvents TBSexoPacMed As ComboBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents TBEspeciePac As TextBox
+    Friend WithEvents TBEspeciePacMed As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TBIdPac As TextBox
+    Friend WithEvents TBIdPacMed As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents TPExpDuenio As TabPage
-    Friend WithEvents TBtelCliente As TextBox
+    Friend WithEvents TBtelClienteMed As TextBox
     Friend WithEvents Label11 As Label
-    Friend WithEvents TBdireccionCliente As TextBox
+    Friend WithEvents TBdireccionClienteMed As TextBox
     Friend WithEvents Label12 As Label
-    Friend WithEvents TBcorreoCliente As TextBox
+    Friend WithEvents TBcorreoClienteMed As TextBox
     Friend WithEvents Label13 As Label
-    Friend WithEvents TBapellidoCliente As ComboBox
+    Friend WithEvents TBapellidoClienteMed As ComboBox
     Friend WithEvents Label14 As Label
-    Friend WithEvents TBnombreCliente As TextBox
+    Friend WithEvents TBnombreClienteMed As TextBox
     Friend WithEvents Label15 As Label
-    Friend WithEvents TBcedulaCliente As TextBox
+    Friend WithEvents TBcedulaClienteMed As TextBox
     Friend WithEvents Label16 As Label
-    Friend WithEvents BtnEliminarPac As Button
-    Friend WithEvents BtnGuardarPac As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents BtnCancelarPacMed As Button
+    Friend WithEvents BtnGuardarPacMed As Button
 End Class

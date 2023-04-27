@@ -22,22 +22,22 @@ Partial Class FrmClientes
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.BtnEliminarPac = New System.Windows.Forms.Button()
-        Me.BtnGuardarPac = New System.Windows.Forms.Button()
+        Me.BtnCancelarClt = New System.Windows.Forms.Button()
+        Me.BtnGuardarClt = New System.Windows.Forms.Button()
         Me.TBtelCliente = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TBdireccionCliente = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TCClientes = New System.Windows.Forms.TabControl()
-        Me.TPPac = New System.Windows.Forms.TabPage()
-        Me.BtnEliminarRegCli = New System.Windows.Forms.Button()
-        Me.BtnEditarCli = New System.Windows.Forms.Button()
-        Me.BtnNuevoCli = New System.Windows.Forms.Button()
+        Me.TPClt = New System.Windows.Forms.TabPage()
+        Me.BtnEliminarRegClt = New System.Windows.Forms.Button()
+        Me.BtnEditarClt = New System.Windows.Forms.Button()
+        Me.BtnNuevoClt = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.BtnBuscarCli = New System.Windows.Forms.Button()
+        Me.BtnBuscarClt = New System.Windows.Forms.Button()
         Me.TBBuscCli = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TPDetPac = New System.Windows.Forms.TabPage()
+        Me.TPDetClt = New System.Windows.Forms.TabPage()
         Me.TBcorreoCliente = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TBapellidoCliente = New System.Windows.Forms.ComboBox()
@@ -50,33 +50,33 @@ Partial Class FrmClientes
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BtnCerrar = New System.Windows.Forms.PictureBox()
         Me.TCClientes.SuspendLayout()
-        Me.TPPac.SuspendLayout()
+        Me.TPClt.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TPDetPac.SuspendLayout()
+        Me.TPDetClt.SuspendLayout()
         Me.PnlTitle.SuspendLayout()
         CType(Me.BtnCerrar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'BtnEliminarPac
+        'BtnCancelarClt
         '
-        Me.BtnEliminarPac.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnEliminarPac.Location = New System.Drawing.Point(434, 300)
-        Me.BtnEliminarPac.Name = "BtnEliminarPac"
-        Me.BtnEliminarPac.Size = New System.Drawing.Size(82, 37)
-        Me.BtnEliminarPac.TabIndex = 14
-        Me.BtnEliminarPac.Text = "Eliminar"
-        Me.BtnEliminarPac.UseVisualStyleBackColor = True
+        Me.BtnCancelarClt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnCancelarClt.Location = New System.Drawing.Point(434, 300)
+        Me.BtnCancelarClt.Name = "BtnCancelarClt"
+        Me.BtnCancelarClt.Size = New System.Drawing.Size(82, 37)
+        Me.BtnCancelarClt.TabIndex = 14
+        Me.BtnCancelarClt.Text = "Cancelar"
+        Me.BtnCancelarClt.UseVisualStyleBackColor = True
         '
-        'BtnGuardarPac
+        'BtnGuardarClt
         '
-        Me.BtnGuardarPac.AccessibleRole = System.Windows.Forms.AccessibleRole.None
-        Me.BtnGuardarPac.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnGuardarPac.Location = New System.Drawing.Point(271, 300)
-        Me.BtnGuardarPac.Name = "BtnGuardarPac"
-        Me.BtnGuardarPac.Size = New System.Drawing.Size(82, 37)
-        Me.BtnGuardarPac.TabIndex = 13
-        Me.BtnGuardarPac.Text = "Guardar"
-        Me.BtnGuardarPac.UseVisualStyleBackColor = True
+        Me.BtnGuardarClt.AccessibleRole = System.Windows.Forms.AccessibleRole.None
+        Me.BtnGuardarClt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnGuardarClt.Location = New System.Drawing.Point(271, 300)
+        Me.BtnGuardarClt.Name = "BtnGuardarClt"
+        Me.BtnGuardarClt.Size = New System.Drawing.Size(82, 37)
+        Me.BtnGuardarClt.TabIndex = 13
+        Me.BtnGuardarClt.Text = "Guardar"
+        Me.BtnGuardarClt.UseVisualStyleBackColor = True
         '
         'TBtelCliente
         '
@@ -115,8 +115,8 @@ Partial Class FrmClientes
         '
         'TCClientes
         '
-        Me.TCClientes.Controls.Add(Me.TPPac)
-        Me.TCClientes.Controls.Add(Me.TPDetPac)
+        Me.TCClientes.Controls.Add(Me.TPClt)
+        Me.TCClientes.Controls.Add(Me.TPDetClt)
         Me.TCClientes.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TCClientes.Location = New System.Drawing.Point(0, 38)
         Me.TCClientes.Name = "TCClientes"
@@ -124,55 +124,55 @@ Partial Class FrmClientes
         Me.TCClientes.Size = New System.Drawing.Size(794, 431)
         Me.TCClientes.TabIndex = 5
         '
-        'TPPac
+        'TPClt
         '
-        Me.TPPac.Controls.Add(Me.BtnEliminarRegCli)
-        Me.TPPac.Controls.Add(Me.BtnEditarCli)
-        Me.TPPac.Controls.Add(Me.BtnNuevoCli)
-        Me.TPPac.Controls.Add(Me.DataGridView1)
-        Me.TPPac.Controls.Add(Me.BtnBuscarCli)
-        Me.TPPac.Controls.Add(Me.TBBuscCli)
-        Me.TPPac.Controls.Add(Me.Label2)
-        Me.TPPac.Location = New System.Drawing.Point(4, 22)
-        Me.TPPac.Name = "TPPac"
-        Me.TPPac.Padding = New System.Windows.Forms.Padding(3)
-        Me.TPPac.Size = New System.Drawing.Size(786, 405)
-        Me.TPPac.TabIndex = 0
-        Me.TPPac.Text = "Pacientes"
-        Me.TPPac.UseVisualStyleBackColor = True
+        Me.TPClt.Controls.Add(Me.BtnEliminarRegClt)
+        Me.TPClt.Controls.Add(Me.BtnEditarClt)
+        Me.TPClt.Controls.Add(Me.BtnNuevoClt)
+        Me.TPClt.Controls.Add(Me.DataGridView1)
+        Me.TPClt.Controls.Add(Me.BtnBuscarClt)
+        Me.TPClt.Controls.Add(Me.TBBuscCli)
+        Me.TPClt.Controls.Add(Me.Label2)
+        Me.TPClt.Location = New System.Drawing.Point(4, 22)
+        Me.TPClt.Name = "TPClt"
+        Me.TPClt.Padding = New System.Windows.Forms.Padding(3)
+        Me.TPClt.Size = New System.Drawing.Size(786, 405)
+        Me.TPClt.TabIndex = 0
+        Me.TPClt.Text = "Clientes"
+        Me.TPClt.UseVisualStyleBackColor = True
         '
-        'BtnEliminarRegCli
+        'BtnEliminarRegClt
         '
-        Me.BtnEliminarRegCli.Image = Global.ProyectoF.My.Resources.Resources.trash
-        Me.BtnEliminarRegCli.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnEliminarRegCli.Location = New System.Drawing.Point(689, 178)
-        Me.BtnEliminarRegCli.Name = "BtnEliminarRegCli"
-        Me.BtnEliminarRegCli.Size = New System.Drawing.Size(82, 36)
-        Me.BtnEliminarRegCli.TabIndex = 6
-        Me.BtnEliminarRegCli.Text = "Eliminar"
-        Me.BtnEliminarRegCli.UseVisualStyleBackColor = True
+        Me.BtnEliminarRegClt.Image = Global.ProyectoF.My.Resources.Resources.trash
+        Me.BtnEliminarRegClt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnEliminarRegClt.Location = New System.Drawing.Point(689, 178)
+        Me.BtnEliminarRegClt.Name = "BtnEliminarRegClt"
+        Me.BtnEliminarRegClt.Size = New System.Drawing.Size(82, 36)
+        Me.BtnEliminarRegClt.TabIndex = 6
+        Me.BtnEliminarRegClt.Text = "Eliminar"
+        Me.BtnEliminarRegClt.UseVisualStyleBackColor = True
         '
-        'BtnEditarCli
+        'BtnEditarClt
         '
-        Me.BtnEditarCli.Image = Global.ProyectoF.My.Resources.Resources.editar
-        Me.BtnEditarCli.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnEditarCli.Location = New System.Drawing.Point(689, 122)
-        Me.BtnEditarCli.Name = "BtnEditarCli"
-        Me.BtnEditarCli.Size = New System.Drawing.Size(82, 37)
-        Me.BtnEditarCli.TabIndex = 5
-        Me.BtnEditarCli.Text = "Editar"
-        Me.BtnEditarCli.UseVisualStyleBackColor = True
+        Me.BtnEditarClt.Image = Global.ProyectoF.My.Resources.Resources.editar
+        Me.BtnEditarClt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnEditarClt.Location = New System.Drawing.Point(689, 122)
+        Me.BtnEditarClt.Name = "BtnEditarClt"
+        Me.BtnEditarClt.Size = New System.Drawing.Size(82, 37)
+        Me.BtnEditarClt.TabIndex = 5
+        Me.BtnEditarClt.Text = "Editar"
+        Me.BtnEditarClt.UseVisualStyleBackColor = True
         '
-        'BtnNuevoCli
+        'BtnNuevoClt
         '
-        Me.BtnNuevoCli.Image = Global.ProyectoF.My.Resources.Resources.addUser
-        Me.BtnNuevoCli.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnNuevoCli.Location = New System.Drawing.Point(689, 67)
-        Me.BtnNuevoCli.Name = "BtnNuevoCli"
-        Me.BtnNuevoCli.Size = New System.Drawing.Size(82, 37)
-        Me.BtnNuevoCli.TabIndex = 4
-        Me.BtnNuevoCli.Text = "Nuevo"
-        Me.BtnNuevoCli.UseVisualStyleBackColor = True
+        Me.BtnNuevoClt.Image = Global.ProyectoF.My.Resources.Resources.addUser
+        Me.BtnNuevoClt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnNuevoClt.Location = New System.Drawing.Point(689, 67)
+        Me.BtnNuevoClt.Name = "BtnNuevoClt"
+        Me.BtnNuevoClt.Size = New System.Drawing.Size(82, 37)
+        Me.BtnNuevoClt.TabIndex = 4
+        Me.BtnNuevoClt.Text = "Nuevo"
+        Me.BtnNuevoClt.UseVisualStyleBackColor = True
         '
         'DataGridView1
         '
@@ -182,16 +182,16 @@ Partial Class FrmClientes
         Me.DataGridView1.Size = New System.Drawing.Size(666, 326)
         Me.DataGridView1.TabIndex = 3
         '
-        'BtnBuscarCli
+        'BtnBuscarClt
         '
-        Me.BtnBuscarCli.Image = Global.ProyectoF.My.Resources.Resources.searchUser
-        Me.BtnBuscarCli.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnBuscarCli.Location = New System.Drawing.Point(605, 38)
-        Me.BtnBuscarCli.Name = "BtnBuscarCli"
-        Me.BtnBuscarCli.Size = New System.Drawing.Size(75, 23)
-        Me.BtnBuscarCli.TabIndex = 2
-        Me.BtnBuscarCli.Text = "Buscar"
-        Me.BtnBuscarCli.UseVisualStyleBackColor = True
+        Me.BtnBuscarClt.Image = Global.ProyectoF.My.Resources.Resources.searchUser
+        Me.BtnBuscarClt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnBuscarClt.Location = New System.Drawing.Point(605, 38)
+        Me.BtnBuscarClt.Name = "BtnBuscarClt"
+        Me.BtnBuscarClt.Size = New System.Drawing.Size(75, 23)
+        Me.BtnBuscarClt.TabIndex = 2
+        Me.BtnBuscarClt.Text = "Buscar"
+        Me.BtnBuscarClt.UseVisualStyleBackColor = True
         '
         'TBBuscCli
         '
@@ -210,29 +210,29 @@ Partial Class FrmClientes
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Buscar cliente:"
         '
-        'TPDetPac
+        'TPDetClt
         '
-        Me.TPDetPac.Controls.Add(Me.BtnEliminarPac)
-        Me.TPDetPac.Controls.Add(Me.BtnGuardarPac)
-        Me.TPDetPac.Controls.Add(Me.TBtelCliente)
-        Me.TPDetPac.Controls.Add(Me.Label9)
-        Me.TPDetPac.Controls.Add(Me.TBdireccionCliente)
-        Me.TPDetPac.Controls.Add(Me.Label8)
-        Me.TPDetPac.Controls.Add(Me.TBcorreoCliente)
-        Me.TPDetPac.Controls.Add(Me.Label6)
-        Me.TPDetPac.Controls.Add(Me.TBapellidoCliente)
-        Me.TPDetPac.Controls.Add(Me.Label5)
-        Me.TPDetPac.Controls.Add(Me.TBnombreCliente)
-        Me.TPDetPac.Controls.Add(Me.Label3)
-        Me.TPDetPac.Controls.Add(Me.TBcedulaCliente)
-        Me.TPDetPac.Controls.Add(Me.Label4)
-        Me.TPDetPac.Location = New System.Drawing.Point(4, 22)
-        Me.TPDetPac.Name = "TPDetPac"
-        Me.TPDetPac.Padding = New System.Windows.Forms.Padding(3)
-        Me.TPDetPac.Size = New System.Drawing.Size(786, 405)
-        Me.TPDetPac.TabIndex = 1
-        Me.TPDetPac.Text = "Detalles"
-        Me.TPDetPac.UseVisualStyleBackColor = True
+        Me.TPDetClt.Controls.Add(Me.BtnCancelarClt)
+        Me.TPDetClt.Controls.Add(Me.BtnGuardarClt)
+        Me.TPDetClt.Controls.Add(Me.TBtelCliente)
+        Me.TPDetClt.Controls.Add(Me.Label9)
+        Me.TPDetClt.Controls.Add(Me.TBdireccionCliente)
+        Me.TPDetClt.Controls.Add(Me.Label8)
+        Me.TPDetClt.Controls.Add(Me.TBcorreoCliente)
+        Me.TPDetClt.Controls.Add(Me.Label6)
+        Me.TPDetClt.Controls.Add(Me.TBapellidoCliente)
+        Me.TPDetClt.Controls.Add(Me.Label5)
+        Me.TPDetClt.Controls.Add(Me.TBnombreCliente)
+        Me.TPDetClt.Controls.Add(Me.Label3)
+        Me.TPDetClt.Controls.Add(Me.TBcedulaCliente)
+        Me.TPDetClt.Controls.Add(Me.Label4)
+        Me.TPDetClt.Location = New System.Drawing.Point(4, 22)
+        Me.TPDetClt.Name = "TPDetClt"
+        Me.TPDetClt.Padding = New System.Windows.Forms.Padding(3)
+        Me.TPDetClt.Size = New System.Drawing.Size(786, 405)
+        Me.TPDetClt.TabIndex = 1
+        Me.TPDetClt.Text = "Detalles"
+        Me.TPDetClt.UseVisualStyleBackColor = True
         '
         'TBcorreoCliente
         '
@@ -347,11 +347,11 @@ Partial Class FrmClientes
         Me.Name = "FrmClientes"
         Me.Text = "FrmClientes"
         Me.TCClientes.ResumeLayout(False)
-        Me.TPPac.ResumeLayout(False)
-        Me.TPPac.PerformLayout()
+        Me.TPClt.ResumeLayout(False)
+        Me.TPClt.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TPDetPac.ResumeLayout(False)
-        Me.TPDetPac.PerformLayout()
+        Me.TPDetClt.ResumeLayout(False)
+        Me.TPDetClt.PerformLayout()
         Me.PnlTitle.ResumeLayout(False)
         Me.PnlTitle.PerformLayout()
         CType(Me.BtnCerrar, System.ComponentModel.ISupportInitialize).EndInit()
@@ -360,21 +360,21 @@ Partial Class FrmClientes
     End Sub
 
     Friend WithEvents BtnCerrar As PictureBox
-    Friend WithEvents BtnEliminarRegCli As Button
-    Friend WithEvents BtnEditarCli As Button
-    Friend WithEvents BtnNuevoCli As Button
-    Friend WithEvents BtnBuscarCli As Button
-    Friend WithEvents BtnEliminarPac As Button
-    Friend WithEvents BtnGuardarPac As Button
+    Friend WithEvents BtnEliminarRegClt As Button
+    Friend WithEvents BtnEditarClt As Button
+    Friend WithEvents BtnNuevoClt As Button
+    Friend WithEvents BtnBuscarClt As Button
+    Friend WithEvents BtnCancelarClt As Button
+    Friend WithEvents BtnGuardarClt As Button
     Friend WithEvents TBtelCliente As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents TCClientes As TabControl
-    Friend WithEvents TPPac As TabPage
+    Friend WithEvents TPClt As TabPage
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents TBBuscCli As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents TPDetPac As TabPage
+    Friend WithEvents TPDetClt As TabPage
     Friend WithEvents TBcorreoCliente As TextBox
     Friend WithEvents TBdireccionCliente As TextBox
     Friend WithEvents Label6 As Label

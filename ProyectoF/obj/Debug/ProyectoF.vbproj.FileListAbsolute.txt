@@ -60,9 +60,7 @@ C:\Users\DELL\Desktop\DBD-VetLosArcos\ProyectoF\bin\Debug\ProyectoF.pdb
 C:\Users\DELL\Desktop\DBD-VetLosArcos\ProyectoF\bin\Debug\ProyectoF.xml
 C:\Users\DELL\Desktop\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.vbproj.AssemblyReference.cache
 C:\Users\DELL\Desktop\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.FrmLogin.resources
-C:\Users\DELL\Desktop\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.FrmPacientes.resources
 C:\Users\DELL\Desktop\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.FrmRecepcionista.resources
-C:\Users\DELL\Desktop\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.FrmSalida.resources
 C:\Users\DELL\Desktop\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.Resources.resources
 C:\Users\DELL\Desktop\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.vbproj.GenerateResource.cache
 C:\Users\DELL\Desktop\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.vbproj.CoreCompileInputs.cache
@@ -75,3 +73,6 @@ C:\Users\Diego\Desktop\RepositoriosVB\Disenios\DBD-ProyectoFinal\ProyectoF\obj\D
 C:\Users\Diego\Desktop\RepositoriosVB\Disenios\DBD-ProyectoFinal\ProyectoF\obj\Debug\ProyectoF.FrmPacientesR.resources
 C:\Users\Diego\Desktop\RepositoriosVB\Disenios\DBD-ProyectoFinal\ProyectoF\obj\Debug\ProyectoF.FrmRecepcionista.resources
 C:\Users\Diego\Desktop\RepositoriosVB\Disenios\DBD-ProyectoFinal\ProyectoF\obj\Debug\ProyectoF.FrmMedico.resources
+C:\Users\DELL\Desktop\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.FrmPacientesM.resources
+C:\Users\DELL\Desktop\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.FrmPacientesR.resources
+C:\Users\DELL\Desktop\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.FrmMedico.resources
