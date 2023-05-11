@@ -53,6 +53,10 @@ Public Class FrmLogin
         ReleaseCapture()
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
+
+    Private Sub TitleBar_Paint(sender As Object, e As PaintEventArgs) Handles TitleBar.Paint
+
+    End Sub
 #End Region
 
 

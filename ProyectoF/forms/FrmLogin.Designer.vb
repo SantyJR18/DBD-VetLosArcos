@@ -24,27 +24,27 @@ Partial Class FrmLogin
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmLogin))
         Me.TitleBar = New System.Windows.Forms.Panel()
-        Me.BtnMinimize = New System.Windows.Forms.PictureBox()
-        Me.BtnClose = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.BtnLogin = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.BtnCancelar = New System.Windows.Forms.Button()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.BtnMinimize = New System.Windows.Forms.PictureBox()
+        Me.BtnClose = New System.Windows.Forms.PictureBox()
         Me.TitleBar.SuspendLayout()
+        Me.Panel1.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BtnMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BtnClose, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'TitleBar
@@ -59,28 +59,6 @@ Partial Class FrmLogin
         Me.TitleBar.Size = New System.Drawing.Size(427, 50)
         Me.TitleBar.TabIndex = 0
         '
-        'BtnMinimize
-        '
-        Me.BtnMinimize.Image = Global.ProyectoF.My.Resources.Resources.minusIcon
-        Me.BtnMinimize.Location = New System.Drawing.Point(353, 12)
-        Me.BtnMinimize.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.BtnMinimize.Name = "BtnMinimize"
-        Me.BtnMinimize.Size = New System.Drawing.Size(25, 25)
-        Me.BtnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.BtnMinimize.TabIndex = 3
-        Me.BtnMinimize.TabStop = False
-        '
-        'BtnClose
-        '
-        Me.BtnClose.Image = CType(resources.GetObject("BtnClose.Image"), System.Drawing.Image)
-        Me.BtnClose.Location = New System.Drawing.Point(384, 12)
-        Me.BtnClose.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.BtnClose.Name = "BtnClose"
-        Me.BtnClose.Size = New System.Drawing.Size(25, 25)
-        Me.BtnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.BtnClose.TabIndex = 2
-        Me.BtnClose.TabStop = False
-        '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.DodgerBlue
@@ -90,17 +68,6 @@ Partial Class FrmLogin
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(427, 15)
         Me.Panel2.TabIndex = 1
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = Global.ProyectoF.My.Resources.Resources.HuellaAnimal
-        Me.PictureBox3.Location = New System.Drawing.Point(116, 124)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(195, 174)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 4
-        Me.PictureBox3.TabStop = False
         '
         'BtnLogin
         '
@@ -148,28 +115,6 @@ Partial Class FrmLogin
         Me.TextBox1.Size = New System.Drawing.Size(240, 21)
         Me.TextBox1.TabIndex = 1
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.ProyectoF.My.Resources.Resources.veterinario
-        Me.PictureBox1.Location = New System.Drawing.Point(4, 5)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(49, 42)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 13
-        Me.PictureBox1.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(4, 5)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(49, 42)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 14
-        Me.PictureBox2.TabStop = False
-        '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.White
@@ -206,6 +151,61 @@ Partial Class FrmLogin
         Me.BtnCancelar.Text = "Cancelar"
         Me.BtnCancelar.UseVisualStyleBackColor = False
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(4, 5)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(49, 42)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 14
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.ProyectoF.My.Resources.Resources.veterinario
+        Me.PictureBox1.Location = New System.Drawing.Point(4, 5)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(49, 42)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 13
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = Global.ProyectoF.My.Resources.Resources.HuellaAnimal
+        Me.PictureBox3.Location = New System.Drawing.Point(116, 124)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(195, 174)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 4
+        Me.PictureBox3.TabStop = False
+        '
+        'BtnMinimize
+        '
+        Me.BtnMinimize.Image = Global.ProyectoF.My.Resources.Resources.minusIcon
+        Me.BtnMinimize.Location = New System.Drawing.Point(353, 12)
+        Me.BtnMinimize.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.BtnMinimize.Name = "BtnMinimize"
+        Me.BtnMinimize.Size = New System.Drawing.Size(25, 25)
+        Me.BtnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.BtnMinimize.TabIndex = 3
+        Me.BtnMinimize.TabStop = False
+        '
+        'BtnClose
+        '
+        Me.BtnClose.Image = CType(resources.GetObject("BtnClose.Image"), System.Drawing.Image)
+        Me.BtnClose.Location = New System.Drawing.Point(384, 12)
+        Me.BtnClose.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.BtnClose.Name = "BtnClose"
+        Me.BtnClose.Size = New System.Drawing.Size(25, 25)
+        Me.BtnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.BtnClose.TabIndex = 2
+        Me.BtnClose.TabStop = False
+        '
         'FrmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -227,15 +227,15 @@ Partial Class FrmLogin
         Me.Name = "FrmLogin"
         Me.Text = "Login"
         Me.TitleBar.ResumeLayout(False)
-        CType(Me.BtnMinimize, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BtnClose, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BtnMinimize, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BtnClose, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

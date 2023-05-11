@@ -102,6 +102,11 @@ ProyectoF
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:ProyectoF.My.Resources.Resources.logoVetPreview">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:ProyectoF.My.Resources.Resources.maxIcon">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.

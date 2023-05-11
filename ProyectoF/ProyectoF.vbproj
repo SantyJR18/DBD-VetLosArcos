@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{A96C3333-7000-40CB-BA91-05797ADED630}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>ProyectoF.FrmLogin</StartupObject>
+    <StartupObject>ProyectoF.My.MyApplication</StartupObject>
     <RootNamespace>ProyectoF</RootNamespace>
     <AssemblyName>ProyectoF</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -79,6 +79,12 @@
     <Compile Include="forms\FrmClientes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="forms\FrmMenu.Designer.vb">
+      <DependentUpon>FrmMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FrmMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="forms\FrmPacientesM.Designer.vb">
       <DependentUpon>FrmPacientesM.vb</DependentUpon>
     </Compile>
@@ -119,6 +125,9 @@
     <EmbeddedResource Include="forms\FrmClientes.resx">
       <DependentUpon>FrmClientes.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\FrmMenu.resx">
+      <DependentUpon>FrmMenu.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\FrmPacientesM.resx">
       <DependentUpon>FrmPacientesM.vb</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +164,7 @@
     <None Include="Resources\editar.png" />
     <Content Include="Resources\garras.ico" />
     <Content Include="Resources\logoVet.jpg" />
+    <Content Include="Resources\logoVetPreview.png" />
     <Content Include="Resources\medicina24.png" />
     <Content Include="Resources\medicine.png" />
     <Content Include="Resources\minusIcon.png" />
