@@ -61,7 +61,7 @@ Partial Class FrmLogin
         '
         'BtnMinimize
         '
-
+        Me.BtnMinimize.Image = Global.ProyectoF.My.Resources.Resources.minusIcon
         Me.BtnMinimize.Location = New System.Drawing.Point(353, 12)
         Me.BtnMinimize.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnMinimize.Name = "BtnMinimize"
@@ -72,7 +72,7 @@ Partial Class FrmLogin
         '
         'BtnClose
         '
-        Me.BtnClose.Image = Global.ProyectoF.My.Resources.Resources.reject
+        Me.BtnClose.Image = CType(resources.GetObject("BtnClose.Image"), System.Drawing.Image)
         Me.BtnClose.Location = New System.Drawing.Point(384, 12)
         Me.BtnClose.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnClose.Name = "BtnClose"
@@ -93,7 +93,7 @@ Partial Class FrmLogin
         '
         'PictureBox3
         '
-
+        Me.PictureBox3.Image = Global.ProyectoF.My.Resources.Resources.HuellaAnimal
         Me.PictureBox3.Location = New System.Drawing.Point(116, 124)
         Me.PictureBox3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox3.Name = "PictureBox3"
@@ -105,7 +105,7 @@ Partial Class FrmLogin
         'BtnLogin
         '
         Me.BtnLogin.BackColor = System.Drawing.Color.DodgerBlue
-        Me.BtnLogin.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnLogin.Font = New System.Drawing.Font("Segoe UI Semibold", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnLogin.ForeColor = System.Drawing.SystemColors.Window
         Me.BtnLogin.Location = New System.Drawing.Point(61, 494)
         Me.BtnLogin.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -118,10 +118,10 @@ Partial Class FrmLogin
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(99, 68)
+        Me.Label1.Font = New System.Drawing.Font("High Tower Text", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(89, 68)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(256, 32)
+        Me.Label1.Size = New System.Drawing.Size(248, 28)
         Me.Label1.TabIndex = 10
         Me.Label1.Text = "Veterinaria Los Arcos"
         '
@@ -132,7 +132,7 @@ Partial Class FrmLogin
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Panel1.Location = New System.Drawing.Point(61, 350)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(305, 53)
         Me.Panel1.TabIndex = 12
@@ -141,18 +141,18 @@ Partial Class FrmLogin
         '
         Me.TextBox1.BackColor = System.Drawing.Color.White
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Font = New System.Drawing.Font("High Tower Text", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.Location = New System.Drawing.Point(61, 15)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(240, 23)
+        Me.TextBox1.Size = New System.Drawing.Size(240, 21)
         Me.TextBox1.TabIndex = 1
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Image = Global.ProyectoF.My.Resources.Resources.veterinario
         Me.PictureBox1.Location = New System.Drawing.Point(4, 5)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(49, 42)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -163,7 +163,7 @@ Partial Class FrmLogin
         '
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
         Me.PictureBox2.Location = New System.Drawing.Point(4, 5)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(49, 42)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -176,7 +176,7 @@ Partial Class FrmLogin
         Me.Panel3.Controls.Add(Me.TextBox2)
         Me.Panel3.Controls.Add(Me.PictureBox2)
         Me.Panel3.Location = New System.Drawing.Point(61, 402)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(305, 53)
         Me.Panel3.TabIndex = 15
@@ -185,21 +185,21 @@ Partial Class FrmLogin
         '
         Me.TextBox2.BackColor = System.Drawing.Color.White
         Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.Font = New System.Drawing.Font("High Tower Text", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox2.Location = New System.Drawing.Point(61, 15)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(240, 23)
+        Me.TextBox2.Size = New System.Drawing.Size(240, 21)
         Me.TextBox2.TabIndex = 2
         Me.TextBox2.UseSystemPasswordChar = True
         '
         'BtnCancelar
         '
         Me.BtnCancelar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.BtnCancelar.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCancelar.Font = New System.Drawing.Font("Segoe UI Semibold", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnCancelar.ForeColor = System.Drawing.SystemColors.Window
         Me.BtnCancelar.Location = New System.Drawing.Point(61, 550)
-        Me.BtnCancelar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnCancelar.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnCancelar.Name = "BtnCancelar"
         Me.BtnCancelar.Size = New System.Drawing.Size(305, 49)
         Me.BtnCancelar.TabIndex = 4

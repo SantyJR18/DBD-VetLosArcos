@@ -169,6 +169,7 @@
     <None Include="Resources\trash.png" />
     <Content Include="Resources\vac.png" />
     <Content Include="Resources\vac24.png" />
+    <Content Include="Resources\veterinario.png" />
     <Content Include="Resources\volver.png" />
   </ItemGroup>
   <ItemGroup>

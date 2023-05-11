@@ -150,7 +150,6 @@ Partial Class FrmPacientesM
         '
         'BtnBuscarPacMed
         '
-        Me.BtnBuscarPacMed.Image = Global.ProyectoF.My.Resources.Resources.searchVet
         Me.BtnBuscarPacMed.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnBuscarPacMed.Location = New System.Drawing.Point(605, 38)
         Me.BtnBuscarPacMed.Name = "BtnBuscarPacMed"
