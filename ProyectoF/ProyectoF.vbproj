@@ -91,18 +91,6 @@
     <Compile Include="forms\FrmPacientesR.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\FrmRecepcionista.Designer.vb">
-      <DependentUpon>FrmRecepcionista.vb</DependentUpon>
-    </Compile>
-    <Compile Include="forms\FrmRecepcionista.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forms\FrmMedico.Designer.vb">
-      <DependentUpon>FrmMedico.vb</DependentUpon>
-    </Compile>
-    <Compile Include="forms\FrmMedico.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="forms\FrmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -140,12 +128,6 @@
     <EmbeddedResource Include="forms\FrmPacientesR.resx">
       <DependentUpon>FrmPacientesR.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\FrmRecepcionista.resx">
-      <DependentUpon>FrmRecepcionista.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forms\FrmMedico.resx">
-      <DependentUpon>FrmMedico.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -166,21 +148,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="iconos\closeIcon.png" />
-    <Content Include="iconos\diagnostico.png" />
-    <Content Include="iconos\diagnostico24.png" />
-    <Content Include="iconos\garras.ico" />
-    <Content Include="iconos\HuellaAnimal.png" />
-    <Content Include="iconos\logoVet.jpg" />
-    <Content Include="iconos\medicina24.png" />
-    <Content Include="iconos\medicine.png" />
-    <Content Include="iconos\minusIcon.png" />
-    <Content Include="iconos\pet %281%29.png" />
-    <Content Include="iconos\pet.png" />
-    <Content Include="iconos\syringe.png" />
-    <Content Include="iconos\vac.png" />
-    <Content Include="iconos\vac24.png" />
-    <Content Include="iconos\volver.png" />
     <None Include="Resources\add-file.png" />
     <None Include="Resources\addUser.png" />
     <Content Include="Resources\diagnostico.png" />
