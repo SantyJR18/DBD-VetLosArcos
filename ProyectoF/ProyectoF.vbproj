@@ -163,10 +163,17 @@
     <Content Include="Resources\diagnostico24.png" />
     <None Include="Resources\editar.png" />
     <Content Include="Resources\garras.ico" />
+    <Content Include="Resources\la-tienda-de-animales.png" />
     <Content Include="Resources\logoVet.jpg" />
     <Content Include="Resources\logoVetPreview.png" />
     <Content Include="Resources\medicina24.png" />
     <Content Include="Resources\medicine.png" />
+    <Content Include="Resources\MenuCliente.png" />
+    <Content Include="Resources\MenuDiag.png" />
+    <Content Include="Resources\MenuFactura.png" />
+    <Content Include="Resources\MenuInforme.png" />
+    <Content Include="Resources\MenuPaciente.png" />
+    <Content Include="Resources\MenuServicio.png" />
     <Content Include="Resources\minusIcon.png" />
     <None Include="Resources\personal-data.png" />
     <Content Include="Resources\pet %281%29.png" />

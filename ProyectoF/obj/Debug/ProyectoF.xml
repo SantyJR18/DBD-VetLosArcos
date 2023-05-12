@@ -87,6 +87,11 @@ ProyectoF
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:ProyectoF.My.Resources.Resources.la_tienda_de_animales">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:ProyectoF.My.Resources.Resources.log_out">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -118,6 +123,36 @@ ProyectoF
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.medicine">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProyectoF.My.Resources.Resources.MenuCliente">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProyectoF.My.Resources.Resources.MenuDiag">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProyectoF.My.Resources.Resources.MenuFactura">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProyectoF.My.Resources.Resources.MenuInforme">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProyectoF.My.Resources.Resources.MenuPaciente">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ProyectoF.My.Resources.Resources.MenuServicio">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
