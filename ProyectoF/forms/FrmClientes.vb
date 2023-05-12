@@ -47,7 +47,7 @@ Public Class FrmClientes
 
     'Cierra el form
     Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
-        Application.Exit()
+        Me.Close()
     End Sub
 
     'Agrega color rojo al boton cerrar

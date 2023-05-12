@@ -57,6 +57,13 @@ Public Class FrmLogin
     Private Sub TitleBar_Paint(sender As Object, e As PaintEventArgs) Handles TitleBar.Paint
 
     End Sub
+
+    Private Sub BtnLogin_Click(sender As Object, e As EventArgs) Handles BtnLogin.Click
+        Me.Hide()
+        FrmMenu.Show()
+
+
+    End Sub
 #End Region
 
 
