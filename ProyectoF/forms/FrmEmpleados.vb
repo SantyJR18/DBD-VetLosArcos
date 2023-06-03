@@ -1,9 +1,11 @@
 ﻿Imports System.Runtime.InteropServices
 
-Public Class FrmLogin
+Public Class FrmEmpleados
+    Private Sub FrmEmpleados_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 
 #Region "Botones del Formulario"
-
     Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles BtnClose.Click
         Application.Exit()
     End Sub
@@ -28,27 +30,6 @@ Public Class FrmLogin
         BtnMinimize.BackColor = Color.DodgerBlue
     End Sub
 
-    Private Sub BtnLogin_Click(sender As Object, e As EventArgs) Handles BtnLogin.Click
-        Me.Hide()
-        FrmMenu.Show()
-    End Sub
-
-    Private Sub LblAccount_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LblAccount.LinkClicked
-        Me.Hide()
-        FrmEmpleados.Show()
-    End Sub
-
-#End Region
-
-#Region "Componentes de personalización del Form"
-
-    Public Sub New()
-        ' Esta llamada es exigida por el diseñador.
-        InitializeComponent()
-
-        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
-    End Sub
-
 #End Region
 
 #Region "Arrastrar/Drag Form"
@@ -65,5 +46,6 @@ Public Class FrmLogin
     End Sub
 
 #End Region
+
 
 End Class

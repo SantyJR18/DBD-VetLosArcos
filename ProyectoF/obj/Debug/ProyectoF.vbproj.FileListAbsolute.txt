@@ -94,3 +94,5 @@ C:\Users\Santiago\Documents\SDLL\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.F
 C:\Users\Santiago\Documents\SDLL\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.FrmPacientesR.resources
 C:\Users\Santiago\Documents\SDLL\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.FrmMenu.resources
 C:\Users\DELL\Desktop\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.FrmMenu.resources
+C:\Users\Santiago\Documents\SDLL\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.FrmEmpleados.resources
+C:\Users\Santiago\Documents\SDLL\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.FrmMenuR.resources

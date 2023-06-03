@@ -8,253 +8,653 @@ ProyectoF
 <members>
 <member name="T:ProyectoF.My.Resources.Resources">
 <summary>
-  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+  A strongly-typed resource class, for looking up localized strings, etc.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.ResourceManager">
 <summary>
-  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+  Returns the cached ResourceManager instance used by this class.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.Culture">
 <summary>
-  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
-  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.add_file">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.addUser">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.bill">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.cliente">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.close">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.closeIcon">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.customer">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.delete">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.diagnostico">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.diagnostico24">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.edit">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.editar">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.HuellaAnimal">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.la_tienda_de_animales">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.log_out">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:ProyectoF.My.Resources.Resources.logOut">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.logoVet">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.logoVetPreview">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.maxIcon">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.medicina24">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.medicine">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.MenuCliente">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.MenuDiag">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.MenuFactura">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.MenuInforme">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.MenuPaciente">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.MenuServicio">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.minicon">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.miniIcon">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.minusIcon">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.paws">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.personal_data">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.pet">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.pet__1_">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.pet_care">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.pet_care__1_">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.reject">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.search">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.searchUser">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.syringe">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.trash">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.user">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.vac">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.vac24">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.verify">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.veterinario">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ProyectoF.My.Resources.Resources.volver">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.ClienteDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.DesparasitantesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.DiagnosticosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.EmpleadosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.EmpresaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.EspeciesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.ExpedientesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.MarcasDesparasitantesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.MarcasVacunasDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.PacientesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.RazasDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.RegistroDesparasitacionesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.RegistroFacturasDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.RegistroServiciosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.RegistroVacunacionesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.RolesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.ServiciosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.VacunasDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.ClienteRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.DesparasitantesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.DiagnosticosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.EmpleadosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.EmpresaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.EspeciesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.ExpedientesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.MarcasDesparasitantesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.MarcasVacunasRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.PacientesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.RazasRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.RegistroDesparasitacionesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.RegistroFacturasRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.RegistroServiciosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.RegistroVacunacionesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.RolesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.ServiciosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.VacunasRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.ClienteRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.DesparasitantesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.DiagnosticosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.EmpleadosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.EmpresaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.EspeciesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.ExpedientesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.MarcasDesparasitantesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.MarcasVacunasRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.PacientesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.RazasRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.RegistroDesparasitacionesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.RegistroFacturasRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.RegistroServiciosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.RegistroVacunacionesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.RolesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.ServiciosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.VacunasRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDsTableAdapters.ClienteTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDsTableAdapters.DesparasitantesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDsTableAdapters.DiagnosticosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDsTableAdapters.EmpleadosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDsTableAdapters.EmpresaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDsTableAdapters.EspeciesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDsTableAdapters.ExpedientesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDsTableAdapters.MarcasDesparasitantesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDsTableAdapters.MarcasVacunasTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDsTableAdapters.PacientesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDsTableAdapters.RazasTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDsTableAdapters.RegistroDesparasitacionesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDsTableAdapters.RegistroFacturasTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDsTableAdapters.RegistroServiciosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDsTableAdapters.RegistroVacunacionesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDsTableAdapters.RolesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDsTableAdapters.ServiciosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDsTableAdapters.VacunasTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDsTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:ProyectoF.DBLosArcosDsTableAdapters.TableAdapterManager.UpdateUpdatedRows(ProyectoF.DBLosArcosDs,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:ProyectoF.DBLosArcosDsTableAdapters.TableAdapterManager.UpdateInsertedRows(ProyectoF.DBLosArcosDs,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:ProyectoF.DBLosArcosDsTableAdapters.TableAdapterManager.UpdateDeletedRows(ProyectoF.DBLosArcosDs,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:ProyectoF.DBLosArcosDsTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:ProyectoF.DBLosArcosDsTableAdapters.TableAdapterManager.UpdateAll(ProyectoF.DBLosArcosDs)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDsTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDsTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
 </summary>
 </member>
 </members>
