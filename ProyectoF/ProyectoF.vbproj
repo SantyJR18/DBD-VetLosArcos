@@ -90,6 +90,12 @@
     <Compile Include="forms\FrmMenu.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="forms\FrmMenuR.Designer.vb">
+      <DependentUpon>FrmMenuR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FrmMenuR.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="forms\FrmPacientesM.Designer.vb">
       <DependentUpon>FrmPacientesM.vb</DependentUpon>
     </Compile>
@@ -132,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\FrmMenu.resx">
       <DependentUpon>FrmMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FrmMenuR.resx">
+      <DependentUpon>FrmMenuR.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\FrmPacientesM.resx">
       <DependentUpon>FrmPacientesM.vb</DependentUpon>
@@ -180,6 +189,7 @@
     <None Include="Resources\editar.png" />
     <Content Include="Resources\garras.ico" />
     <Content Include="Resources\la-tienda-de-animales.png" />
+    <None Include="Resources\log-out.png" />
     <Content Include="Resources\logoVet.jpg" />
     <Content Include="Resources\logoVetPreview.png" />
     <Content Include="Resources\medicina24.png" />
@@ -222,7 +232,6 @@
     <None Include="Resources\maxIcon.png" />
     <None Include="Resources\HuellaAnimal.png" />
     <None Include="Resources\closeIcon.png" />
-    <None Include="Resources\log-out.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="dao\" />
