@@ -8,7 +8,7 @@
     Private _SegundoApellidoEmp As String
     Private _fechaContratacion As DateTime
     Private _segundoNombreEmp As String
-    Private _idRol As Integer
+    Private _Rol As New RolesEntity
 
     Public Sub New()
 
@@ -86,12 +86,12 @@
         End Set
     End Property
 
-    Public Property IdRol As Integer
+    Public Property Rol As RolesEntity
         Get
-            Return _idRol
+            Return _Rol
         End Get
-        Set(value As Integer)
-            _idRol = value
+        Set(value As RolesEntity)
+            _Rol = value
         End Set
     End Property
 End Class

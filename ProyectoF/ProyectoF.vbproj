@@ -74,6 +74,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="dao\EmpleadosDao.vb" />
+    <Compile Include="dao\RolesDao.vb" />
     <Compile Include="DBLosArcosDs.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

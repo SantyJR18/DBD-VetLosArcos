@@ -19,7 +19,7 @@ Public Class EmpleadosDao
             cmd.Parameters.AddWithValue("@primerApellidoEmp", empleado.PrimerApellidoEmp)
             cmd.Parameters.AddWithValue("@SegundoApellidoEmp", empleado.SegundoApellidoEmp)
             cmd.Parameters.AddWithValue("@fechaContratacion", empleado.FechaContratacion)
-            cmd.Parameters.AddWithValue("@idRol", empleado.IdRol)
+            cmd.Parameters.AddWithValue("@idRol", empleado.Rol.IdRol)
             cmd.Connection = conn
             cmd.Connection.Open()
             If (cmd.ExecuteNonQuery <> 0) Then
@@ -30,5 +30,18 @@ Public Class EmpleadosDao
             resp = False
         End Try
         Return resp
+    End Function
+
+    Public Function MostrarRegistros() As DataSet
+        Dim ds As New DataSet
+        Try
+            Dim tsql As String = "Select * from Empleados"
+            Dim conn As New SqlConnection(cStrConn)
+            Dim da As New SqlDataAdapter(tsql, conn)
+            da.Fill(ds)
+        Catch ex As Exception
+
+        End Try
+        Return ds
     End Function
 End Class
