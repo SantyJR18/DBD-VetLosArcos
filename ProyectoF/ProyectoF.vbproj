@@ -83,8 +83,19 @@
     <Compile Include="entidades\DiagnosticosEntity.vb" />
     <Compile Include="entidades\EmpleadosEntity.vb" />
     <Compile Include="entidades\EmpresaEntity.vb" />
+    <Compile Include="entidades\EspeciesEntity.vb" />
+    <Compile Include="entidades\ExpedientesEntity.vb" />
+    <Compile Include="entidades\MarcasDesparasitantesEntity.vb" />
+    <Compile Include="entidades\MarcasVacunasEntity.vb" />
     <Compile Include="entidades\PacientesEntity.vb" />
+    <Compile Include="entidades\RazasEntity.vb" />
+    <Compile Include="entidades\RegistroDesparasitacionesEntity.vb" />
+    <Compile Include="entidades\RegistroFacturasEntity.vb" />
+    <Compile Include="entidades\RegistroServiciosEntity.vb" />
+    <Compile Include="entidades\RegistroVacunacionesEntity.vb" />
     <Compile Include="entidades\RolesEntity.vb" />
+    <Compile Include="entidades\ServiciosEntity.vb" />
+    <Compile Include="entidades\VacunasEntity.vb" />
     <Compile Include="forms\FrmClientes.Designer.vb">
       <DependentUpon>FrmClientes.vb</DependentUpon>
     </Compile>
