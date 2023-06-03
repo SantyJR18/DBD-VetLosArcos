@@ -208,5 +208,10 @@
     <None Include="Resources\closeIcon.png" />
     <None Include="Resources\log-out.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="dao\" />
+    <Folder Include="entidades\" />
+    <Folder Include="scriptBD\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
