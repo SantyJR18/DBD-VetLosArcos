@@ -21,7 +21,7 @@ Public Class FrmClientes
         TCClientes.Text = "Editar cliente"
     End Sub
 
-    Private Sub BtnGuardarClt_Click(sender As Object, e As EventArgs) Handles BtnGuardarClt.Click
+    Private Sub BtnGuardarClt_Click(sender As Object, e As EventArgs)
         'Hay que hacer esto dentro de un If verificando una funcion que devuelva el valor verdadero si
         'se guardaron los cambios
         TCClientes.TabPages.Remove(TPDetClt)
@@ -31,7 +31,7 @@ Public Class FrmClientes
     End Sub
 
 
-    Private Sub BtnCancelarClt_Click(sender As Object, e As EventArgs) Handles BtnCancelarClt.Click
+    Private Sub BtnCancelarClt_Click(sender As Object, e As EventArgs)
         TCClientes.TabPages.Remove(TPDetClt)
         TCClientes.TabPages.Add(TPClt)
     End Sub

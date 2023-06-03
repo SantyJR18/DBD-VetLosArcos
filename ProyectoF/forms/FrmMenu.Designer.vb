@@ -39,18 +39,16 @@ Partial Class FrmMenu
         Me.FlowLayoutPanel4 = New System.Windows.Forms.FlowLayoutPanel()
         Me.FlowLayoutPanel5 = New System.Windows.Forms.FlowLayoutPanel()
         Me.FlowLayoutPanel6 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.FlowLayoutPanel7 = New System.Windows.Forms.FlowLayoutPanel()
         Me.PanelMenu = New System.Windows.Forms.Panel()
+        Me.BtnCerrarSes = New System.Windows.Forms.Button()
         Me.FlowLayoutPanel8 = New System.Windows.Forms.FlowLayoutPanel()
         Me.BtnReportes = New System.Windows.Forms.Button()
-        Me.BtnFacturas = New System.Windows.Forms.Button()
         Me.BtnDesparasitacion = New System.Windows.Forms.Button()
         Me.BtnVacunas = New System.Windows.Forms.Button()
         Me.BtnDiagnostico = New System.Windows.Forms.Button()
         Me.BtnServicio = New System.Windows.Forms.Button()
         Me.BtnPaciente = New System.Windows.Forms.Button()
         Me.BtnCliente = New System.Windows.Forms.Button()
-        Me.BtnCerrarSes = New System.Windows.Forms.Button()
         Me.PanelChildForm.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TitleBar.SuspendLayout()
@@ -145,6 +143,8 @@ Partial Class FrmMenu
         '
         'PictureBox1
         '
+        Me.PictureBox1.BackColor = System.Drawing.Color.White
+        Me.PictureBox1.ErrorImage = Nothing
         Me.PictureBox1.Image = Global.ProyectoF.My.Resources.Resources.logoVetPreview
         Me.PictureBox1.Location = New System.Drawing.Point(0, -1)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
@@ -227,23 +227,12 @@ Partial Class FrmMenu
         Me.FlowLayoutPanel6.Size = New System.Drawing.Size(188, 28)
         Me.FlowLayoutPanel6.TabIndex = 14
         '
-        'FlowLayoutPanel7
-        '
-        Me.FlowLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Top
-        Me.FlowLayoutPanel7.Location = New System.Drawing.Point(0, 427)
-        Me.FlowLayoutPanel7.Margin = New System.Windows.Forms.Padding(2)
-        Me.FlowLayoutPanel7.Name = "FlowLayoutPanel7"
-        Me.FlowLayoutPanel7.Size = New System.Drawing.Size(188, 28)
-        Me.FlowLayoutPanel7.TabIndex = 17
-        '
         'PanelMenu
         '
         Me.PanelMenu.BackColor = System.Drawing.Color.DodgerBlue
         Me.PanelMenu.Controls.Add(Me.BtnCerrarSes)
         Me.PanelMenu.Controls.Add(Me.FlowLayoutPanel8)
         Me.PanelMenu.Controls.Add(Me.BtnReportes)
-        Me.PanelMenu.Controls.Add(Me.FlowLayoutPanel7)
-        Me.PanelMenu.Controls.Add(Me.BtnFacturas)
         Me.PanelMenu.Controls.Add(Me.FlowLayoutPanel6)
         Me.PanelMenu.Controls.Add(Me.BtnDesparasitacion)
         Me.PanelMenu.Controls.Add(Me.FlowLayoutPanel5)
@@ -264,10 +253,27 @@ Partial Class FrmMenu
         Me.PanelMenu.Size = New System.Drawing.Size(188, 571)
         Me.PanelMenu.TabIndex = 6
         '
+        'BtnCerrarSes
+        '
+        Me.BtnCerrarSes.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BtnCerrarSes.FlatAppearance.BorderSize = 0
+        Me.BtnCerrarSes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCerrarSes.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCerrarSes.ForeColor = System.Drawing.Color.White
+        Me.BtnCerrarSes.Image = CType(resources.GetObject("BtnCerrarSes.Image"), System.Drawing.Image)
+        Me.BtnCerrarSes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnCerrarSes.Location = New System.Drawing.Point(0, 455)
+        Me.BtnCerrarSes.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnCerrarSes.Name = "BtnCerrarSes"
+        Me.BtnCerrarSes.Size = New System.Drawing.Size(188, 37)
+        Me.BtnCerrarSes.TabIndex = 21
+        Me.BtnCerrarSes.Text = "Cerrar Sesión"
+        Me.BtnCerrarSes.UseVisualStyleBackColor = True
+        '
         'FlowLayoutPanel8
         '
         Me.FlowLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Top
-        Me.FlowLayoutPanel8.Location = New System.Drawing.Point(0, 492)
+        Me.FlowLayoutPanel8.Location = New System.Drawing.Point(0, 427)
         Me.FlowLayoutPanel8.Margin = New System.Windows.Forms.Padding(2)
         Me.FlowLayoutPanel8.Name = "FlowLayoutPanel8"
         Me.FlowLayoutPanel8.Size = New System.Drawing.Size(188, 28)
@@ -282,30 +288,13 @@ Partial Class FrmMenu
         Me.BtnReportes.ForeColor = System.Drawing.Color.White
         Me.BtnReportes.Image = Global.ProyectoF.My.Resources.Resources.MenuInforme
         Me.BtnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnReportes.Location = New System.Drawing.Point(0, 455)
+        Me.BtnReportes.Location = New System.Drawing.Point(0, 390)
         Me.BtnReportes.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnReportes.Name = "BtnReportes"
         Me.BtnReportes.Size = New System.Drawing.Size(188, 37)
         Me.BtnReportes.TabIndex = 18
         Me.BtnReportes.Text = "   Reportes"
         Me.BtnReportes.UseVisualStyleBackColor = True
-        '
-        'BtnFacturas
-        '
-        Me.BtnFacturas.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BtnFacturas.FlatAppearance.BorderSize = 0
-        Me.BtnFacturas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnFacturas.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnFacturas.ForeColor = System.Drawing.Color.White
-        Me.BtnFacturas.Image = Global.ProyectoF.My.Resources.Resources.MenuFactura
-        Me.BtnFacturas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnFacturas.Location = New System.Drawing.Point(0, 390)
-        Me.BtnFacturas.Margin = New System.Windows.Forms.Padding(2)
-        Me.BtnFacturas.Name = "BtnFacturas"
-        Me.BtnFacturas.Size = New System.Drawing.Size(188, 37)
-        Me.BtnFacturas.TabIndex = 15
-        Me.BtnFacturas.Text = "   Facturas"
-        Me.BtnFacturas.UseVisualStyleBackColor = True
         '
         'BtnDesparasitacion
         '
@@ -409,23 +398,6 @@ Partial Class FrmMenu
         Me.BtnCliente.Text = "   Registro Cliente"
         Me.BtnCliente.UseVisualStyleBackColor = True
         '
-        'BtnCerrarSes
-        '
-        Me.BtnCerrarSes.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BtnCerrarSes.FlatAppearance.BorderSize = 0
-        Me.BtnCerrarSes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnCerrarSes.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnCerrarSes.ForeColor = System.Drawing.Color.White
-        Me.BtnCerrarSes.Image = CType(resources.GetObject("BtnCerrarSes.Image"), System.Drawing.Image)
-        Me.BtnCerrarSes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnCerrarSes.Location = New System.Drawing.Point(0, 520)
-        Me.BtnCerrarSes.Margin = New System.Windows.Forms.Padding(2)
-        Me.BtnCerrarSes.Name = "BtnCerrarSes"
-        Me.BtnCerrarSes.Size = New System.Drawing.Size(188, 37)
-        Me.BtnCerrarSes.TabIndex = 21
-        Me.BtnCerrarSes.Text = "Cerrar Sesión"
-        Me.BtnCerrarSes.UseVisualStyleBackColor = True
-        '
         'FrmMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -472,8 +444,6 @@ Partial Class FrmMenu
     Friend WithEvents FlowLayoutPanel5 As FlowLayoutPanel
     Friend WithEvents BtnDesparasitacion As Button
     Friend WithEvents FlowLayoutPanel6 As FlowLayoutPanel
-    Friend WithEvents BtnFacturas As Button
-    Friend WithEvents FlowLayoutPanel7 As FlowLayoutPanel
     Friend WithEvents BtnReportes As Button
     Friend WithEvents PanelMenu As Panel
     Friend WithEvents BtnMinimize As PictureBox

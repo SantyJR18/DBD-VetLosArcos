@@ -66,7 +66,6 @@ Public Class FrmMenu
         ReleaseCapture()
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
-
 #End Region
 
 End Class

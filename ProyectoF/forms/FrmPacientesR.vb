@@ -7,20 +7,20 @@ Public Class FrmPacientesR
         TCPacientesRec.TabPages.Remove(TPDetPacRec)
     End Sub
 
-    Private Sub BtnNuevoPacRec_Click(sender As Object, e As EventArgs) Handles BtnNuevoPacRec.Click
+    Private Sub BtnNuevoPacRec_Click(sender As Object, e As EventArgs) Handles BtnNuevoPac.Click
         TCPacientesRec.TabPages.Remove(TPPacienteRec)
         TCPacientesRec.TabPages.Add(TPDetPacRec)
         TPDetPacRec.Text = "Agregar nuevo paciente"
     End Sub
 
 
-    Private Sub BtnEditarPacRec_Click(sender As Object, e As EventArgs) Handles BtnEditarPacRec.Click
+    Private Sub BtnEditarPacRec_Click(sender As Object, e As EventArgs) Handles BtnEditarPac.Click
         TCPacientesRec.TabPages.Remove(TPPacienteRec)
         TCPacientesRec.TabPages.Add(TPDetPacRec)
         TPDetPacRec.Text = "Editar paciente"
     End Sub
 
-    Private Sub BtnGuardarPacRec_Click(sender As Object, e As EventArgs) Handles BtnGuardarPacRec.Click
+    Private Sub BtnGuardarPacRec_Click(sender As Object, e As EventArgs)
 
         'Hay que hacer esto dentro de un If verificando una funcion que devuelva el valor verdadero si
         'se guardaron los cambios
@@ -31,12 +31,12 @@ Public Class FrmPacientesR
         'MessageBox.Show(Message)
     End Sub
 
-    Private Sub BtnCancelarPacRec_Click(sender As Object, e As EventArgs) Handles BtnCancelarPacRec.Click
+    Private Sub BtnCancelarPacRec_Click(sender As Object, e As EventArgs)
         TCPacientesRec.TabPages.Remove(TPDetPacRec)
         TCPacientesRec.TabPages.Add(TPPacienteRec)
     End Sub
 
-    Private Sub BtnEliminarRegPacRec_Click(sender As Object, e As EventArgs) Handles BtnEliminarRegPacRec.Click
+    Private Sub BtnEliminarRegPacRec_Click(sender As Object, e As EventArgs) Handles BtnEliminarRegPac.Click
 
         Dim resultado = MessageBox.Show("¿Está seguro de eliminar al paciente selccionado?", "Advertencia",
                              MessageBoxButtons.YesNo, MessageBoxIcon.Warning)

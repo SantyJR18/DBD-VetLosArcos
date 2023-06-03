@@ -7,19 +7,19 @@ Public Class FrmPacientesM
         TCPacientesMed.TabPages.Remove(TPDetPacMed)
     End Sub
 
-    Private Sub BtnNuevoPacMed_Click(sender As Object, e As EventArgs) Handles BtnNuevoPacMed.Click
+    Private Sub BtnNuevoPacMed_Click(sender As Object, e As EventArgs) Handles BtnNuevoPac.Click
         TCPacientesMed.TabPages.Remove(TPPacMedico)
         TCPacientesMed.TabPages.Add(TPDetPacMed)
         TCPacientesMed.Text = "Agregar nuevo paciente"
     End Sub
 
-    Private Sub BtnEditarPacMed_Click(sender As Object, e As EventArgs) Handles BtnEditarPacMed.Click
+    Private Sub BtnEditarPacMed_Click(sender As Object, e As EventArgs) Handles BtnEditarPac.Click
         TCPacientesMed.TabPages.Remove(TPPacMedico)
         TCPacientesMed.TabPages.Add(TPDetPacMed)
         TCPacientesMed.Text = "Editar paciente"
     End Sub
 
-    Private Sub BtnGuardarPacMed_Click(sender As Object, e As EventArgs) Handles BtnGuardarPacMed.Click
+    Private Sub BtnGuardarPacMed_Click(sender As Object, e As EventArgs)
         'Hay que hacer esto dentro de un If verificando una funcion que devuelva el valor verdadero si
         '    'se guardaron los cambios
         TCPacientesMed.TabPages.Remove(TPDetPacMed)
@@ -28,13 +28,13 @@ Public Class FrmPacientesM
         '    'MessageBox.Show(Message)
     End Sub
 
-    Private Sub BtnCancelarPacMed_Click(sender As Object, e As EventArgs) Handles BtnCancelarPacMed.Click
+    Private Sub BtnCancelarPacMed_Click(sender As Object, e As EventArgs)
         TCPacientesMed.TabPages.Remove(TPDetPacMed)
         TCPacientesMed.TabPages.Add(TPPacMedico)
     End Sub
 
 
-    Private Sub BtnEliminarRegPacMed_Click(sender As Object, e As EventArgs) Handles BtnEliminarRegPacMed.Click
+    Private Sub BtnEliminarRegPacMed_Click(sender As Object, e As EventArgs) Handles BtnEliminarPac.Click
         Dim resultado = MessageBox.Show("¿Está seguro de eliminar al paciente selccionado?", "Advertencia",
                              MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
         'Para confirmar si el paciente se elimina

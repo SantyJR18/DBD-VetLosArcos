@@ -24,56 +24,56 @@ Partial Class FrmPacientesM
     Private Sub InitializeComponent()
         Me.TCPacientesMed = New System.Windows.Forms.TabControl()
         Me.TPPacMedico = New System.Windows.Forms.TabPage()
-        Me.BtnEliminarRegPacMed = New System.Windows.Forms.Button()
-        Me.BtnEditarPacMed = New System.Windows.Forms.Button()
-        Me.BtnNuevoPacMed = New System.Windows.Forms.Button()
+        Me.BtnEliminarPac = New System.Windows.Forms.Button()
+        Me.BtnEditarPac = New System.Windows.Forms.Button()
+        Me.BtnNuevoPac = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.BtnBuscarPacMed = New System.Windows.Forms.Button()
-        Me.TBBuscMedPac = New System.Windows.Forms.TextBox()
+        Me.BtnBuscarPac = New System.Windows.Forms.Button()
+        Me.TBBuscarPac = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TPDetPacMed = New System.Windows.Forms.TabPage()
         Me.TPPacientesMed = New System.Windows.Forms.TabControl()
-        Me.TPPacienteMed = New System.Windows.Forms.TabPage()
-        Me.BtnCancelarPacMed = New System.Windows.Forms.Button()
-        Me.BtnGuardarPacMed = New System.Windows.Forms.Button()
-        Me.TBNombrePacMed = New System.Windows.Forms.TextBox()
+        Me.TPPaciente = New System.Windows.Forms.TabPage()
+        Me.TBNombrePac = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.TBFechaNacMed = New System.Windows.Forms.TextBox()
+        Me.TBFechaNac = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.TBSenParMed = New System.Windows.Forms.TextBox()
+        Me.TBSenPar = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TBColorPacMed = New System.Windows.Forms.TextBox()
+        Me.TBColorPac = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.TBRazaPacMed = New System.Windows.Forms.TextBox()
+        Me.TBRazaPac = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TBSexoPacMed = New System.Windows.Forms.ComboBox()
+        Me.TBSexoPac = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TBEspeciePacMed = New System.Windows.Forms.TextBox()
+        Me.TBEspeciePac = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TBIdPacMed = New System.Windows.Forms.TextBox()
+        Me.TBIdPac = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TPExpDuenio = New System.Windows.Forms.TabPage()
-        Me.TBtelClienteMed = New System.Windows.Forms.TextBox()
+        Me.TBtelClt = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.TBdireccionClienteMed = New System.Windows.Forms.TextBox()
+        Me.TBdireccionClt = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.TBcorreoClienteMed = New System.Windows.Forms.TextBox()
+        Me.TBcorreoClt = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.TBapellidoClienteMed = New System.Windows.Forms.ComboBox()
+        Me.TBapellidoClt = New System.Windows.Forms.ComboBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.TBnombreClienteMed = New System.Windows.Forms.TextBox()
+        Me.TBnombreClt = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.TBcedulaClienteMed = New System.Windows.Forms.TextBox()
+        Me.TBcedulaClt = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.PnlTitle = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BtnCerrar = New System.Windows.Forms.PictureBox()
+        Me.BtnGuardar = New System.Windows.Forms.Button()
+        Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.TCPacientesMed.SuspendLayout()
         Me.TPPacMedico.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TPDetPacMed.SuspendLayout()
         Me.TPPacientesMed.SuspendLayout()
-        Me.TPPacienteMed.SuspendLayout()
+        Me.TPPaciente.SuspendLayout()
         Me.TPExpDuenio.SuspendLayout()
         Me.PnlTitle.SuspendLayout()
         CType(Me.BtnCerrar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -92,12 +92,13 @@ Partial Class FrmPacientesM
         '
         'TPPacMedico
         '
-        Me.TPPacMedico.Controls.Add(Me.BtnEliminarRegPacMed)
-        Me.TPPacMedico.Controls.Add(Me.BtnEditarPacMed)
-        Me.TPPacMedico.Controls.Add(Me.BtnNuevoPacMed)
+        Me.TPPacMedico.BackColor = System.Drawing.Color.SeaShell
+        Me.TPPacMedico.Controls.Add(Me.BtnEliminarPac)
+        Me.TPPacMedico.Controls.Add(Me.BtnEditarPac)
+        Me.TPPacMedico.Controls.Add(Me.BtnNuevoPac)
         Me.TPPacMedico.Controls.Add(Me.DataGridView1)
-        Me.TPPacMedico.Controls.Add(Me.BtnBuscarPacMed)
-        Me.TPPacMedico.Controls.Add(Me.TBBuscMedPac)
+        Me.TPPacMedico.Controls.Add(Me.BtnBuscarPac)
+        Me.TPPacMedico.Controls.Add(Me.TBBuscarPac)
         Me.TPPacMedico.Controls.Add(Me.Label2)
         Me.TPPacMedico.Location = New System.Drawing.Point(4, 22)
         Me.TPPacMedico.Name = "TPPacMedico"
@@ -105,43 +106,42 @@ Partial Class FrmPacientesM
         Me.TPPacMedico.Size = New System.Drawing.Size(1020, 545)
         Me.TPPacMedico.TabIndex = 0
         Me.TPPacMedico.Text = "Pacientes"
-        Me.TPPacMedico.UseVisualStyleBackColor = True
         '
-        'BtnEliminarRegPacMed
+        'BtnEliminarPac
         '
-        Me.BtnEliminarRegPacMed.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.BtnEliminarRegPacMed.Image = Global.ProyectoF.My.Resources.Resources.trash
-        Me.BtnEliminarRegPacMed.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnEliminarRegPacMed.Location = New System.Drawing.Point(808, 247)
-        Me.BtnEliminarRegPacMed.Name = "BtnEliminarRegPacMed"
-        Me.BtnEliminarRegPacMed.Size = New System.Drawing.Size(82, 36)
-        Me.BtnEliminarRegPacMed.TabIndex = 6
-        Me.BtnEliminarRegPacMed.Text = "Eliminar"
-        Me.BtnEliminarRegPacMed.UseVisualStyleBackColor = True
+        Me.BtnEliminarPac.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.BtnEliminarPac.Image = Global.ProyectoF.My.Resources.Resources.trash
+        Me.BtnEliminarPac.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnEliminarPac.Location = New System.Drawing.Point(808, 247)
+        Me.BtnEliminarPac.Name = "BtnEliminarPac"
+        Me.BtnEliminarPac.Size = New System.Drawing.Size(82, 36)
+        Me.BtnEliminarPac.TabIndex = 6
+        Me.BtnEliminarPac.Text = "Eliminar"
+        Me.BtnEliminarPac.UseVisualStyleBackColor = True
         '
-        'BtnEditarPacMed
+        'BtnEditarPac
         '
-        Me.BtnEditarPacMed.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.BtnEditarPacMed.Image = Global.ProyectoF.My.Resources.Resources.editar
-        Me.BtnEditarPacMed.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnEditarPacMed.Location = New System.Drawing.Point(808, 191)
-        Me.BtnEditarPacMed.Name = "BtnEditarPacMed"
-        Me.BtnEditarPacMed.Size = New System.Drawing.Size(82, 37)
-        Me.BtnEditarPacMed.TabIndex = 5
-        Me.BtnEditarPacMed.Text = "Editar"
-        Me.BtnEditarPacMed.UseVisualStyleBackColor = True
+        Me.BtnEditarPac.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.BtnEditarPac.Image = Global.ProyectoF.My.Resources.Resources.editar
+        Me.BtnEditarPac.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnEditarPac.Location = New System.Drawing.Point(808, 191)
+        Me.BtnEditarPac.Name = "BtnEditarPac"
+        Me.BtnEditarPac.Size = New System.Drawing.Size(82, 37)
+        Me.BtnEditarPac.TabIndex = 5
+        Me.BtnEditarPac.Text = "Editar"
+        Me.BtnEditarPac.UseVisualStyleBackColor = True
         '
-        'BtnNuevoPacMed
+        'BtnNuevoPac
         '
-        Me.BtnNuevoPacMed.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.BtnNuevoPacMed.Image = Global.ProyectoF.My.Resources.Resources.pet_care
-        Me.BtnNuevoPacMed.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnNuevoPacMed.Location = New System.Drawing.Point(808, 136)
-        Me.BtnNuevoPacMed.Name = "BtnNuevoPacMed"
-        Me.BtnNuevoPacMed.Size = New System.Drawing.Size(82, 37)
-        Me.BtnNuevoPacMed.TabIndex = 4
-        Me.BtnNuevoPacMed.Text = "Nuevo"
-        Me.BtnNuevoPacMed.UseVisualStyleBackColor = True
+        Me.BtnNuevoPac.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.BtnNuevoPac.Image = Global.ProyectoF.My.Resources.Resources.pet_care
+        Me.BtnNuevoPac.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnNuevoPac.Location = New System.Drawing.Point(808, 136)
+        Me.BtnNuevoPac.Name = "BtnNuevoPac"
+        Me.BtnNuevoPac.Size = New System.Drawing.Size(82, 37)
+        Me.BtnNuevoPac.TabIndex = 4
+        Me.BtnNuevoPac.Text = "Nuevo"
+        Me.BtnNuevoPac.UseVisualStyleBackColor = True
         '
         'DataGridView1
         '
@@ -153,24 +153,24 @@ Partial Class FrmPacientesM
         Me.DataGridView1.Size = New System.Drawing.Size(666, 326)
         Me.DataGridView1.TabIndex = 3
         '
-        'BtnBuscarPacMed
+        'BtnBuscarPac
         '
-        Me.BtnBuscarPacMed.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.BtnBuscarPacMed.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnBuscarPacMed.Location = New System.Drawing.Point(724, 107)
-        Me.BtnBuscarPacMed.Name = "BtnBuscarPacMed"
-        Me.BtnBuscarPacMed.Size = New System.Drawing.Size(75, 23)
-        Me.BtnBuscarPacMed.TabIndex = 2
-        Me.BtnBuscarPacMed.Text = "Buscar"
-        Me.BtnBuscarPacMed.UseVisualStyleBackColor = True
+        Me.BtnBuscarPac.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.BtnBuscarPac.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnBuscarPac.Location = New System.Drawing.Point(724, 107)
+        Me.BtnBuscarPac.Name = "BtnBuscarPac"
+        Me.BtnBuscarPac.Size = New System.Drawing.Size(75, 23)
+        Me.BtnBuscarPac.TabIndex = 2
+        Me.BtnBuscarPac.Text = "Buscar"
+        Me.BtnBuscarPac.UseVisualStyleBackColor = True
         '
-        'TBBuscMedPac
+        'TBBuscarPac
         '
-        Me.TBBuscMedPac.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TBBuscMedPac.Location = New System.Drawing.Point(133, 107)
-        Me.TBBuscMedPac.Name = "TBBuscMedPac"
-        Me.TBBuscMedPac.Size = New System.Drawing.Size(566, 20)
-        Me.TBBuscMedPac.TabIndex = 1
+        Me.TBBuscarPac.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.TBBuscarPac.Location = New System.Drawing.Point(133, 107)
+        Me.TBBuscarPac.Name = "TBBuscarPac"
+        Me.TBBuscarPac.Size = New System.Drawing.Size(566, 20)
+        Me.TBBuscarPac.TabIndex = 1
         '
         'Label2
         '
@@ -196,7 +196,7 @@ Partial Class FrmPacientesM
         '
         'TPPacientesMed
         '
-        Me.TPPacientesMed.Controls.Add(Me.TPPacienteMed)
+        Me.TPPacientesMed.Controls.Add(Me.TPPaciente)
         Me.TPPacientesMed.Controls.Add(Me.TPExpDuenio)
         Me.TPPacientesMed.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TPPacientesMed.Location = New System.Drawing.Point(3, 3)
@@ -205,206 +205,183 @@ Partial Class FrmPacientesM
         Me.TPPacientesMed.Size = New System.Drawing.Size(1014, 539)
         Me.TPPacientesMed.TabIndex = 0
         '
-        'TPPacienteMed
+        'TPPaciente
         '
-        Me.TPPacienteMed.Controls.Add(Me.BtnCancelarPacMed)
-        Me.TPPacienteMed.Controls.Add(Me.BtnGuardarPacMed)
-        Me.TPPacienteMed.Controls.Add(Me.TBNombrePacMed)
-        Me.TPPacienteMed.Controls.Add(Me.Label10)
-        Me.TPPacienteMed.Controls.Add(Me.TBFechaNacMed)
-        Me.TPPacienteMed.Controls.Add(Me.Label9)
-        Me.TPPacienteMed.Controls.Add(Me.TBSenParMed)
-        Me.TPPacienteMed.Controls.Add(Me.Label8)
-        Me.TPPacienteMed.Controls.Add(Me.TBColorPacMed)
-        Me.TPPacienteMed.Controls.Add(Me.Label7)
-        Me.TPPacienteMed.Controls.Add(Me.TBRazaPacMed)
-        Me.TPPacienteMed.Controls.Add(Me.Label6)
-        Me.TPPacienteMed.Controls.Add(Me.TBSexoPacMed)
-        Me.TPPacienteMed.Controls.Add(Me.Label5)
-        Me.TPPacienteMed.Controls.Add(Me.TBEspeciePacMed)
-        Me.TPPacienteMed.Controls.Add(Me.Label3)
-        Me.TPPacienteMed.Controls.Add(Me.TBIdPacMed)
-        Me.TPPacienteMed.Controls.Add(Me.Label4)
-        Me.TPPacienteMed.Location = New System.Drawing.Point(4, 22)
-        Me.TPPacienteMed.Name = "TPPacienteMed"
-        Me.TPPacienteMed.Padding = New System.Windows.Forms.Padding(3)
-        Me.TPPacienteMed.Size = New System.Drawing.Size(989, 502)
-        Me.TPPacienteMed.TabIndex = 0
-        Me.TPPacienteMed.Text = "Paciente"
-        Me.TPPacienteMed.UseVisualStyleBackColor = True
+        Me.TPPaciente.BackColor = System.Drawing.Color.SeaShell
+        Me.TPPaciente.Controls.Add(Me.BtnGuardar)
+        Me.TPPaciente.Controls.Add(Me.BtnCancelar)
+        Me.TPPaciente.Controls.Add(Me.TBNombrePac)
+        Me.TPPaciente.Controls.Add(Me.Label10)
+        Me.TPPaciente.Controls.Add(Me.TBFechaNac)
+        Me.TPPaciente.Controls.Add(Me.Label9)
+        Me.TPPaciente.Controls.Add(Me.TBSenPar)
+        Me.TPPaciente.Controls.Add(Me.Label8)
+        Me.TPPaciente.Controls.Add(Me.TBColorPac)
+        Me.TPPaciente.Controls.Add(Me.Label7)
+        Me.TPPaciente.Controls.Add(Me.TBRazaPac)
+        Me.TPPaciente.Controls.Add(Me.Label6)
+        Me.TPPaciente.Controls.Add(Me.TBSexoPac)
+        Me.TPPaciente.Controls.Add(Me.Label5)
+        Me.TPPaciente.Controls.Add(Me.TBEspeciePac)
+        Me.TPPaciente.Controls.Add(Me.Label3)
+        Me.TPPaciente.Controls.Add(Me.TBIdPac)
+        Me.TPPaciente.Controls.Add(Me.Label4)
+        Me.TPPaciente.Location = New System.Drawing.Point(4, 22)
+        Me.TPPaciente.Name = "TPPaciente"
+        Me.TPPaciente.Padding = New System.Windows.Forms.Padding(3)
+        Me.TPPaciente.Size = New System.Drawing.Size(1006, 513)
+        Me.TPPaciente.TabIndex = 0
+        Me.TPPaciente.Text = "Paciente"
         '
-        'BtnCancelarPacMed
+        'TBNombrePac
         '
-        Me.BtnCancelarPacMed.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.BtnCancelarPacMed.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnCancelarPacMed.Location = New System.Drawing.Point(535, 335)
-        Me.BtnCancelarPacMed.Name = "BtnCancelarPacMed"
-        Me.BtnCancelarPacMed.Size = New System.Drawing.Size(82, 37)
-        Me.BtnCancelarPacMed.TabIndex = 36
-        Me.BtnCancelarPacMed.Text = "Cancelar"
-        Me.BtnCancelarPacMed.UseVisualStyleBackColor = True
-        '
-        'BtnGuardarPacMed
-        '
-        Me.BtnGuardarPacMed.AccessibleRole = System.Windows.Forms.AccessibleRole.None
-        Me.BtnGuardarPacMed.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.BtnGuardarPacMed.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnGuardarPacMed.Location = New System.Drawing.Point(372, 335)
-        Me.BtnGuardarPacMed.Name = "BtnGuardarPacMed"
-        Me.BtnGuardarPacMed.Size = New System.Drawing.Size(82, 37)
-        Me.BtnGuardarPacMed.TabIndex = 35
-        Me.BtnGuardarPacMed.Text = "Guardar"
-        Me.BtnGuardarPacMed.UseVisualStyleBackColor = True
-        '
-        'TBNombrePacMed
-        '
-        Me.TBNombrePacMed.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TBNombrePacMed.Location = New System.Drawing.Point(680, 167)
-        Me.TBNombrePacMed.Name = "TBNombrePacMed"
-        Me.TBNombrePacMed.Size = New System.Drawing.Size(166, 20)
-        Me.TBNombrePacMed.TabIndex = 30
+        Me.TBNombrePac.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.TBNombrePac.Location = New System.Drawing.Point(689, 172)
+        Me.TBNombrePac.Name = "TBNombrePac"
+        Me.TBNombrePac.Size = New System.Drawing.Size(166, 20)
+        Me.TBNombrePac.TabIndex = 30
         '
         'Label10
         '
         Me.Label10.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(514, 199)
+        Me.Label10.Location = New System.Drawing.Point(523, 204)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(120, 16)
         Me.Label10.TabIndex = 31
         Me.Label10.Text = "Fecha Nacimiento:"
         '
-        'TBFechaNacMed
+        'TBFechaNac
         '
-        Me.TBFechaNacMed.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TBFechaNacMed.Location = New System.Drawing.Point(681, 200)
-        Me.TBFechaNacMed.Name = "TBFechaNacMed"
-        Me.TBFechaNacMed.Size = New System.Drawing.Size(166, 20)
-        Me.TBFechaNacMed.TabIndex = 32
+        Me.TBFechaNac.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.TBFechaNac.Location = New System.Drawing.Point(690, 205)
+        Me.TBFechaNac.Name = "TBFechaNac"
+        Me.TBFechaNac.Size = New System.Drawing.Size(166, 20)
+        Me.TBFechaNac.TabIndex = 32
         '
         'Label9
         '
         Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(514, 166)
+        Me.Label9.Location = New System.Drawing.Point(523, 171)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(60, 16)
         Me.Label9.TabIndex = 29
         Me.Label9.Text = "Nombre:"
         '
-        'TBSenParMed
+        'TBSenPar
         '
-        Me.TBSenParMed.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TBSenParMed.Location = New System.Drawing.Point(681, 235)
-        Me.TBSenParMed.Multiline = True
-        Me.TBSenParMed.Name = "TBSenParMed"
-        Me.TBSenParMed.Size = New System.Drawing.Size(166, 65)
-        Me.TBSenParMed.TabIndex = 34
+        Me.TBSenPar.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.TBSenPar.Location = New System.Drawing.Point(690, 240)
+        Me.TBSenPar.Multiline = True
+        Me.TBSenPar.Name = "TBSenPar"
+        Me.TBSenPar.Size = New System.Drawing.Size(166, 65)
+        Me.TBSenPar.TabIndex = 34
         '
         'Label8
         '
         Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(514, 132)
+        Me.Label8.Location = New System.Drawing.Point(523, 137)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(43, 16)
         Me.Label8.TabIndex = 27
         Me.Label8.Text = "Color:"
         '
-        'TBColorPacMed
+        'TBColorPac
         '
-        Me.TBColorPacMed.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TBColorPacMed.Location = New System.Drawing.Point(681, 131)
-        Me.TBColorPacMed.Name = "TBColorPacMed"
-        Me.TBColorPacMed.Size = New System.Drawing.Size(166, 20)
-        Me.TBColorPacMed.TabIndex = 28
+        Me.TBColorPac.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.TBColorPac.Location = New System.Drawing.Point(690, 136)
+        Me.TBColorPac.Name = "TBColorPac"
+        Me.TBColorPac.Size = New System.Drawing.Size(166, 20)
+        Me.TBColorPac.TabIndex = 28
         '
         'Label7
         '
         Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(141, 235)
+        Me.Label7.Location = New System.Drawing.Point(150, 240)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(43, 16)
         Me.Label7.TabIndex = 25
         Me.Label7.Text = "Raza:"
         '
-        'TBRazaPacMed
+        'TBRazaPac
         '
-        Me.TBRazaPacMed.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TBRazaPacMed.Location = New System.Drawing.Point(308, 233)
-        Me.TBRazaPacMed.Name = "TBRazaPacMed"
-        Me.TBRazaPacMed.Size = New System.Drawing.Size(166, 20)
-        Me.TBRazaPacMed.TabIndex = 26
+        Me.TBRazaPac.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.TBRazaPac.Location = New System.Drawing.Point(317, 238)
+        Me.TBRazaPac.Name = "TBRazaPac"
+        Me.TBRazaPac.Size = New System.Drawing.Size(166, 20)
+        Me.TBRazaPac.TabIndex = 26
         '
         'Label6
         '
         Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(514, 235)
+        Me.Label6.Location = New System.Drawing.Point(523, 240)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(123, 16)
         Me.Label6.TabIndex = 33
         Me.Label6.Text = "Señas particulares:"
         '
-        'TBSexoPacMed
+        'TBSexoPac
         '
-        Me.TBSexoPacMed.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TBSexoPacMed.FormattingEnabled = True
-        Me.TBSexoPacMed.Location = New System.Drawing.Point(308, 199)
-        Me.TBSexoPacMed.Name = "TBSexoPacMed"
-        Me.TBSexoPacMed.Size = New System.Drawing.Size(166, 21)
-        Me.TBSexoPacMed.TabIndex = 24
+        Me.TBSexoPac.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.TBSexoPac.FormattingEnabled = True
+        Me.TBSexoPac.Location = New System.Drawing.Point(317, 204)
+        Me.TBSexoPac.Name = "TBSexoPac"
+        Me.TBSexoPac.Size = New System.Drawing.Size(166, 21)
+        Me.TBSexoPac.TabIndex = 24
         '
         'Label5
         '
         Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(141, 200)
+        Me.Label5.Location = New System.Drawing.Point(150, 205)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(42, 16)
         Me.Label5.TabIndex = 23
         Me.Label5.Text = "Sexo:"
         '
-        'TBEspeciePacMed
+        'TBEspeciePac
         '
-        Me.TBEspeciePacMed.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TBEspeciePacMed.Location = New System.Drawing.Point(308, 165)
-        Me.TBEspeciePacMed.Name = "TBEspeciePacMed"
-        Me.TBEspeciePacMed.Size = New System.Drawing.Size(166, 20)
-        Me.TBEspeciePacMed.TabIndex = 22
+        Me.TBEspeciePac.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.TBEspeciePac.Location = New System.Drawing.Point(317, 170)
+        Me.TBEspeciePac.Name = "TBEspeciePac"
+        Me.TBEspeciePac.Size = New System.Drawing.Size(166, 20)
+        Me.TBEspeciePac.TabIndex = 22
         '
         'Label3
         '
         Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(141, 166)
+        Me.Label3.Location = New System.Drawing.Point(150, 171)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(61, 16)
         Me.Label3.TabIndex = 21
         Me.Label3.Text = "Especie:"
         '
-        'TBIdPacMed
+        'TBIdPac
         '
-        Me.TBIdPacMed.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TBIdPacMed.Location = New System.Drawing.Point(308, 132)
-        Me.TBIdPacMed.Name = "TBIdPacMed"
-        Me.TBIdPacMed.Size = New System.Drawing.Size(98, 20)
-        Me.TBIdPacMed.TabIndex = 20
+        Me.TBIdPac.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.TBIdPac.Location = New System.Drawing.Point(317, 137)
+        Me.TBIdPac.Name = "TBIdPac"
+        Me.TBIdPac.Size = New System.Drawing.Size(166, 20)
+        Me.TBIdPac.TabIndex = 20
         '
         'Label4
         '
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(141, 133)
+        Me.Label4.Location = New System.Drawing.Point(150, 138)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(101, 16)
         Me.Label4.TabIndex = 19
@@ -412,17 +389,18 @@ Partial Class FrmPacientesM
         '
         'TPExpDuenio
         '
-        Me.TPExpDuenio.Controls.Add(Me.TBtelClienteMed)
+        Me.TPExpDuenio.BackColor = System.Drawing.Color.SeaShell
+        Me.TPExpDuenio.Controls.Add(Me.TBtelClt)
         Me.TPExpDuenio.Controls.Add(Me.Label11)
-        Me.TPExpDuenio.Controls.Add(Me.TBdireccionClienteMed)
+        Me.TPExpDuenio.Controls.Add(Me.TBdireccionClt)
         Me.TPExpDuenio.Controls.Add(Me.Label12)
-        Me.TPExpDuenio.Controls.Add(Me.TBcorreoClienteMed)
+        Me.TPExpDuenio.Controls.Add(Me.TBcorreoClt)
         Me.TPExpDuenio.Controls.Add(Me.Label13)
-        Me.TPExpDuenio.Controls.Add(Me.TBapellidoClienteMed)
+        Me.TPExpDuenio.Controls.Add(Me.TBapellidoClt)
         Me.TPExpDuenio.Controls.Add(Me.Label14)
-        Me.TPExpDuenio.Controls.Add(Me.TBnombreClienteMed)
+        Me.TPExpDuenio.Controls.Add(Me.TBnombreClt)
         Me.TPExpDuenio.Controls.Add(Me.Label15)
-        Me.TPExpDuenio.Controls.Add(Me.TBcedulaClienteMed)
+        Me.TPExpDuenio.Controls.Add(Me.TBcedulaClt)
         Me.TPExpDuenio.Controls.Add(Me.Label16)
         Me.TPExpDuenio.Location = New System.Drawing.Point(4, 22)
         Me.TPExpDuenio.Name = "TPExpDuenio"
@@ -430,15 +408,14 @@ Partial Class FrmPacientesM
         Me.TPExpDuenio.Size = New System.Drawing.Size(1006, 513)
         Me.TPExpDuenio.TabIndex = 1
         Me.TPExpDuenio.Text = "Dueño"
-        Me.TPExpDuenio.UseVisualStyleBackColor = True
         '
-        'TBtelClienteMed
+        'TBtelClt
         '
-        Me.TBtelClienteMed.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TBtelClienteMed.Location = New System.Drawing.Point(689, 225)
-        Me.TBtelClienteMed.Name = "TBtelClienteMed"
-        Me.TBtelClienteMed.Size = New System.Drawing.Size(166, 20)
-        Me.TBtelClienteMed.TabIndex = 24
+        Me.TBtelClt.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.TBtelClt.Location = New System.Drawing.Point(689, 225)
+        Me.TBtelClt.Name = "TBtelClt"
+        Me.TBtelClt.Size = New System.Drawing.Size(166, 20)
+        Me.TBtelClt.TabIndex = 24
         '
         'Label11
         '
@@ -451,14 +428,14 @@ Partial Class FrmPacientesM
         Me.Label11.TabIndex = 23
         Me.Label11.Text = "Teléfono:"
         '
-        'TBdireccionClienteMed
+        'TBdireccionClt
         '
-        Me.TBdireccionClienteMed.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TBdireccionClienteMed.Location = New System.Drawing.Point(690, 258)
-        Me.TBdireccionClienteMed.Multiline = True
-        Me.TBdireccionClienteMed.Name = "TBdireccionClienteMed"
-        Me.TBdireccionClienteMed.Size = New System.Drawing.Size(166, 65)
-        Me.TBdireccionClienteMed.TabIndex = 26
+        Me.TBdireccionClt.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.TBdireccionClt.Location = New System.Drawing.Point(690, 258)
+        Me.TBdireccionClt.Multiline = True
+        Me.TBdireccionClt.Name = "TBdireccionClt"
+        Me.TBdireccionClt.Size = New System.Drawing.Size(166, 65)
+        Me.TBdireccionClt.TabIndex = 26
         '
         'Label12
         '
@@ -471,13 +448,13 @@ Partial Class FrmPacientesM
         Me.Label12.TabIndex = 21
         Me.Label12.Text = "Correo:"
         '
-        'TBcorreoClienteMed
+        'TBcorreoClt
         '
-        Me.TBcorreoClienteMed.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TBcorreoClienteMed.Location = New System.Drawing.Point(690, 189)
-        Me.TBcorreoClienteMed.Name = "TBcorreoClienteMed"
-        Me.TBcorreoClienteMed.Size = New System.Drawing.Size(166, 20)
-        Me.TBcorreoClienteMed.TabIndex = 22
+        Me.TBcorreoClt.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.TBcorreoClt.Location = New System.Drawing.Point(690, 189)
+        Me.TBcorreoClt.Name = "TBcorreoClt"
+        Me.TBcorreoClt.Size = New System.Drawing.Size(166, 20)
+        Me.TBcorreoClt.TabIndex = 22
         '
         'Label13
         '
@@ -490,14 +467,14 @@ Partial Class FrmPacientesM
         Me.Label13.TabIndex = 25
         Me.Label13.Text = "Dirección:"
         '
-        'TBapellidoClienteMed
+        'TBapellidoClt
         '
-        Me.TBapellidoClienteMed.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TBapellidoClienteMed.FormattingEnabled = True
-        Me.TBapellidoClienteMed.Location = New System.Drawing.Point(317, 257)
-        Me.TBapellidoClienteMed.Name = "TBapellidoClienteMed"
-        Me.TBapellidoClienteMed.Size = New System.Drawing.Size(166, 21)
-        Me.TBapellidoClienteMed.TabIndex = 20
+        Me.TBapellidoClt.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.TBapellidoClt.FormattingEnabled = True
+        Me.TBapellidoClt.Location = New System.Drawing.Point(317, 257)
+        Me.TBapellidoClt.Name = "TBapellidoClt"
+        Me.TBapellidoClt.Size = New System.Drawing.Size(166, 21)
+        Me.TBapellidoClt.TabIndex = 20
         '
         'Label14
         '
@@ -510,13 +487,13 @@ Partial Class FrmPacientesM
         Me.Label14.TabIndex = 19
         Me.Label14.Text = "Apellido:"
         '
-        'TBnombreClienteMed
+        'TBnombreClt
         '
-        Me.TBnombreClienteMed.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TBnombreClienteMed.Location = New System.Drawing.Point(317, 223)
-        Me.TBnombreClienteMed.Name = "TBnombreClienteMed"
-        Me.TBnombreClienteMed.Size = New System.Drawing.Size(166, 20)
-        Me.TBnombreClienteMed.TabIndex = 18
+        Me.TBnombreClt.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.TBnombreClt.Location = New System.Drawing.Point(317, 223)
+        Me.TBnombreClt.Name = "TBnombreClt"
+        Me.TBnombreClt.Size = New System.Drawing.Size(166, 20)
+        Me.TBnombreClt.TabIndex = 18
         '
         'Label15
         '
@@ -529,13 +506,13 @@ Partial Class FrmPacientesM
         Me.Label15.TabIndex = 17
         Me.Label15.Text = "Nombre:"
         '
-        'TBcedulaClienteMed
+        'TBcedulaClt
         '
-        Me.TBcedulaClienteMed.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TBcedulaClienteMed.Location = New System.Drawing.Point(317, 190)
-        Me.TBcedulaClienteMed.Name = "TBcedulaClienteMed"
-        Me.TBcedulaClienteMed.Size = New System.Drawing.Size(98, 20)
-        Me.TBcedulaClienteMed.TabIndex = 16
+        Me.TBcedulaClt.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.TBcedulaClt.Location = New System.Drawing.Point(317, 190)
+        Me.TBcedulaClt.Name = "TBcedulaClt"
+        Me.TBcedulaClt.Size = New System.Drawing.Size(98, 20)
+        Me.TBcedulaClt.TabIndex = 16
         '
         'Label16
         '
@@ -563,6 +540,7 @@ Partial Class FrmPacientesM
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("High Tower Text", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(3, 6)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(94, 25)
@@ -581,6 +559,29 @@ Partial Class FrmPacientesM
         Me.BtnCerrar.TabIndex = 0
         Me.BtnCerrar.TabStop = False
         '
+        'BtnGuardar
+        '
+        Me.BtnGuardar.AccessibleRole = System.Windows.Forms.AccessibleRole.None
+        Me.BtnGuardar.Image = Global.ProyectoF.My.Resources.Resources.save
+        Me.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnGuardar.Location = New System.Drawing.Point(382, 340)
+        Me.BtnGuardar.Name = "BtnGuardar"
+        Me.BtnGuardar.Size = New System.Drawing.Size(100, 37)
+        Me.BtnGuardar.TabIndex = 36
+        Me.BtnGuardar.Text = "Guardar"
+        Me.BtnGuardar.UseVisualStyleBackColor = True
+        '
+        'BtnCancelar
+        '
+        Me.BtnCancelar.Image = Global.ProyectoF.My.Resources.Resources.close
+        Me.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnCancelar.Location = New System.Drawing.Point(525, 340)
+        Me.BtnCancelar.Name = "BtnCancelar"
+        Me.BtnCancelar.Size = New System.Drawing.Size(100, 37)
+        Me.BtnCancelar.TabIndex = 37
+        Me.BtnCancelar.Text = "Cancelar"
+        Me.BtnCancelar.UseVisualStyleBackColor = True
+        '
         'FrmPacientesM
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -597,8 +598,8 @@ Partial Class FrmPacientesM
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TPDetPacMed.ResumeLayout(False)
         Me.TPPacientesMed.ResumeLayout(False)
-        Me.TPPacienteMed.ResumeLayout(False)
-        Me.TPPacienteMed.PerformLayout()
+        Me.TPPaciente.ResumeLayout(False)
+        Me.TPPaciente.PerformLayout()
         Me.TPExpDuenio.ResumeLayout(False)
         Me.TPExpDuenio.PerformLayout()
         Me.PnlTitle.ResumeLayout(False)
@@ -609,49 +610,49 @@ Partial Class FrmPacientesM
     End Sub
 
     Friend WithEvents BtnCerrar As PictureBox
-    Friend WithEvents BtnEliminarRegPacMed As Button
-    Friend WithEvents BtnEditarPacMed As Button
-    Friend WithEvents BtnNuevoPacMed As Button
-    Friend WithEvents BtnBuscarPacMed As Button
+    Friend WithEvents BtnEliminarPac As Button
+    Friend WithEvents BtnEditarPac As Button
+    Friend WithEvents BtnNuevoPac As Button
+    Friend WithEvents BtnBuscarPac As Button
     Friend WithEvents TCPacientesMed As TabControl
     Friend WithEvents TPPacMedico As TabPage
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents TBBuscMedPac As TextBox
+    Friend WithEvents TBBuscarPac As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents TPDetPacMed As TabPage
     Friend WithEvents PnlTitle As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents TPPacientesMed As TabControl
-    Friend WithEvents TPPacienteMed As TabPage
-    Friend WithEvents TBNombrePacMed As TextBox
+    Friend WithEvents TPPaciente As TabPage
+    Friend WithEvents TBNombrePac As TextBox
     Friend WithEvents Label10 As Label
-    Friend WithEvents TBFechaNacMed As TextBox
+    Friend WithEvents TBFechaNac As TextBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents TBSenParMed As TextBox
+    Friend WithEvents TBSenPar As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents TBColorPacMed As TextBox
+    Friend WithEvents TBColorPac As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents TBRazaPacMed As TextBox
+    Friend WithEvents TBRazaPac As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents TBSexoPacMed As ComboBox
+    Friend WithEvents TBSexoPac As ComboBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents TBEspeciePacMed As TextBox
+    Friend WithEvents TBEspeciePac As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TBIdPacMed As TextBox
+    Friend WithEvents TBIdPac As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents TPExpDuenio As TabPage
-    Friend WithEvents TBtelClienteMed As TextBox
+    Friend WithEvents TBtelClt As TextBox
     Friend WithEvents Label11 As Label
-    Friend WithEvents TBdireccionClienteMed As TextBox
+    Friend WithEvents TBdireccionClt As TextBox
     Friend WithEvents Label12 As Label
-    Friend WithEvents TBcorreoClienteMed As TextBox
+    Friend WithEvents TBcorreoClt As TextBox
     Friend WithEvents Label13 As Label
-    Friend WithEvents TBapellidoClienteMed As ComboBox
+    Friend WithEvents TBapellidoClt As ComboBox
     Friend WithEvents Label14 As Label
-    Friend WithEvents TBnombreClienteMed As TextBox
+    Friend WithEvents TBnombreClt As TextBox
     Friend WithEvents Label15 As Label
-    Friend WithEvents TBcedulaClienteMed As TextBox
+    Friend WithEvents TBcedulaClt As TextBox
     Friend WithEvents Label16 As Label
-    Friend WithEvents BtnCancelarPacMed As Button
-    Friend WithEvents BtnGuardarPacMed As Button
+    Friend WithEvents BtnGuardar As Button
+    Friend WithEvents BtnCancelar As Button
 End Class
