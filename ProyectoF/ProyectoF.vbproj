@@ -78,6 +78,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DBLosArcosDs.xsd</DependentUpon>
     </Compile>
+    <Compile Include="entidades\ClienteEntity.vb" />
+    <Compile Include="entidades\DesparasitantesEntity.vb" />
+    <Compile Include="entidades\DiagnosticosEntity.vb" />
+    <Compile Include="entidades\EmpleadosEntity.vb" />
+    <Compile Include="entidades\EmpresaEntity.vb" />
+    <Compile Include="entidades\PacientesEntity.vb" />
+    <Compile Include="entidades\RolesEntity.vb" />
     <Compile Include="forms\FrmClientes.Designer.vb">
       <DependentUpon>FrmClientes.vb</DependentUpon>
     </Compile>
@@ -235,7 +242,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="dao\" />
-    <Folder Include="entidades\" />
     <Folder Include="scriptBD\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
