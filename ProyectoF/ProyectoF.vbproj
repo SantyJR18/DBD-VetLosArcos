@@ -73,6 +73,8 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dao\EmpleadosDao.vb" />
+    <Compile Include="dao\RolesDao.vb" />
     <Compile Include="DBLosArcosDs.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -100,6 +102,12 @@
       <DependentUpon>FrmClientes.vb</DependentUpon>
     </Compile>
     <Compile Include="forms\FrmClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FrmEmpleados.Designer.vb">
+      <DependentUpon>FrmEmpleados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FrmEmpleados.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="forms\FrmMenu.Designer.vb">
@@ -159,6 +167,9 @@
   <ItemGroup>
     <EmbeddedResource Include="forms\FrmClientes.resx">
       <DependentUpon>FrmClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FrmEmpleados.resx">
+      <DependentUpon>FrmEmpleados.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\FrmMenu.resx">
       <DependentUpon>FrmMenu.vb</DependentUpon>
@@ -262,7 +273,6 @@
     <None Include="Resources\closeIcon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="dao\" />
     <Folder Include="scriptBD\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

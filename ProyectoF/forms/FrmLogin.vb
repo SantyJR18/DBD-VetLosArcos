@@ -33,6 +33,11 @@ Public Class FrmLogin
         FrmMenu.Show()
     End Sub
 
+    Private Sub LblAccount_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LblAccount.LinkClicked
+        Me.Hide()
+        FrmEmpleados.Show()
+    End Sub
+
 #End Region
 
 #Region "Componentes de personalización del Form"

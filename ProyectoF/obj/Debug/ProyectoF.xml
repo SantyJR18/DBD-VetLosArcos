@@ -202,11 +202,6 @@ ProyectoF
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:ProyectoF.My.Resources.Resources.save">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
 <member name="P:ProyectoF.My.Resources.Resources.search">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
