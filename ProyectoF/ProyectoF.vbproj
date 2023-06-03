@@ -73,6 +73,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBLosArcosDs.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBLosArcosDs.xsd</DependentUpon>
+    </Compile>
     <Compile Include="forms\FrmClientes.Designer.vb">
       <DependentUpon>FrmClientes.vb</DependentUpon>
     </Compile>
@@ -145,6 +150,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="DBLosArcosDs.xsc">
+      <DependentUpon>DBLosArcosDs.xsd</DependentUpon>
+    </None>
+    <None Include="DBLosArcosDs.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBLosArcosDs.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBLosArcosDs.xss">
+      <DependentUpon>DBLosArcosDs.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
