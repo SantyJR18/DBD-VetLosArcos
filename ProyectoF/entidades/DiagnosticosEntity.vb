@@ -1,8 +1,13 @@
 ﻿Public Class DiagnosticosEntity
+
     Private _idDiag As Integer
     Private _descripcionDiag As String
     Private _fechaDiag As DateTime
     Private _idExp As Integer
+
+    Public Sub New()
+
+    End Sub
 
     Public Property IdDiag As Integer
         Get

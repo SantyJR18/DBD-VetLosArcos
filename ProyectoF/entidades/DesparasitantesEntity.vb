@@ -4,6 +4,10 @@
     Private _nombreDes As String
     Private _idMarcaDes As Integer
 
+    Public Sub New()
+
+    End Sub
+
     Public Property IdDesparasitante As Integer
         Get
             Return _idDesparasitante

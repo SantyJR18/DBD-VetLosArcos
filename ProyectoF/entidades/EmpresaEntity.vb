@@ -1,9 +1,14 @@
 ﻿Public Class EmpresaEntity
+
     Private _idEmp As Integer
     Private _nombreEmp As String
     Private _direccionEmp As String
     Private _telEmp As String
     Private _rucEmp As String
+
+    Public Sub New()
+
+    End Sub
 
     Public Property IdEmp As Integer
         Get

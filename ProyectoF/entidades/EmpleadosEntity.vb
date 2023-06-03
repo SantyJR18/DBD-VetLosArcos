@@ -1,4 +1,5 @@
 ﻿Public Class EmpleadosEntity
+
     Private _idEmpleado As Integer
     Private _usuario As String
     Private _contrasenia As String
@@ -8,6 +9,10 @@
     Private _fechaContratacion As DateTime
     Private _segundoNombreEmp As String
     Private _idRol As Integer
+
+    Public Sub New()
+
+    End Sub
 
     Public Property IdEmpleado As Integer
         Get

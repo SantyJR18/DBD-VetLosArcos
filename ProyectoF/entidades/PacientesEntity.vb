@@ -1,4 +1,5 @@
 ﻿Public Class PacientesEntity
+
     Private _idPaciente As Integer
     Private _nombrePaciente As String
     Private _sexoPaciente As Boolean
@@ -8,6 +9,10 @@
     Private _idCliente As String
     Private _idEspecie As Integer
     Private _idRaza As Integer
+
+    Public Sub New()
+
+    End Sub
 
     Public Property IdPaciente As Integer
         Get

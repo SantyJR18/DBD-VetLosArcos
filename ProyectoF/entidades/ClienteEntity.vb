@@ -9,6 +9,10 @@
     Private correoCliente As String
     Private telefonoCliente As String
 
+    Public Sub New()
+
+    End Sub
+
     Public Property IdCliente As String
         Get
             Return _idCliente

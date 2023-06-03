@@ -1,7 +1,12 @@
-﻿Module RolesEntity
+﻿Public Class RolesEntity
+
     Private _idRol As Integer
     Private _nombreRol As String
     Private _estado As Boolean
+
+    Public Sub New()
+
+    End Sub
 
     Public Property IdRol As Integer
         Get
@@ -29,4 +34,4 @@
             _estado = value
         End Set
     End Property
-End Module
+End Class
