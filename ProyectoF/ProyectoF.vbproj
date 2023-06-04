@@ -73,6 +73,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dao\ClienteDao.vb" />
     <Compile Include="dao\DesparasitantesDao.vb" />
     <Compile Include="dao\EmpleadosDao.vb" />
     <Compile Include="dao\MarcasDesparasitantesDao.vb" />
