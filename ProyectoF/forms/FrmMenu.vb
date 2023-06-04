@@ -52,6 +52,11 @@ Public Class FrmMenu
         BtnMinimize.BackColor = Color.White
     End Sub
 
+    Private Sub BtnCerrarSes_Click(sender As Object, e As EventArgs) Handles BtnCerrarSes.Click
+        Me.Close()
+        FrmLogin.Show()
+    End Sub
+
 #End Region
 
 #Region "Arrastrar/Drag Form"
@@ -66,6 +71,7 @@ Public Class FrmMenu
         ReleaseCapture()
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
+
 #End Region
 
 End Class

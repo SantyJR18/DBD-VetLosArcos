@@ -231,6 +231,7 @@
     <Content Include="Resources\garras.ico" />
     <Content Include="Resources\la-tienda-de-animales.png" />
     <None Include="Resources\log-out.png" />
+    <Content Include="Resources\limpiar.png" />
     <Content Include="Resources\logoVet.jpg" />
     <Content Include="Resources\logoVetPreview.png" />
     <Content Include="Resources\medicina24.png" />

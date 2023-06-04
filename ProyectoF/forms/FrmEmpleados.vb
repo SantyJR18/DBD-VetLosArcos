@@ -31,6 +31,15 @@ Public Class FrmEmpleados
         BtnMinimize.BackColor = Color.DodgerBlue
     End Sub
 
+    Private Sub BtnNuevo_Click(sender As Object, e As EventArgs) Handles BtnNuevo.Click
+        Limpiar()
+    End Sub
+
+    Private Sub BtnVolver_Click(sender As Object, e As EventArgs) Handles BtnVolver.Click
+        Me.Close()
+        FrmLogin.Show()
+    End Sub
+
 #End Region
 
 #Region "Arrastrar/Drag Form"
@@ -82,7 +91,6 @@ Public Class FrmEmpleados
             empleados.SegundoApellidoEmp = txtSegundoApe.Text
             empleados.Rol.IdRol = cmbIdRol.SelectedValue
             empleados.FechaContratacion = dtFechaC.Value
-            ''monitor.Observaciones = TxtObservacion.Text''
 
             If (dEmpleados.AgregarRegistro(empleados) = True) Then
                 MsgBox("Registro guardado satisfactoriamente.", MsgBoxStyle.Information, "Empleados")
@@ -92,6 +100,18 @@ Public Class FrmEmpleados
         Catch ex As Exception
             MsgBox("Error al guardar registro: " & ex.Message, MsgBoxStyle.Critical, "Empleados")
         End Try
+    End Sub
+
+    Sub Limpiar()
+        txtUsuario.Clear()
+        txtPwd.Clear()
+        txtPrimerNombre.Clear()
+        txtSegundoNombre.Clear()
+        txtPrimerApe.Clear()
+        txtSegundoApe.Clear()
+        cmbIdRol.SelectedIndex = -1
+        dtFechaC.Value = Now
+        txtUsuario.Focus()
     End Sub
 
 #End Region

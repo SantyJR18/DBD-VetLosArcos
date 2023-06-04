@@ -44,4 +44,59 @@ Public Class EmpleadosDao
         End Try
         Return ds
     End Function
+
+    Public Function ValidarCredenciales(ByVal usuario As String, ByVal contrasenia As String) As Boolean
+        Dim isValid As Boolean = False
+        Try
+            Dim tsql As String = "SELECT COUNT(*) FROM Empleados WHERE usuario = @usuario AND contrasenia = @contrasenia"
+            Dim conn As New SqlConnection(cStrConn)
+            Dim cmd As New SqlCommand(tsql, conn)
+            cmd.Parameters.AddWithValue("@usuario", usuario)
+            cmd.Parameters.AddWithValue("@contrasenia", contrasenia)
+            conn.Open()
+
+            Dim result As Integer = CInt(cmd.ExecuteScalar())
+            If result > 0 Then
+                isValid = True
+            End If
+
+            conn.Close()
+        Catch ex As Exception
+            ' Manejar adecuadamente la excepción
+            Console.WriteLine("Error al validar las credenciales: " & ex.Message)
+        End Try
+
+        Return isValid
+    End Function
+
+    Public Function ObtenerRol(ByVal usuario As String) As String
+        Dim rol As String = String.Empty
+        Try
+            Dim tsql As String = "SELECT idRol FROM Empleados WHERE usuario = @usuario"
+            Dim conn As New SqlConnection(cStrConn)
+            Dim cmd As New SqlCommand(tsql, conn)
+            cmd.Parameters.AddWithValue("@usuario", usuario)
+            conn.Open()
+
+            Dim result As Object = cmd.ExecuteScalar()
+            If result IsNot Nothing AndAlso Not IsDBNull(result) Then
+                Dim idRol As Integer = CInt(result)
+
+                ' Obtener el nombre del rol basado en el idRol
+                Dim tsqlRol As String = "SELECT nombreRol FROM Roles WHERE idRol = @idRol"
+                Dim cmdRol As New SqlCommand(tsqlRol, conn)
+                cmdRol.Parameters.AddWithValue("@idRol", idRol)
+
+                rol = CStr(cmdRol.ExecuteScalar())
+            End If
+
+            conn.Close()
+        Catch ex As Exception
+            ' Manejar adecuadamente la excepción
+            Console.WriteLine("Error al obtener el rol: " & ex.Message)
+        End Try
+
+        Return rol
+    End Function
+
 End Class
