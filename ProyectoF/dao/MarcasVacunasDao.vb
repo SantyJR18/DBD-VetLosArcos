@@ -6,7 +6,7 @@ Public Class MarcasVacunasDao
     Public Function AgregarRegistro(ByVal marcasVacunas As MarcasVacunasEntity) As Boolean
         Dim resp As Boolean = False
         Try
-            Dim tsql As String = "Insert into MarcasVacunas(nombreMarcaVac) values(@nombreMarcaVac)"
+            Dim tsql As String = "INSERT INTO MarcasVacunas(nombreMarcaVac) VALUES(@nombreMarcaVac)"
             Dim conn As New SqlConnection(strConn)
             Dim cmd As New SqlCommand()
             cmd.CommandType = CommandType.Text
@@ -48,7 +48,7 @@ Public Class MarcasVacunasDao
     Public Function EliminarRegistro(ByVal idMarcaVac As Integer) As Boolean
         Dim resp As Boolean = False
         Try
-            Dim tsql As String = "DELETE FROM MarcasVacunas WHERE idMarcaVac"
+            Dim tsql As String = "DELETE FROM MarcasVacunas WHERE idMarcaVac = @idMarcaVac"
             Dim conn As New SqlConnection(strConn)
             Dim cmd As New SqlCommand()
             cmd.CommandType = CommandType.Text
