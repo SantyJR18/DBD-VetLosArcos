@@ -1,18 +1,18 @@
 ﻿Imports System.Data.SqlClient
 
-Public Class VacunasDao
-    Private strConn As String = My.Settings.cStrDBLosArcos
+Public Class DesparasitantesDao
+    Dim strConn As String = My.Settings.cStrDBLosArcos
 
-    Public Function AgregarRegistros(ByVal vacunas As VacunasEntity) As Boolean
+    Public Function AgregarRegistros(ByVal desparasitante As DesparasitantesEntity) As Boolean
         Dim resp As Boolean = False
         Try
-            Dim tsql As String = "INSERT INTO Vacunas(nombreVacuna, idMarcaVac) VALUES(@nombreVacuna, @idMarcaVac)"
+            Dim tsql As String = "INSERT INTO Desparasitantes(nombreDes, idMarcaDes) VALUES (@nombreDes, @idMarcaDes)"
             Dim conn As New SqlConnection(strConn)
             Dim cmd As New SqlCommand()
             cmd.CommandType = CommandType.Text
             cmd.CommandText = tsql
-            cmd.Parameters.AddWithValue("@nombreVacuna", vacunas.NombreVacuna)
-            cmd.Parameters.AddWithValue("@idMarcaVac", vacunas.IdMarcaVac)
+            cmd.Parameters.AddWithValue("@nombreDes", desparasitante.NombreDes)
+            cmd.Parameters.AddWithValue("@idMarcaDes", desparasitante.IdMarcaDes)
             cmd.Connection = conn
             cmd.Connection.Open()
             If (cmd.ExecuteNonQuery <> 0) Then
@@ -25,17 +25,16 @@ Public Class VacunasDao
         Return resp
     End Function
 
-
-    Public Function EditarRegistro(ByVal vacuna As VacunasEntity) As Boolean
+    Public Function EditarRegistro(ByVal desparasitante As DesparasitantesEntity) As Boolean
         Dim resp As Boolean = False
         Try
-            Dim tsql As String = "UPDATE Vacunas SET nombreVacuna = @nombreVacuna, idMarcaVac = @idMarcaVac"
+            Dim tsql As String = "UPDATE Desparasitantes SET nombreDes = @nombreDes, idMarcaDes = @idMarcaDes"
             Dim conn As New SqlConnection(strConn)
             Dim cmd As New SqlCommand()
             cmd.CommandType = CommandType.Text
             cmd.CommandText = tsql
-            cmd.Parameters.AddWithValue("@nombreVacuna", vacuna.NombreVacuna)
-            cmd.Parameters.AddWithValue("@idMarcaVac", vacuna.IdMarcaVac)
+            cmd.Parameters.AddWithValue("@nombreDes", desparasitante.NombreDes)
+            cmd.Parameters.AddWithValue("@idMarcaDes", desparasitante.IdMarcaDes)
             cmd.Connection = conn
             cmd.Connection.Open()
             If (cmd.ExecuteNonQuery <> 0) Then
@@ -48,15 +47,15 @@ Public Class VacunasDao
         Return resp
     End Function
 
-    Public Function EliminarRegistro(ByVal idVacuna As Integer) As Boolean
-        Dim resp As Boolean = True
+    Public Function EliminarRegistro(ByVal idDesparasitante As Integer) As Boolean
+        Dim resp As Boolean = False
         Try
-            Dim tsql As String = "DELETE FROM Vacunas WHERE idVacuna = @idVacuna"
+            Dim tsql As String = "DELETE FROM Desparasitantes WHERE idDesparasitante = @idDesparasitante"
             Dim conn As New SqlConnection(strConn)
             Dim cmd As New SqlCommand()
             cmd.CommandType = CommandType.Text
             cmd.CommandText = tsql
-            cmd.Parameters.AddWithValue("@idVacuna", idVacuna)
+            cmd.Parameters.AddWithValue("@idDesparasitante", idDesparasitante)
             cmd.Connection = conn
             cmd.Connection.Open()
             If (cmd.ExecuteNonQuery <> 0) Then
@@ -69,10 +68,10 @@ Public Class VacunasDao
         Return resp
     End Function
 
-    Public Function MostrarRegistros() As DataSet
-        Dim ds As New DataSet
+    Public Function MostrarRegistro()
+        Dim ds As DataSet
         Try
-            Dim tsql As String = "SELECT * FROM Vacunas"
+            Dim tsql As String = "SELECT * FROM Desparasitantes"
             Dim conn As New SqlConnection(strConn)
             Dim da As New SqlDataAdapter(tsql, conn)
             da.Fill(ds)
