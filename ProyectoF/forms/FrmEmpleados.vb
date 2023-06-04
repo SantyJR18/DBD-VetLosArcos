@@ -5,7 +5,6 @@ Public Class FrmEmpleados
     Private dEmpleados As New EmpleadosDao
     Private dRoles As New RolesDao
 
-
 #Region "Botones del Formulario"
     Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles BtnClose.Click
         Application.Exit()
@@ -67,6 +66,7 @@ Public Class FrmEmpleados
 #Region "Funciones del FrmEmpleados"
     Private Sub FrmEmpleados_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LlenarRol()
+        MostrarRegistros()
     End Sub
 
     Sub LlenarRol()
@@ -94,6 +94,8 @@ Public Class FrmEmpleados
 
             If (dEmpleados.AgregarRegistro(empleados) = True) Then
                 MsgBox("Registro guardado satisfactoriamente.", MsgBoxStyle.Information, "Empleados")
+                Limpiar()
+                MostrarRegistros()
             Else
                 MsgBox("No se pudo guardar el registro...", MsgBoxStyle.Exclamation, "Empleados")
             End If
@@ -112,6 +114,82 @@ Public Class FrmEmpleados
         cmbIdRol.SelectedIndex = -1
         dtFechaC.Value = Now
         txtUsuario.Focus()
+    End Sub
+
+    Sub MostrarRegistros()
+        Try
+            dgvRegistrosAlmacenados.DataSource = dEmpleados.MostrarRegistros.Tables(0)
+            dgvRegistrosAlmacenados.Refresh()
+            GbRegistros.Text = "Registros almacenados: " & dgvRegistrosAlmacenados.Rows.Count
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub dgvRegistrosAlmacenados_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvRegistrosAlmacenados.CellClick
+        If e.RowIndex >= 0 Then
+            Dim usuario As String = dgvRegistrosAlmacenados.Rows(e.RowIndex).Cells("USUARIO").Value.ToString()
+            Dim empleado As EmpleadosEntity = dEmpleados.ObtenerRegistro(usuario)
+            If empleado IsNot Nothing Then
+                txtUsuario.Text = empleado.Usuario
+                txtPwd.Text = empleado.Contrasenia
+                txtPrimerNombre.Text = empleado.PrimerNombreEmp
+                txtSegundoNombre.Text = empleado.SegundoNombreEmp
+                txtPrimerApe.Text = empleado.PrimerApellidoEmp
+                txtSegundoApe.Text = empleado.SegundoApellidoEmp
+                cmbIdRol.SelectedValue = empleado.Rol.IdRol
+                dtFechaC.Value = empleado.FechaContratacion
+            End If
+        End If
+    End Sub
+
+    Private Sub BtnEditar_Click(sender As Object, e As EventArgs) Handles BtnEditar.Click
+        Try
+            Dim empleado As New EmpleadosEntity()
+            empleado.Usuario = txtUsuario.Text
+            empleado.Contrasenia = txtPwd.Text
+            empleado.PrimerNombreEmp = txtPrimerNombre.Text
+            empleado.SegundoNombreEmp = txtSegundoNombre.Text
+            empleado.PrimerApellidoEmp = txtPrimerApe.Text
+            empleado.SegundoApellidoEmp = txtSegundoApe.Text
+            empleado.FechaContratacion = dtFechaC.Value
+            empleado.Rol.IdRol = cmbIdRol.SelectedValue
+
+            If dEmpleados.EditarRegistro(empleado) Then
+                MsgBox("Registro modificado satisfactoriamente.", MsgBoxStyle.Information, "Empleados")
+                Limpiar()
+                MostrarRegistros()
+            Else
+                MsgBox("No se pudo modificar el registro...", MsgBoxStyle.Exclamation, "Empleados")
+            End If
+        Catch ex As Exception
+            MsgBox("Error al guardar registro: " & ex.Message, MsgBoxStyle.Critical, "Empleados")
+        End Try
+
+        MostrarRegistros()
+    End Sub
+
+    Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
+        Dim usuario As String = txtUsuario.Text
+
+        If String.IsNullOrEmpty(usuario) Then
+            MsgBox("Debe seleccionar un empleado para eliminar.", MsgBoxStyle.Information, "Empleados")
+            Return
+        End If
+
+        Dim respuesta As DialogResult = MessageBox.Show("¿Está seguro de que desea eliminar este empleado?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+        If respuesta = DialogResult.Yes Then
+            Dim exito As Boolean = dEmpleados.EliminarRegistro(usuario)
+
+            If exito Then
+                MsgBox("Empleado eliminado correctamente.", MsgBoxStyle.Information, "Empleados")
+                Limpiar()
+                MostrarRegistros()
+            Else
+                MsgBox("No se pudo eliminar el empleado.", MsgBoxStyle.Exclamation, "Empleados")
+            End If
+        End If
     End Sub
 
 #End Region

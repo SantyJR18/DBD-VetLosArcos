@@ -52,6 +52,9 @@ Public Class FrmLogin
                 Case "Recepcionista"
                     FrmMenu.Visible = False
                     FrmMenuR.Visible = True
+                Case "Admin"
+                    FrmMenu.Visible = True
+                    FrmMenuR.Visible = False
             End Select
 
             ' Mostrar el formulario principal
