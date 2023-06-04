@@ -75,8 +75,11 @@
   <ItemGroup>
     <Compile Include="dao\DesparasitantesDao.vb" />
     <Compile Include="dao\EmpleadosDao.vb" />
+    <Compile Include="dao\EspecieDao.vb" />
     <Compile Include="dao\MarcasDesparasitantesDao.vb" />
     <Compile Include="dao\MarcasVacunasDao.vb" />
+    <Compile Include="dao\PacientesDao.vb" />
+    <Compile Include="dao\RazasDao.vb" />
     <Compile Include="dao\RolesDao.vb" />
     <Compile Include="dao\VacunasDao.vb" />
     <Compile Include="DBLosArcosDs.Designer.vb">

@@ -35,7 +35,7 @@ Public Class EmpleadosDao
     Public Function MostrarRegistros() As DataSet
         Dim ds As New DataSet
         Try
-            Dim tsql As String = "SELECT usuario AS USUARIO, primerNombreEmp AS 'PRIMER NOMBRE', segundoNombreEmp AS 'SEGUNDO NOMBRE', primerApellidoEmp AS 'PRIMER APELLIDO', SegundoApellidoEmp AS 'SEGUNDO APELLIDO', fechaContratacion AS 'FECHA CONTRATACIÓN', idRol AS 'ID ROL' FROM Empleados"
+            Dim tsql As String = "SELECT usuario AS 'USUARIO', primerNombreEmp AS 'PRIMER NOMBRE', segundoNombreEmp AS 'SEGUNDO NOMBRE', primerApellidoEmp AS 'PRIMER APELLIDO', SegundoApellidoEmp AS 'SEGUNDO APELLIDO', fechaContratacion AS 'FECHA CONTRATACIÓN', idRol AS 'ID ROL' FROM Empleados"
             Dim conn As New SqlConnection(cStrConn)
             Dim da As New SqlDataAdapter(tsql, conn)
             da.Fill(ds)

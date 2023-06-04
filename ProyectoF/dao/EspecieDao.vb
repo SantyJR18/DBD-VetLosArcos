@@ -1,59 +1,37 @@
 ﻿Imports System.Data.SqlClient
 
-Public Class MarcasVacunasDao
+Public Class EspecieDao
     Private strConn As String = My.Settings.cStrDBLosArcos
 
-    Public Function AgregarRegistro(ByVal marcasVacunas As MarcasVacunasEntity) As Boolean
+    Public Function AgregarRegistro(ByVal especie As EspeciesEntity) As Boolean
         Dim resp As Boolean = False
         Try
-            Dim tsql As String = "INSERT INTO MarcasVacunas(nombreMarcaVac) VALUES(@nombreMarcaVac)"
+            Dim tsql As String = "INSERT INTO Especies(nombreEspecie) VALUES(@nombreEspecie)"
             Dim conn As New SqlConnection(strConn)
             Dim cmd As New SqlCommand()
             cmd.CommandType = CommandType.Text
             cmd.CommandText = tsql
-            cmd.Parameters.AddWithValue("@nombreMarcaVac", marcasVacunas.NombreMarcaVac)
+            cmd.Parameters.AddWithValue("@nombreEspecie", especie.NombreEspecie)
             cmd.Connection = conn
             cmd.Connection.Open()
-            If (cmd.ExecuteNonQuery <> 0) Then
+            If cmd.ExecuteNonQuery <> 0 Then
                 resp = True
             End If
-            cmd.Connection.Close()
         Catch ex As Exception
             resp = False
         End Try
         Return resp
     End Function
 
-    Public Function EditarRegistro(ByVal marcasVacunas As MarcasVacunasEntity) As Boolean
+    Public Function EditarRegistro(ByVal especie As EspeciesEntity) As Boolean
         Dim resp As Boolean = False
         Try
-            Dim tsql As String = "UPDATE MarcasVacunas SET nombreMarcaVac = @nombreMarcaVac"
+            Dim tsql As String = "UPDATE Especies SET nombreEspecie = @nombreEspecie"
             Dim conn As New SqlConnection(strConn)
             Dim cmd As New SqlCommand()
             cmd.CommandType = CommandType.Text
             cmd.CommandText = tsql
-            cmd.Parameters.AddWithValue("@nombreMarcaVac", marcasVacunas.NombreMarcaVac)
-            cmd.Connection = conn
-            cmd.Connection.Open()
-            If (cmd.ExecuteNonQuery <> 0) Then
-                resp = True
-            End If
-            cmd.Connection.Close()
-        Catch ex As Exception
-            resp = False
-        End Try
-        Return resp
-    End Function
-
-    Public Function EliminarRegistro(ByVal idMarcaVac As Integer) As Boolean
-        Dim resp As Boolean = False
-        Try
-            Dim tsql As String = "DELETE FROM MarcasVacunas WHERE idMarcaVac = @idMarcaVac"
-            Dim conn As New SqlConnection(strConn)
-            Dim cmd As New SqlCommand()
-            cmd.CommandType = CommandType.Text
-            cmd.CommandText = tsql
-            cmd.Parameters.AddWithValue("@idMarcaVac", idMarcaVac)
+            cmd.Parameters.AddWithValue("@nombreEspecie", especie.NombreEspecie)
             cmd.Connection = conn
             cmd.Connection.Open()
             If (cmd.ExecuteNonQuery <> 0) Then
@@ -69,14 +47,35 @@ Public Class MarcasVacunasDao
     Public Function MostrarRegistros() As DataSet
         Dim ds As New DataSet
         Try
-            Dim tsql As String = "SELECT * FROM MarcasVacunas"
+            Dim tsql As String = "SELECT * FROM Especies"
             Dim conn As New SqlConnection(strConn)
             Dim da As New SqlDataAdapter(tsql, conn)
             da.Fill(ds)
         Catch ex As Exception
-
+            Console.WriteLine("An error has ocurred")
         End Try
         Return ds
+    End Function
+    Public Function EliminarRegistro(ByVal especie As EspeciesEntity) As Boolean
+        Dim resp As Boolean = False
+        Try
+            Dim tsql As String = "DELETE FROM Especies WHERE idEspecie = @idEspecie"
+            Dim conn As New SqlConnection(strConn)
+            Dim cmd As New SqlCommand()
+            cmd.CommandType = CommandType.Text
+            cmd.CommandText = tsql
+            cmd.Parameters.AddWithValue("@nombreEspecie", especie.NombreEspecie)
+            cmd.Connection = conn
+            cmd.Connection.Open()
+            If cmd.ExecuteNonQuery <> 0 Then
+                resp = True
+            End If
+            cmd.Connection.Close()
+        Catch ex As Exception
+            resp = False
+            Console.WriteLine("An error has ocurred")
+        End Try
+        Return resp
     End Function
 
 End Class
