@@ -84,7 +84,7 @@
     <Compile Include="dao\PacientesDao.vb" />
     <Compile Include="dao\RazasDao.vb" />
     <Compile Include="dao\RegistroServiciosDao.vb" />
-    <Compile Include="dao\RegistroVacunasDao.vb" />
+    <Compile Include="dao\RegistroVacunacionesDao.vb" />
     <Compile Include="dao\RolesDao.vb" />
     <Compile Include="dao\ServiciosDao.vb" />
     <Compile Include="dao\VacunasDao.vb" />

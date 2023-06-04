@@ -2,18 +2,18 @@
 
     Private _idVacunacion As Integer
     Private _fechaVacunacion As DateTime
-    Private _idExp As Integer
-    Private _idVacuna As Integer
+    Private _Exp As ExpedientesEntity
+    Private _Vacuna As VacunasEntity
 
     Public Sub New()
 
     End Sub
 
-    Public Sub New(idVacunacion As Integer, fechaVacunacion As Date, idExp As Integer, idVacuna As Integer)
+    Public Sub New(idVacunacion As Integer, fechaVacunacion As Date, exp As ExpedientesEntity, vacuna As VacunasEntity)
         _idVacunacion = idVacunacion
         _fechaVacunacion = fechaVacunacion
-        _idExp = idExp
-        _idVacuna = idVacuna
+        _Exp = exp
+        _Vacuna = vacuna
     End Sub
 
     Public Property IdVacunacion As Integer
@@ -34,21 +34,21 @@
         End Set
     End Property
 
-    Public Property IdExp As Integer
+    Public Property Exp As ExpedientesEntity
         Get
-            Return _idExp
+            Return _Exp
         End Get
-        Set(value As Integer)
-            _idExp = value
+        Set(value As ExpedientesEntity)
+            _Exp = value
         End Set
     End Property
 
-    Public Property IdVacuna As Integer
+    Public Property Vacuna As VacunasEntity
         Get
-            Return _idVacuna
+            Return _Vacuna
         End Get
-        Set(value As Integer)
-            _idVacuna = value
+        Set(value As VacunasEntity)
+            _Vacuna = value
         End Set
     End Property
 End Class
