@@ -14,6 +14,18 @@
 
     End Sub
 
+    Public Sub New(idEmpleado As Integer, usuario As String, contrasenia As String, primerNombreEmp As String, primerApellidoEmp As String, segundoApellidoEmp As String, fechaContratacion As Date, segundoNombreEmp As String, rol As RolesEntity)
+        _idEmpleado = idEmpleado
+        _usuario = usuario
+        _contrasenia = contrasenia
+        _primerNombreEmp = primerNombreEmp
+        _primerApellidoEmp = primerApellidoEmp
+        _SegundoApellidoEmp = segundoApellidoEmp
+        _fechaContratacion = fechaContratacion
+        _segundoNombreEmp = segundoNombreEmp
+        _Rol = rol
+    End Sub
+
     Public Property IdEmpleado As Integer
         Get
             Return _idEmpleado

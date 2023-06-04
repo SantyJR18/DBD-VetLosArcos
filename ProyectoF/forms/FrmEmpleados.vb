@@ -126,7 +126,7 @@ Public Class FrmEmpleados
         End Try
     End Sub
 
-    Private Sub dgvRegistrosAlmacenados_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvRegistrosAlmacenados.CellClick
+    Private Sub dgvRegistrosAlmacenados_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvRegistrosAlmacenados.CellDoubleClick
         If e.RowIndex >= 0 Then
             Dim usuario As String = dgvRegistrosAlmacenados.Rows(e.RowIndex).Cells("USUARIO").Value.ToString()
             Dim empleado As EmpleadosEntity = dEmpleados.ObtenerRegistro(usuario)
@@ -139,9 +139,12 @@ Public Class FrmEmpleados
                 txtSegundoApe.Text = empleado.SegundoApellidoEmp
                 cmbIdRol.SelectedValue = empleado.Rol.IdRol
                 dtFechaC.Value = empleado.FechaContratacion
+                tcEmpleados.SelectedIndex = 0
+                ''tcEmpleados.TabPages(0).Enabled = False
             End If
         End If
     End Sub
+
 
     Private Sub BtnEditar_Click(sender As Object, e As EventArgs) Handles BtnEditar.Click
         Try
@@ -189,6 +192,35 @@ Public Class FrmEmpleados
             Else
                 MsgBox("No se pudo eliminar el empleado.", MsgBoxStyle.Exclamation, "Empleados")
             End If
+        End If
+    End Sub
+
+    Private Sub txtBusqueda_Enter(sender As Object, e As EventArgs) Handles txtBusqueda.Enter
+        If txtBusqueda.Text = "Buscar Empleado Por Nombre" Then
+            txtBusqueda.Text = ""
+            txtBusqueda.ForeColor = Color.DimGray
+        End If
+    End Sub
+
+    Private Sub txtBusqueda_Leave(sender As Object, e As EventArgs) Handles txtBusqueda.Leave
+        If txtBusqueda.Text = "" Then
+            txtBusqueda.Text = "Buscar Empleado Por Nombre"
+            txtBusqueda.ForeColor = Color.DimGray
+        End If
+    End Sub
+
+    Private Sub txtBusqueda_TextChanged(sender As Object, e As EventArgs) Handles txtBusqueda.TextChanged
+        If txtBusqueda.Text = "Buscar Empleado Por Nombre" Then
+            Return
+        End If
+
+        Dim empleadoDao As New EmpleadosDao()
+
+        If String.IsNullOrWhiteSpace(txtBusqueda.Text) Then
+            MostrarRegistros()
+        Else
+            Dim ds As DataSet = empleadoDao.BuscarEmpleadoPorNombre(txtBusqueda.Text.Trim())
+            dgvRegistrosAlmacenados.DataSource = ds.Tables(0)
         End If
     End Sub
 
