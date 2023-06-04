@@ -176,4 +176,20 @@ Public Class EmpleadosDao
         Return empleado
     End Function
 
+    Public Function BuscarEmpleadoPorNombre(ByVal nombre As String) As DataSet
+        Dim ds As New DataSet()
+        Try
+            Dim tsql As String = "SELECT usuario AS USUARIO, primerNombreEmp AS 'PRIMER NOMBRE', segundoNombreEmp AS 'SEGUNDO NOMBRE', primerApellidoEmp AS 'PRIMER APELLIDO', SegundoApellidoEmp AS 'SEGUNDO APELLIDO', fechaContratacion AS 'FECHA CONTRATACIÓN', idRol AS 'ID ROL' FROM Empleados WHERE primerNombreEmp LIKE @nombre"
+            Dim conn As New SqlConnection(cStrConn)
+            Dim cmd As New SqlCommand(tsql, conn)
+            cmd.Parameters.AddWithValue("@nombre", "%" & nombre & "%")
+            conn.Open()
+            Dim da As New SqlDataAdapter(cmd)
+            da.Fill(ds)
+        Catch ex As Exception
+            ' Manejar la excepción adecuadamente
+        End Try
+        Return ds
+    End Function
+
 End Class

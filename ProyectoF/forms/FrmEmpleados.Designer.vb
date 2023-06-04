@@ -52,13 +52,19 @@ Partial Class FrmEmpleados
         Me.BtnNuevo = New System.Windows.Forms.Button()
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.BtnVolver = New System.Windows.Forms.Button()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.tcEmpleados = New System.Windows.Forms.TabControl()
         Me.tpEmpleados = New System.Windows.Forms.TabPage()
         Me.BtnEliminar = New System.Windows.Forms.Button()
         Me.BtnEditar = New System.Windows.Forms.Button()
         Me.tbRegistros = New System.Windows.Forms.TabPage()
+        Me.txtBusqueda = New System.Windows.Forms.TextBox()
         Me.GbRegistros = New System.Windows.Forms.GroupBox()
         Me.dgvRegistrosAlmacenados = New System.Windows.Forms.DataGridView()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         lblUsuario = New System.Windows.Forms.Label()
         lblPwd = New System.Windows.Forms.Label()
         lblPrimerNombre = New System.Windows.Forms.Label()
@@ -72,18 +78,22 @@ Partial Class FrmEmpleados
         CType(Me.BtnClose, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DBLosArcosDs, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmpleadosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabControl1.SuspendLayout()
+        Me.tcEmpleados.SuspendLayout()
         Me.tpEmpleados.SuspendLayout()
         Me.tbRegistros.SuspendLayout()
         Me.GbRegistros.SuspendLayout()
         CType(Me.dgvRegistrosAlmacenados, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblUsuario
         '
         lblUsuario.AutoSize = True
         lblUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lblUsuario.Location = New System.Drawing.Point(97, 103)
+        lblUsuario.Location = New System.Drawing.Point(97, 119)
         lblUsuario.Name = "lblUsuario"
         lblUsuario.Size = New System.Drawing.Size(61, 17)
         lblUsuario.TabIndex = 3
@@ -93,7 +103,7 @@ Partial Class FrmEmpleados
         '
         lblPwd.AutoSize = True
         lblPwd.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lblPwd.Location = New System.Drawing.Point(73, 165)
+        lblPwd.Location = New System.Drawing.Point(73, 181)
         lblPwd.Name = "lblPwd"
         lblPwd.Size = New System.Drawing.Size(85, 17)
         lblPwd.TabIndex = 7
@@ -103,7 +113,7 @@ Partial Class FrmEmpleados
         '
         lblPrimerNombre.AutoSize = True
         lblPrimerNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lblPrimerNombre.Location = New System.Drawing.Point(55, 226)
+        lblPrimerNombre.Location = New System.Drawing.Point(55, 242)
         lblPrimerNombre.Name = "lblPrimerNombre"
         lblPrimerNombre.Size = New System.Drawing.Size(107, 17)
         lblPrimerNombre.TabIndex = 8
@@ -113,7 +123,7 @@ Partial Class FrmEmpleados
         '
         lblPrimerApe.AutoSize = True
         lblPrimerApe.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lblPrimerApe.Location = New System.Drawing.Point(434, 225)
+        lblPrimerApe.Location = New System.Drawing.Point(434, 241)
         lblPrimerApe.Name = "lblPrimerApe"
         lblPrimerApe.Size = New System.Drawing.Size(107, 17)
         lblPrimerApe.TabIndex = 9
@@ -123,7 +133,7 @@ Partial Class FrmEmpleados
         '
         lblSegundoApe.AutoSize = True
         lblSegundoApe.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lblSegundoApe.Location = New System.Drawing.Point(418, 295)
+        lblSegundoApe.Location = New System.Drawing.Point(418, 311)
         lblSegundoApe.Name = "lblSegundoApe"
         lblSegundoApe.Size = New System.Drawing.Size(123, 17)
         lblSegundoApe.TabIndex = 11
@@ -133,7 +143,7 @@ Partial Class FrmEmpleados
         '
         lblIdRol.AutoSize = True
         lblIdRol.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lblIdRol.Location = New System.Drawing.Point(491, 164)
+        lblIdRol.Location = New System.Drawing.Point(491, 180)
         lblIdRol.Name = "lblIdRol"
         lblIdRol.Size = New System.Drawing.Size(50, 17)
         lblIdRol.TabIndex = 13
@@ -143,7 +153,7 @@ Partial Class FrmEmpleados
         '
         lblSegundoNombre.AutoSize = True
         lblSegundoNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lblSegundoNombre.Location = New System.Drawing.Point(35, 294)
+        lblSegundoNombre.Location = New System.Drawing.Point(35, 310)
         lblSegundoNombre.Name = "lblSegundoNombre"
         lblSegundoNombre.Size = New System.Drawing.Size(123, 17)
         lblSegundoNombre.TabIndex = 15
@@ -153,7 +163,7 @@ Partial Class FrmEmpleados
         '
         lblFechaC.AutoSize = True
         lblFechaC.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        lblFechaC.Location = New System.Drawing.Point(406, 101)
+        lblFechaC.Location = New System.Drawing.Point(406, 117)
         lblFechaC.Name = "lblFechaC"
         lblFechaC.Size = New System.Drawing.Size(135, 17)
         lblFechaC.TabIndex = 17
@@ -242,7 +252,7 @@ Partial Class FrmEmpleados
         '
         Me.txtUsuario.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmpleadosBindingSource, "usuario", True))
         Me.txtUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUsuario.Location = New System.Drawing.Point(179, 100)
+        Me.txtUsuario.Location = New System.Drawing.Point(179, 116)
         Me.txtUsuario.Name = "txtUsuario"
         Me.txtUsuario.Size = New System.Drawing.Size(160, 22)
         Me.txtUsuario.TabIndex = 4
@@ -251,7 +261,7 @@ Partial Class FrmEmpleados
         '
         Me.txtPwd.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmpleadosBindingSource, "contrasenia", True))
         Me.txtPwd.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPwd.Location = New System.Drawing.Point(179, 162)
+        Me.txtPwd.Location = New System.Drawing.Point(179, 178)
         Me.txtPwd.Name = "txtPwd"
         Me.txtPwd.Size = New System.Drawing.Size(160, 22)
         Me.txtPwd.TabIndex = 8
@@ -261,7 +271,7 @@ Partial Class FrmEmpleados
         '
         Me.txtPrimerNombre.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmpleadosBindingSource, "primerNombreEmp", True))
         Me.txtPrimerNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPrimerNombre.Location = New System.Drawing.Point(179, 223)
+        Me.txtPrimerNombre.Location = New System.Drawing.Point(179, 239)
         Me.txtPrimerNombre.Name = "txtPrimerNombre"
         Me.txtPrimerNombre.Size = New System.Drawing.Size(160, 22)
         Me.txtPrimerNombre.TabIndex = 9
@@ -270,7 +280,7 @@ Partial Class FrmEmpleados
         '
         Me.txtPrimerApe.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmpleadosBindingSource, "primerApellidoEmp", True))
         Me.txtPrimerApe.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPrimerApe.Location = New System.Drawing.Point(562, 222)
+        Me.txtPrimerApe.Location = New System.Drawing.Point(562, 238)
         Me.txtPrimerApe.Name = "txtPrimerApe"
         Me.txtPrimerApe.Size = New System.Drawing.Size(157, 22)
         Me.txtPrimerApe.TabIndex = 10
@@ -279,7 +289,7 @@ Partial Class FrmEmpleados
         '
         Me.txtSegundoApe.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmpleadosBindingSource, "SegundoApellidoEmp", True))
         Me.txtSegundoApe.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSegundoApe.Location = New System.Drawing.Point(562, 290)
+        Me.txtSegundoApe.Location = New System.Drawing.Point(562, 306)
         Me.txtSegundoApe.Name = "txtSegundoApe"
         Me.txtSegundoApe.Size = New System.Drawing.Size(155, 22)
         Me.txtSegundoApe.TabIndex = 12
@@ -288,7 +298,7 @@ Partial Class FrmEmpleados
         '
         Me.txtSegundoNombre.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmpleadosBindingSource, "segundoNombreEmp", True))
         Me.txtSegundoNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSegundoNombre.Location = New System.Drawing.Point(179, 291)
+        Me.txtSegundoNombre.Location = New System.Drawing.Point(179, 307)
         Me.txtSegundoNombre.Name = "txtSegundoNombre"
         Me.txtSegundoNombre.Size = New System.Drawing.Size(158, 22)
         Me.txtSegundoNombre.TabIndex = 16
@@ -297,7 +307,7 @@ Partial Class FrmEmpleados
         '
         Me.dtFechaC.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.EmpleadosBindingSource, "fechaContratacion", True))
         Me.dtFechaC.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtFechaC.Location = New System.Drawing.Point(562, 101)
+        Me.dtFechaC.Location = New System.Drawing.Point(562, 117)
         Me.dtFechaC.Name = "dtFechaC"
         Me.dtFechaC.Size = New System.Drawing.Size(281, 22)
         Me.dtFechaC.TabIndex = 18
@@ -306,7 +316,7 @@ Partial Class FrmEmpleados
         '
         Me.cmbIdRol.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbIdRol.FormattingEnabled = True
-        Me.cmbIdRol.Location = New System.Drawing.Point(562, 161)
+        Me.cmbIdRol.Location = New System.Drawing.Point(562, 177)
         Me.cmbIdRol.Name = "cmbIdRol"
         Me.cmbIdRol.Size = New System.Drawing.Size(158, 24)
         Me.cmbIdRol.TabIndex = 19
@@ -316,11 +326,11 @@ Partial Class FrmEmpleados
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.Label1.Location = New System.Drawing.Point(187, 19)
+        Me.Label1.Location = New System.Drawing.Point(282, 36)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(509, 36)
+        Me.Label1.Size = New System.Drawing.Size(291, 36)
         Me.Label1.TabIndex = 20
-        Me.Label1.Text = "Empleados - Veterinaria Los Arcos"
+        Me.Label1.Text = "Datos de Empleado"
         '
         'BtnNuevo
         '
@@ -358,20 +368,22 @@ Partial Class FrmEmpleados
         Me.BtnVolver.Text = "   Volver"
         Me.BtnVolver.UseVisualStyleBackColor = True
         '
-        'TabControl1
+        'tcEmpleados
         '
-        Me.TabControl1.Controls.Add(Me.tpEmpleados)
-        Me.TabControl1.Controls.Add(Me.tbRegistros)
-        Me.TabControl1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControl1.Location = New System.Drawing.Point(0, 41)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(890, 500)
-        Me.TabControl1.TabIndex = 24
+        Me.tcEmpleados.Controls.Add(Me.tpEmpleados)
+        Me.tcEmpleados.Controls.Add(Me.tbRegistros)
+        Me.tcEmpleados.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tcEmpleados.Location = New System.Drawing.Point(0, 41)
+        Me.tcEmpleados.Name = "tcEmpleados"
+        Me.tcEmpleados.SelectedIndex = 0
+        Me.tcEmpleados.Size = New System.Drawing.Size(890, 500)
+        Me.tcEmpleados.TabIndex = 24
         '
         'tpEmpleados
         '
         Me.tpEmpleados.BackColor = System.Drawing.Color.SeaShell
+        Me.tpEmpleados.Controls.Add(Me.PictureBox4)
+        Me.tpEmpleados.Controls.Add(Me.PictureBox3)
         Me.tpEmpleados.Controls.Add(Me.BtnEliminar)
         Me.tpEmpleados.Controls.Add(Me.BtnEditar)
         Me.tpEmpleados.Controls.Add(Me.cmbIdRol)
@@ -428,6 +440,10 @@ Partial Class FrmEmpleados
         'tbRegistros
         '
         Me.tbRegistros.BackColor = System.Drawing.Color.SeaShell
+        Me.tbRegistros.Controls.Add(Me.PictureBox2)
+        Me.tbRegistros.Controls.Add(Me.PictureBox1)
+        Me.tbRegistros.Controls.Add(Me.Label2)
+        Me.tbRegistros.Controls.Add(Me.txtBusqueda)
         Me.tbRegistros.Controls.Add(Me.GbRegistros)
         Me.tbRegistros.Location = New System.Drawing.Point(4, 25)
         Me.tbRegistros.Name = "tbRegistros"
@@ -436,12 +452,23 @@ Partial Class FrmEmpleados
         Me.tbRegistros.TabIndex = 1
         Me.tbRegistros.Text = "Registros Almacenados"
         '
+        'txtBusqueda
+        '
+        Me.txtBusqueda.ForeColor = System.Drawing.Color.DimGray
+        Me.txtBusqueda.Location = New System.Drawing.Point(22, 110)
+        Me.txtBusqueda.Multiline = True
+        Me.txtBusqueda.Name = "txtBusqueda"
+        Me.txtBusqueda.Size = New System.Drawing.Size(818, 33)
+        Me.txtBusqueda.TabIndex = 1
+        Me.txtBusqueda.Text = "Buscar Empleado Por Nombre"
+        Me.txtBusqueda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
         'GbRegistros
         '
         Me.GbRegistros.Controls.Add(Me.dgvRegistrosAlmacenados)
-        Me.GbRegistros.Location = New System.Drawing.Point(22, 169)
+        Me.GbRegistros.Location = New System.Drawing.Point(22, 154)
         Me.GbRegistros.Name = "GbRegistros"
-        Me.GbRegistros.Size = New System.Drawing.Size(821, 277)
+        Me.GbRegistros.Size = New System.Drawing.Size(821, 292)
         Me.GbRegistros.TabIndex = 0
         Me.GbRegistros.TabStop = False
         '
@@ -454,8 +481,59 @@ Partial Class FrmEmpleados
         Me.dgvRegistrosAlmacenados.Name = "dgvRegistrosAlmacenados"
         Me.dgvRegistrosAlmacenados.RowHeadersWidth = 51
         Me.dgvRegistrosAlmacenados.RowTemplate.Height = 24
-        Me.dgvRegistrosAlmacenados.Size = New System.Drawing.Size(815, 256)
+        Me.dgvRegistrosAlmacenados.Size = New System.Drawing.Size(815, 271)
         Me.dgvRegistrosAlmacenados.TabIndex = 0
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.Label2.Location = New System.Drawing.Point(283, 41)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(294, 36)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "Registro Empleado " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.ProyectoF.My.Resources.Resources.veterinario
+        Me.PictureBox1.Location = New System.Drawing.Point(195, 17)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(73, 60)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 3
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.ProyectoF.My.Resources.Resources.veterinario
+        Me.PictureBox2.Location = New System.Drawing.Point(606, 17)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(73, 60)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 4
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = Global.ProyectoF.My.Resources.Resources.veterinario
+        Me.PictureBox3.Location = New System.Drawing.Point(210, 12)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(73, 60)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 26
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Image = Global.ProyectoF.My.Resources.Resources.veterinario
+        Me.PictureBox4.Location = New System.Drawing.Point(596, 12)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(73, 60)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox4.TabIndex = 27
+        Me.PictureBox4.TabStop = False
         '
         'FrmEmpleados
         '
@@ -463,7 +541,7 @@ Partial Class FrmEmpleados
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SeaShell
         Me.ClientSize = New System.Drawing.Size(890, 581)
-        Me.Controls.Add(Me.TabControl1)
+        Me.Controls.Add(Me.tcEmpleados)
         Me.Controls.Add(Me.BottomPanel)
         Me.Controls.Add(Me.TitleBar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -475,12 +553,17 @@ Partial Class FrmEmpleados
         CType(Me.BtnClose, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DBLosArcosDs, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmpleadosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabControl1.ResumeLayout(False)
+        Me.tcEmpleados.ResumeLayout(False)
         Me.tpEmpleados.ResumeLayout(False)
         Me.tpEmpleados.PerformLayout()
         Me.tbRegistros.ResumeLayout(False)
+        Me.tbRegistros.PerformLayout()
         Me.GbRegistros.ResumeLayout(False)
         CType(Me.dgvRegistrosAlmacenados, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -505,11 +588,17 @@ Partial Class FrmEmpleados
     Friend WithEvents BtnGuardar As Button
     Friend WithEvents BtnNuevo As Button
     Friend WithEvents BtnVolver As Button
-    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents tcEmpleados As TabControl
     Friend WithEvents tpEmpleados As TabPage
     Friend WithEvents tbRegistros As TabPage
     Friend WithEvents GbRegistros As GroupBox
     Friend WithEvents dgvRegistrosAlmacenados As DataGridView
     Friend WithEvents BtnEliminar As Button
     Friend WithEvents BtnEditar As Button
+    Friend WithEvents txtBusqueda As TextBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents PictureBox3 As PictureBox
 End Class
