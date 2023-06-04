@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 
-Public Class MarcasDesparacitantesDao
+Public Class MarcasDesparasitantesDao
     Private strConn As String = My.Settings.cStrDBLosArcos
 
     Public Function AgregarRegistro(ByVal marcasDesparasitantes As MarcasDesparasitantesEntity) As Boolean
