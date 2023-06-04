@@ -6,12 +6,24 @@
     Private _fechaNac As DateTime
     Private _color As String
     Private _senPart As String
-    Private _idCliente As String
-    Private _idEspecie As Integer
-    Private _idRaza As Integer
+    Private _Cliente As New ClienteEntity
+    Private _Especie As New EspeciesEntity
+    Private _Raza As New RazasEntity
 
     Public Sub New()
 
+    End Sub
+
+    Public Sub New(idPaciente As Integer, nombrePaciente As String, sexoPaciente As Boolean, fechaNac As Date, color As String, senPart As String, cliente As ClienteEntity, especie As EspeciesEntity, raza As RazasEntity)
+        _idPaciente = idPaciente
+        _nombrePaciente = nombrePaciente
+        _sexoPaciente = sexoPaciente
+        _fechaNac = fechaNac
+        _color = color
+        _senPart = senPart
+        _Cliente = cliente
+        _Especie = especie
+        _Raza = raza
     End Sub
 
     Public Property IdPaciente As Integer
@@ -68,30 +80,30 @@
         End Set
     End Property
 
-    Public Property IdCliente As String
+    Public Property Cliente As ClienteEntity
         Get
-            Return _idCliente
+            Return _Cliente
         End Get
-        Set(value As String)
-            _idCliente = value
+        Set(value As ClienteEntity)
+            _Cliente = value
         End Set
     End Property
 
-    Public Property IdEspecie As Integer
+    Public Property Especie As EspeciesEntity
         Get
-            Return _idEspecie
+            Return _Especie
         End Get
-        Set(value As Integer)
-            _idEspecie = value
+        Set(value As EspeciesEntity)
+            _Especie = value
         End Set
     End Property
 
-    Public Property IdRaza As Integer
+    Public Property Raza As RazasEntity
         Get
-            Return _idRaza
+            Return _Raza
         End Get
-        Set(value As Integer)
-            _idRaza = value
+        Set(value As RazasEntity)
+            _Raza = value
         End Set
     End Property
 End Class
