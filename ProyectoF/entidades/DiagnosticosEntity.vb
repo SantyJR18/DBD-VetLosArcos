@@ -3,10 +3,17 @@
     Private _idDiag As Integer
     Private _descripcionDiag As String
     Private _fechaDiag As DateTime
-    Private _idExp As Integer
+    Private _Exp As ExpedientesEntity
 
     Public Sub New()
 
+    End Sub
+
+    Public Sub New(idDiag As Integer, descripcionDiag As String, fechaDiag As Date, exp As ExpedientesEntity)
+        _idDiag = idDiag
+        _descripcionDiag = descripcionDiag
+        _fechaDiag = fechaDiag
+        _Exp = exp
     End Sub
 
     Public Property IdDiag As Integer
@@ -36,12 +43,12 @@
         End Set
     End Property
 
-    Public Property IdExp As Integer
+    Public Property Exp As ExpedientesEntity
         Get
-            Return _idExp
+            Return _Exp
         End Get
-        Set(value As Integer)
-            _idExp = value
+        Set(value As ExpedientesEntity)
+            _Exp = value
         End Set
     End Property
 End Class
