@@ -35,7 +35,7 @@ Public Class EmpleadosDao
     Public Function MostrarRegistros() As DataSet
         Dim ds As New DataSet
         Try
-            Dim tsql As String = "Select * from Empleados"
+            Dim tsql As String = "SELECT usuario AS USUARIO, primerNombreEmp AS 'PRIMER NOMBRE', segundoNombreEmp AS 'SEGUNDO NOMBRE', primerApellidoEmp AS 'PRIMER APELLIDO', SegundoApellidoEmp AS 'SEGUNDO APELLIDO', fechaContratacion AS 'FECHA CONTRATACIÓN', idRol AS 'ID ROL' FROM Empleados"
             Dim conn As New SqlConnection(cStrConn)
             Dim da As New SqlDataAdapter(tsql, conn)
             da.Fill(ds)
@@ -97,6 +97,83 @@ Public Class EmpleadosDao
         End Try
 
         Return rol
+    End Function
+
+    Public Function EditarRegistro(ByVal empleado As EmpleadosEntity) As Boolean
+        Try
+            Dim conn As New SqlConnection(cStrConn)
+            Dim cmd As New SqlCommand()
+            cmd.Connection = conn
+            cmd.CommandText = "UPDATE Empleados SET usuario = @usuario, contrasenia = @contrasenia, primerNombreEmp = @primerNombreEmp, segundoNombreEmp = @segundoNombreEmp, primerApellidoEmp = @primerApellidoEmp, SegundoApellidoEmp = @segundoApellidoEmp, fechaContratacion = @fechaContratacion, idRol = @idRol WHERE usuario = @usuario"
+            cmd.Parameters.AddWithValue("@usuario", empleado.Usuario)
+            cmd.Parameters.AddWithValue("@contrasenia", empleado.Contrasenia)
+            cmd.Parameters.AddWithValue("@primerNombreEmp", empleado.PrimerNombreEmp)
+            cmd.Parameters.AddWithValue("@segundoNombreEmp", empleado.SegundoNombreEmp)
+            cmd.Parameters.AddWithValue("@primerApellidoEmp", empleado.PrimerApellidoEmp)
+            cmd.Parameters.AddWithValue("@segundoApellidoEmp", empleado.SegundoApellidoEmp)
+            cmd.Parameters.AddWithValue("@fechaContratacion", empleado.FechaContratacion)
+            cmd.Parameters.AddWithValue("@idRol", empleado.Rol.IdRol)
+
+            conn.Open()
+            Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
+            conn.Close()
+
+            If rowsAffected > 0 Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+
+    Public Function EliminarRegistro(ByVal usuario As String) As Boolean
+        Dim success As Boolean = False
+        Try
+            Dim tsql As String = "DELETE FROM Empleados WHERE usuario = @usuario"
+            Using conn As New SqlConnection(cStrConn)
+                Using cmd As New SqlCommand(tsql, conn)
+                    cmd.Parameters.AddWithValue("@usuario", usuario)
+                    conn.Open()
+                    Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
+                    If rowsAffected > 0 Then
+                        success = True
+                    End If
+                End Using
+            End Using
+        Catch ex As Exception
+            success = False
+        End Try
+        Return success
+    End Function
+
+    Public Function ObtenerRegistro(ByVal usuario As String) As EmpleadosEntity
+        Dim empleado As New EmpleadosEntity()
+        Try
+            Dim tsql As String = "SELECT * FROM Empleados WHERE usuario = @usuario"
+            Dim conn As New SqlConnection(cStrConn)
+            Dim cmd As New SqlCommand(tsql, conn)
+            cmd.Parameters.AddWithValue("@usuario", usuario)
+            conn.Open()
+            Dim reader As SqlDataReader = cmd.ExecuteReader()
+            If reader.HasRows Then
+                reader.Read()
+                empleado.Usuario = reader.GetString(reader.GetOrdinal("usuario"))
+                empleado.Contrasenia = reader.GetString(reader.GetOrdinal("contrasenia"))
+                empleado.PrimerNombreEmp = reader.GetString(reader.GetOrdinal("primerNombreEmp"))
+                empleado.SegundoNombreEmp = reader.GetString(reader.GetOrdinal("segundoNombreEmp"))
+                empleado.PrimerApellidoEmp = reader.GetString(reader.GetOrdinal("primerApellidoEmp"))
+                empleado.SegundoApellidoEmp = reader.GetString(reader.GetOrdinal("SegundoApellidoEmp"))
+                empleado.FechaContratacion = reader.GetDateTime(reader.GetOrdinal("fechaContratacion"))
+                empleado.Rol.IdRol = reader.GetInt32(reader.GetOrdinal("idRol"))
+            End If
+            reader.Close()
+            conn.Close()
+        Catch ex As Exception
+            empleado = Nothing
+        End Try
+        Return empleado
     End Function
 
 End Class
