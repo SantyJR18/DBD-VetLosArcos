@@ -2,10 +2,15 @@
 
     Private _idDesparasitante As Integer
     Private _nombreDes As String
-    Private _idMarcaDes As Integer
+    Private _MarcaDes As New MarcasDesparasitantesEntity
 
     Public Sub New()
+    End Sub
 
+    Public Sub New(idDesparasitante As Integer, nombreDes As String, marcaDes As MarcasDesparasitantesEntity)
+        _idDesparasitante = idDesparasitante
+        _nombreDes = nombreDes
+        _MarcaDes = marcaDes
     End Sub
 
     Public Property IdDesparasitante As Integer
@@ -26,12 +31,12 @@
         End Set
     End Property
 
-    Public Property IdMarcaDes As Integer
+    Public Property MarcaDes As MarcasDesparasitantesEntity
         Get
-            Return _idMarcaDes
+            Return _MarcaDes
         End Get
-        Set(value As Integer)
-            _idMarcaDes = value
+        Set(value As MarcasDesparasitantesEntity)
+            _MarcaDes = value
         End Set
     End Property
 End Class

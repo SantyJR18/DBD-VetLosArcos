@@ -12,7 +12,7 @@ Public Class DesparasitantesDao
             cmd.CommandType = CommandType.Text
             cmd.CommandText = tsql
             cmd.Parameters.AddWithValue("@nombreDes", desparasitante.NombreDes)
-            cmd.Parameters.AddWithValue("@idMarcaDes", desparasitante.IdMarcaDes)
+            cmd.Parameters.AddWithValue("@idMarcaDes", desparasitante.MarcaDes.IdMarcaDes)
             cmd.Connection = conn
             cmd.Connection.Open()
             If (cmd.ExecuteNonQuery <> 0) Then
@@ -34,7 +34,7 @@ Public Class DesparasitantesDao
             cmd.CommandType = CommandType.Text
             cmd.CommandText = tsql
             cmd.Parameters.AddWithValue("@nombreDes", desparasitante.NombreDes)
-            cmd.Parameters.AddWithValue("@idMarcaDes", desparasitante.IdMarcaDes)
+            cmd.Parameters.AddWithValue("@idMarcaDes", desparasitante.MarcaDes.IdMarcaDes)
             cmd.Connection = conn
             cmd.Connection.Open()
             If (cmd.ExecuteNonQuery <> 0) Then
@@ -76,7 +76,6 @@ Public Class DesparasitantesDao
             Dim da As New SqlDataAdapter(tsql, conn)
             da.Fill(ds)
         Catch ex As Exception
-
         End Try
         Return ds
     End Function

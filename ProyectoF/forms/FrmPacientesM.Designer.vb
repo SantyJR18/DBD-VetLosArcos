@@ -34,6 +34,8 @@ Partial Class FrmPacientesM
         Me.TPDetPacMed = New System.Windows.Forms.TabPage()
         Me.TPPacientesMed = New System.Windows.Forms.TabControl()
         Me.TPPaciente = New System.Windows.Forms.TabPage()
+        Me.BtnGuardar = New System.Windows.Forms.Button()
+        Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.TBNombrePac = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.TBFechaNac = New System.Windows.Forms.TextBox()
@@ -66,8 +68,6 @@ Partial Class FrmPacientesM
         Me.PnlTitle = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BtnCerrar = New System.Windows.Forms.PictureBox()
-        Me.BtnGuardar = New System.Windows.Forms.Button()
-        Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.TCPacientesMed.SuspendLayout()
         Me.TPPacMedico.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -156,6 +156,7 @@ Partial Class FrmPacientesM
         'BtnBuscarPac
         '
         Me.BtnBuscarPac.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.BtnBuscarPac.Image = Global.ProyectoF.My.Resources.Resources.search
         Me.BtnBuscarPac.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnBuscarPac.Location = New System.Drawing.Point(724, 107)
         Me.BtnBuscarPac.Name = "BtnBuscarPac"
@@ -232,6 +233,29 @@ Partial Class FrmPacientesM
         Me.TPPaciente.Size = New System.Drawing.Size(1006, 513)
         Me.TPPaciente.TabIndex = 0
         Me.TPPaciente.Text = "Paciente"
+        '
+        'BtnGuardar
+        '
+        Me.BtnGuardar.AccessibleRole = System.Windows.Forms.AccessibleRole.None
+        Me.BtnGuardar.Image = Global.ProyectoF.My.Resources.Resources.save
+        Me.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnGuardar.Location = New System.Drawing.Point(382, 340)
+        Me.BtnGuardar.Name = "BtnGuardar"
+        Me.BtnGuardar.Size = New System.Drawing.Size(100, 37)
+        Me.BtnGuardar.TabIndex = 36
+        Me.BtnGuardar.Text = "Guardar"
+        Me.BtnGuardar.UseVisualStyleBackColor = True
+        '
+        'BtnCancelar
+        '
+        Me.BtnCancelar.Image = Global.ProyectoF.My.Resources.Resources.close
+        Me.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnCancelar.Location = New System.Drawing.Point(525, 340)
+        Me.BtnCancelar.Name = "BtnCancelar"
+        Me.BtnCancelar.Size = New System.Drawing.Size(100, 37)
+        Me.BtnCancelar.TabIndex = 37
+        Me.BtnCancelar.Text = "Cancelar"
+        Me.BtnCancelar.UseVisualStyleBackColor = True
         '
         'TBNombrePac
         '
@@ -558,29 +582,6 @@ Partial Class FrmPacientesM
         Me.BtnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.BtnCerrar.TabIndex = 0
         Me.BtnCerrar.TabStop = False
-        '
-        'BtnGuardar
-        '
-        Me.BtnGuardar.AccessibleRole = System.Windows.Forms.AccessibleRole.None
-        Me.BtnGuardar.Image = Global.ProyectoF.My.Resources.Resources.save
-        Me.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnGuardar.Location = New System.Drawing.Point(382, 340)
-        Me.BtnGuardar.Name = "BtnGuardar"
-        Me.BtnGuardar.Size = New System.Drawing.Size(100, 37)
-        Me.BtnGuardar.TabIndex = 36
-        Me.BtnGuardar.Text = "Guardar"
-        Me.BtnGuardar.UseVisualStyleBackColor = True
-        '
-        'BtnCancelar
-        '
-        Me.BtnCancelar.Image = Global.ProyectoF.My.Resources.Resources.close
-        Me.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnCancelar.Location = New System.Drawing.Point(525, 340)
-        Me.BtnCancelar.Name = "BtnCancelar"
-        Me.BtnCancelar.Size = New System.Drawing.Size(100, 37)
-        Me.BtnCancelar.TabIndex = 37
-        Me.BtnCancelar.Text = "Cancelar"
-        Me.BtnCancelar.UseVisualStyleBackColor = True
         '
         'FrmPacientesM
         '

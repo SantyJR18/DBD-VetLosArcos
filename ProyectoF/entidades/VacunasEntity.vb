@@ -2,16 +2,15 @@
 
     Private _idVacuna As Integer
     Private _nombreVacuna As String
-    Private _idMarcaVac As Integer
+    Private _MarcaVac As New MarcasVacunasEntity
 
     Public Sub New()
-
     End Sub
 
-    Public Sub New(idVacuna As Integer, nombreVacuna As String, idMarcaVac As Integer)
+    Public Sub New(idVacuna As Integer, nombreVacuna As String, marcaVac As MarcasVacunasEntity)
         _idVacuna = idVacuna
         _nombreVacuna = nombreVacuna
-        _idMarcaVac = idMarcaVac
+        _MarcaVac = marcaVac
     End Sub
 
     Public Property IdVacuna As Integer
@@ -32,12 +31,12 @@
         End Set
     End Property
 
-    Public Property IdMarcaVac As Integer
+    Public Property MarcaVac As MarcasVacunasEntity
         Get
-            Return _idMarcaVac
+            Return _MarcaVac
         End Get
-        Set(value As Integer)
-            _idMarcaVac = value
+        Set(value As MarcasVacunasEntity)
+            _MarcaVac = value
         End Set
     End Property
 End Class

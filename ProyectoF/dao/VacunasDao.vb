@@ -12,7 +12,7 @@ Public Class VacunasDao
             cmd.CommandType = CommandType.Text
             cmd.CommandText = tsql
             cmd.Parameters.AddWithValue("@nombreVacuna", vacunas.NombreVacuna)
-            cmd.Parameters.AddWithValue("@idMarcaVac", vacunas.IdMarcaVac)
+            cmd.Parameters.AddWithValue("@idMarcaVac", vacunas.MarcaVac.IdMarcaVac)
             cmd.Connection = conn
             cmd.Connection.Open()
             If (cmd.ExecuteNonQuery <> 0) Then
@@ -35,7 +35,7 @@ Public Class VacunasDao
             cmd.CommandType = CommandType.Text
             cmd.CommandText = tsql
             cmd.Parameters.AddWithValue("@nombreVacuna", vacuna.NombreVacuna)
-            cmd.Parameters.AddWithValue("@idMarcaVac", vacuna.IdMarcaVac)
+            cmd.Parameters.AddWithValue("@idMarcaVac", vacuna.MarcaVac.IdMarcaVac)
             cmd.Connection = conn
             cmd.Connection.Open()
             If (cmd.ExecuteNonQuery <> 0) Then
