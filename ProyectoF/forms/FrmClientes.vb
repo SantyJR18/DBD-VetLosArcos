@@ -87,5 +87,4 @@ Public Class FrmClientes
             Return _instance
         End Function
     End Class
-
 End Class
