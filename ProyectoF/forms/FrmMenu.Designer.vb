@@ -24,8 +24,6 @@ Partial Class FrmMenu
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMenu))
         Me.PanelChildForm = New System.Windows.Forms.Panel()
-        Me.LblVet = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.TitleBar = New System.Windows.Forms.Panel()
         Me.BtnMinimize = New System.Windows.Forms.PictureBox()
         Me.BtnClose = New System.Windows.Forms.PictureBox()
@@ -49,8 +47,9 @@ Partial Class FrmMenu
         Me.BtnServicio = New System.Windows.Forms.Button()
         Me.BtnPaciente = New System.Windows.Forms.Button()
         Me.BtnCliente = New System.Windows.Forms.Button()
+        Me.LblVet = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PanelChildForm.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TitleBar.SuspendLayout()
         CType(Me.BtnMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BtnClose, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -58,6 +57,7 @@ Partial Class FrmMenu
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BtnCerrar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelMenu.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelChildForm
@@ -67,33 +67,11 @@ Partial Class FrmMenu
         Me.PanelChildForm.Controls.Add(Me.LblVet)
         Me.PanelChildForm.Controls.Add(Me.PictureBox2)
         Me.PanelChildForm.ForeColor = System.Drawing.Color.SteelBlue
-        Me.PanelChildForm.Location = New System.Drawing.Point(183, 38)
-        Me.PanelChildForm.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelChildForm.Location = New System.Drawing.Point(185, 38)
+        Me.PanelChildForm.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelChildForm.Name = "PanelChildForm"
-        Me.PanelChildForm.Size = New System.Drawing.Size(845, 571)
+        Me.PanelChildForm.Size = New System.Drawing.Size(843, 571)
         Me.PanelChildForm.TabIndex = 1
-        '
-        'LblVet
-        '
-        Me.LblVet.AutoSize = True
-        Me.LblVet.Font = New System.Drawing.Font("Georgia", 25.8!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblVet.Location = New System.Drawing.Point(225, 455)
-        Me.LblVet.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.LblVet.Name = "LblVet"
-        Me.LblVet.Size = New System.Drawing.Size(421, 41)
-        Me.LblVet.TabIndex = 1
-        Me.LblVet.Text = "Veterinaria Los Arcos"
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.ProyectoF.My.Resources.Resources.la_tienda_de_animales
-        Me.PictureBox2.Location = New System.Drawing.Point(209, 123)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(427, 325)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 0
-        Me.PictureBox2.TabStop = False
         '
         'TitleBar
         '
@@ -147,7 +125,7 @@ Partial Class FrmMenu
         Me.PictureBox1.ErrorImage = Nothing
         Me.PictureBox1.Image = Global.ProyectoF.My.Resources.Resources.logoVetPreview
         Me.PictureBox1.Location = New System.Drawing.Point(0, -1)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(188, 39)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -168,7 +146,7 @@ Partial Class FrmMenu
         'PanelEspacio
         '
         Me.PanelEspacio.Location = New System.Drawing.Point(2, 2)
-        Me.PanelEspacio.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelEspacio.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelEspacio.Name = "PanelEspacio"
         Me.PanelEspacio.Size = New System.Drawing.Size(188, 28)
         Me.PanelEspacio.TabIndex = 2
@@ -177,7 +155,7 @@ Partial Class FrmMenu
         '
         Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 37)
-        Me.FlowLayoutPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.FlowLayoutPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(188, 28)
         Me.FlowLayoutPanel1.TabIndex = 4
@@ -186,7 +164,7 @@ Partial Class FrmMenu
         '
         Me.FlowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.FlowLayoutPanel2.Location = New System.Drawing.Point(0, 102)
-        Me.FlowLayoutPanel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.FlowLayoutPanel2.Margin = New System.Windows.Forms.Padding(2)
         Me.FlowLayoutPanel2.Name = "FlowLayoutPanel2"
         Me.FlowLayoutPanel2.Size = New System.Drawing.Size(188, 28)
         Me.FlowLayoutPanel2.TabIndex = 6
@@ -195,7 +173,7 @@ Partial Class FrmMenu
         '
         Me.FlowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top
         Me.FlowLayoutPanel3.Location = New System.Drawing.Point(0, 167)
-        Me.FlowLayoutPanel3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.FlowLayoutPanel3.Margin = New System.Windows.Forms.Padding(2)
         Me.FlowLayoutPanel3.Name = "FlowLayoutPanel3"
         Me.FlowLayoutPanel3.Size = New System.Drawing.Size(188, 28)
         Me.FlowLayoutPanel3.TabIndex = 8
@@ -204,7 +182,7 @@ Partial Class FrmMenu
         '
         Me.FlowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Top
         Me.FlowLayoutPanel4.Location = New System.Drawing.Point(0, 232)
-        Me.FlowLayoutPanel4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.FlowLayoutPanel4.Margin = New System.Windows.Forms.Padding(2)
         Me.FlowLayoutPanel4.Name = "FlowLayoutPanel4"
         Me.FlowLayoutPanel4.Size = New System.Drawing.Size(188, 28)
         Me.FlowLayoutPanel4.TabIndex = 10
@@ -213,7 +191,7 @@ Partial Class FrmMenu
         '
         Me.FlowLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Top
         Me.FlowLayoutPanel5.Location = New System.Drawing.Point(0, 297)
-        Me.FlowLayoutPanel5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.FlowLayoutPanel5.Margin = New System.Windows.Forms.Padding(2)
         Me.FlowLayoutPanel5.Name = "FlowLayoutPanel5"
         Me.FlowLayoutPanel5.Size = New System.Drawing.Size(188, 28)
         Me.FlowLayoutPanel5.TabIndex = 12
@@ -222,7 +200,7 @@ Partial Class FrmMenu
         '
         Me.FlowLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Top
         Me.FlowLayoutPanel6.Location = New System.Drawing.Point(0, 362)
-        Me.FlowLayoutPanel6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.FlowLayoutPanel6.Margin = New System.Windows.Forms.Padding(2)
         Me.FlowLayoutPanel6.Name = "FlowLayoutPanel6"
         Me.FlowLayoutPanel6.Size = New System.Drawing.Size(188, 28)
         Me.FlowLayoutPanel6.TabIndex = 14
@@ -248,7 +226,7 @@ Partial Class FrmMenu
         Me.PanelMenu.Controls.Add(Me.PanelEspacio)
         Me.PanelMenu.Dock = System.Windows.Forms.DockStyle.Left
         Me.PanelMenu.Location = New System.Drawing.Point(0, 38)
-        Me.PanelMenu.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelMenu.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelMenu.Name = "PanelMenu"
         Me.PanelMenu.Size = New System.Drawing.Size(188, 571)
         Me.PanelMenu.TabIndex = 6
@@ -263,7 +241,7 @@ Partial Class FrmMenu
         Me.BtnCerrarSes.Image = CType(resources.GetObject("BtnCerrarSes.Image"), System.Drawing.Image)
         Me.BtnCerrarSes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnCerrarSes.Location = New System.Drawing.Point(0, 494)
-        Me.BtnCerrarSes.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.BtnCerrarSes.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnCerrarSes.Name = "BtnCerrarSes"
         Me.BtnCerrarSes.Size = New System.Drawing.Size(188, 37)
         Me.BtnCerrarSes.TabIndex = 21
@@ -274,7 +252,7 @@ Partial Class FrmMenu
         '
         Me.FlowLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Top
         Me.FlowLayoutPanel8.Location = New System.Drawing.Point(0, 427)
-        Me.FlowLayoutPanel8.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.FlowLayoutPanel8.Margin = New System.Windows.Forms.Padding(2)
         Me.FlowLayoutPanel8.Name = "FlowLayoutPanel8"
         Me.FlowLayoutPanel8.Size = New System.Drawing.Size(188, 67)
         Me.FlowLayoutPanel8.TabIndex = 19
@@ -289,7 +267,7 @@ Partial Class FrmMenu
         Me.BtnReportes.Image = Global.ProyectoF.My.Resources.Resources.MenuInforme
         Me.BtnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnReportes.Location = New System.Drawing.Point(0, 390)
-        Me.BtnReportes.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.BtnReportes.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnReportes.Name = "BtnReportes"
         Me.BtnReportes.Size = New System.Drawing.Size(188, 37)
         Me.BtnReportes.TabIndex = 18
@@ -306,7 +284,7 @@ Partial Class FrmMenu
         Me.BtnDesparasitacion.Image = Global.ProyectoF.My.Resources.Resources.medicina24
         Me.BtnDesparasitacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnDesparasitacion.Location = New System.Drawing.Point(0, 325)
-        Me.BtnDesparasitacion.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.BtnDesparasitacion.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnDesparasitacion.Name = "BtnDesparasitacion"
         Me.BtnDesparasitacion.Size = New System.Drawing.Size(188, 37)
         Me.BtnDesparasitacion.TabIndex = 13
@@ -323,7 +301,7 @@ Partial Class FrmMenu
         Me.BtnVacunas.Image = Global.ProyectoF.My.Resources.Resources.vac24
         Me.BtnVacunas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnVacunas.Location = New System.Drawing.Point(0, 260)
-        Me.BtnVacunas.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.BtnVacunas.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnVacunas.Name = "BtnVacunas"
         Me.BtnVacunas.Size = New System.Drawing.Size(188, 37)
         Me.BtnVacunas.TabIndex = 11
@@ -340,7 +318,7 @@ Partial Class FrmMenu
         Me.BtnDiagnostico.Image = Global.ProyectoF.My.Resources.Resources.MenuDiag
         Me.BtnDiagnostico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnDiagnostico.Location = New System.Drawing.Point(0, 195)
-        Me.BtnDiagnostico.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.BtnDiagnostico.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnDiagnostico.Name = "BtnDiagnostico"
         Me.BtnDiagnostico.Size = New System.Drawing.Size(188, 37)
         Me.BtnDiagnostico.TabIndex = 9
@@ -357,7 +335,7 @@ Partial Class FrmMenu
         Me.BtnServicio.Image = Global.ProyectoF.My.Resources.Resources.MenuServicio
         Me.BtnServicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnServicio.Location = New System.Drawing.Point(0, 130)
-        Me.BtnServicio.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.BtnServicio.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnServicio.Name = "BtnServicio"
         Me.BtnServicio.Size = New System.Drawing.Size(188, 37)
         Me.BtnServicio.TabIndex = 7
@@ -374,7 +352,7 @@ Partial Class FrmMenu
         Me.BtnPaciente.Image = Global.ProyectoF.My.Resources.Resources.MenuPaciente
         Me.BtnPaciente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnPaciente.Location = New System.Drawing.Point(0, 65)
-        Me.BtnPaciente.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.BtnPaciente.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnPaciente.Name = "BtnPaciente"
         Me.BtnPaciente.Size = New System.Drawing.Size(188, 37)
         Me.BtnPaciente.TabIndex = 5
@@ -391,12 +369,34 @@ Partial Class FrmMenu
         Me.BtnCliente.Image = Global.ProyectoF.My.Resources.Resources.MenuCliente
         Me.BtnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnCliente.Location = New System.Drawing.Point(0, 0)
-        Me.BtnCliente.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.BtnCliente.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnCliente.Name = "BtnCliente"
         Me.BtnCliente.Size = New System.Drawing.Size(188, 37)
         Me.BtnCliente.TabIndex = 3
         Me.BtnCliente.Text = "   Registro Cliente"
         Me.BtnCliente.UseVisualStyleBackColor = True
+        '
+        'LblVet
+        '
+        Me.LblVet.AutoSize = True
+        Me.LblVet.Font = New System.Drawing.Font("Georgia", 25.8!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblVet.Location = New System.Drawing.Point(225, 455)
+        Me.LblVet.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LblVet.Name = "LblVet"
+        Me.LblVet.Size = New System.Drawing.Size(421, 41)
+        Me.LblVet.TabIndex = 1
+        Me.LblVet.Text = "Veterinaria Los Arcos"
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.ProyectoF.My.Resources.Resources.la_tienda_de_animales
+        Me.PictureBox2.Location = New System.Drawing.Point(209, 123)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(427, 325)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 0
+        Me.PictureBox2.TabStop = False
         '
         'FrmMenu
         '
@@ -409,12 +409,11 @@ Partial Class FrmMenu
         Me.Controls.Add(Me.PanelChildForm)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "FrmMenu"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.PanelChildForm.ResumeLayout(False)
         Me.PanelChildForm.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TitleBar.ResumeLayout(False)
         CType(Me.BtnMinimize, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BtnClose, System.ComponentModel.ISupportInitialize).EndInit()
@@ -422,6 +421,7 @@ Partial Class FrmMenu
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BtnCerrar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelMenu.ResumeLayout(False)
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -447,8 +447,8 @@ Partial Class FrmMenu
     Friend WithEvents BtnReportes As Button
     Friend WithEvents PanelMenu As Panel
     Friend WithEvents BtnMinimize As PictureBox
-    Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents LblVet As Label
     Friend WithEvents FlowLayoutPanel8 As FlowLayoutPanel
     Friend WithEvents BtnCerrarSes As Button
+    Friend WithEvents LblVet As Label
+    Friend WithEvents PictureBox2 As PictureBox
 End Class

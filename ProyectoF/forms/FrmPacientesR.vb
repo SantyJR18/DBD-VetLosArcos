@@ -7,14 +7,14 @@ Public Class FrmPacientesR
         TCPacientesRec.TabPages.Remove(TPDetPacRec)
     End Sub
 
-    Private Sub BtnNuevoPacRec_Click(sender As Object, e As EventArgs) Handles BtnNuevoPac.Click
+    Private Sub BtnNuevoPacRec_Click(sender As Object, e As EventArgs)
         TCPacientesRec.TabPages.Remove(TPPacienteRec)
         TCPacientesRec.TabPages.Add(TPDetPacRec)
         TPDetPacRec.Text = "Agregar nuevo paciente"
     End Sub
 
 
-    Private Sub BtnEditarPacRec_Click(sender As Object, e As EventArgs) Handles BtnEditarPac.Click
+    Private Sub BtnEditarPacRec_Click(sender As Object, e As EventArgs)
         TCPacientesRec.TabPages.Remove(TPPacienteRec)
         TCPacientesRec.TabPages.Add(TPDetPacRec)
         TPDetPacRec.Text = "Editar paciente"
@@ -36,7 +36,7 @@ Public Class FrmPacientesR
         TCPacientesRec.TabPages.Add(TPPacienteRec)
     End Sub
 
-    Private Sub BtnEliminarRegPacRec_Click(sender As Object, e As EventArgs) Handles BtnEliminarRegPac.Click
+    Private Sub BtnEliminarRegPacRec_Click(sender As Object, e As EventArgs)
 
         Dim resultado = MessageBox.Show("¿Está seguro de eliminar al paciente selccionado?", "Advertencia",
                              MessageBoxButtons.YesNo, MessageBoxIcon.Warning)

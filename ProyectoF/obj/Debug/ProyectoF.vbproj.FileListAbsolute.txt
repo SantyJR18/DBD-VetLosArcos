@@ -98,7 +98,6 @@ C:\Users\Santiago\Documents\SDLL\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.F
 C:\Users\Santiago\Documents\SDLL\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.FrmMenuR.resources
 C:\Users\DELL\Desktop\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.FrmEmpleados.resources
 C:\Users\DELL\Desktop\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.FrmMenuR.resources
-C:\Users\DELL\Desktop\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.FrmDesparacitante.resources
 C:\Users\Santiago\Documents\SDLL\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.FrmDesparasitante.resources
 C:\Users\Diego\Desktop\BDFinalFolder\DBD-VetLosArcos\ProyectoF\bin\Debug\ProyectoF.exe.config
 C:\Users\Diego\Desktop\BDFinalFolder\DBD-VetLosArcos\ProyectoF\bin\Debug\ProyectoF.exe
@@ -120,3 +119,4 @@ C:\Users\Diego\Desktop\BDFinalFolder\DBD-VetLosArcos\ProyectoF\obj\Debug\Proyect
 C:\Users\Diego\Desktop\BDFinalFolder\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.exe
 C:\Users\Diego\Desktop\BDFinalFolder\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.xml
 C:\Users\Diego\Desktop\BDFinalFolder\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.pdb
+C:\Users\DELL\Desktop\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.FrmDesparasitante.resources
