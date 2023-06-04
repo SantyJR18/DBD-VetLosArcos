@@ -49,7 +49,9 @@ Partial Class FrmEmpleados
         Me.dtFechaC = New System.Windows.Forms.DateTimePicker()
         Me.cmbIdRol = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.BtnNuevo = New System.Windows.Forms.Button()
         Me.BtnGuardar = New System.Windows.Forms.Button()
+        Me.BtnVolver = New System.Windows.Forms.Button()
         lblUsuario = New System.Windows.Forms.Label()
         lblPwd = New System.Windows.Forms.Label()
         lblPrimerNombre = New System.Windows.Forms.Label()
@@ -68,6 +70,7 @@ Partial Class FrmEmpleados
         'lblUsuario
         '
         lblUsuario.AutoSize = True
+        lblUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         lblUsuario.Location = New System.Drawing.Point(153, 187)
         lblUsuario.Name = "lblUsuario"
         lblUsuario.Size = New System.Drawing.Size(61, 17)
@@ -77,6 +80,7 @@ Partial Class FrmEmpleados
         'lblPwd
         '
         lblPwd.AutoSize = True
+        lblPwd.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         lblPwd.Location = New System.Drawing.Point(136, 246)
         lblPwd.Name = "lblPwd"
         lblPwd.Size = New System.Drawing.Size(85, 17)
@@ -86,6 +90,7 @@ Partial Class FrmEmpleados
         'lblPrimerNombre
         '
         lblPrimerNombre.AutoSize = True
+        lblPrimerNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         lblPrimerNombre.Location = New System.Drawing.Point(130, 301)
         lblPrimerNombre.Name = "lblPrimerNombre"
         lblPrimerNombre.Size = New System.Drawing.Size(107, 17)
@@ -95,7 +100,8 @@ Partial Class FrmEmpleados
         'lblPrimerApe
         '
         lblPrimerApe.AutoSize = True
-        lblPrimerApe.Location = New System.Drawing.Point(456, 302)
+        lblPrimerApe.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        lblPrimerApe.Location = New System.Drawing.Point(469, 302)
         lblPrimerApe.Name = "lblPrimerApe"
         lblPrimerApe.Size = New System.Drawing.Size(107, 17)
         lblPrimerApe.TabIndex = 9
@@ -104,7 +110,8 @@ Partial Class FrmEmpleados
         'lblSegundoApe
         '
         lblSegundoApe.AutoSize = True
-        lblSegundoApe.Location = New System.Drawing.Point(448, 358)
+        lblSegundoApe.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        lblSegundoApe.Location = New System.Drawing.Point(455, 358)
         lblSegundoApe.Name = "lblSegundoApe"
         lblSegundoApe.Size = New System.Drawing.Size(123, 17)
         lblSegundoApe.TabIndex = 11
@@ -113,7 +120,8 @@ Partial Class FrmEmpleados
         'lblIdRol
         '
         lblIdRol.AutoSize = True
-        lblIdRol.Location = New System.Drawing.Point(520, 242)
+        lblIdRol.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        lblIdRol.Location = New System.Drawing.Point(523, 242)
         lblIdRol.Name = "lblIdRol"
         lblIdRol.Size = New System.Drawing.Size(50, 17)
         lblIdRol.TabIndex = 13
@@ -122,6 +130,7 @@ Partial Class FrmEmpleados
         'lblSegundoNombre
         '
         lblSegundoNombre.AutoSize = True
+        lblSegundoNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         lblSegundoNombre.Location = New System.Drawing.Point(116, 359)
         lblSegundoNombre.Name = "lblSegundoNombre"
         lblSegundoNombre.Size = New System.Drawing.Size(123, 17)
@@ -131,7 +140,8 @@ Partial Class FrmEmpleados
         'lblFechaC
         '
         lblFechaC.AutoSize = True
-        lblFechaC.Location = New System.Drawing.Point(437, 186)
+        lblFechaC.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        lblFechaC.Location = New System.Drawing.Point(435, 186)
         lblFechaC.Name = "lblFechaC"
         lblFechaC.Size = New System.Drawing.Size(135, 17)
         lblFechaC.TabIndex = 17
@@ -243,7 +253,7 @@ Partial Class FrmEmpleados
         'txtPrimerApe
         '
         Me.txtPrimerApe.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmpleadosBindingSource, "primerApellidoEmp", True))
-        Me.txtPrimerApe.Location = New System.Drawing.Point(575, 299)
+        Me.txtPrimerApe.Location = New System.Drawing.Point(593, 299)
         Me.txtPrimerApe.Name = "txtPrimerApe"
         Me.txtPrimerApe.Size = New System.Drawing.Size(157, 22)
         Me.txtPrimerApe.TabIndex = 10
@@ -251,7 +261,7 @@ Partial Class FrmEmpleados
         'txtSegundoApe
         '
         Me.txtSegundoApe.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmpleadosBindingSource, "SegundoApellidoEmp", True))
-        Me.txtSegundoApe.Location = New System.Drawing.Point(577, 355)
+        Me.txtSegundoApe.Location = New System.Drawing.Point(596, 355)
         Me.txtSegundoApe.Name = "txtSegundoApe"
         Me.txtSegundoApe.Size = New System.Drawing.Size(155, 22)
         Me.txtSegundoApe.TabIndex = 12
@@ -267,7 +277,7 @@ Partial Class FrmEmpleados
         'dtFechaC
         '
         Me.dtFechaC.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.EmpleadosBindingSource, "fechaContratacion", True))
-        Me.dtFechaC.Location = New System.Drawing.Point(574, 182)
+        Me.dtFechaC.Location = New System.Drawing.Point(590, 182)
         Me.dtFechaC.Name = "dtFechaC"
         Me.dtFechaC.Size = New System.Drawing.Size(241, 22)
         Me.dtFechaC.TabIndex = 18
@@ -275,7 +285,7 @@ Partial Class FrmEmpleados
         'cmbIdRol
         '
         Me.cmbIdRol.FormattingEnabled = True
-        Me.cmbIdRol.Location = New System.Drawing.Point(574, 239)
+        Me.cmbIdRol.Location = New System.Drawing.Point(592, 239)
         Me.cmbIdRol.Name = "cmbIdRol"
         Me.cmbIdRol.Size = New System.Drawing.Size(158, 24)
         Me.cmbIdRol.TabIndex = 19
@@ -284,24 +294,48 @@ Partial Class FrmEmpleados
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label1.Location = New System.Drawing.Point(243, 86)
+        Me.Label1.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.Label1.Location = New System.Drawing.Point(125, 86)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(404, 44)
+        Me.Label1.Size = New System.Drawing.Size(640, 44)
         Me.Label1.TabIndex = 20
-        Me.Label1.Text = "Veterinaria Los Arcos"
+        Me.Label1.Text = "Empleados - Veterinaria Los Arcos"
+        '
+        'BtnNuevo
+        '
+        Me.BtnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnNuevo.Image = Global.ProyectoF.My.Resources.Resources.limpiar
+        Me.BtnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnNuevo.Location = New System.Drawing.Point(554, 437)
+        Me.BtnNuevo.Name = "BtnNuevo"
+        Me.BtnNuevo.Size = New System.Drawing.Size(134, 46)
+        Me.BtnNuevo.TabIndex = 22
+        Me.BtnNuevo.Text = "   Nuevo"
+        Me.BtnNuevo.UseVisualStyleBackColor = True
         '
         'BtnGuardar
         '
         Me.BtnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnGuardar.Image = Global.ProyectoF.My.Resources.Resources.verify
         Me.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnGuardar.Location = New System.Drawing.Point(378, 437)
+        Me.BtnGuardar.Location = New System.Drawing.Point(388, 437)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Size = New System.Drawing.Size(134, 46)
         Me.BtnGuardar.TabIndex = 21
-        Me.BtnGuardar.Text = "Crear"
+        Me.BtnGuardar.Text = "   Crear"
         Me.BtnGuardar.UseVisualStyleBackColor = True
+        '
+        'BtnVolver
+        '
+        Me.BtnVolver.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnVolver.Image = Global.ProyectoF.My.Resources.Resources.volver
+        Me.BtnVolver.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnVolver.Location = New System.Drawing.Point(219, 437)
+        Me.BtnVolver.Name = "BtnVolver"
+        Me.BtnVolver.Size = New System.Drawing.Size(134, 46)
+        Me.BtnVolver.TabIndex = 23
+        Me.BtnVolver.Text = "   Volver"
+        Me.BtnVolver.UseVisualStyleBackColor = True
         '
         'FrmEmpleados
         '
@@ -309,6 +343,8 @@ Partial Class FrmEmpleados
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SeaShell
         Me.ClientSize = New System.Drawing.Size(890, 581)
+        Me.Controls.Add(Me.BtnVolver)
+        Me.Controls.Add(Me.BtnNuevo)
         Me.Controls.Add(Me.BtnGuardar)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cmbIdRol)
@@ -331,6 +367,7 @@ Partial Class FrmEmpleados
         Me.Controls.Add(Me.TitleBar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmEmpleados"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmEmpleados"
         Me.TitleBar.ResumeLayout(False)
         CType(Me.BtnMinimize, System.ComponentModel.ISupportInitialize).EndInit()
@@ -360,4 +397,6 @@ Partial Class FrmEmpleados
     Friend WithEvents cmbIdRol As ComboBox
     Friend WithEvents Label1 As Label
     Friend WithEvents BtnGuardar As Button
+    Friend WithEvents BtnNuevo As Button
+    Friend WithEvents BtnVolver As Button
 End Class
