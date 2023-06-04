@@ -84,6 +84,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DBLosArcosDs.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DBLosArcosDs.vb">
+      <DependentUpon>DBLosArcosDs.xsd</DependentUpon>
+    </Compile>
     <Compile Include="entidades\ClienteEntity.vb" />
     <Compile Include="entidades\DesparasitantesEntity.vb" />
     <Compile Include="entidades\DiagnosticosEntity.vb" />
