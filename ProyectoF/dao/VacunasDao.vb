@@ -29,7 +29,7 @@ Public Class VacunasDao
     Public Function EditarRegistro(ByVal vacuna As VacunasEntity) As Boolean
         Dim resp As Boolean = False
         Try
-            Dim tsql As String = "UPDATE Vacunas SET nombreVacuna = @nombreVacuna, idMarcaVac = @idMarcaVac"
+            Dim tsql As String = "UPDATE Vacunas SET nombreVacuna = @nombreVacuna, idMarcaVac = @idMarcaVac WHERE idVacuna = @idVacuna"
             Dim conn As New SqlConnection(strConn)
             Dim cmd As New SqlCommand()
             cmd.CommandType = CommandType.Text
