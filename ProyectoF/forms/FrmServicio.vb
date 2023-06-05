@@ -91,12 +91,13 @@
         Try
             cmbIdFactura.DataSource = dFactura.MostrarRegistros.Tables(0)
             cmbIdFactura.DisplayMember = "idFactura"
-            cmbIdFactura.ValueMember = "idCliente"
+            cmbIdFactura.ValueMember = "idFactura" ' Actualizar el ValueMember a "idFactura"
             cmbIdFactura.Refresh()
         Catch ex As Exception
-            MsgBox("Error al mostrar ID Paciente", MsgBoxStyle.Critical, "Paciente")
+            MsgBox("Error al mostrar ID Factura", MsgBoxStyle.Critical, "Factura")
         End Try
     End Sub
+
 
     Sub Limpiar()
         dtFechaConsulta.Value = DateTime.Now
