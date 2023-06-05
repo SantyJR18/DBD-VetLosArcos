@@ -92,7 +92,7 @@ Public Class RegistroServiciosDao
     Public Function ObtenerRegistro(ByVal idRegServicio As Integer) As RegistroServiciosEntity
         Dim registroServicio As New RegistroServiciosEntity()
         Try
-            MessageBox.Show("ID de registro de servicio: " & idRegServicio)
+            'MessageBox.Show("ID de registro de servicio: " & idRegServicio)
             Dim tsql As String = "SELECT * FROM RegistroServicios WHERE idRegServicio = @idRegServicio"
             Dim conn As New SqlConnection(cStrConn)
             Dim cmd As New SqlCommand(tsql, conn)
@@ -103,7 +103,7 @@ Public Class RegistroServiciosDao
                 reader.Read()
                 registroServicio.IdRegServicio = reader.GetInt32(reader.GetOrdinal("idRegServicio"))
                 registroServicio.FechaConsulta = reader.GetDateTime(reader.GetOrdinal("fechaConsulta"))
-                registroServicio.Cliente.IdCliente = reader.GetInt32(reader.GetOrdinal("idCliente"))
+                registroServicio.Cliente.IdCliente = reader.GetString(reader.GetOrdinal("idCliente"))
                 registroServicio.Paciente.IdPaciente = reader.GetInt32(reader.GetOrdinal("idPaciente"))
                 registroServicio.Servicio.IdServicio = reader.GetInt32(reader.GetOrdinal("idServicio"))
                 registroServicio.Factura.IdFactura = reader.GetInt32(reader.GetOrdinal("idFactura"))

@@ -123,3 +123,6 @@ C:\Users\DELL\Desktop\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.FrmDesparasi
 C:\Users\Santiago\Documents\SDLL\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.FrmDiagnostico.resources
 C:\Users\Santiago\Documents\SDLL\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.FrmServicio.resources
 C:\Users\Santiago\Documents\SDLL\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.FrmVacunas.resources
+C:\Users\Diego\Desktop\BDFinalFolder\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.FrmDiagnostico.resources
+C:\Users\Diego\Desktop\BDFinalFolder\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.FrmServicio.resources
+C:\Users\Diego\Desktop\BDFinalFolder\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.FrmVacunas.resources

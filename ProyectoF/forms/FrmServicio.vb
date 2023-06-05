@@ -108,12 +108,10 @@
 
     Private Sub dgvRegistrosAlmacenados_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvRegistrosAlmacenados.CellDoubleClick
         If e.RowIndex >= 0 Then
-            Dim idRegServicio As Integer = Convert.ToInt32(dgvRegistrosAlmacenados.Rows(e.RowIndex).Cells("ID REGISTRO").Value)
+            Dim idRegServicio As Integer = Convert.ToInt32(dgvRegistrosAlmacenados.Rows(e.RowIndex).Cells("ID REGISTRO").Value.ToString())
             Dim registroServicio As RegistroServiciosEntity = dRegistroServicio.ObtenerRegistro(idRegServicio)
             If registroServicio IsNot Nothing Then
                 ' Limpiar los controles antes de asignar nuevos valores
-                Limpiar()
-
                 ' Asignar los nuevos valores del objeto RegistroServiciosEntity a los controles
                 dtFechaConsulta.Value = registroServicio.FechaConsulta
                 cmbIdCliente.SelectedValue = registroServicio.Cliente.IdCliente
@@ -121,7 +119,7 @@
                 cmbIdServicio.SelectedValue = registroServicio.Servicio.IdServicio
                 cmbIdFactura.SelectedValue = registroServicio.Factura.IdFactura
 
-                ''tcServicios.SelectedIndex = 0
+                tcServicios.SelectedIndex = 1
                 ''tcServicios.TabPages(0).Enabled = False
             End If
         End If
