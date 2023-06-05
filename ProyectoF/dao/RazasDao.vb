@@ -61,13 +61,14 @@ Public Class RazasDao
     Public Function EditarRegistro(ByVal raza As RazasEntity) As Boolean
         Dim resp As Boolean = False
         Try
-            Dim tsql As String = "UPDATE Razas SET idRaza = @idRaza, verificarEsp = @verificarEsp"
+            Dim tsql As String = "UPDATE Razas SET nombreRaza = @nombreRaza, verificarEsp = @verificarEsp WHERE idRaza = @idRaza"
             Dim conn As New SqlConnection(strConn)
             Dim cmd As New SqlCommand()
             cmd.CommandType = CommandType.Text
             cmd.CommandText = tsql
-            cmd.Parameters.AddWithValue("@idRaza", raza.IdRaza)
+            cmd.Parameters.AddWithValue("@nombreRaza", raza.NombreRaza)
             cmd.Parameters.AddWithValue("@verificarEsp", raza.VerificarEsp)
+            cmd.Parameters.AddWithValue("@idRaza", raza.IdRaza)
             cmd.Connection = conn
             cmd.Connection.Open()
             If cmd.ExecuteNonQuery <> 0 Then
