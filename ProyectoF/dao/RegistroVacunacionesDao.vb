@@ -41,7 +41,7 @@ Public Class RegistroVacunacionesDao
     Public Function EditarRegistro(ByVal registroVacuna As RegistroVacunacionesEntity) As Boolean
         Dim resp As Boolean = False
         Try
-            Dim tsql As String = "UPDATE Diagnosticos SET fechaVacunacion = @fechaVacunacion, idExp = @idExp, idVacuna = @idVacuna"
+            Dim tsql As String = "UPDATE Diagnosticos SET fechaVacunacion = @fechaVacunacion, idExp = @idExp, idVacuna = @idVacuna WHERE idVacunacion = @idVacunacion"
             Dim conn As New SqlConnection(strConn)
             Dim cmd As New SqlCommand()
             cmd.CommandType = CommandType.Text

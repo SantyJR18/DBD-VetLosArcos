@@ -68,8 +68,8 @@ Public Class DesparasitantesDao
         Return resp
     End Function
 
-    Public Function MostrarRegistro()
-        Dim ds As DataSet
+    Public Function MostrarRegistro() As DataSet
+        Dim ds As New DataSet
         Try
             Dim tsql As String = "SELECT * FROM Desparasitantes"
             Dim conn As New SqlConnection(strConn)

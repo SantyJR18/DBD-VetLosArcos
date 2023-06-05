@@ -1,15 +1,15 @@
 ﻿Public Class RegistroFacturasEntity
 
     Private _idFactura As Integer
-    Private _idCliente As String
+    Private _Cliente As ClienteEntity
 
     Public Sub New()
 
     End Sub
 
-    Public Sub New(idFactura As Integer, idCliente As String)
+    Public Sub New(idFactura As Integer, cliente As ClienteEntity)
         _idFactura = idFactura
-        _idCliente = idCliente
+        _Cliente = cliente
     End Sub
 
     Public Property IdFactura As Integer
@@ -21,12 +21,12 @@
         End Set
     End Property
 
-    Public Property IdCliente As String
+    Public Property Cliente As ClienteEntity
         Get
-            Return _idCliente
+            Return _Cliente
         End Get
-        Set(value As String)
-            _idCliente = value
+        Set(value As ClienteEntity)
+            _Cliente = value
         End Set
     End Property
 End Class

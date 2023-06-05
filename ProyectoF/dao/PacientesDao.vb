@@ -47,7 +47,7 @@ Public Class PacientesDao
 
     Public Function EditarRegistro(ByVal paciente As PacientesEntity) As Boolean
         Try
-            Dim tsql As String = "UPDATE Pacientes SET nombrePaciente = @nombrePaciente, sexoPaciente = @sexoPaciente, fechaNac = @fechaNac, color = @color, senPart = @senPart, idCliente = @idCliente, idEspecie = @idEspecie, idRaza = @idRaza"
+            Dim tsql As String = "UPDATE Pacientes SET nombrePaciente = @nombrePaciente, sexoPaciente = @sexoPaciente, fechaNac = @fechaNac, color = @color, senPart = @senPart, idCliente = @idCliente, idEspecie = @idEspecie, idRaza = @idRaza WHERE idPaciente = @idPaciente"
             Dim conn As New SqlConnection(strConn)
             Dim cmd As New SqlCommand()
             cmd.Connection = conn
@@ -60,6 +60,7 @@ Public Class PacientesDao
             cmd.Parameters.AddWithValue("@idCliente", paciente.Cliente.IdCliente)
             cmd.Parameters.AddWithValue("@idEspecie", paciente.Especie.IdEspecie)
             cmd.Parameters.AddWithValue("@idRaza", paciente.Raza.IdRaza)
+            cmd.Parameters.AddWithValue("@idPaciente", paciente.IdPaciente)
             conn.Open()
             Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
             conn.Close()
