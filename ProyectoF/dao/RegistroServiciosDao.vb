@@ -117,4 +117,20 @@ Public Class RegistroServiciosDao
         Return registroServicio
     End Function
 
+    Public Function BuscarRegistroPorIdCliente(ByVal idCliente As String) As DataSet
+        Dim ds As New DataSet()
+        Try
+            Dim tsql As String = "SELECT idRegServicio AS 'ID REGISTRO', fechaConsulta AS 'FECHA CONSULTA', idCliente AS 'ID CLIENTE', idPaciente AS 'ID PACIENTE', idServicio AS 'ID SERVICIO', idFactura AS 'ID FACTURA' FROM RegistroServicios WHERE idCliente LIKE @idCliente"
+            Dim conn As New SqlConnection(cStrConn)
+            Dim cmd As New SqlCommand(tsql, conn)
+            cmd.Parameters.AddWithValue("@idCliente", "%" & idCliente & "%")
+            conn.Open()
+            Dim da As New SqlDataAdapter(cmd)
+            da.Fill(ds)
+        Catch ex As Exception
+            ' Manejar la excepción adecuadamente
+        End Try
+        Return ds
+    End Function
+
 End Class
