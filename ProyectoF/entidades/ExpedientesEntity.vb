@@ -2,16 +2,16 @@
 
     Private _idExp As Integer
     Private _fechaCreacionExp As DateTime
-    Private _idPaciente As Integer
+    Private _Paciente As PacientesEntity
 
     Public Sub New()
 
     End Sub
 
-    Public Sub New(idExp As Integer, fechaCreacionExp As Date, idPaciente As Integer)
+    Public Sub New(idExp As Integer, fechaCreacionExp As Date, paciente As PacientesEntity)
         _idExp = idExp
         _fechaCreacionExp = fechaCreacionExp
-        _idPaciente = idPaciente
+        _Paciente = paciente
     End Sub
 
     Public Property IdExp As Integer
@@ -32,12 +32,12 @@
         End Set
     End Property
 
-    Public Property IdPaciente As Integer
+    Public Property Paciente As PacientesEntity
         Get
-            Return _idPaciente
+            Return _Paciente
         End Get
-        Set(value As Integer)
-            _idPaciente = value
+        Set(value As PacientesEntity)
+            _Paciente = value
         End Set
     End Property
 End Class
