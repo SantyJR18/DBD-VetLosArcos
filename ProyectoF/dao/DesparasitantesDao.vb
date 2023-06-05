@@ -28,7 +28,7 @@ Public Class DesparasitantesDao
     Public Function EditarRegistro(ByVal desparasitante As DesparasitantesEntity) As Boolean
         Dim resp As Boolean = False
         Try
-            Dim tsql As String = "UPDATE Desparasitantes SET nombreDes = @nombreDes, idMarcaDes = @idMarcaDes"
+            Dim tsql As String = "UPDATE Desparasitantes SET nombreDes = @nombreDes, idMarcaDes = @idMarcaDes WHERE idDesparasitante = @idDesparasitante"
             Dim conn As New SqlConnection(strConn)
             Dim cmd As New SqlCommand()
             cmd.CommandType = CommandType.Text

@@ -2,18 +2,18 @@
 
     Private _idDesparasitacion As Integer
     Private _fechaDesparasitaciones As DateTime
-    Private _idExp As Integer
-    Private _idDesparasitante As Integer
+    Private _Exp As New ExpedientesEntity
+    Private _Desparasitante As New DesparasitantesEntity
 
     Public Sub New()
 
     End Sub
 
-    Public Sub New(idDesparasitacion As Integer, fechaDesparasitaciones As Date, idExp As Integer, idDesparasitante As Integer)
+    Public Sub New(idDesparasitacion As Integer, fechaDesparasitaciones As Date, exp As ExpedientesEntity, desparasitante As DesparasitantesEntity)
         _idDesparasitacion = idDesparasitacion
         _fechaDesparasitaciones = fechaDesparasitaciones
-        _idExp = idExp
-        _idDesparasitante = idDesparasitante
+        _Exp = exp
+        _Desparasitante = desparasitante
     End Sub
 
     Public Property IdDesparasitacion As Integer
@@ -34,21 +34,21 @@
         End Set
     End Property
 
-    Public Property IdExp As Integer
+    Public Property Exp As ExpedientesEntity
         Get
-            Return _idExp
+            Return _Exp
         End Get
-        Set(value As Integer)
-            _idExp = value
+        Set(value As ExpedientesEntity)
+            _Exp = value
         End Set
     End Property
 
-    Public Property IdDesparasitante As Integer
+    Public Property Desparasitante As DesparasitantesEntity
         Get
-            Return _idDesparasitante
+            Return _Desparasitante
         End Get
-        Set(value As Integer)
-            _idDesparasitante = value
+        Set(value As DesparasitantesEntity)
+            _Desparasitante = value
         End Set
     End Property
 End Class
