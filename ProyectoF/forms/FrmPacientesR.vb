@@ -62,17 +62,6 @@ Public Class FrmPacientesR
         BtnCerrar.BackColor = Color.DodgerBlue
     End Sub
 
-    <DllImport("user32.DLL", EntryPoint:="ReleaseCapture")>
-    Private Shared Sub ReleaseCapture()
-    End Sub
-    <DllImport("user32.DLL", EntryPoint:="SendMessage")>
-    Private Shared Sub SendMessage(hWnd As IntPtr, wMsg As Integer, wParam As Integer, lParam As Integer)
-    End Sub
-    Private Sub titleBarRec_MouseDown(sender As Object, e As MouseEventArgs) Handles PnlTitle.MouseDown
-        ReleaseCapture()
-        SendMessage(Me.Handle, &H112&, &HF012&, 0)
-    End Sub
-
     'Clase Singleton que es un patrón de diseño que restringe la instanciación de una clase a un objeto
     Public Class Singleton
         Private Shared _instance As Singleton

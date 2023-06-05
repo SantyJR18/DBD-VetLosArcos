@@ -27,11 +27,12 @@ Partial Class FrmDesparasitante
         Me.BtnCerrar = New System.Windows.Forms.PictureBox()
         Me.TCPacientes = New System.Windows.Forms.TabControl()
         Me.TPPaciente = New System.Windows.Forms.TabPage()
+        Me.GbRegistros = New System.Windows.Forms.GroupBox()
+        Me.dgvRegistrosAlmacenados = New System.Windows.Forms.DataGridView()
         Me.txtBusqueda = New System.Windows.Forms.TextBox()
         Me.BtnEliminarPac = New System.Windows.Forms.Button()
         Me.BtnEditarPac = New System.Windows.Forms.Button()
         Me.BtnNuevoPac = New System.Windows.Forms.Button()
-        Me.dgvRegistrosAlmacenados = New System.Windows.Forms.DataGridView()
         Me.TPDetPac = New System.Windows.Forms.TabPage()
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.BtnCancelar = New System.Windows.Forms.Button()
@@ -59,6 +60,7 @@ Partial Class FrmDesparasitante
         CType(Me.BtnCerrar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TCPacientes.SuspendLayout()
         Me.TPPaciente.SuspendLayout()
+        Me.GbRegistros.SuspendLayout()
         CType(Me.dgvRegistrosAlmacenados, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TPDetPac.SuspendLayout()
         Me.SuspendLayout()
@@ -77,13 +79,13 @@ Partial Class FrmDesparasitante
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("High Tower Text", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label1.Location = New System.Drawing.Point(3, 6)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(88, 25)
+        Me.Label1.Size = New System.Drawing.Size(157, 25)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Vacunas"
+        Me.Label1.Text = "Desparasitante"
         '
         'BtnCerrar
         '
@@ -111,17 +113,37 @@ Partial Class FrmDesparasitante
         'TPPaciente
         '
         Me.TPPaciente.BackColor = System.Drawing.Color.SeaShell
+        Me.TPPaciente.Controls.Add(Me.GbRegistros)
         Me.TPPaciente.Controls.Add(Me.txtBusqueda)
         Me.TPPaciente.Controls.Add(Me.BtnEliminarPac)
         Me.TPPaciente.Controls.Add(Me.BtnEditarPac)
         Me.TPPaciente.Controls.Add(Me.BtnNuevoPac)
-        Me.TPPaciente.Controls.Add(Me.dgvRegistrosAlmacenados)
         Me.TPPaciente.Location = New System.Drawing.Point(4, 22)
         Me.TPPaciente.Name = "TPPaciente"
         Me.TPPaciente.Padding = New System.Windows.Forms.Padding(3)
         Me.TPPaciente.Size = New System.Drawing.Size(835, 507)
         Me.TPPaciente.TabIndex = 0
         Me.TPPaciente.Text = "Pacientes"
+        '
+        'GbRegistros
+        '
+        Me.GbRegistros.Controls.Add(Me.dgvRegistrosAlmacenados)
+        Me.GbRegistros.Location = New System.Drawing.Point(27, 121)
+        Me.GbRegistros.Name = "GbRegistros"
+        Me.GbRegistros.Size = New System.Drawing.Size(666, 331)
+        Me.GbRegistros.TabIndex = 8
+        Me.GbRegistros.TabStop = False
+        Me.GbRegistros.Text = "GroupBox1"
+        '
+        'dgvRegistrosAlmacenados
+        '
+        Me.dgvRegistrosAlmacenados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvRegistrosAlmacenados.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvRegistrosAlmacenados.Location = New System.Drawing.Point(3, 16)
+        Me.dgvRegistrosAlmacenados.Name = "dgvRegistrosAlmacenados"
+        Me.dgvRegistrosAlmacenados.RowHeadersWidth = 51
+        Me.dgvRegistrosAlmacenados.Size = New System.Drawing.Size(660, 312)
+        Me.dgvRegistrosAlmacenados.TabIndex = 6
         '
         'txtBusqueda
         '
@@ -174,16 +196,6 @@ Partial Class FrmDesparasitante
         Me.BtnNuevoPac.TabIndex = 3
         Me.BtnNuevoPac.Text = "Nuevo"
         Me.BtnNuevoPac.UseVisualStyleBackColor = True
-        '
-        'dgvRegistrosAlmacenados
-        '
-        Me.dgvRegistrosAlmacenados.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.dgvRegistrosAlmacenados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvRegistrosAlmacenados.Location = New System.Drawing.Point(27, 122)
-        Me.dgvRegistrosAlmacenados.Name = "dgvRegistrosAlmacenados"
-        Me.dgvRegistrosAlmacenados.RowHeadersWidth = 51
-        Me.dgvRegistrosAlmacenados.Size = New System.Drawing.Size(666, 326)
-        Me.dgvRegistrosAlmacenados.TabIndex = 6
         '
         'TPDetPac
         '
@@ -349,7 +361,7 @@ Partial Class FrmDesparasitante
         '
         'TBColorPac
         '
-        Me.TBColorPac.Location = New System.Drawing.Point(616, 154)
+        Me.TBColorPac.Location = New System.Drawing.Point(453, 121)
         Me.TBColorPac.Name = "TBColorPac"
         Me.TBColorPac.Size = New System.Drawing.Size(200, 20)
         Me.TBColorPac.TabIndex = 14
@@ -435,6 +447,7 @@ Partial Class FrmDesparasitante
         Me.TCPacientes.ResumeLayout(False)
         Me.TPPaciente.ResumeLayout(False)
         Me.TPPaciente.PerformLayout()
+        Me.GbRegistros.ResumeLayout(False)
         CType(Me.dgvRegistrosAlmacenados, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TPDetPac.ResumeLayout(False)
         Me.TPDetPac.PerformLayout()
@@ -475,4 +488,5 @@ Partial Class FrmDesparasitante
     Friend WithEvents BtnGuardar As Button
     Friend WithEvents BtnCancelar As Button
     Friend WithEvents txtBusqueda As TextBox
+    Friend WithEvents GbRegistros As GroupBox
 End Class

@@ -33,6 +33,10 @@ Public Class FrmMenu
         OpenChildForm(New FrmServicio)
     End Sub
 
+    Private Sub BtnDesparasitacion_Click(sender As Object, e As EventArgs) Handles BtnDesparasitacion.Click
+        OpenChildForm(New FrmDesparasitante())
+    End Sub
+
     Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles BtnClose.Click
         Application.Exit()
     End Sub
