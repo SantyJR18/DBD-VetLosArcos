@@ -47,29 +47,12 @@
             dgvRegistrosAlmacenados.DataSource = dRegistroServicio.MostrarRegistros.Tables(0)
             dgvRegistrosAlmacenados.Refresh()
             GbRegistros.Text = "Registros almacenados: " & dgvRegistrosAlmacenados.Rows.Count
-
-            dgvRegistrosAlmacenados.AutoResizeColumns()
-            dgvRegistrosAlmacenados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+            dgvRegistrosAlmacenados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnMode.Fill
         Catch ex As Exception
 
         End Try
     End Sub
 
-    Private Sub dgvRegistrosAlmacenados_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvRegistrosAlmacenados.CellDoubleClick
-        If e.RowIndex >= 0 Then
-            Dim idRegServicio As Integer = Convert.ToInt32(dgvRegistrosAlmacenados.Rows(e.RowIndex).Cells("ID REGISTRO").Value)
-            Dim registroServicio As RegistroServiciosEntity = dRegistroServicio.ObtenerRegistro(idRegServicio)
-            If registroServicio IsNot Nothing Then
-                dtFechaConsulta.Value = registroServicio.FechaConsulta
-                cmbIdCliente.SelectedValue = registroServicio.Cliente.IdCliente
-                cmbIdPaciente.SelectedValue = registroServicio.Paciente.IdPaciente
-                cmbIdServicio.SelectedValue = registroServicio.Servicio.IdServicio
-                cmbIdFactura.SelectedValue = registroServicio.Factura.IdFactura
-                ''tcServicios.SelectedIndex = 0
-                ''tcServicios.TabPages(0).Enabled = False
-            End If
-        End If
-    End Sub
 
     Sub LlenarCliente()
         Try
@@ -122,6 +105,28 @@
         cmbIdServicio.SelectedIndex = -1
         cmbIdFactura.SelectedIndex = -1
     End Sub
+
+    Private Sub dgvRegistrosAlmacenados_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvRegistrosAlmacenados.CellDoubleClick
+        If e.RowIndex >= 0 Then
+            Dim idRegServicio As Integer = Convert.ToInt32(dgvRegistrosAlmacenados.Rows(e.RowIndex).Cells("ID REGISTRO").Value)
+            Dim registroServicio As RegistroServiciosEntity = dRegistroServicio.ObtenerRegistro(idRegServicio)
+            If registroServicio IsNot Nothing Then
+                ' Limpiar los controles antes de asignar nuevos valores
+                Limpiar()
+
+                ' Asignar los nuevos valores del objeto RegistroServiciosEntity a los controles
+                dtFechaConsulta.Value = registroServicio.FechaConsulta
+                cmbIdCliente.SelectedValue = registroServicio.Cliente.IdCliente
+                cmbIdPaciente.SelectedValue = registroServicio.Paciente.IdPaciente
+                cmbIdServicio.SelectedValue = registroServicio.Servicio.IdServicio
+                cmbIdFactura.SelectedValue = registroServicio.Factura.IdFactura
+
+                ''tcServicios.SelectedIndex = 0
+                ''tcServicios.TabPages(0).Enabled = False
+            End If
+        End If
+    End Sub
+
 
 #End Region
 End Class

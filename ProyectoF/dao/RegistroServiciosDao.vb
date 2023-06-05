@@ -72,7 +72,7 @@ Public Class RegistroServiciosDao
     Public Function EliminarRegistro(ByVal registroServicio As String) As Boolean
         Dim success As Boolean = False
         Try
-            Dim tsql As String = "DELETE FROM RegistroServicio WHERE idRegServicio = @idRegServicio"
+            Dim tsql As String = "DELETE FROM RegistroServicios WHERE idRegServicio = @idRegServicio"
             Using conn As New SqlConnection(cStrConn)
                 Using cmd As New SqlCommand(tsql, conn)
                     cmd.Parameters.AddWithValue("@idRegServicio", registroServicio)
@@ -92,6 +92,7 @@ Public Class RegistroServiciosDao
     Public Function ObtenerRegistro(ByVal idRegServicio As Integer) As RegistroServiciosEntity
         Dim registroServicio As New RegistroServiciosEntity()
         Try
+            MessageBox.Show("ID de registro de servicio: " & idRegServicio)
             Dim tsql As String = "SELECT * FROM RegistroServicios WHERE idRegServicio = @idRegServicio"
             Dim conn As New SqlConnection(cStrConn)
             Dim cmd As New SqlCommand(tsql, conn)
