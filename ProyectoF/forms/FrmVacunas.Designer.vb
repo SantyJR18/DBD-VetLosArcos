@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FrmDesparasitante
+Partial Class FrmVacunas
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,9 +22,6 @@ Partial Class FrmDesparasitante
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.PnlTitle = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.BtnCerrar = New System.Windows.Forms.PictureBox()
         Me.TCPacientes = New System.Windows.Forms.TabControl()
         Me.TPPaciente = New System.Windows.Forms.TabPage()
         Me.txtBusqueda = New System.Windows.Forms.TextBox()
@@ -55,47 +52,16 @@ Partial Class FrmDesparasitante
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TBIdPac = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.PnlTitle.SuspendLayout()
-        CType(Me.BtnCerrar, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PnlTitle = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.BtnCerrar = New System.Windows.Forms.PictureBox()
         Me.TCPacientes.SuspendLayout()
         Me.TPPaciente.SuspendLayout()
         CType(Me.dgvRegistrosAlmacenados, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TPDetPac.SuspendLayout()
+        Me.PnlTitle.SuspendLayout()
+        CType(Me.BtnCerrar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'PnlTitle
-        '
-        Me.PnlTitle.BackColor = System.Drawing.Color.DodgerBlue
-        Me.PnlTitle.Controls.Add(Me.Label1)
-        Me.PnlTitle.Controls.Add(Me.BtnCerrar)
-        Me.PnlTitle.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PnlTitle.Location = New System.Drawing.Point(0, 0)
-        Me.PnlTitle.Name = "PnlTitle"
-        Me.PnlTitle.Size = New System.Drawing.Size(843, 38)
-        Me.PnlTitle.TabIndex = 5
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("High Tower Text", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label1.Location = New System.Drawing.Point(3, 6)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(88, 25)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Vacunas"
-        '
-        'BtnCerrar
-        '
-        Me.BtnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnCerrar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnCerrar.Image = Global.ProyectoF.My.Resources.Resources.reject
-        Me.BtnCerrar.Location = New System.Drawing.Point(799, 6)
-        Me.BtnCerrar.Name = "BtnCerrar"
-        Me.BtnCerrar.Size = New System.Drawing.Size(25, 25)
-        Me.BtnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.BtnCerrar.TabIndex = 0
-        Me.BtnCerrar.TabStop = False
         '
         'TCPacientes
         '
@@ -105,8 +71,8 @@ Partial Class FrmDesparasitante
         Me.TCPacientes.Location = New System.Drawing.Point(0, 38)
         Me.TCPacientes.Name = "TCPacientes"
         Me.TCPacientes.SelectedIndex = 0
-        Me.TCPacientes.Size = New System.Drawing.Size(843, 533)
-        Me.TCPacientes.TabIndex = 6
+        Me.TCPacientes.Size = New System.Drawing.Size(827, 494)
+        Me.TCPacientes.TabIndex = 8
         '
         'TPPaciente
         '
@@ -119,7 +85,7 @@ Partial Class FrmDesparasitante
         Me.TPPaciente.Location = New System.Drawing.Point(4, 22)
         Me.TPPaciente.Name = "TPPaciente"
         Me.TPPaciente.Padding = New System.Windows.Forms.Padding(3)
-        Me.TPPaciente.Size = New System.Drawing.Size(835, 507)
+        Me.TPPaciente.Size = New System.Drawing.Size(819, 468)
         Me.TPPaciente.TabIndex = 0
         Me.TPPaciente.Text = "Pacientes"
         '
@@ -128,7 +94,7 @@ Partial Class FrmDesparasitante
         Me.txtBusqueda.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txtBusqueda.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtBusqueda.ForeColor = System.Drawing.Color.DimGray
-        Me.txtBusqueda.Location = New System.Drawing.Point(27, 88)
+        Me.txtBusqueda.Location = New System.Drawing.Point(19, 69)
         Me.txtBusqueda.Multiline = True
         Me.txtBusqueda.Name = "txtBusqueda"
         Me.txtBusqueda.Size = New System.Drawing.Size(666, 28)
@@ -142,7 +108,7 @@ Partial Class FrmDesparasitante
         Me.BtnEliminarPac.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnEliminarPac.Image = Global.ProyectoF.My.Resources.Resources.trash
         Me.BtnEliminarPac.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnEliminarPac.Location = New System.Drawing.Point(699, 230)
+        Me.BtnEliminarPac.Location = New System.Drawing.Point(691, 211)
         Me.BtnEliminarPac.Name = "BtnEliminarPac"
         Me.BtnEliminarPac.Size = New System.Drawing.Size(111, 36)
         Me.BtnEliminarPac.TabIndex = 5
@@ -155,7 +121,7 @@ Partial Class FrmDesparasitante
         Me.BtnEditarPac.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnEditarPac.Image = Global.ProyectoF.My.Resources.Resources.editar
         Me.BtnEditarPac.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnEditarPac.Location = New System.Drawing.Point(699, 176)
+        Me.BtnEditarPac.Location = New System.Drawing.Point(691, 157)
         Me.BtnEditarPac.Name = "BtnEditarPac"
         Me.BtnEditarPac.Size = New System.Drawing.Size(111, 37)
         Me.BtnEditarPac.TabIndex = 4
@@ -168,7 +134,7 @@ Partial Class FrmDesparasitante
         Me.BtnNuevoPac.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnNuevoPac.Image = Global.ProyectoF.My.Resources.Resources.pet_care
         Me.BtnNuevoPac.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnNuevoPac.Location = New System.Drawing.Point(699, 121)
+        Me.BtnNuevoPac.Location = New System.Drawing.Point(691, 102)
         Me.BtnNuevoPac.Name = "BtnNuevoPac"
         Me.BtnNuevoPac.Size = New System.Drawing.Size(111, 37)
         Me.BtnNuevoPac.TabIndex = 3
@@ -179,7 +145,7 @@ Partial Class FrmDesparasitante
         '
         Me.dgvRegistrosAlmacenados.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.dgvRegistrosAlmacenados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvRegistrosAlmacenados.Location = New System.Drawing.Point(27, 122)
+        Me.dgvRegistrosAlmacenados.Location = New System.Drawing.Point(19, 103)
         Me.dgvRegistrosAlmacenados.Name = "dgvRegistrosAlmacenados"
         Me.dgvRegistrosAlmacenados.RowHeadersWidth = 51
         Me.dgvRegistrosAlmacenados.Size = New System.Drawing.Size(666, 326)
@@ -419,35 +385,80 @@ Partial Class FrmDesparasitante
         Me.Label4.TabIndex = 1
         Me.Label4.Text = "ID del paciente:"
         '
-        'FrmDesparasitante
+        'PnlTitle
+        '
+        Me.PnlTitle.BackColor = System.Drawing.Color.DodgerBlue
+        Me.PnlTitle.Controls.Add(Me.Label1)
+        Me.PnlTitle.Controls.Add(Me.BtnCerrar)
+        Me.PnlTitle.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PnlTitle.Location = New System.Drawing.Point(0, 0)
+        Me.PnlTitle.Name = "PnlTitle"
+        Me.PnlTitle.Size = New System.Drawing.Size(827, 38)
+        Me.PnlTitle.TabIndex = 7
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("High Tower Text", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label1.Location = New System.Drawing.Point(3, 6)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(148, 25)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Desparasitantes"
+        '
+        'BtnCerrar
+        '
+        Me.BtnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnCerrar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnCerrar.Image = Global.ProyectoF.My.Resources.Resources.reject
+        Me.BtnCerrar.Location = New System.Drawing.Point(783, 6)
+        Me.BtnCerrar.Name = "BtnCerrar"
+        Me.BtnCerrar.Size = New System.Drawing.Size(25, 25)
+        Me.BtnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.BtnCerrar.TabIndex = 0
+        Me.BtnCerrar.TabStop = False
+        '
+        'FrmVacunas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(843, 571)
+        Me.ClientSize = New System.Drawing.Size(827, 532)
         Me.Controls.Add(Me.TCPacientes)
         Me.Controls.Add(Me.PnlTitle)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "FrmDesparasitante"
+        Me.Name = "FrmVacunas"
         Me.Text = "FrmVacunas"
-        Me.PnlTitle.ResumeLayout(False)
-        Me.PnlTitle.PerformLayout()
-        CType(Me.BtnCerrar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TCPacientes.ResumeLayout(False)
         Me.TPPaciente.ResumeLayout(False)
         Me.TPPaciente.PerformLayout()
         CType(Me.dgvRegistrosAlmacenados, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TPDetPac.ResumeLayout(False)
         Me.TPDetPac.PerformLayout()
+        Me.PnlTitle.ResumeLayout(False)
+        Me.PnlTitle.PerformLayout()
+        CType(Me.BtnCerrar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents PnlTitle As Panel
-    Friend WithEvents Label1 As Label
-    Friend WithEvents BtnCerrar As PictureBox
     Friend WithEvents TCPacientes As TabControl
     Friend WithEvents TPPaciente As TabPage
+    Friend WithEvents txtBusqueda As TextBox
+    Friend WithEvents BtnEliminarPac As Button
+    Friend WithEvents BtnEditarPac As Button
+    Friend WithEvents BtnNuevoPac As Button
+    Friend WithEvents dgvRegistrosAlmacenados As DataGridView
     Friend WithEvents TPDetPac As TabPage
+    Friend WithEvents BtnGuardar As Button
+    Friend WithEvents BtnCancelar As Button
+    Friend WithEvents TBSenPar As TextBox
+    Friend WithEvents DtFechaApli As DateTimePicker
+    Friend WithEvents Label12 As Label
+    Friend WithEvents CmbDesparacitante As ComboBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents CmbRazaPac As ComboBox
+    Friend WithEvents CmbEspeciePac As ComboBox
     Friend WithEvents TBNombrePac As TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents TBFechaNac As TextBox
@@ -461,18 +472,7 @@ Partial Class FrmDesparasitante
     Friend WithEvents Label3 As Label
     Friend WithEvents TBIdPac As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents CmbEspeciePac As ComboBox
-    Friend WithEvents CmbRazaPac As ComboBox
-    Friend WithEvents Label11 As Label
-    Friend WithEvents DtFechaApli As DateTimePicker
-    Friend WithEvents Label12 As Label
-    Friend WithEvents CmbDesparacitante As ComboBox
-    Friend WithEvents BtnEliminarPac As Button
-    Friend WithEvents BtnEditarPac As Button
-    Friend WithEvents BtnNuevoPac As Button
-    Friend WithEvents dgvRegistrosAlmacenados As DataGridView
-    Friend WithEvents TBSenPar As TextBox
-    Friend WithEvents BtnGuardar As Button
-    Friend WithEvents BtnCancelar As Button
-    Friend WithEvents txtBusqueda As TextBox
+    Friend WithEvents PnlTitle As Panel
+    Friend WithEvents Label1 As Label
+    Friend WithEvents BtnCerrar As PictureBox
 End Class
