@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class FrmClientes
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class FrmDiagnostico
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FrmClientes
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.TCClientes = New System.Windows.Forms.TabControl()
         Me.TPClt = New System.Windows.Forms.TabPage()
@@ -63,8 +63,8 @@ Partial Class FrmClientes
         Me.TCClientes.Location = New System.Drawing.Point(0, 38)
         Me.TCClientes.Name = "TCClientes"
         Me.TCClientes.SelectedIndex = 0
-        Me.TCClientes.Size = New System.Drawing.Size(843, 533)
-        Me.TCClientes.TabIndex = 5
+        Me.TCClientes.Size = New System.Drawing.Size(827, 494)
+        Me.TCClientes.TabIndex = 8
         '
         'TPClt
         '
@@ -77,7 +77,7 @@ Partial Class FrmClientes
         Me.TPClt.Location = New System.Drawing.Point(4, 22)
         Me.TPClt.Name = "TPClt"
         Me.TPClt.Padding = New System.Windows.Forms.Padding(3)
-        Me.TPClt.Size = New System.Drawing.Size(835, 507)
+        Me.TPClt.Size = New System.Drawing.Size(819, 468)
         Me.TPClt.TabIndex = 0
         Me.TPClt.Text = "Clientes"
         '
@@ -85,7 +85,7 @@ Partial Class FrmClientes
         '
         Me.dgvRegistrosAlmacenados.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.dgvRegistrosAlmacenados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvRegistrosAlmacenados.Location = New System.Drawing.Point(27, 122)
+        Me.dgvRegistrosAlmacenados.Location = New System.Drawing.Point(19, 103)
         Me.dgvRegistrosAlmacenados.Name = "dgvRegistrosAlmacenados"
         Me.dgvRegistrosAlmacenados.RowHeadersWidth = 51
         Me.dgvRegistrosAlmacenados.Size = New System.Drawing.Size(666, 326)
@@ -96,7 +96,7 @@ Partial Class FrmClientes
         Me.txtBusqueda.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txtBusqueda.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtBusqueda.ForeColor = System.Drawing.Color.DimGray
-        Me.txtBusqueda.Location = New System.Drawing.Point(27, 88)
+        Me.txtBusqueda.Location = New System.Drawing.Point(19, 69)
         Me.txtBusqueda.Multiline = True
         Me.txtBusqueda.Name = "txtBusqueda"
         Me.txtBusqueda.Size = New System.Drawing.Size(666, 28)
@@ -110,7 +110,7 @@ Partial Class FrmClientes
         Me.BtnEliminarRegClt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnEliminarRegClt.Image = Global.ProyectoF.My.Resources.Resources.trash
         Me.BtnEliminarRegClt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnEliminarRegClt.Location = New System.Drawing.Point(699, 230)
+        Me.BtnEliminarRegClt.Location = New System.Drawing.Point(691, 211)
         Me.BtnEliminarRegClt.Name = "BtnEliminarRegClt"
         Me.BtnEliminarRegClt.Size = New System.Drawing.Size(108, 36)
         Me.BtnEliminarRegClt.TabIndex = 4
@@ -123,7 +123,7 @@ Partial Class FrmClientes
         Me.BtnEditarClt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnEditarClt.Image = Global.ProyectoF.My.Resources.Resources.editar
         Me.BtnEditarClt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnEditarClt.Location = New System.Drawing.Point(699, 176)
+        Me.BtnEditarClt.Location = New System.Drawing.Point(691, 157)
         Me.BtnEditarClt.Name = "BtnEditarClt"
         Me.BtnEditarClt.Size = New System.Drawing.Size(111, 37)
         Me.BtnEditarClt.TabIndex = 3
@@ -136,7 +136,7 @@ Partial Class FrmClientes
         Me.BtnNuevoClt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnNuevoClt.Image = Global.ProyectoF.My.Resources.Resources.addUser
         Me.BtnNuevoClt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnNuevoClt.Location = New System.Drawing.Point(699, 122)
+        Me.BtnNuevoClt.Location = New System.Drawing.Point(691, 103)
         Me.BtnNuevoClt.Name = "BtnNuevoClt"
         Me.BtnNuevoClt.Size = New System.Drawing.Size(111, 37)
         Me.BtnNuevoClt.TabIndex = 2
@@ -163,7 +163,7 @@ Partial Class FrmClientes
         Me.TPDetClt.Location = New System.Drawing.Point(4, 22)
         Me.TPDetClt.Name = "TPDetClt"
         Me.TPDetClt.Padding = New System.Windows.Forms.Padding(3)
-        Me.TPDetClt.Size = New System.Drawing.Size(835, 507)
+        Me.TPDetClt.Size = New System.Drawing.Size(819, 468)
         Me.TPDetClt.TabIndex = 1
         Me.TPDetClt.Text = "Detalles"
         '
@@ -177,7 +177,7 @@ Partial Class FrmClientes
         'TBtelClt
         '
         Me.TBtelClt.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TBtelClt.Location = New System.Drawing.Point(615, 218)
+        Me.TBtelClt.Location = New System.Drawing.Point(607, 199)
         Me.TBtelClt.Name = "TBtelClt"
         Me.TBtelClt.Size = New System.Drawing.Size(200, 20)
         Me.TBtelClt.TabIndex = 10
@@ -185,7 +185,7 @@ Partial Class FrmClientes
         'TBdireccionClt
         '
         Me.TBdireccionClt.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TBdireccionClt.Location = New System.Drawing.Point(616, 257)
+        Me.TBdireccionClt.Location = New System.Drawing.Point(608, 238)
         Me.TBdireccionClt.Multiline = True
         Me.TBdireccionClt.Name = "TBdireccionClt"
         Me.TBdireccionClt.Size = New System.Drawing.Size(199, 65)
@@ -194,7 +194,7 @@ Partial Class FrmClientes
         'TBcorreoClt
         '
         Me.TBcorreoClt.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TBcorreoClt.Location = New System.Drawing.Point(615, 185)
+        Me.TBcorreoClt.Location = New System.Drawing.Point(607, 166)
         Me.TBcorreoClt.Name = "TBcorreoClt"
         Me.TBcorreoClt.Size = New System.Drawing.Size(200, 20)
         Me.TBcorreoClt.TabIndex = 8
@@ -202,7 +202,7 @@ Partial Class FrmClientes
         'TBnombreClt
         '
         Me.TBnombreClt.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TBnombreClt.Location = New System.Drawing.Point(186, 217)
+        Me.TBnombreClt.Location = New System.Drawing.Point(178, 198)
         Me.TBnombreClt.Name = "TBnombreClt"
         Me.TBnombreClt.Size = New System.Drawing.Size(200, 20)
         Me.TBnombreClt.TabIndex = 4
@@ -210,7 +210,7 @@ Partial Class FrmClientes
         'TBcedulaClt
         '
         Me.TBcedulaClt.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TBcedulaClt.Location = New System.Drawing.Point(186, 184)
+        Me.TBcedulaClt.Location = New System.Drawing.Point(178, 165)
         Me.TBcedulaClt.Name = "TBcedulaClt"
         Me.TBcedulaClt.Size = New System.Drawing.Size(200, 20)
         Me.TBcedulaClt.TabIndex = 2
@@ -220,7 +220,7 @@ Partial Class FrmClientes
         Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(449, 221)
+        Me.Label11.Location = New System.Drawing.Point(441, 202)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(75, 20)
         Me.Label11.TabIndex = 9
@@ -231,7 +231,7 @@ Partial Class FrmClientes
         Me.Label12.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(449, 187)
+        Me.Label12.Location = New System.Drawing.Point(441, 168)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(61, 20)
         Me.Label12.TabIndex = 7
@@ -242,7 +242,7 @@ Partial Class FrmClientes
         Me.Label13.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(449, 255)
+        Me.Label13.Location = New System.Drawing.Point(441, 236)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(79, 20)
         Me.Label13.TabIndex = 11
@@ -253,7 +253,7 @@ Partial Class FrmClientes
         Me.Label14.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(19, 252)
+        Me.Label14.Location = New System.Drawing.Point(11, 233)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(69, 20)
         Me.Label14.TabIndex = 5
@@ -264,7 +264,7 @@ Partial Class FrmClientes
         Me.Label15.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(19, 218)
+        Me.Label15.Location = New System.Drawing.Point(11, 199)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(69, 20)
         Me.Label15.TabIndex = 3
@@ -275,7 +275,7 @@ Partial Class FrmClientes
         Me.Label16.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(19, 185)
+        Me.Label16.Location = New System.Drawing.Point(11, 166)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(63, 20)
         Me.Label16.TabIndex = 1
@@ -314,8 +314,8 @@ Partial Class FrmClientes
         Me.PnlTitle.Dock = System.Windows.Forms.DockStyle.Top
         Me.PnlTitle.Location = New System.Drawing.Point(0, 0)
         Me.PnlTitle.Name = "PnlTitle"
-        Me.PnlTitle.Size = New System.Drawing.Size(843, 38)
-        Me.PnlTitle.TabIndex = 4
+        Me.PnlTitle.Size = New System.Drawing.Size(827, 38)
+        Me.PnlTitle.TabIndex = 7
         '
         'Label1
         '
@@ -324,32 +324,32 @@ Partial Class FrmClientes
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(3, 6)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(84, 25)
+        Me.Label1.Size = New System.Drawing.Size(117, 25)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Clientes"
+        Me.Label1.Text = "Diagnóstico"
         '
         'BtnCerrar
         '
         Me.BtnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnCerrar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnCerrar.Image = Global.ProyectoF.My.Resources.Resources.reject
-        Me.BtnCerrar.Location = New System.Drawing.Point(799, 6)
+        Me.BtnCerrar.Location = New System.Drawing.Point(783, 6)
         Me.BtnCerrar.Name = "BtnCerrar"
         Me.BtnCerrar.Size = New System.Drawing.Size(25, 25)
         Me.BtnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.BtnCerrar.TabIndex = 0
         Me.BtnCerrar.TabStop = False
         '
-        'FrmClientes
+        'FrmDiagnostico
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(843, 571)
+        Me.ClientSize = New System.Drawing.Size(827, 532)
         Me.Controls.Add(Me.TCClientes)
         Me.Controls.Add(Me.PnlTitle)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "FrmClientes"
-        Me.Text = "FrmClientes"
+        Me.Name = "FrmDiagnostico"
+        Me.Text = "FrmDiagnostico"
         Me.TCClientes.ResumeLayout(False)
         Me.TPClt.ResumeLayout(False)
         Me.TPClt.PerformLayout()
@@ -363,19 +363,14 @@ Partial Class FrmClientes
 
     End Sub
 
-    Friend WithEvents BtnCerrar As PictureBox
+    Friend WithEvents TCClientes As TabControl
+    Friend WithEvents TPClt As TabPage
+    Friend WithEvents dgvRegistrosAlmacenados As DataGridView
+    Friend WithEvents txtBusqueda As TextBox
     Friend WithEvents BtnEliminarRegClt As Button
     Friend WithEvents BtnEditarClt As Button
     Friend WithEvents BtnNuevoClt As Button
-    Friend WithEvents TCClientes As TabControl
-    Friend WithEvents TPClt As TabPage
     Friend WithEvents TPDetClt As TabPage
-    Friend WithEvents PnlTitle As Panel
-    Friend WithEvents Label1 As Label
-    Friend WithEvents BtnGuardar As Button
-    Friend WithEvents BtnCancelar As Button
-    Friend WithEvents dgvRegistrosAlmacenados As DataGridView
-    Friend WithEvents txtBusqueda As TextBox
     Friend WithEvents TBapellidoClt As TextBox
     Friend WithEvents TBtelClt As TextBox
     Friend WithEvents TBdireccionClt As TextBox
@@ -388,4 +383,9 @@ Partial Class FrmClientes
     Friend WithEvents Label14 As Label
     Friend WithEvents Label15 As Label
     Friend WithEvents Label16 As Label
+    Friend WithEvents BtnGuardar As Button
+    Friend WithEvents BtnCancelar As Button
+    Friend WithEvents PnlTitle As Panel
+    Friend WithEvents Label1 As Label
+    Friend WithEvents BtnCerrar As PictureBox
 End Class

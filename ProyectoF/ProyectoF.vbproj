@@ -121,6 +121,12 @@
     <Compile Include="forms\FrmClientes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="forms\FrmDiagnostico.Designer.vb">
+      <DependentUpon>FrmDiagnostico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FrmDiagnostico.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="forms\FrmEmpleados.Designer.vb">
       <DependentUpon>FrmEmpleados.vb</DependentUpon>
     </Compile>
@@ -164,6 +170,18 @@
     <Compile Include="forms\FrmDesparasitante.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="forms\FrmServicio.Designer.vb">
+      <DependentUpon>FrmServicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FrmServicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FrmVacunas.Designer.vb">
+      <DependentUpon>FrmVacunas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FrmVacunas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -185,6 +203,9 @@
     <EmbeddedResource Include="forms\FrmClientes.resx">
       <DependentUpon>FrmClientes.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\FrmDiagnostico.resx">
+      <DependentUpon>FrmDiagnostico.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\FrmEmpleados.resx">
       <DependentUpon>FrmEmpleados.vb</DependentUpon>
     </EmbeddedResource>
@@ -205,6 +226,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\FrmDesparasitante.resx">
       <DependentUpon>FrmDesparasitante.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FrmServicio.resx">
+      <DependentUpon>FrmServicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FrmVacunas.resx">
+      <DependentUpon>FrmVacunas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

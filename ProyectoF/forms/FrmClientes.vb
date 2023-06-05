@@ -87,4 +87,18 @@ Public Class FrmClientes
             Return _instance
         End Function
     End Class
+
+    Private Sub txtBusqueda_Enter(sender As Object, e As EventArgs) Handles txtBusqueda.Enter
+        If txtBusqueda.Text = "Buscar Cliente por Nombre" Then
+            txtBusqueda.Text = ""
+            txtBusqueda.ForeColor = Color.Black
+        End If
+    End Sub
+
+    Private Sub txtBusqueda_Leave(sender As Object, e As EventArgs) Handles txtBusqueda.Leave
+        If txtBusqueda.Text = "" Then
+            txtBusqueda.Text = "Buscar Cliente por Nombre"
+            txtBusqueda.ForeColor = Color.DimGray
+        End If
+    End Sub
 End Class
