@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmDesparasitante
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FrmDesparasitante
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.PnlTitle = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -30,32 +30,19 @@ Partial Class FrmDesparasitante
         Me.GbRegistros = New System.Windows.Forms.GroupBox()
         Me.dgvRegistrosAlmacenados = New System.Windows.Forms.DataGridView()
         Me.txtBusqueda = New System.Windows.Forms.TextBox()
-        Me.BtnEliminarPac = New System.Windows.Forms.Button()
-        Me.BtnEditarPac = New System.Windows.Forms.Button()
-        Me.BtnNuevoPac = New System.Windows.Forms.Button()
-        Me.TPDetPac = New System.Windows.Forms.TabPage()
-        Me.BtnGuardar = New System.Windows.Forms.Button()
-        Me.BtnCancelar = New System.Windows.Forms.Button()
-        Me.TBSenPar = New System.Windows.Forms.TextBox()
-        Me.DtFechaApli = New System.Windows.Forms.DateTimePicker()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.CmbDesparacitante = New System.Windows.Forms.ComboBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.CmbRazaPac = New System.Windows.Forms.ComboBox()
-        Me.CmbEspeciePac = New System.Windows.Forms.ComboBox()
-        Me.TBNombrePac = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.TBFechaNac = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.TBColorPac = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.CmbSexoPac = New System.Windows.Forms.ComboBox()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.CmbDesparacitante = New System.Windows.Forms.ComboBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.DtFechaApli = New System.Windows.Forms.DateTimePicker()
+        Me.BtnGuardar = New System.Windows.Forms.Button()
+        Me.TPDetPac = New System.Windows.Forms.TabPage()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TBIdPac = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.PnlTitle.SuspendLayout()
         CType(Me.BtnCerrar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TCPacientes.SuspendLayout()
@@ -72,8 +59,9 @@ Partial Class FrmDesparasitante
         Me.PnlTitle.Controls.Add(Me.BtnCerrar)
         Me.PnlTitle.Dock = System.Windows.Forms.DockStyle.Top
         Me.PnlTitle.Location = New System.Drawing.Point(0, 0)
+        Me.PnlTitle.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PnlTitle.Name = "PnlTitle"
-        Me.PnlTitle.Size = New System.Drawing.Size(843, 38)
+        Me.PnlTitle.Size = New System.Drawing.Size(1124, 47)
         Me.PnlTitle.TabIndex = 5
         '
         'Label1
@@ -81,9 +69,10 @@ Partial Class FrmDesparasitante
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label1.Location = New System.Drawing.Point(3, 6)
+        Me.Label1.Location = New System.Drawing.Point(4, 7)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(157, 25)
+        Me.Label1.Size = New System.Drawing.Size(198, 31)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Desparasitante"
         '
@@ -92,9 +81,10 @@ Partial Class FrmDesparasitante
         Me.BtnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnCerrar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnCerrar.Image = Global.ProyectoF.My.Resources.Resources.reject
-        Me.BtnCerrar.Location = New System.Drawing.Point(799, 6)
+        Me.BtnCerrar.Location = New System.Drawing.Point(1065, 7)
+        Me.BtnCerrar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BtnCerrar.Name = "BtnCerrar"
-        Me.BtnCerrar.Size = New System.Drawing.Size(25, 25)
+        Me.BtnCerrar.Size = New System.Drawing.Size(33, 31)
         Me.BtnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.BtnCerrar.TabIndex = 0
         Me.BtnCerrar.TabStop = False
@@ -104,45 +94,47 @@ Partial Class FrmDesparasitante
         Me.TCPacientes.Controls.Add(Me.TPPaciente)
         Me.TCPacientes.Controls.Add(Me.TPDetPac)
         Me.TCPacientes.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TCPacientes.Location = New System.Drawing.Point(0, 38)
+        Me.TCPacientes.Location = New System.Drawing.Point(0, 47)
+        Me.TCPacientes.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TCPacientes.Name = "TCPacientes"
         Me.TCPacientes.SelectedIndex = 0
-        Me.TCPacientes.Size = New System.Drawing.Size(843, 533)
+        Me.TCPacientes.Size = New System.Drawing.Size(1124, 656)
         Me.TCPacientes.TabIndex = 6
         '
         'TPPaciente
         '
         Me.TPPaciente.BackColor = System.Drawing.Color.SeaShell
+        Me.TPPaciente.Controls.Add(Me.Label2)
         Me.TPPaciente.Controls.Add(Me.GbRegistros)
         Me.TPPaciente.Controls.Add(Me.txtBusqueda)
-        Me.TPPaciente.Controls.Add(Me.BtnEliminarPac)
-        Me.TPPaciente.Controls.Add(Me.BtnEditarPac)
-        Me.TPPaciente.Controls.Add(Me.BtnNuevoPac)
-        Me.TPPaciente.Location = New System.Drawing.Point(4, 22)
+        Me.TPPaciente.Location = New System.Drawing.Point(4, 25)
+        Me.TPPaciente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TPPaciente.Name = "TPPaciente"
-        Me.TPPaciente.Padding = New System.Windows.Forms.Padding(3)
-        Me.TPPaciente.Size = New System.Drawing.Size(835, 507)
+        Me.TPPaciente.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TPPaciente.Size = New System.Drawing.Size(1116, 627)
         Me.TPPaciente.TabIndex = 0
         Me.TPPaciente.Text = "Pacientes"
         '
         'GbRegistros
         '
         Me.GbRegistros.Controls.Add(Me.dgvRegistrosAlmacenados)
-        Me.GbRegistros.Location = New System.Drawing.Point(27, 121)
+        Me.GbRegistros.Location = New System.Drawing.Point(36, 149)
+        Me.GbRegistros.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GbRegistros.Name = "GbRegistros"
-        Me.GbRegistros.Size = New System.Drawing.Size(666, 331)
+        Me.GbRegistros.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GbRegistros.Size = New System.Drawing.Size(1058, 451)
         Me.GbRegistros.TabIndex = 8
         Me.GbRegistros.TabStop = False
-        Me.GbRegistros.Text = "GroupBox1"
         '
         'dgvRegistrosAlmacenados
         '
         Me.dgvRegistrosAlmacenados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRegistrosAlmacenados.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvRegistrosAlmacenados.Location = New System.Drawing.Point(3, 16)
+        Me.dgvRegistrosAlmacenados.Location = New System.Drawing.Point(4, 19)
+        Me.dgvRegistrosAlmacenados.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.dgvRegistrosAlmacenados.Name = "dgvRegistrosAlmacenados"
         Me.dgvRegistrosAlmacenados.RowHeadersWidth = 51
-        Me.dgvRegistrosAlmacenados.Size = New System.Drawing.Size(660, 312)
+        Me.dgvRegistrosAlmacenados.Size = New System.Drawing.Size(1050, 428)
         Me.dgvRegistrosAlmacenados.TabIndex = 6
         '
         'txtBusqueda
@@ -150,84 +142,76 @@ Partial Class FrmDesparasitante
         Me.txtBusqueda.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txtBusqueda.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtBusqueda.ForeColor = System.Drawing.Color.DimGray
-        Me.txtBusqueda.Location = New System.Drawing.Point(27, 88)
+        Me.txtBusqueda.Location = New System.Drawing.Point(36, 89)
+        Me.txtBusqueda.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtBusqueda.Multiline = True
         Me.txtBusqueda.Name = "txtBusqueda"
-        Me.txtBusqueda.Size = New System.Drawing.Size(666, 28)
+        Me.txtBusqueda.Size = New System.Drawing.Size(1054, 34)
         Me.txtBusqueda.TabIndex = 7
         Me.txtBusqueda.Text = "Buscar Desparasitante por Nombre"
         Me.txtBusqueda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'BtnEliminarPac
+        'Label2
         '
-        Me.BtnEliminarPac.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.BtnEliminarPac.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnEliminarPac.Image = Global.ProyectoF.My.Resources.Resources.trash
-        Me.BtnEliminarPac.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnEliminarPac.Location = New System.Drawing.Point(699, 230)
-        Me.BtnEliminarPac.Name = "BtnEliminarPac"
-        Me.BtnEliminarPac.Size = New System.Drawing.Size(111, 36)
-        Me.BtnEliminarPac.TabIndex = 5
-        Me.BtnEliminarPac.Text = "Eliminar"
-        Me.BtnEliminarPac.UseVisualStyleBackColor = True
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.Label2.Location = New System.Drawing.Point(359, 16)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(415, 32)
+        Me.Label2.TabIndex = 9
+        Me.Label2.Text = "Registros de Desparasitantes"
         '
-        'BtnEditarPac
+        'Label9
         '
-        Me.BtnEditarPac.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.BtnEditarPac.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnEditarPac.Image = Global.ProyectoF.My.Resources.Resources.editar
-        Me.BtnEditarPac.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnEditarPac.Location = New System.Drawing.Point(699, 176)
-        Me.BtnEditarPac.Name = "BtnEditarPac"
-        Me.BtnEditarPac.Size = New System.Drawing.Size(111, 37)
-        Me.BtnEditarPac.TabIndex = 4
-        Me.BtnEditarPac.Text = "Editar"
-        Me.BtnEditarPac.UseVisualStyleBackColor = True
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(351, 201)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(140, 25)
+        Me.Label9.TabIndex = 15
+        Me.Label9.Text = "ID Expediente:"
         '
-        'BtnNuevoPac
+        'Label11
         '
-        Me.BtnNuevoPac.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.BtnNuevoPac.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnNuevoPac.Image = Global.ProyectoF.My.Resources.Resources.pet_care
-        Me.BtnNuevoPac.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnNuevoPac.Location = New System.Drawing.Point(699, 121)
-        Me.BtnNuevoPac.Name = "BtnNuevoPac"
-        Me.BtnNuevoPac.Size = New System.Drawing.Size(111, 37)
-        Me.BtnNuevoPac.TabIndex = 3
-        Me.BtnNuevoPac.Text = "Nuevo"
-        Me.BtnNuevoPac.UseVisualStyleBackColor = True
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(351, 256)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(149, 25)
+        Me.Label11.TabIndex = 9
+        Me.Label11.Text = "Desparasitante:"
         '
-        'TPDetPac
+        'CmbDesparacitante
         '
-        Me.TPDetPac.BackColor = System.Drawing.Color.SeaShell
-        Me.TPDetPac.Controls.Add(Me.BtnGuardar)
-        Me.TPDetPac.Controls.Add(Me.BtnCancelar)
-        Me.TPDetPac.Controls.Add(Me.TBSenPar)
-        Me.TPDetPac.Controls.Add(Me.DtFechaApli)
-        Me.TPDetPac.Controls.Add(Me.Label12)
-        Me.TPDetPac.Controls.Add(Me.CmbDesparacitante)
-        Me.TPDetPac.Controls.Add(Me.Label11)
-        Me.TPDetPac.Controls.Add(Me.CmbRazaPac)
-        Me.TPDetPac.Controls.Add(Me.CmbEspeciePac)
-        Me.TPDetPac.Controls.Add(Me.TBNombrePac)
-        Me.TPDetPac.Controls.Add(Me.Label10)
-        Me.TPDetPac.Controls.Add(Me.TBFechaNac)
-        Me.TPDetPac.Controls.Add(Me.Label9)
-        Me.TPDetPac.Controls.Add(Me.Label8)
-        Me.TPDetPac.Controls.Add(Me.TBColorPac)
-        Me.TPDetPac.Controls.Add(Me.Label7)
-        Me.TPDetPac.Controls.Add(Me.Label6)
-        Me.TPDetPac.Controls.Add(Me.CmbSexoPac)
-        Me.TPDetPac.Controls.Add(Me.Label5)
-        Me.TPDetPac.Controls.Add(Me.Label3)
-        Me.TPDetPac.Controls.Add(Me.TBIdPac)
-        Me.TPDetPac.Controls.Add(Me.Label4)
-        Me.TPDetPac.Location = New System.Drawing.Point(4, 22)
-        Me.TPDetPac.Name = "TPDetPac"
-        Me.TPDetPac.Padding = New System.Windows.Forms.Padding(3)
-        Me.TPDetPac.Size = New System.Drawing.Size(835, 507)
-        Me.TPDetPac.TabIndex = 1
-        Me.TPDetPac.Text = "Detalles"
+        Me.CmbDesparacitante.FormattingEnabled = True
+        Me.CmbDesparacitante.Location = New System.Drawing.Point(508, 260)
+        Me.CmbDesparacitante.Margin = New System.Windows.Forms.Padding(4)
+        Me.CmbDesparacitante.Name = "CmbDesparacitante"
+        Me.CmbDesparacitante.Size = New System.Drawing.Size(265, 24)
+        Me.CmbDesparacitante.TabIndex = 10
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(306, 317)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(192, 25)
+        Me.Label12.TabIndex = 11
+        Me.Label12.Text = "Fecha de aplicación:"
+        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'DtFechaApli
+        '
+        Me.DtFechaApli.Location = New System.Drawing.Point(508, 320)
+        Me.DtFechaApli.Margin = New System.Windows.Forms.Padding(4)
+        Me.DtFechaApli.Name = "DtFechaApli"
+        Me.DtFechaApli.Size = New System.Drawing.Size(265, 22)
+        Me.DtFechaApli.TabIndex = 12
         '
         'BtnGuardar
         '
@@ -235,210 +219,106 @@ Partial Class FrmDesparasitante
         Me.BtnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnGuardar.Image = Global.ProyectoF.My.Resources.Resources.save
         Me.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnGuardar.Location = New System.Drawing.Point(296, 420)
+        Me.BtnGuardar.Location = New System.Drawing.Point(127, 462)
+        Me.BtnGuardar.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnGuardar.Name = "BtnGuardar"
-        Me.BtnGuardar.Size = New System.Drawing.Size(100, 37)
+        Me.BtnGuardar.Size = New System.Drawing.Size(188, 46)
         Me.BtnGuardar.TabIndex = 21
         Me.BtnGuardar.Text = "Guardar"
         Me.BtnGuardar.UseVisualStyleBackColor = True
         '
-        'BtnCancelar
+        'TPDetPac
         '
-        Me.BtnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnCancelar.Image = Global.ProyectoF.My.Resources.Resources.close
-        Me.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnCancelar.Location = New System.Drawing.Point(439, 420)
-        Me.BtnCancelar.Name = "BtnCancelar"
-        Me.BtnCancelar.Size = New System.Drawing.Size(100, 37)
-        Me.BtnCancelar.TabIndex = 22
-        Me.BtnCancelar.Text = "Cancelar"
-        Me.BtnCancelar.UseVisualStyleBackColor = True
+        Me.TPDetPac.BackColor = System.Drawing.Color.SeaShell
+        Me.TPDetPac.Controls.Add(Me.Label3)
+        Me.TPDetPac.Controls.Add(Me.ComboBox1)
+        Me.TPDetPac.Controls.Add(Me.Button3)
+        Me.TPDetPac.Controls.Add(Me.Button2)
+        Me.TPDetPac.Controls.Add(Me.Button1)
+        Me.TPDetPac.Controls.Add(Me.BtnGuardar)
+        Me.TPDetPac.Controls.Add(Me.DtFechaApli)
+        Me.TPDetPac.Controls.Add(Me.Label12)
+        Me.TPDetPac.Controls.Add(Me.CmbDesparacitante)
+        Me.TPDetPac.Controls.Add(Me.Label11)
+        Me.TPDetPac.Controls.Add(Me.Label9)
+        Me.TPDetPac.Location = New System.Drawing.Point(4, 25)
+        Me.TPDetPac.Margin = New System.Windows.Forms.Padding(4)
+        Me.TPDetPac.Name = "TPDetPac"
+        Me.TPDetPac.Padding = New System.Windows.Forms.Padding(4)
+        Me.TPDetPac.Size = New System.Drawing.Size(1116, 627)
+        Me.TPDetPac.TabIndex = 1
+        Me.TPDetPac.Text = "Detalles"
         '
-        'TBSenPar
+        'Button1
         '
-        Me.TBSenPar.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TBSenPar.Location = New System.Drawing.Point(616, 258)
-        Me.TBSenPar.Multiline = True
-        Me.TBSenPar.Name = "TBSenPar"
-        Me.TBSenPar.Size = New System.Drawing.Size(200, 65)
-        Me.TBSenPar.TabIndex = 20
+        Me.Button1.AccessibleRole = System.Windows.Forms.AccessibleRole.None
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Image = Global.ProyectoF.My.Resources.Resources.save
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(783, 462)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(188, 46)
+        Me.Button1.TabIndex = 22
+        Me.Button1.Text = "Guardar"
+        Me.Button1.UseVisualStyleBackColor = True
         '
-        'DtFechaApli
+        'Button2
         '
-        Me.DtFechaApli.Location = New System.Drawing.Point(187, 335)
-        Me.DtFechaApli.Name = "DtFechaApli"
-        Me.DtFechaApli.Size = New System.Drawing.Size(200, 20)
-        Me.DtFechaApli.TabIndex = 12
+        Me.Button2.AccessibleRole = System.Windows.Forms.AccessibleRole.None
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Image = Global.ProyectoF.My.Resources.Resources.save
+        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button2.Location = New System.Drawing.Point(569, 462)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(188, 46)
+        Me.Button2.TabIndex = 23
+        Me.Button2.Text = "Guardar"
+        Me.Button2.UseVisualStyleBackColor = True
         '
-        'Label12
+        'Button3
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(20, 335)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(154, 20)
-        Me.Label12.TabIndex = 11
-        Me.Label12.Text = "Fecha de aplicación:"
-        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Button3.AccessibleRole = System.Windows.Forms.AccessibleRole.None
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Image = Global.ProyectoF.My.Resources.Resources.save
+        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button3.Location = New System.Drawing.Point(345, 462)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(188, 46)
+        Me.Button3.TabIndex = 24
+        Me.Button3.Text = "Guardar"
+        Me.Button3.UseVisualStyleBackColor = True
         '
-        'CmbDesparacitante
+        'ComboBox1
         '
-        Me.CmbDesparacitante.FormattingEnabled = True
-        Me.CmbDesparacitante.Location = New System.Drawing.Point(187, 293)
-        Me.CmbDesparacitante.Name = "CmbDesparacitante"
-        Me.CmbDesparacitante.Size = New System.Drawing.Size(200, 21)
-        Me.CmbDesparacitante.TabIndex = 10
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(20, 294)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(122, 20)
-        Me.Label11.TabIndex = 9
-        Me.Label11.Text = "Desparasitante:"
-        '
-        'CmbRazaPac
-        '
-        Me.CmbRazaPac.FormattingEnabled = True
-        Me.CmbRazaPac.Location = New System.Drawing.Point(187, 257)
-        Me.CmbRazaPac.Name = "CmbRazaPac"
-        Me.CmbRazaPac.Size = New System.Drawing.Size(200, 21)
-        Me.CmbRazaPac.TabIndex = 8
-        '
-        'CmbEspeciePac
-        '
-        Me.CmbEspeciePac.FormattingEnabled = True
-        Me.CmbEspeciePac.Location = New System.Drawing.Point(187, 189)
-        Me.CmbEspeciePac.Name = "CmbEspeciePac"
-        Me.CmbEspeciePac.Size = New System.Drawing.Size(200, 21)
-        Me.CmbEspeciePac.TabIndex = 4
-        '
-        'TBNombrePac
-        '
-        Me.TBNombrePac.Location = New System.Drawing.Point(615, 190)
-        Me.TBNombrePac.Name = "TBNombrePac"
-        Me.TBNombrePac.Size = New System.Drawing.Size(201, 20)
-        Me.TBNombrePac.TabIndex = 16
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(449, 222)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(141, 20)
-        Me.Label10.TabIndex = 17
-        Me.Label10.Text = "Fecha Nacimiento:"
-        '
-        'TBFechaNac
-        '
-        Me.TBFechaNac.Location = New System.Drawing.Point(616, 223)
-        Me.TBFechaNac.Name = "TBFechaNac"
-        Me.TBFechaNac.Size = New System.Drawing.Size(200, 20)
-        Me.TBFechaNac.TabIndex = 18
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(449, 189)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(69, 20)
-        Me.Label9.TabIndex = 15
-        Me.Label9.Text = "Nombre:"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(449, 155)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(50, 20)
-        Me.Label8.TabIndex = 13
-        Me.Label8.Text = "Color:"
-        '
-        'TBColorPac
-        '
-        Me.TBColorPac.Location = New System.Drawing.Point(453, 121)
-        Me.TBColorPac.Name = "TBColorPac"
-        Me.TBColorPac.Size = New System.Drawing.Size(200, 20)
-        Me.TBColorPac.TabIndex = 14
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(20, 257)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(51, 20)
-        Me.Label7.TabIndex = 7
-        Me.Label7.Text = "Raza:"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(449, 258)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(145, 20)
-        Me.Label6.TabIndex = 19
-        Me.Label6.Text = "Señas particulares:"
-        '
-        'CmbSexoPac
-        '
-        Me.CmbSexoPac.FormattingEnabled = True
-        Me.CmbSexoPac.Location = New System.Drawing.Point(187, 221)
-        Me.CmbSexoPac.Name = "CmbSexoPac"
-        Me.CmbSexoPac.Size = New System.Drawing.Size(200, 21)
-        Me.CmbSexoPac.TabIndex = 6
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(20, 222)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(49, 20)
-        Me.Label5.TabIndex = 5
-        Me.Label5.Text = "Sexo:"
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(508, 201)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(265, 24)
+        Me.ComboBox1.TabIndex = 25
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(20, 188)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.Label3.Location = New System.Drawing.Point(380, 92)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(70, 20)
-        Me.Label3.TabIndex = 3
-        Me.Label3.Text = "Especie:"
-        '
-        'TBIdPac
-        '
-        Me.TBIdPac.Location = New System.Drawing.Point(187, 154)
-        Me.TBIdPac.Name = "TBIdPac"
-        Me.TBIdPac.Size = New System.Drawing.Size(98, 20)
-        Me.TBIdPac.TabIndex = 2
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(18, 152)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(120, 20)
-        Me.Label4.TabIndex = 1
-        Me.Label4.Text = "ID del paciente:"
+        Me.Label3.Size = New System.Drawing.Size(364, 32)
+        Me.Label3.TabIndex = 26
+        Me.Label3.Text = "Detalles Desparasitantes "
         '
         'FrmDesparasitante
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(843, 571)
+        Me.ClientSize = New System.Drawing.Size(1124, 703)
         Me.Controls.Add(Me.TCPacientes)
         Me.Controls.Add(Me.PnlTitle)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FrmDesparasitante"
         Me.Text = "FrmVacunas"
         Me.PnlTitle.ResumeLayout(False)
@@ -460,33 +340,20 @@ Partial Class FrmDesparasitante
     Friend WithEvents BtnCerrar As PictureBox
     Friend WithEvents TCPacientes As TabControl
     Friend WithEvents TPPaciente As TabPage
+    Friend WithEvents dgvRegistrosAlmacenados As DataGridView
+    Friend WithEvents txtBusqueda As TextBox
+    Friend WithEvents GbRegistros As GroupBox
+    Friend WithEvents Label2 As Label
     Friend WithEvents TPDetPac As TabPage
-    Friend WithEvents TBNombrePac As TextBox
-    Friend WithEvents Label10 As Label
-    Friend WithEvents TBFechaNac As TextBox
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label8 As Label
-    Friend WithEvents TBColorPac As TextBox
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents CmbSexoPac As ComboBox
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents TBIdPac As TextBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents CmbEspeciePac As ComboBox
-    Friend WithEvents CmbRazaPac As ComboBox
-    Friend WithEvents Label11 As Label
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents BtnGuardar As Button
     Friend WithEvents DtFechaApli As DateTimePicker
     Friend WithEvents Label12 As Label
     Friend WithEvents CmbDesparacitante As ComboBox
-    Friend WithEvents BtnEliminarPac As Button
-    Friend WithEvents BtnEditarPac As Button
-    Friend WithEvents BtnNuevoPac As Button
-    Friend WithEvents dgvRegistrosAlmacenados As DataGridView
-    Friend WithEvents TBSenPar As TextBox
-    Friend WithEvents BtnGuardar As Button
-    Friend WithEvents BtnCancelar As Button
-    Friend WithEvents txtBusqueda As TextBox
-    Friend WithEvents GbRegistros As GroupBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label3 As Label
 End Class
