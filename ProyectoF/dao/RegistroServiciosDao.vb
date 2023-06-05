@@ -12,7 +12,7 @@ Public Class RegistroServiciosDao
             cmd.CommandType = CommandType.Text
             cmd.CommandText = tsql
             cmd.Parameters.AddWithValue("@fechaConsulta", registroServicio.FechaConsulta)
-            cmd.Parameters.AddWithValue("idCliente", registroServicio.Cliente.IdCliente)
+            cmd.Parameters.AddWithValue("@idCliente", registroServicio.Cliente.IdCliente)
             cmd.Parameters.AddWithValue("@idPaciente", registroServicio.Paciente.IdPaciente)
             cmd.Parameters.AddWithValue("@idServicio", registroServicio.Servicio.IdServicio)
             cmd.Parameters.AddWithValue("@idFactura", registroServicio.Factura.IdFactura)
@@ -31,7 +31,7 @@ Public Class RegistroServiciosDao
     Public Function MostrarRegistros() As DataSet
         Dim ds As New DataSet
         Try
-            Dim tsql As String = "SELECT * FROM RegistroServicios"
+            Dim tsql As String = "SELECT idRegServicio AS 'ID REGISTRO', fechaConsulta AS 'FECHA CONSULTA', idCliente AS 'ID CLIENTE', idPaciente AS 'ID PACIENTE', idServicio AS 'ID SERVICIO', idFactura AS 'ID FACTURA' FROM RegistroServicios"
             Dim conn As New SqlConnection(cStrConn)
             Dim da As New SqlDataAdapter(tsql, conn)
             da.Fill(ds)
@@ -41,14 +41,15 @@ Public Class RegistroServiciosDao
         Return ds
     End Function
 
+
     Public Function EditarRegistro(ByVal registroServicio As RegistroServiciosEntity) As Boolean
         Try
             Dim conn As New SqlConnection(cStrConn)
             Dim cmd As New SqlCommand()
             cmd.Connection = conn
 
-            cmd.CommandText = "UPDATE RegistroServicios SET idRegServicio = @idRegServicio, fechaConsulta = @fechaConsulta, idCliente = @idCliente, idPaciente = @idPaciente, idServicio = @idServicio, idFactura = @idFactura WHERE idRegServicio = @idRegServicio"
-            cmd.Parameters.AddWithValue("@idRegServicio", registroServicio.IdRegServicio)
+            cmd.CommandText = "UPDATE RegistroServicio SET fechaConsulta = @fechaConsulta, idCliente = @idCliente, idPaciente = @idPaciente, idServicio = @idServicio, idFactura = @idFactura WHERE idRegServicio = @idRegServicio"
+            ''cmd.Parameters.AddWithValue("@idRegServicio", registroServicio.IdRegServicio)
             cmd.Parameters.AddWithValue("@fechaConsulta", registroServicio.FechaConsulta)
             cmd.Parameters.AddWithValue("@idCliente", registroServicio.Cliente.IdCliente)
             cmd.Parameters.AddWithValue("@idPaciente", registroServicio.Paciente.IdPaciente)
@@ -87,4 +88,32 @@ Public Class RegistroServiciosDao
         End Try
         Return success
     End Function
+
+    Public Function ObtenerRegistro(ByVal idRegServicio As Integer) As RegistroServiciosEntity
+        Dim registroServicio As New RegistroServiciosEntity()
+        Try
+            Dim tsql As String = "SELECT * FROM RegistroServicios WHERE idRegServicio = @idRegServicio"
+            Dim conn As New SqlConnection(cStrConn)
+            Dim cmd As New SqlCommand(tsql, conn)
+            cmd.Parameters.AddWithValue("@idRegServicio", idRegServicio)
+            conn.Open()
+            Dim reader As SqlDataReader = cmd.ExecuteReader()
+            If reader.HasRows Then
+                reader.Read()
+                registroServicio.IdRegServicio = reader.GetInt32(reader.GetOrdinal("idRegServicio"))
+                registroServicio.FechaConsulta = reader.GetDateTime(reader.GetOrdinal("fechaConsulta"))
+                registroServicio.Cliente.IdCliente = reader.GetInt32(reader.GetOrdinal("idCliente"))
+                registroServicio.Paciente.IdPaciente = reader.GetInt32(reader.GetOrdinal("idPaciente"))
+                registroServicio.Servicio.IdServicio = reader.GetInt32(reader.GetOrdinal("idServicio"))
+                registroServicio.Factura.IdFactura = reader.GetInt32(reader.GetOrdinal("idFactura"))
+                ' Asigna los demás campos del objeto RegistroServiciosEntity de manera similar
+            End If
+            reader.Close()
+            conn.Close()
+        Catch ex As Exception
+            registroServicio = Nothing
+        End Try
+        Return registroServicio
+    End Function
+
 End Class

@@ -22,38 +22,98 @@ Partial Class FrmServicio
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim FechaConsultaLabel As System.Windows.Forms.Label
+        Dim IdClienteLabel As System.Windows.Forms.Label
+        Dim IdPacienteLabel As System.Windows.Forms.Label
+        Dim IdServicioLabel As System.Windows.Forms.Label
+        Dim IdFacturaLabel As System.Windows.Forms.Label
         Me.PnlTitle = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BtnCerrar = New System.Windows.Forms.PictureBox()
         Me.TCClientes = New System.Windows.Forms.TabControl()
         Me.TPClt = New System.Windows.Forms.TabPage()
+        Me.GbRegistros = New System.Windows.Forms.GroupBox()
         Me.dgvRegistrosAlmacenados = New System.Windows.Forms.DataGridView()
         Me.txtBusqueda = New System.Windows.Forms.TextBox()
-        Me.BtnEliminarRegClt = New System.Windows.Forms.Button()
-        Me.BtnEditarClt = New System.Windows.Forms.Button()
-        Me.BtnNuevoClt = New System.Windows.Forms.Button()
         Me.TPDetClt = New System.Windows.Forms.TabPage()
-        Me.TBapellidoClt = New System.Windows.Forms.TextBox()
-        Me.TBtelClt = New System.Windows.Forms.TextBox()
-        Me.TBdireccionClt = New System.Windows.Forms.TextBox()
-        Me.TBcorreoClt = New System.Windows.Forms.TextBox()
-        Me.TBnombreClt = New System.Windows.Forms.TextBox()
-        Me.TBcedulaClt = New System.Windows.Forms.TextBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
+        Me.cmbIdPaciente = New System.Windows.Forms.ComboBox()
+        Me.cmbIdFactura = New System.Windows.Forms.ComboBox()
+        Me.cmbIdServicio = New System.Windows.Forms.ComboBox()
+        Me.cmbIdCliente = New System.Windows.Forms.ComboBox()
+        Me.BtnEditar = New System.Windows.Forms.Button()
+        Me.BtnLimpiar = New System.Windows.Forms.Button()
+        Me.dtFechaConsulta = New System.Windows.Forms.DateTimePicker()
+        Me.RegistroServiciosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DBLosArcosDs = New ProyectoF.DBLosArcosDs()
         Me.BtnGuardar = New System.Windows.Forms.Button()
-        Me.BtnCancelar = New System.Windows.Forms.Button()
+        Me.RegistroServiciosTableAdapter = New ProyectoF.DBLosArcosDsTableAdapters.RegistroServiciosTableAdapter()
+        Me.TableAdapterManager = New ProyectoF.DBLosArcosDsTableAdapters.TableAdapterManager()
+        FechaConsultaLabel = New System.Windows.Forms.Label()
+        IdClienteLabel = New System.Windows.Forms.Label()
+        IdPacienteLabel = New System.Windows.Forms.Label()
+        IdServicioLabel = New System.Windows.Forms.Label()
+        IdFacturaLabel = New System.Windows.Forms.Label()
         Me.PnlTitle.SuspendLayout()
         CType(Me.BtnCerrar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TCClientes.SuspendLayout()
         Me.TPClt.SuspendLayout()
+        Me.GbRegistros.SuspendLayout()
         CType(Me.dgvRegistrosAlmacenados, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TPDetClt.SuspendLayout()
+        CType(Me.RegistroServiciosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DBLosArcosDs, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'FechaConsultaLabel
+        '
+        FechaConsultaLabel.AutoSize = True
+        FechaConsultaLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        FechaConsultaLabel.Location = New System.Drawing.Point(335, 148)
+        FechaConsultaLabel.Name = "FechaConsultaLabel"
+        FechaConsultaLabel.Size = New System.Drawing.Size(164, 25)
+        FechaConsultaLabel.TabIndex = 14
+        FechaConsultaLabel.Text = "fecha Consulta:"
+        '
+        'IdClienteLabel
+        '
+        IdClienteLabel.AutoSize = True
+        IdClienteLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        IdClienteLabel.Location = New System.Drawing.Point(243, 222)
+        IdClienteLabel.Name = "IdClienteLabel"
+        IdClienteLabel.Size = New System.Drawing.Size(110, 25)
+        IdClienteLabel.TabIndex = 15
+        IdClienteLabel.Text = "id Cliente:"
+        '
+        'IdPacienteLabel
+        '
+        IdPacienteLabel.AutoSize = True
+        IdPacienteLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        IdPacienteLabel.Location = New System.Drawing.Point(572, 291)
+        IdPacienteLabel.Name = "IdPacienteLabel"
+        IdPacienteLabel.Size = New System.Drawing.Size(103, 25)
+        IdPacienteLabel.TabIndex = 16
+        IdPacienteLabel.Text = "Paciente:"
+        '
+        'IdServicioLabel
+        '
+        IdServicioLabel.AutoSize = True
+        IdServicioLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        IdServicioLabel.Location = New System.Drawing.Point(258, 293)
+        IdServicioLabel.Name = "IdServicioLabel"
+        IdServicioLabel.Size = New System.Drawing.Size(97, 25)
+        IdServicioLabel.TabIndex = 17
+        IdServicioLabel.Text = "Servicio:"
+        '
+        'IdFacturaLabel
+        '
+        IdFacturaLabel.AutoSize = True
+        IdFacturaLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        IdFacturaLabel.Location = New System.Drawing.Point(556, 220)
+        IdFacturaLabel.Name = "IdFacturaLabel"
+        IdFacturaLabel.Size = New System.Drawing.Size(115, 25)
+        IdFacturaLabel.TabIndex = 18
+        IdFacturaLabel.Text = "id Factura:"
         '
         'PnlTitle
         '
@@ -62,8 +122,9 @@ Partial Class FrmServicio
         Me.PnlTitle.Controls.Add(Me.BtnCerrar)
         Me.PnlTitle.Dock = System.Windows.Forms.DockStyle.Top
         Me.PnlTitle.Location = New System.Drawing.Point(0, 0)
+        Me.PnlTitle.Margin = New System.Windows.Forms.Padding(4)
         Me.PnlTitle.Name = "PnlTitle"
-        Me.PnlTitle.Size = New System.Drawing.Size(827, 38)
+        Me.PnlTitle.Size = New System.Drawing.Size(1103, 47)
         Me.PnlTitle.TabIndex = 5
         '
         'Label1
@@ -71,9 +132,10 @@ Partial Class FrmServicio
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("High Tower Text", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(3, 6)
+        Me.Label1.Location = New System.Drawing.Point(4, 7)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(83, 25)
+        Me.Label1.Size = New System.Drawing.Size(104, 32)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Servicio"
         '
@@ -82,9 +144,10 @@ Partial Class FrmServicio
         Me.BtnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnCerrar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnCerrar.Image = Global.ProyectoF.My.Resources.Resources.reject
-        Me.BtnCerrar.Location = New System.Drawing.Point(783, 6)
+        Me.BtnCerrar.Location = New System.Drawing.Point(1044, 7)
+        Me.BtnCerrar.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnCerrar.Name = "BtnCerrar"
-        Me.BtnCerrar.Size = New System.Drawing.Size(25, 25)
+        Me.BtnCerrar.Size = New System.Drawing.Size(33, 31)
         Me.BtnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.BtnCerrar.TabIndex = 0
         Me.BtnCerrar.TabStop = False
@@ -94,35 +157,44 @@ Partial Class FrmServicio
         Me.TCClientes.Controls.Add(Me.TPClt)
         Me.TCClientes.Controls.Add(Me.TPDetClt)
         Me.TCClientes.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TCClientes.Location = New System.Drawing.Point(0, 38)
+        Me.TCClientes.Location = New System.Drawing.Point(0, 47)
+        Me.TCClientes.Margin = New System.Windows.Forms.Padding(4)
         Me.TCClientes.Name = "TCClientes"
         Me.TCClientes.SelectedIndex = 0
-        Me.TCClientes.Size = New System.Drawing.Size(827, 494)
+        Me.TCClientes.Size = New System.Drawing.Size(1103, 608)
         Me.TCClientes.TabIndex = 6
         '
         'TPClt
         '
         Me.TPClt.BackColor = System.Drawing.Color.SeaShell
-        Me.TPClt.Controls.Add(Me.dgvRegistrosAlmacenados)
+        Me.TPClt.Controls.Add(Me.GbRegistros)
         Me.TPClt.Controls.Add(Me.txtBusqueda)
-        Me.TPClt.Controls.Add(Me.BtnEliminarRegClt)
-        Me.TPClt.Controls.Add(Me.BtnEditarClt)
-        Me.TPClt.Controls.Add(Me.BtnNuevoClt)
-        Me.TPClt.Location = New System.Drawing.Point(4, 22)
+        Me.TPClt.Location = New System.Drawing.Point(4, 25)
+        Me.TPClt.Margin = New System.Windows.Forms.Padding(4)
         Me.TPClt.Name = "TPClt"
-        Me.TPClt.Padding = New System.Windows.Forms.Padding(3)
-        Me.TPClt.Size = New System.Drawing.Size(819, 468)
+        Me.TPClt.Padding = New System.Windows.Forms.Padding(4)
+        Me.TPClt.Size = New System.Drawing.Size(1095, 579)
         Me.TPClt.TabIndex = 0
         Me.TPClt.Text = "Clientes"
         '
+        'GbRegistros
+        '
+        Me.GbRegistros.Controls.Add(Me.dgvRegistrosAlmacenados)
+        Me.GbRegistros.Location = New System.Drawing.Point(25, 141)
+        Me.GbRegistros.Name = "GbRegistros"
+        Me.GbRegistros.Size = New System.Drawing.Size(1048, 417)
+        Me.GbRegistros.TabIndex = 6
+        Me.GbRegistros.TabStop = False
+        '
         'dgvRegistrosAlmacenados
         '
-        Me.dgvRegistrosAlmacenados.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.dgvRegistrosAlmacenados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvRegistrosAlmacenados.Location = New System.Drawing.Point(19, 103)
+        Me.dgvRegistrosAlmacenados.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvRegistrosAlmacenados.Location = New System.Drawing.Point(3, 18)
+        Me.dgvRegistrosAlmacenados.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvRegistrosAlmacenados.Name = "dgvRegistrosAlmacenados"
         Me.dgvRegistrosAlmacenados.RowHeadersWidth = 51
-        Me.dgvRegistrosAlmacenados.Size = New System.Drawing.Size(666, 326)
+        Me.dgvRegistrosAlmacenados.Size = New System.Drawing.Size(1042, 396)
         Me.dgvRegistrosAlmacenados.TabIndex = 5
         '
         'txtBusqueda
@@ -130,190 +202,115 @@ Partial Class FrmServicio
         Me.txtBusqueda.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txtBusqueda.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtBusqueda.ForeColor = System.Drawing.Color.DimGray
-        Me.txtBusqueda.Location = New System.Drawing.Point(19, 69)
+        Me.txtBusqueda.Location = New System.Drawing.Point(25, 85)
+        Me.txtBusqueda.Margin = New System.Windows.Forms.Padding(4)
         Me.txtBusqueda.Multiline = True
         Me.txtBusqueda.Name = "txtBusqueda"
-        Me.txtBusqueda.Size = New System.Drawing.Size(666, 28)
+        Me.txtBusqueda.Size = New System.Drawing.Size(1045, 34)
         Me.txtBusqueda.TabIndex = 1
-        Me.txtBusqueda.Text = "Buscar Cliente por Nombre"
+        Me.txtBusqueda.Text = "Buscar Servicio"
         Me.txtBusqueda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'BtnEliminarRegClt
-        '
-        Me.BtnEliminarRegClt.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.BtnEliminarRegClt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnEliminarRegClt.Image = Global.ProyectoF.My.Resources.Resources.trash
-        Me.BtnEliminarRegClt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnEliminarRegClt.Location = New System.Drawing.Point(691, 211)
-        Me.BtnEliminarRegClt.Name = "BtnEliminarRegClt"
-        Me.BtnEliminarRegClt.Size = New System.Drawing.Size(108, 36)
-        Me.BtnEliminarRegClt.TabIndex = 4
-        Me.BtnEliminarRegClt.Text = "Eliminar"
-        Me.BtnEliminarRegClt.UseVisualStyleBackColor = True
-        '
-        'BtnEditarClt
-        '
-        Me.BtnEditarClt.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.BtnEditarClt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnEditarClt.Image = Global.ProyectoF.My.Resources.Resources.editar
-        Me.BtnEditarClt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnEditarClt.Location = New System.Drawing.Point(691, 157)
-        Me.BtnEditarClt.Name = "BtnEditarClt"
-        Me.BtnEditarClt.Size = New System.Drawing.Size(111, 37)
-        Me.BtnEditarClt.TabIndex = 3
-        Me.BtnEditarClt.Text = "Editar"
-        Me.BtnEditarClt.UseVisualStyleBackColor = True
-        '
-        'BtnNuevoClt
-        '
-        Me.BtnNuevoClt.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.BtnNuevoClt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnNuevoClt.Image = Global.ProyectoF.My.Resources.Resources.addUser
-        Me.BtnNuevoClt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnNuevoClt.Location = New System.Drawing.Point(691, 103)
-        Me.BtnNuevoClt.Name = "BtnNuevoClt"
-        Me.BtnNuevoClt.Size = New System.Drawing.Size(111, 37)
-        Me.BtnNuevoClt.TabIndex = 2
-        Me.BtnNuevoClt.Text = "Nuevo"
-        Me.BtnNuevoClt.UseVisualStyleBackColor = True
         '
         'TPDetClt
         '
+        Me.TPDetClt.AutoScroll = True
         Me.TPDetClt.BackColor = System.Drawing.Color.SeaShell
-        Me.TPDetClt.Controls.Add(Me.TBapellidoClt)
-        Me.TPDetClt.Controls.Add(Me.TBtelClt)
-        Me.TPDetClt.Controls.Add(Me.TBdireccionClt)
-        Me.TPDetClt.Controls.Add(Me.TBcorreoClt)
-        Me.TPDetClt.Controls.Add(Me.TBnombreClt)
-        Me.TPDetClt.Controls.Add(Me.TBcedulaClt)
-        Me.TPDetClt.Controls.Add(Me.Label11)
-        Me.TPDetClt.Controls.Add(Me.Label12)
-        Me.TPDetClt.Controls.Add(Me.Label13)
-        Me.TPDetClt.Controls.Add(Me.Label14)
-        Me.TPDetClt.Controls.Add(Me.Label15)
-        Me.TPDetClt.Controls.Add(Me.Label16)
+        Me.TPDetClt.Controls.Add(Me.cmbIdPaciente)
+        Me.TPDetClt.Controls.Add(Me.cmbIdFactura)
+        Me.TPDetClt.Controls.Add(Me.cmbIdServicio)
+        Me.TPDetClt.Controls.Add(Me.cmbIdCliente)
+        Me.TPDetClt.Controls.Add(Me.BtnEditar)
+        Me.TPDetClt.Controls.Add(Me.BtnLimpiar)
+        Me.TPDetClt.Controls.Add(IdFacturaLabel)
+        Me.TPDetClt.Controls.Add(IdServicioLabel)
+        Me.TPDetClt.Controls.Add(IdPacienteLabel)
+        Me.TPDetClt.Controls.Add(IdClienteLabel)
+        Me.TPDetClt.Controls.Add(FechaConsultaLabel)
+        Me.TPDetClt.Controls.Add(Me.dtFechaConsulta)
         Me.TPDetClt.Controls.Add(Me.BtnGuardar)
-        Me.TPDetClt.Controls.Add(Me.BtnCancelar)
-        Me.TPDetClt.Location = New System.Drawing.Point(4, 22)
+        Me.TPDetClt.Location = New System.Drawing.Point(4, 25)
+        Me.TPDetClt.Margin = New System.Windows.Forms.Padding(4)
         Me.TPDetClt.Name = "TPDetClt"
-        Me.TPDetClt.Padding = New System.Windows.Forms.Padding(3)
-        Me.TPDetClt.Size = New System.Drawing.Size(819, 468)
+        Me.TPDetClt.Padding = New System.Windows.Forms.Padding(4)
+        Me.TPDetClt.Size = New System.Drawing.Size(1095, 579)
         Me.TPDetClt.TabIndex = 1
         Me.TPDetClt.Text = "Detalles"
         '
-        'TBapellidoClt
+        'cmbIdPaciente
         '
-        Me.TBapellidoClt.Location = New System.Drawing.Point(186, 252)
-        Me.TBapellidoClt.Name = "TBapellidoClt"
-        Me.TBapellidoClt.Size = New System.Drawing.Size(200, 20)
-        Me.TBapellidoClt.TabIndex = 6
+        Me.cmbIdPaciente.FormattingEnabled = True
+        Me.cmbIdPaciente.Location = New System.Drawing.Point(693, 291)
+        Me.cmbIdPaciente.Name = "cmbIdPaciente"
+        Me.cmbIdPaciente.Size = New System.Drawing.Size(183, 24)
+        Me.cmbIdPaciente.TabIndex = 25
         '
-        'TBtelClt
+        'cmbIdFactura
         '
-        Me.TBtelClt.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TBtelClt.Location = New System.Drawing.Point(607, 199)
-        Me.TBtelClt.Name = "TBtelClt"
-        Me.TBtelClt.Size = New System.Drawing.Size(200, 20)
-        Me.TBtelClt.TabIndex = 10
+        Me.cmbIdFactura.FormattingEnabled = True
+        Me.cmbIdFactura.Location = New System.Drawing.Point(693, 220)
+        Me.cmbIdFactura.Name = "cmbIdFactura"
+        Me.cmbIdFactura.Size = New System.Drawing.Size(183, 24)
+        Me.cmbIdFactura.TabIndex = 24
         '
-        'TBdireccionClt
+        'cmbIdServicio
         '
-        Me.TBdireccionClt.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TBdireccionClt.Location = New System.Drawing.Point(608, 238)
-        Me.TBdireccionClt.Multiline = True
-        Me.TBdireccionClt.Name = "TBdireccionClt"
-        Me.TBdireccionClt.Size = New System.Drawing.Size(199, 65)
-        Me.TBdireccionClt.TabIndex = 12
+        Me.cmbIdServicio.FormattingEnabled = True
+        Me.cmbIdServicio.Location = New System.Drawing.Point(365, 295)
+        Me.cmbIdServicio.Name = "cmbIdServicio"
+        Me.cmbIdServicio.Size = New System.Drawing.Size(160, 24)
+        Me.cmbIdServicio.TabIndex = 23
         '
-        'TBcorreoClt
+        'cmbIdCliente
         '
-        Me.TBcorreoClt.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TBcorreoClt.Location = New System.Drawing.Point(607, 166)
-        Me.TBcorreoClt.Name = "TBcorreoClt"
-        Me.TBcorreoClt.Size = New System.Drawing.Size(200, 20)
-        Me.TBcorreoClt.TabIndex = 8
+        Me.cmbIdCliente.FormattingEnabled = True
+        Me.cmbIdCliente.Location = New System.Drawing.Point(365, 223)
+        Me.cmbIdCliente.Name = "cmbIdCliente"
+        Me.cmbIdCliente.Size = New System.Drawing.Size(160, 24)
+        Me.cmbIdCliente.TabIndex = 22
         '
-        'TBnombreClt
+        'BtnEditar
         '
-        Me.TBnombreClt.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TBnombreClt.Location = New System.Drawing.Point(178, 198)
-        Me.TBnombreClt.Name = "TBnombreClt"
-        Me.TBnombreClt.Size = New System.Drawing.Size(200, 20)
-        Me.TBnombreClt.TabIndex = 4
+        Me.BtnEditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnEditar.Image = Global.ProyectoF.My.Resources.Resources.edit
+        Me.BtnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnEditar.Location = New System.Drawing.Point(441, 447)
+        Me.BtnEditar.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnEditar.Name = "BtnEditar"
+        Me.BtnEditar.Size = New System.Drawing.Size(133, 46)
+        Me.BtnEditar.TabIndex = 21
+        Me.BtnEditar.Text = "Editar"
+        Me.BtnEditar.UseVisualStyleBackColor = True
         '
-        'TBcedulaClt
+        'BtnLimpiar
         '
-        Me.TBcedulaClt.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TBcedulaClt.Location = New System.Drawing.Point(178, 165)
-        Me.TBcedulaClt.Name = "TBcedulaClt"
-        Me.TBcedulaClt.Size = New System.Drawing.Size(200, 20)
-        Me.TBcedulaClt.TabIndex = 2
+        Me.BtnLimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnLimpiar.Image = Global.ProyectoF.My.Resources.Resources.limpiar
+        Me.BtnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnLimpiar.Location = New System.Drawing.Point(598, 447)
+        Me.BtnLimpiar.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnLimpiar.Name = "BtnLimpiar"
+        Me.BtnLimpiar.Size = New System.Drawing.Size(133, 46)
+        Me.BtnLimpiar.TabIndex = 20
+        Me.BtnLimpiar.Text = "Limpiar"
+        Me.BtnLimpiar.UseVisualStyleBackColor = True
         '
-        'Label11
+        'dtFechaConsulta
         '
-        Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(441, 202)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(75, 20)
-        Me.Label11.TabIndex = 9
-        Me.Label11.Text = "Teléfono:"
+        Me.dtFechaConsulta.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.RegistroServiciosBindingSource, "fechaConsulta", True))
+        Me.dtFechaConsulta.Location = New System.Drawing.Point(512, 151)
+        Me.dtFechaConsulta.Name = "dtFechaConsulta"
+        Me.dtFechaConsulta.Size = New System.Drawing.Size(282, 22)
+        Me.dtFechaConsulta.TabIndex = 15
         '
-        'Label12
+        'RegistroServiciosBindingSource
         '
-        Me.Label12.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(441, 168)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(61, 20)
-        Me.Label12.TabIndex = 7
-        Me.Label12.Text = "Correo:"
+        Me.RegistroServiciosBindingSource.DataMember = "RegistroServicios"
+        Me.RegistroServiciosBindingSource.DataSource = Me.DBLosArcosDs
         '
-        'Label13
+        'DBLosArcosDs
         '
-        Me.Label13.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(441, 236)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(79, 20)
-        Me.Label13.TabIndex = 11
-        Me.Label13.Text = "Dirección:"
-        '
-        'Label14
-        '
-        Me.Label14.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(11, 233)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(69, 20)
-        Me.Label14.TabIndex = 5
-        Me.Label14.Text = "Apellido:"
-        '
-        'Label15
-        '
-        Me.Label15.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(11, 199)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(69, 20)
-        Me.Label15.TabIndex = 3
-        Me.Label15.Text = "Nombre:"
-        '
-        'Label16
-        '
-        Me.Label16.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(11, 166)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(63, 20)
-        Me.Label16.TabIndex = 1
-        Me.Label16.Text = "Cédula:"
+        Me.DBLosArcosDs.DataSetName = "DBLosArcosDs"
+        Me.DBLosArcosDs.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'BtnGuardar
         '
@@ -321,33 +318,50 @@ Partial Class FrmServicio
         Me.BtnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnGuardar.Image = Global.ProyectoF.My.Resources.Resources.save
         Me.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnGuardar.Location = New System.Drawing.Point(296, 363)
+        Me.BtnGuardar.Location = New System.Drawing.Point(286, 447)
+        Me.BtnGuardar.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnGuardar.Name = "BtnGuardar"
-        Me.BtnGuardar.Size = New System.Drawing.Size(100, 37)
+        Me.BtnGuardar.Size = New System.Drawing.Size(133, 46)
         Me.BtnGuardar.TabIndex = 13
         Me.BtnGuardar.Text = "Guardar"
         Me.BtnGuardar.UseVisualStyleBackColor = True
         '
-        'BtnCancelar
+        'RegistroServiciosTableAdapter
         '
-        Me.BtnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnCancelar.Image = Global.ProyectoF.My.Resources.Resources.close
-        Me.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnCancelar.Location = New System.Drawing.Point(439, 363)
-        Me.BtnCancelar.Name = "BtnCancelar"
-        Me.BtnCancelar.Size = New System.Drawing.Size(100, 37)
-        Me.BtnCancelar.TabIndex = 14
-        Me.BtnCancelar.Text = "Cancelar"
-        Me.BtnCancelar.UseVisualStyleBackColor = True
+        Me.RegistroServiciosTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.ClienteTableAdapter = Nothing
+        Me.TableAdapterManager.DesparasitantesTableAdapter = Nothing
+        Me.TableAdapterManager.DiagnosticosTableAdapter = Nothing
+        Me.TableAdapterManager.EmpleadosTableAdapter = Nothing
+        Me.TableAdapterManager.EmpresaTableAdapter = Nothing
+        Me.TableAdapterManager.EspeciesTableAdapter = Nothing
+        Me.TableAdapterManager.ExpedientesTableAdapter = Nothing
+        Me.TableAdapterManager.MarcasDesparasitantesTableAdapter = Nothing
+        Me.TableAdapterManager.MarcasVacunasTableAdapter = Nothing
+        Me.TableAdapterManager.PacientesTableAdapter = Nothing
+        Me.TableAdapterManager.RazasTableAdapter = Nothing
+        Me.TableAdapterManager.RegistroDesparasitacionesTableAdapter = Nothing
+        Me.TableAdapterManager.RegistroFacturasTableAdapter = Nothing
+        Me.TableAdapterManager.RegistroServiciosTableAdapter = Me.RegistroServiciosTableAdapter
+        Me.TableAdapterManager.RegistroVacunacionesTableAdapter = Nothing
+        Me.TableAdapterManager.RolesTableAdapter = Nothing
+        Me.TableAdapterManager.ServiciosTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = ProyectoF.DBLosArcosDsTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.VacunasTableAdapter = Nothing
         '
         'FrmServicio
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(827, 532)
+        Me.ClientSize = New System.Drawing.Size(1103, 655)
         Me.Controls.Add(Me.TCClientes)
         Me.Controls.Add(Me.PnlTitle)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FrmServicio"
         Me.Text = "FrmServicio"
         Me.PnlTitle.ResumeLayout(False)
@@ -356,9 +370,12 @@ Partial Class FrmServicio
         Me.TCClientes.ResumeLayout(False)
         Me.TPClt.ResumeLayout(False)
         Me.TPClt.PerformLayout()
+        Me.GbRegistros.ResumeLayout(False)
         CType(Me.dgvRegistrosAlmacenados, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TPDetClt.ResumeLayout(False)
         Me.TPDetClt.PerformLayout()
+        CType(Me.RegistroServiciosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DBLosArcosDs, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -370,22 +387,18 @@ Partial Class FrmServicio
     Friend WithEvents TPClt As TabPage
     Friend WithEvents dgvRegistrosAlmacenados As DataGridView
     Friend WithEvents txtBusqueda As TextBox
-    Friend WithEvents BtnEliminarRegClt As Button
-    Friend WithEvents BtnEditarClt As Button
-    Friend WithEvents BtnNuevoClt As Button
+    Friend WithEvents DBLosArcosDs As DBLosArcosDs
+    Friend WithEvents RegistroServiciosBindingSource As BindingSource
+    Friend WithEvents RegistroServiciosTableAdapter As DBLosArcosDsTableAdapters.RegistroServiciosTableAdapter
+    Friend WithEvents TableAdapterManager As DBLosArcosDsTableAdapters.TableAdapterManager
     Friend WithEvents TPDetClt As TabPage
-    Friend WithEvents TBapellidoClt As TextBox
-    Friend WithEvents TBtelClt As TextBox
-    Friend WithEvents TBdireccionClt As TextBox
-    Friend WithEvents TBcorreoClt As TextBox
-    Friend WithEvents TBnombreClt As TextBox
-    Friend WithEvents TBcedulaClt As TextBox
-    Friend WithEvents Label11 As Label
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Label13 As Label
-    Friend WithEvents Label14 As Label
-    Friend WithEvents Label15 As Label
-    Friend WithEvents Label16 As Label
+    Friend WithEvents cmbIdPaciente As ComboBox
+    Friend WithEvents cmbIdFactura As ComboBox
+    Friend WithEvents cmbIdServicio As ComboBox
+    Friend WithEvents cmbIdCliente As ComboBox
+    Friend WithEvents BtnEditar As Button
+    Friend WithEvents BtnLimpiar As Button
+    Friend WithEvents dtFechaConsulta As DateTimePicker
     Friend WithEvents BtnGuardar As Button
-    Friend WithEvents BtnCancelar As Button
+    Friend WithEvents GbRegistros As GroupBox
 End Class

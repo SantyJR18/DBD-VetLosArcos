@@ -54,13 +54,6 @@ Public Class FrmEmpleados
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
 
-    Private Sub EmpleadosBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
-        Me.Validate()
-        Me.EmpleadosBindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.DBLosArcosDs)
-
-    End Sub
-
 #End Region
 
 #Region "Funciones del FrmEmpleados"

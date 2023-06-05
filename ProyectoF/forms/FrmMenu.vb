@@ -29,6 +29,10 @@ Public Class FrmMenu
         OpenChildForm(New FrmClientes())
     End Sub
 
+    Private Sub BtnServicio_Click(sender As Object, e As EventArgs) Handles BtnServicio.Click
+        OpenChildForm(New FrmServicio)
+    End Sub
+
     Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles BtnClose.Click
         Application.Exit()
     End Sub
