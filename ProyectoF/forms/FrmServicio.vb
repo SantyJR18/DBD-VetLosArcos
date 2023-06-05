@@ -5,6 +5,7 @@
     Private dPaciente As New PacientesDao
     Private dServicio As New ServiciosDao
     Private dFactura As New RegistroFacturasDao
+    Dim idRegServicio As Integer = -1
 
 #Region "Botones del Formulario"
     Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
@@ -28,6 +29,7 @@
         LlenarPaciente()
         LlenarServicio()
         LlenarFactura()
+        Limpiar()
     End Sub
 
     Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
@@ -58,51 +60,53 @@
     End Sub
 
     Private Sub BtnEditar_Click(sender As Object, e As EventArgs) Handles BtnEditar.Click
-        If dgvRegistrosAlmacenados.SelectedRows.Count > 0 Then
-            ' Obtener los valores de los controles
-            Dim fechaConsulta As DateTime = dtFechaConsulta.Value
-            Dim idCliente As String = cmbIdCliente.SelectedValue.ToString()
-            Dim idPaciente As Integer = Convert.ToInt32(cmbIdPaciente.SelectedValue.ToString())
-            Dim idServicio As Integer = Convert.ToInt32(cmbIdServicio.SelectedValue.ToString())
-            Dim idFactura As Integer = Convert.ToInt32(cmbIdFactura.SelectedValue.ToString())
-
-            ' Crear el objeto RegistroServiciosEntity con los valores
-            Dim registroServicio As New RegistroServiciosEntity()
-            registroServicio.IdRegServicio = Convert.ToInt32(dgvRegistrosAlmacenados.SelectedRows(0).Cells("ID REGISTRO").Value.ToString())
-            registroServicio.FechaConsulta = fechaConsulta
-            registroServicio.Cliente.IdCliente = idCliente
-            registroServicio.Paciente.IdPaciente = idPaciente
-            registroServicio.Servicio.IdServicio = idServicio
-            registroServicio.Factura.IdFactura = idFactura
-
-            ' Llamar al método EditarRegistro del RegistroServiciosDao
-            Dim resultado As Boolean = dRegistroServicio.EditarRegistro(registroServicio)
-            If resultado Then
-                MessageBox.Show("Registro editado exitosamente", "Editar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Try
+            'Dim servicio As New RegistroServicios
+            Dim RegistroServicio As New RegistroServiciosEntity
+            RegistroServicio.IdRegServicio = idRegServicio
+            RegistroServicio.FechaConsulta = dtFechaConsulta.Value
+            RegistroServicio.Cliente.IdCliente = cmbIdCliente.SelectedValue
+            RegistroServicio.Paciente.IdPaciente = cmbIdPaciente.SelectedValue
+            RegistroServicio.Servicio.IdServicio = cmbIdServicio.SelectedValue
+            RegistroServicio.Factura.IdFactura = cmbIdFactura.SelectedValue
+            If dRegistroServicio.EditarRegistro(RegistroServicio) Then
+                MsgBox("Regtro modificado satisfactoriamente.", MsgBoxStyle.Information, "Empleados")
                 Limpiar()
                 MostrarRegistros()
             Else
-                MessageBox.Show("Error al editar el registro", "Editar Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MsgBox("No se pudo modificar el registro...", MsgBoxStyle.Exclamation, "Empleados")
             End If
-        Else
-            MsgBox("Selecciona un registro para editar.")
-        End If
+        Catch ex As Exception
+            MsgBox("Error al guardar registro: " & ex.Message, MsgBoxStyle.Critical, "Empleados")
+        End Try
+
+        MostrarRegistros()
     End Sub
 
     Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
-        If dgvRegistrosAlmacenados.SelectedRows.Count > 0 Then
-            Dim idRegServicio As Integer = Convert.ToInt32(dgvRegistrosAlmacenados.SelectedRows(0).Cells("ID REGISTRO").Value.ToString())
+        'If dgvRegistrosAlmacenados.SelectedRows.Count > 0 Then
+        ' Obtener el ID del registro seleccionado
+        ' Dim idRegServicio As Integer = Convert.ToInt32(dgvRegistrosAlmacenados.SelectedRows(0).Cells("ID REGISTRO"))
 
-            If dRegistroServicio.EliminarRegistro(idRegServicio.ToString()) Then
-                MsgBox("Registro eliminado exitosamente.")
-                MostrarRegistros()
-            Else
-                MsgBox("Error al eliminar el registro.")
+        ' Confirmar la eliminación del registro
+        Dim respuesta As DialogResult = MessageBox.Show("¿Está seguro de eliminar este registro?", "Eliminar Registro", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            If respuesta = DialogResult.Yes Then
+                ' Llamar al método EliminarRegistro del RegistroServiciosDao
+                Dim resultado As Boolean = dRegistroServicio.EliminarRegistro(idRegServicio)
+                If resultado Then
+                    MessageBox.Show("Registro eliminado exitosamente", "Eliminar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Limpiar()
+                    MostrarRegistros()
+                Else
+                    MessageBox.Show("Error al eliminar el registro", "Eliminar Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End If
             End If
-        Else
-            MsgBox("Selecciona un registro para eliminar.")
-        End If
+        'Else
+        '    MessageBox.Show("Debe seleccionar un registro para eliminar", "Eliminar Registro", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        'End If
     End Sub
+
+
 
     Private Sub BtnLimpiar_Click(sender As Object, e As EventArgs) Handles BtnLimpiar.Click
         Limpiar()
@@ -173,8 +177,11 @@
     End Sub
 
     Private Sub dgvRegistrosAlmacenados_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvRegistrosAlmacenados.CellDoubleClick
+        Dim fila As Integer
+        fila = dgvRegistrosAlmacenados.CurrentRow.Index
         If e.RowIndex >= 0 Then
-            Dim idRegServicio As Integer = Convert.ToInt32(dgvRegistrosAlmacenados.Rows(e.RowIndex).Cells("ID REGISTRO").Value.ToString())
+            'Dim idRegServicio As Integer = Convert.ToInt32(dgvRegistrosAlmacenados.Rows(e.RowIndex).Cells("ID REGISTRO").Value.ToString())
+            idRegServicio = Integer.Parse(dgvRegistrosAlmacenados.Rows(fila).Cells(0).Value)
             Dim registroServicio As RegistroServiciosEntity = dRegistroServicio.ObtenerRegistro(idRegServicio)
             If registroServicio IsNot Nothing Then
                 ' Limpiar los controles antes de asignar nuevos valores

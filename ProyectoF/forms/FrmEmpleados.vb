@@ -217,6 +217,10 @@ Public Class FrmEmpleados
         End If
     End Sub
 
+    Private Sub dgvRegistrosAlmacenados_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvRegistrosAlmacenados.CellContentClick
+
+    End Sub
+
 #End Region
 
 End Class
