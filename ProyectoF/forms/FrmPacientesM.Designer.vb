@@ -43,7 +43,6 @@ Partial Class FrmPacientesM
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TxtPeso = New System.Windows.Forms.TextBox()
-        Me.BtnEliminar = New System.Windows.Forms.Button()
         Me.BtnEditar = New System.Windows.Forms.Button()
         Me.BtnLimpiar = New System.Windows.Forms.Button()
         Me.BtnGuardar = New System.Windows.Forms.Button()
@@ -223,7 +222,6 @@ Partial Class FrmPacientesM
         Me.TPPaciente.Controls.Add(Me.Label18)
         Me.TPPaciente.Controls.Add(Me.Label2)
         Me.TPPaciente.Controls.Add(Me.TxtPeso)
-        Me.TPPaciente.Controls.Add(Me.BtnEliminar)
         Me.TPPaciente.Controls.Add(Me.BtnEditar)
         Me.TPPaciente.Controls.Add(Me.BtnLimpiar)
         Me.TPPaciente.Controls.Add(Me.BtnGuardar)
@@ -347,26 +345,13 @@ Partial Class FrmPacientesM
         Me.TxtPeso.Size = New System.Drawing.Size(105, 20)
         Me.TxtPeso.TabIndex = 15
         '
-        'BtnEliminar
-        '
-        Me.BtnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnEliminar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.BtnEliminar.Image = Global.ProyectoF.My.Resources.Resources.delete
-        Me.BtnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnEliminar.Location = New System.Drawing.Point(577, 382)
-        Me.BtnEliminar.Name = "BtnEliminar"
-        Me.BtnEliminar.Size = New System.Drawing.Size(146, 37)
-        Me.BtnEliminar.TabIndex = 24
-        Me.BtnEliminar.Text = "   Eliminar"
-        Me.BtnEliminar.UseVisualStyleBackColor = True
-        '
         'BtnEditar
         '
         Me.BtnEditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnEditar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnEditar.Image = Global.ProyectoF.My.Resources.Resources.edit
         Me.BtnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnEditar.Location = New System.Drawing.Point(256, 382)
+        Me.BtnEditar.Location = New System.Drawing.Point(336, 382)
         Me.BtnEditar.Name = "BtnEditar"
         Me.BtnEditar.Size = New System.Drawing.Size(146, 37)
         Me.BtnEditar.TabIndex = 22
@@ -379,7 +364,7 @@ Partial Class FrmPacientesM
         Me.BtnLimpiar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnLimpiar.Image = Global.ProyectoF.My.Resources.Resources.limpiar
         Me.BtnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnLimpiar.Location = New System.Drawing.Point(418, 382)
+        Me.BtnLimpiar.Location = New System.Drawing.Point(498, 382)
         Me.BtnLimpiar.Name = "BtnLimpiar"
         Me.BtnLimpiar.Size = New System.Drawing.Size(146, 37)
         Me.BtnLimpiar.TabIndex = 23
@@ -393,7 +378,7 @@ Partial Class FrmPacientesM
         Me.BtnGuardar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnGuardar.Image = Global.ProyectoF.My.Resources.Resources.verify
         Me.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnGuardar.Location = New System.Drawing.Point(97, 382)
+        Me.BtnGuardar.Location = New System.Drawing.Point(177, 382)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Size = New System.Drawing.Size(146, 37)
         Me.BtnGuardar.TabIndex = 21
@@ -702,11 +687,11 @@ Partial Class FrmPacientesM
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("High Tower Text", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(3, 6)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(94, 25)
+        Me.Label1.Size = New System.Drawing.Size(107, 25)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Pacientes"
         '
@@ -791,7 +776,6 @@ Partial Class FrmPacientesM
     Friend WithEvents CmbEspeciePac As ComboBox
     Friend WithEvents Label2 As Label
     Friend WithEvents TxtPeso As TextBox
-    Friend WithEvents BtnEliminar As Button
     Friend WithEvents BtnEditar As Button
     Friend WithEvents BtnLimpiar As Button
     Friend WithEvents BtnGuardar As Button

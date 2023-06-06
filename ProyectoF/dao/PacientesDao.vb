@@ -41,7 +41,7 @@ Public Class PacientesDao
             Dim da As New SqlDataAdapter(tsql, conn)
             da.Fill(ds)
         Catch ex As Exception
-
+            MsgBox("Ha ocurrido un error")
         End Try
         Return ds
     End Function

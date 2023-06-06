@@ -11,26 +11,28 @@ Public Class ClienteDao
                               segundoApellido, direccionCliente, correoCliente, telefonoCliente)
                               VALUES(@idCliente, @primerNombre, @segundoNombre, @primerApellido, 
                               @segundoApellido, @direccionCliente, @correoCliente, @telefonoCliente)"
-            Dim conn As New SqlConnection(strConn)
-            Dim cmb As New SqlCommand()
-            cmb.CommandType = CommandType.Text
-            cmb.CommandText = tsql
-            cmb.Parameters.AddWithValue("@idCliente", cliente.IdCliente)
-            cmb.Parameters.AddWithValue("@primerNombre", cliente.PrimerNombre)
-            cmb.Parameters.AddWithValue("@segundoNombre", cliente.SegundoNombre1)
-            cmb.Parameters.AddWithValue("@primerApellido", cliente.PrimerApellido1)
-            cmb.Parameters.AddWithValue("@segundoApellido", cliente.SegundoApellido1)
-            cmb.Parameters.AddWithValue("@direccionCliente", cliente.DireccionCliente1)
-            cmb.Parameters.AddWithValue("@correoCliente", cliente.CorreoCliente1)
-            cmb.Parameters.AddWithValue("@telefonoCliente", cliente.TelefonoCliente1)
-            cmb.Connection.Open()
-            If (cmb.ExecuteNonQuery <> 0) Then
-                resp = False
-            End If
-            cmb.Connection.Close()
+            Using conn As New SqlConnection(strConn),
+              cmd As New SqlCommand(tsql, conn)
+
+                cmd.CommandType = CommandType.Text
+                cmd.Parameters.AddWithValue("@idCliente", cliente.IdCliente)
+                cmd.Parameters.AddWithValue("@primerNombre", cliente.PrimerNombre)
+                cmd.Parameters.AddWithValue("@segundoNombre", cliente.SegundoNombre)
+                cmd.Parameters.AddWithValue("@primerApellido", cliente.PrimerApellido)
+                cmd.Parameters.AddWithValue("@segundoApellido", cliente.SegundoApellido)
+                cmd.Parameters.AddWithValue("@direccionCliente", cliente.DireccionCliente)
+                cmd.Parameters.AddWithValue("@correoCliente", cliente.CorreoCliente)
+                cmd.Parameters.AddWithValue("@telefonoCliente", cliente.TelefonoCliente)
+
+                conn.Open()
+                If (cmd.ExecuteNonQuery() > 0) Then
+                    resp = True
+                End If
+            End Using
         Catch ex As Exception
             resp = False
         End Try
+
         Return resp
     End Function
 
@@ -39,24 +41,24 @@ Public Class ClienteDao
         Try
             Dim tsql As String = "UPDATE Cliente SET primerNombre = @primerNombre, 
                               segundoNombre = @segundoNombre, primerApellido = @primerApellido,
-                              segundoApellido = @segundoApellido, direccionCliente = @direccionClinte, 
+                              segundoApellido = @segundoApellido, direccionCliente = @direccionCliente, 
                               correoCliente = @correoCliente, telefonoCliente = @telefonoCliente WHERE idCliente = @idCliente"
             Dim conn As New SqlConnection(strConn)
             Dim cmb As New SqlCommand()
             cmb.CommandType = CommandType.Text
             cmb.CommandText = tsql
-            cmb.Parameters.AddWithValue("@idCliente", cliente.IdCliente)
             cmb.Parameters.AddWithValue("@primerNombre", cliente.PrimerNombre)
-            cmb.Parameters.AddWithValue(" @segundoNombre", cliente.SegundoNombre1)
-            cmb.Parameters.AddWithValue(" @primerApellido", cliente.PrimerApellido1)
-            cmb.Parameters.AddWithValue(" @segundoApellido", cliente.SegundoApellido1)
-            cmb.Parameters.AddWithValue(" @direccionCliente", cliente.DireccionCliente1)
-            cmb.Parameters.AddWithValue(" @correoCliente", cliente.CorreoCliente1)
-            cmb.Parameters.AddWithValue(" @telefonoCliente", cliente.TelefonoCliente1)
+            cmb.Parameters.AddWithValue("@segundoNombre", cliente.SegundoNombre)
+            cmb.Parameters.AddWithValue("@primerApellido", cliente.PrimerApellido)
+            cmb.Parameters.AddWithValue("@segundoApellido", cliente.SegundoApellido)
+            cmb.Parameters.AddWithValue("@direccionCliente", cliente.DireccionCliente)
+            cmb.Parameters.AddWithValue("@correoCliente", cliente.CorreoCliente)
+            cmb.Parameters.AddWithValue("@telefonoCliente", cliente.TelefonoCliente)
+            cmb.Parameters.AddWithValue("@idCliente", cliente.IdCliente)
             cmb.Connection = conn
             cmb.Connection.Open()
             If (cmb.ExecuteNonQuery <> 0) Then
-                resp = False
+                resp = True
             End If
             cmb.Connection.Close()
         Catch ex As Exception
@@ -65,7 +67,7 @@ Public Class ClienteDao
         Return resp
     End Function
 
-    Public Function EliminarRegistro(ByVal idCliente As Integer) As Boolean
+    Public Function EliminarRegistro(ByVal idCliente As String) As Boolean
         Dim resp As Boolean = True
         Try
             Dim tsql As String = "DELETE FROM Cliente WHERE idCliente = @idCliente"
@@ -73,7 +75,7 @@ Public Class ClienteDao
             Dim cmd As New SqlCommand()
             cmd.CommandType = CommandType.Text
             cmd.CommandText = tsql
-            cmd.Parameters.AddWithValue(" @idCliente", idCliente)
+            cmd.Parameters.AddWithValue("@idCliente", idCliente)
             cmd.Connection = conn
             cmd.Connection.Open()
             If (cmd.ExecuteNonQuery <> 0) Then
@@ -89,7 +91,7 @@ Public Class ClienteDao
     Public Function MostrarRegistros() As DataSet
         Dim ds As New DataSet
         Try
-            Dim tsql As String = "SELECT * FROM Cliente"
+            Dim tsql As String = "SELECT idCliente AS 'ID CLIENTE', primerNombre AS 'PRIMER NOMBRE', segundoNombre AS 'SEGUNDO NOMBRE', primerApellido AS 'PRIMER APELLIDO', segundoApellido AS 'SEGUNDO APELLIDO', direccionCliente AS 'DIRECCIÓN', correoCliente AS 'CORREO ELECTRÓNICO', telefonoCliente AS 'TELÉFONO' FROM Cliente"
             Dim conn As New SqlConnection(strConn)
             Dim da As New SqlDataAdapter(tsql, conn)
             da.Fill(ds)
@@ -99,5 +101,49 @@ Public Class ClienteDao
         Return ds
     End Function
 
+    Public Function ObtenerRegistro(ByVal idCliente As String) As ClienteEntity
+        Dim cliente As New ClienteEntity()
+        Try
+            Dim tsql As String = "SELECT * FROM Cliente WHERE idCliente = @idCliente"
+            Dim conn As New SqlConnection(strConn)
+            Dim cmd As New SqlCommand(tsql, conn)
+            cmd.Parameters.AddWithValue("@idCliente", idCliente)
+            conn.Open()
+            Dim reader As SqlDataReader = cmd.ExecuteReader()
+            If reader.HasRows Then
+                reader.Read()
+                cliente.IdCliente = reader.GetString(reader.GetOrdinal("idCliente"))
+                cliente.PrimerNombre = reader.GetString(reader.GetOrdinal("primerNombre"))
+                cliente.SegundoNombre = reader.GetString(reader.GetOrdinal("segundoNombre"))
+                cliente.PrimerApellido = reader.GetString(reader.GetOrdinal("primerApellido"))
+                cliente.SegundoApellido = reader.GetString(reader.GetOrdinal("segundoApellido"))
+                cliente.DireccionCliente = reader.GetString(reader.GetOrdinal("direccionCliente"))
+                cliente.CorreoCliente = reader.GetString(reader.GetOrdinal("correoCliente"))
+                cliente.TelefonoCliente = reader.GetString(reader.GetOrdinal("telefonoCliente"))
+                ' Asigna los demás campos del objeto ClienteEntity de manera similar
+            End If
+            reader.Close()
+            conn.Close()
+        Catch ex As Exception
+            cliente = Nothing
+        End Try
+        Return cliente
+    End Function
+
+    Public Function BuscarRegistroPorIdCliente(ByVal idCliente As String) As DataSet
+        Dim ds As New DataSet()
+        Try
+            Dim tsql As String = "SELECT idCliente AS 'ID CLIENTE', primerNombre AS 'PRIMER NOMBRE', segundoNombre AS 'SEGUNDO NOMBRE', primerApellido AS 'PRIMER APELLIDO', segundoApellido AS 'SEGUNDO APELLIDO', direccionCliente AS 'DIRECCIÓN', correoCliente AS 'CORREO', telefonoCliente AS 'TELÉFONO' FROM Cliente WHERE idCliente LIKE @idCliente"
+            Dim conn As New SqlConnection(strConn)
+            Dim cmd As New SqlCommand(tsql, conn)
+            cmd.Parameters.AddWithValue("@idCliente", "%" & idCliente & "%")
+            conn.Open()
+            Dim da As New SqlDataAdapter(cmd)
+            da.Fill(ds)
+        Catch ex As Exception
+            ' Manejar la excepción adecuadamente
+        End Try
+        Return ds
+    End Function
 
 End Class

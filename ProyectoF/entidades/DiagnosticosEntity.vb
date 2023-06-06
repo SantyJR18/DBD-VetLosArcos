@@ -3,13 +3,13 @@
     Private _idDiag As Integer
     Private _descripcionDiag As String
     Private _fechaDiag As DateTime
-    Private _Paciente As PacientesEntity
+    Private _Paciente As Integer
 
     Public Sub New()
 
     End Sub
 
-    Public Sub New(idDiag As Integer, descripcionDiag As String, fechaDiag As Date, paciente As PacientesEntity)
+    Public Sub New(idDiag As Integer, descripcionDiag As String, fechaDiag As Date, paciente As Integer)
         _idDiag = idDiag
         _descripcionDiag = descripcionDiag
         _fechaDiag = fechaDiag
@@ -43,11 +43,11 @@
         End Set
     End Property
 
-    Public Property Paciente As PacientesEntity
+    Public Property Paciente As Integer
         Get
             Return _Paciente
         End Get
-        Set(value As PacientesEntity)
+        Set(value As Integer)
             _Paciente = value
         End Set
     End Property

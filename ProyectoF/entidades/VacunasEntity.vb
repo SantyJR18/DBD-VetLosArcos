@@ -5,6 +5,7 @@
     Private _MarcaVac As New MarcasVacunasEntity
 
     Public Sub New()
+
     End Sub
 
     Public Sub New(idVacuna As Integer, nombreVacuna As String, marcaVac As MarcasVacunasEntity)

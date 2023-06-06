@@ -30,7 +30,7 @@ Public Class FrmMenu
     End Sub
 
     Private Sub BtnServicio_Click(sender As Object, e As EventArgs) Handles BtnServicio.Click
-        OpenChildForm(New FrmServicio)
+        OpenChildForm(New FrmServicio())
     End Sub
 
     Private Sub BtnDesparasitacion_Click(sender As Object, e As EventArgs) Handles BtnDesparasitacion.Click
