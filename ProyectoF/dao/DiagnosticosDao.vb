@@ -13,7 +13,7 @@ Public Class DiagnosticosDao
             cmd.CommandText = tsql
             cmd.Parameters.AddWithValue("@descripcionDiag", diagnostico.DescripcionDiag)
             cmd.Parameters.AddWithValue("@fechaDiag", diagnostico.FechaDiag)
-            cmd.Parameters.AddWithValue("@idPaciente", diagnostico.Paciente.IdPaciente)
+            cmd.Parameters.AddWithValue("@idPaciente", diagnostico.Paciente)
             cmd.Connection = conn
             cmd.Connection.Open()
             If cmd.ExecuteNonQuery <> 0 Then
@@ -52,7 +52,7 @@ Public Class DiagnosticosDao
             cmd.CommandText = tsql
             cmd.Parameters.AddWithValue("@descripcionDiag", diagnostico.DescripcionDiag)
             cmd.Parameters.AddWithValue("@fechaDiag", diagnostico.FechaDiag)
-            cmd.Parameters.AddWithValue("@idPaciente", diagnostico.Paciente.IdPaciente)
+            cmd.Parameters.AddWithValue("@idPaciente", diagnostico.Paciente)
             cmd.Parameters.AddWithValue("@idDiag", diagnostico.IdDiag)
             cmd.Connection = conn
             cmd.Connection.Open()
@@ -98,14 +98,12 @@ Public Class DiagnosticosDao
             cmd.Parameters.AddWithValue("@idDiag", idDiag)
             conn.Open()
             Dim reader As SqlDataReader = cmd.ExecuteReader()
-            Dim test As Boolean
-            MsgBox(test)
             If reader.HasRows Then
                 reader.Read()
                 diagnostico.IdDiag = reader.GetInt32(reader.GetOrdinal("idDiag"))
                 diagnostico.FechaDiag = reader.GetDateTime(reader.GetOrdinal("fechaDiag"))
                 diagnostico.DescripcionDiag = reader.GetString(reader.GetOrdinal("descripcionDiag"))
-                'diagnostico.Paciente.IdPaciente = reader.GetInt32(reader.GetOrdinal("idPaciente"))
+                diagnostico.Paciente = reader.GetInt32(reader.GetOrdinal("idPaciente"))
                 ' Asigna los demás campos del objeto RegistroServiciosEntity de manera similar
             End If
             reader.Close()
@@ -114,9 +112,6 @@ Public Class DiagnosticosDao
             MsgBox("Instance crisis" & ex.Message)
             diagnostico = Nothing
         End Try
-        If diagnostico.DescripcionDiag IsNot Nothing Then
-            MsgBox("MAMALA")
-        End If
         Return diagnostico
     End Function
 
