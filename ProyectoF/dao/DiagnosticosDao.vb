@@ -21,7 +21,7 @@ Public Class DiagnosticosDao
             End If
         Catch ex As Exception
             resp = False
-            Console.WriteLine("An error has ocurred")
+            Console.WriteLine("Ha ocurrido un error")
         End Try
         Return resp
     End Function
@@ -91,28 +91,32 @@ Public Class DiagnosticosDao
     Public Function ObtenerRegistro(ByVal idDiag As Integer) As DiagnosticosEntity
         Dim diagnostico As New DiagnosticosEntity()
         Try
-            Dim tsql As String = "SELECT * FROM Diagnosticos WHERE idDiag = @idDiag" ''"SELECT D.idDiag, D.descripcionDiag, D.fechaDiag, D.idPaciente, P.nombrePaciente " &
-            ''"FROM Diagnosticos D INNER JOIN Pacientes P ON D.idPaciente = P.idPaciente " &
-            ''"WHERE D.idDiag = @idDiag"
-            Using conn As New SqlConnection(strConn)
-                conn.Open()
-                Using cmd As New SqlCommand(tsql, conn)
-                    cmd.Parameters.AddWithValue("@idDiag", idDiag)
-                    Dim reader As SqlDataReader = cmd.ExecuteReader()
-                    If reader.HasRows Then
-                        reader.Read()
-                        diagnostico.IdDiag = reader.GetInt32(reader.GetOrdinal("idDiag"))
-                        diagnostico.DescripcionDiag = reader.GetString(reader.GetOrdinal("descripcionDiag"))
-                        diagnostico.FechaDiag = reader.GetDateTime(reader.GetOrdinal("fechaDiag"))
-                        diagnostico.Paciente.IdPaciente = reader.GetInt32(reader.GetOrdinal("idPaciente"))
-                    End If
-                    reader.Close()
-                End Using
-            End Using
+            'MessageBox.Show("ID de registro de servicio: " & idRegServicio)
+            Dim tsql As String = "SELECT * FROM Diagnosticos WHERE idDiag = @idDiag"
+            Dim conn As New SqlConnection(strConn)
+            Dim cmd As New SqlCommand(tsql, conn)
+            cmd.Parameters.AddWithValue("@idDiag", idDiag)
+            conn.Open()
+            Dim reader As SqlDataReader = cmd.ExecuteReader()
+            Dim test As Boolean
+            MsgBox(test)
+            If reader.HasRows Then
+                reader.Read()
+                diagnostico.IdDiag = reader.GetInt32(reader.GetOrdinal("idDiag"))
+                diagnostico.FechaDiag = reader.GetDateTime(reader.GetOrdinal("fechaDiag"))
+                diagnostico.DescripcionDiag = reader.GetString(reader.GetOrdinal("descripcionDiag"))
+                'diagnostico.Paciente.IdPaciente = reader.GetInt32(reader.GetOrdinal("idPaciente"))
+                ' Asigna los demás campos del objeto RegistroServiciosEntity de manera similar
+            End If
+            reader.Close()
+            conn.Close()
         Catch ex As Exception
+            MsgBox("Instance crisis" & ex.Message)
             diagnostico = Nothing
-            Console.WriteLine("An error has occurred")
         End Try
+        If diagnostico.DescripcionDiag IsNot Nothing Then
+            MsgBox("MAMALA")
+        End If
         Return diagnostico
     End Function
 

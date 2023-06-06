@@ -43,16 +43,22 @@
         Dim fila As Integer
         fila = dgvRegistrosAlmacenados.CurrentRow.Index
         If e.RowIndex >= 0 Then
+            tcDiagnosticos.SelectedIndex = 1
             idDiag = Integer.Parse(dgvRegistrosAlmacenados.Rows(fila).Cells(0).Value)
             Dim diagnosticoR As DiagnosticosEntity = dDiagnostico.ObtenerRegistro(idDiag)
             If diagnosticoR IsNot Nothing Then
+                MsgBox(idDiag)
                 ' Mostrar los datos del registro en los controles del formulario
                 txtDesDiag.Text = diagnosticoR.DescripcionDiag
                 dtFechaDiag.Value = diagnosticoR.FechaDiag
                 cmbIdPac.SelectedValue = diagnosticoR.Paciente.IdPaciente
+
             End If
         End If
     End Sub
+
+
+
 
     'Private Sub dgvRegistrosAlmacenados_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvRegistrosAlmacenados.CellDoubleClick
     '    If e.RowIndex >= 0 Then

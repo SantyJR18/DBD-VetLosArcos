@@ -17,12 +17,12 @@ Public Class ClienteDao
             cmb.CommandText = tsql
             cmb.Parameters.AddWithValue("@idCliente", cliente.IdCliente)
             cmb.Parameters.AddWithValue("@primerNombre", cliente.PrimerNombre)
-            cmb.Parameters.AddWithValue("@segundoNombre", cliente.SegundoNombre1)
-            cmb.Parameters.AddWithValue("@primerApellido", cliente.PrimerApellido1)
-            cmb.Parameters.AddWithValue("@segundoApellido", cliente.SegundoApellido1)
-            cmb.Parameters.AddWithValue("@direccionCliente", cliente.DireccionCliente1)
-            cmb.Parameters.AddWithValue("@correoCliente", cliente.CorreoCliente1)
-            cmb.Parameters.AddWithValue("@telefonoCliente", cliente.TelefonoCliente1)
+            cmb.Parameters.AddWithValue("@segundoNombre", cliente.SegundoNombre)
+            cmb.Parameters.AddWithValue("@primerApellido", cliente.PrimerApellido)
+            cmb.Parameters.AddWithValue("@segundoApellido", cliente.SegundoApellido)
+            cmb.Parameters.AddWithValue("@direccionCliente", cliente.DireccionCliente)
+            cmb.Parameters.AddWithValue("@correoCliente", cliente.CorreoCliente)
+            cmb.Parameters.AddWithValue("@telefonoCliente", cliente.TelefonoCliente)
             cmb.Connection.Open()
             If (cmb.ExecuteNonQuery <> 0) Then
                 resp = False
@@ -47,12 +47,12 @@ Public Class ClienteDao
             cmb.CommandText = tsql
             cmb.Parameters.AddWithValue("@idCliente", cliente.IdCliente)
             cmb.Parameters.AddWithValue("@primerNombre", cliente.PrimerNombre)
-            cmb.Parameters.AddWithValue(" @segundoNombre", cliente.SegundoNombre1)
-            cmb.Parameters.AddWithValue(" @primerApellido", cliente.PrimerApellido1)
-            cmb.Parameters.AddWithValue(" @segundoApellido", cliente.SegundoApellido1)
-            cmb.Parameters.AddWithValue(" @direccionCliente", cliente.DireccionCliente1)
-            cmb.Parameters.AddWithValue(" @correoCliente", cliente.CorreoCliente1)
-            cmb.Parameters.AddWithValue(" @telefonoCliente", cliente.TelefonoCliente1)
+            cmb.Parameters.AddWithValue(" @segundoNombre", cliente.SegundoNombre)
+            cmb.Parameters.AddWithValue(" @primerApellido", cliente.PrimerApellido)
+            cmb.Parameters.AddWithValue(" @segundoApellido", cliente.SegundoApellido)
+            cmb.Parameters.AddWithValue(" @direccionCliente", cliente.DireccionCliente)
+            cmb.Parameters.AddWithValue(" @correoCliente", cliente.CorreoCliente)
+            cmb.Parameters.AddWithValue(" @telefonoCliente", cliente.TelefonoCliente)
             cmb.Connection = conn
             cmb.Connection.Open()
             If (cmb.ExecuteNonQuery <> 0) Then

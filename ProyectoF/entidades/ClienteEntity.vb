@@ -2,15 +2,26 @@
 
     Private _idCliente As String
     Private _primerNombre As String
-    Private segundoNombre As String
-    Private primerApellido As String
-    Private segundoApellido As String
-    Private direccionCliente As String
-    Private correoCliente As String
-    Private telefonoCliente As String
+    Private _segundoNombre As String
+    Private _primerApellido As String
+    Private _segundoApellido As String
+    Private _direccionCliente As String
+    Private _correoCliente As String
+    Private _telefonoCliente As String
 
     Public Sub New()
 
+    End Sub
+
+    Public Sub New(idCliente As String, primerNombre As String, segundoNombre As String, primerApellido As String, segundoApellido As String, direccionCliente As String, correoCliente As String, telefonoCliente As String)
+        _idCliente = idCliente
+        _primerNombre = primerNombre
+        _segundoNombre = segundoNombre
+        _primerApellido = primerApellido
+        _segundoApellido = segundoApellido
+        _direccionCliente = direccionCliente
+        _correoCliente = correoCliente
+        _telefonoCliente = telefonoCliente
     End Sub
 
     Public Property IdCliente As String
@@ -31,57 +42,57 @@
         End Set
     End Property
 
-    Public Property SegundoNombre1 As String
+    Public Property SegundoNombre As String
         Get
-            Return segundoNombre
+            Return _segundoNombre
         End Get
         Set(value As String)
-            segundoNombre = value
+            _segundoNombre = value
         End Set
     End Property
 
-    Public Property PrimerApellido1 As String
+    Public Property PrimerApellido As String
         Get
-            Return primerApellido
+            Return _primerApellido
         End Get
         Set(value As String)
-            primerApellido = value
+            _primerApellido = value
         End Set
     End Property
 
-    Public Property SegundoApellido1 As String
+    Public Property SegundoApellido As String
         Get
-            Return segundoApellido
+            Return _segundoApellido
         End Get
         Set(value As String)
-            segundoApellido = value
+            _segundoApellido = value
         End Set
     End Property
 
-    Public Property DireccionCliente1 As String
+    Public Property DireccionCliente As String
         Get
-            Return direccionCliente
+            Return _direccionCliente
         End Get
         Set(value As String)
-            direccionCliente = value
+            _direccionCliente = value
         End Set
     End Property
 
-    Public Property CorreoCliente1 As String
+    Public Property CorreoCliente As String
         Get
-            Return correoCliente
+            Return _correoCliente
         End Get
         Set(value As String)
-            correoCliente = value
+            _correoCliente = value
         End Set
     End Property
 
-    Public Property TelefonoCliente1 As String
+    Public Property TelefonoCliente As String
         Get
-            Return telefonoCliente
+            Return _telefonoCliente
         End Get
         Set(value As String)
-            telefonoCliente = value
+            _telefonoCliente = value
         End Set
     End Property
 End Class
