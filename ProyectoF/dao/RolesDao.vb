@@ -2,7 +2,7 @@
 
 Public Class RolesDao
 
-    Private cStrConn = My.Settings.cStrDBLosArcos
+    Private cStrConn As String = My.Settings.cStrDBLosArcos
     Public Function AgregarRegistro(ByVal rol As RolesEntity) As Boolean
 
         Dim resp As Boolean = False
