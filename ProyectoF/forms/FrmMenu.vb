@@ -37,6 +37,10 @@ Public Class FrmMenu
         OpenChildForm(New FrmDesparasitante())
     End Sub
 
+    Private Sub BtnDiagnostico_Click(sender As Object, e As EventArgs) Handles BtnDiagnostico.Click
+        OpenChildForm(New FrmDiagnostico())
+    End Sub
+
     Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles BtnClose.Click
         Application.Exit()
     End Sub

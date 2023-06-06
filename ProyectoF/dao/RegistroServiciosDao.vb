@@ -41,15 +41,14 @@ Public Class RegistroServiciosDao
         Return ds
     End Function
 
-
     Public Function EditarRegistro(ByVal registroServicio As RegistroServiciosEntity) As Boolean
         Try
             Dim conn As New SqlConnection(cStrConn)
             Dim cmd As New SqlCommand()
             cmd.Connection = conn
 
-            cmd.CommandText = "UPDATE RegistroServicio SET fechaConsulta = @fechaConsulta, idCliente = @idCliente, idPaciente = @idPaciente, idServicio = @idServicio, idFactura = @idFactura WHERE idRegServicio = @idRegServicio"
-            ''cmd.Parameters.AddWithValue("@idRegServicio", registroServicio.IdRegServicio)
+            cmd.CommandText = "UPDATE RegistroServicios SET fechaConsulta = @fechaConsulta, idCliente = @idCliente, idPaciente = @idPaciente, idServicio = @idServicio, idFactura = @idFactura WHERE idRegServicio = @idRegServicio"
+            cmd.Parameters.AddWithValue("@idRegServicio", registroServicio.IdRegServicio)
             cmd.Parameters.AddWithValue("@fechaConsulta", registroServicio.FechaConsulta)
             cmd.Parameters.AddWithValue("@idCliente", registroServicio.Cliente.IdCliente)
             cmd.Parameters.AddWithValue("@idPaciente", registroServicio.Paciente.IdPaciente)
@@ -69,13 +68,15 @@ Public Class RegistroServiciosDao
         End Try
     End Function
 
-    Public Function EliminarRegistro(ByVal registroServicio As String) As Boolean
+
+
+    Public Function EliminarRegistro(ByVal idRegServicio As String) As Boolean
         Dim success As Boolean = False
         Try
             Dim tsql As String = "DELETE FROM RegistroServicios WHERE idRegServicio = @idRegServicio"
             Using conn As New SqlConnection(cStrConn)
                 Using cmd As New SqlCommand(tsql, conn)
-                    cmd.Parameters.AddWithValue("@idRegServicio", registroServicio)
+                    cmd.Parameters.AddWithValue("@idRegServicio", idRegServicio)
                     conn.Open()
                     Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
                     If rowsAffected > 0 Then
