@@ -109,7 +109,7 @@ Public Class FrmClientes
                 .DireccionCliente = txtDireccionClt.Text,
                 .CorreoCliente = txtCorreoClt.Text,
                 .TelefonoCliente = txtTelClt.Text
-        }
+             }
 
             If dCliente.AgregarRegistro(registroCliente) Then
                 MessageBox.Show("Registro agregado exitosamente", "Agregar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -151,7 +151,7 @@ Public Class FrmClientes
         Limpiar()
     End Sub
 
-    Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) 
+    Private Sub BtnEliminar_Click(sender As Object, e As EventArgs)
         Dim idCliente As String = txtIdCliente.Text
 
         ' Verificar si se ha ingresado un ID de cliente válido

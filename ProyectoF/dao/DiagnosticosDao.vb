@@ -6,7 +6,7 @@ Public Class DiagnosticosDao
     Public Function AgregarRegistro(ByVal diagnostico As DiagnosticosEntity) As Boolean
         Dim resp As String = False
         Try
-            Dim tsql As String = "INSERT INTO Diagnosticos(descripcionDiag, fechaDiag, idExp) VALUES(@descripcionDiag, @fechaDiag, @idPaciente)"
+            Dim tsql As String = "INSERT INTO Diagnosticos(descripcionDiag, fechaDiag, idPaciente) VALUES(@descripcionDiag, @fechaDiag, @idPaciente)"
             Dim conn As New SqlConnection(strConn)
             Dim cmd As New SqlCommand()
             cmd.CommandType = CommandType.Text
@@ -16,7 +16,7 @@ Public Class DiagnosticosDao
             cmd.Parameters.AddWithValue("@idPaciente", diagnostico.Paciente)
             cmd.Connection = conn
             cmd.Connection.Open()
-            If cmd.ExecuteNonQuery <> 0 Then
+            If cmd.ExecuteNonQuery > 0 Then
                 resp = True
             End If
         Catch ex As Exception
@@ -29,9 +29,8 @@ Public Class DiagnosticosDao
     Public Function MostrarRegistros() As DataSet
         Dim ds As New DataSet
         Try
-            Dim tsql As String = "SELECT * FROM Diagnosticos" ''"SELECT d.idDiag AS 'ID DIAGNOSTICO', d.descripcionDiag AS 'DESCRIPCION DIAGNOSTICO', d.fechaDiag AS 'FECHA DIAGNOSTICO', d.idPaciente AS 'ID PACIENTE',  
-            ''p.nombrePaciente AS 'NOMBRE PACIENTE' FROM Diagnosticos d
-            ''INNER JOIN Pacientes p ON d.idPaciente = p.idPaciente"
+            Dim tsql As String = "SELECT d.idDiag AS 'ID DIAGNOSTICO', d.descripcionDiag AS 'DESCRIPCION DIAGNOSTICO', d.fechaDiag AS 'FECHA DIAGNOSTICO', d.idPaciente AS 'ID PACIENTE',  
+            p.nombrePaciente AS 'NOMBRE PACIENTE' FROM Diagnosticos d INNER JOIN Pacientes p ON d.idPaciente = p.idPaciente" ''"SELECT * FROM Diagnosticos"
 
             Dim conn As New SqlConnection(strConn)
             Dim da As New SqlDataAdapter(tsql, conn)
@@ -114,5 +113,26 @@ Public Class DiagnosticosDao
         End Try
         Return diagnostico
     End Function
+
+    Public Function ObtenerRegistroPorIdPaciente(ByVal idPaciente As Integer) As DataSet
+        Dim ds As New DataSet()
+
+        Try
+            Dim tsql As String = "SELECT d.idDiag AS 'ID DIAGNOSTICO', d.descripcionDiag AS 'DESCRIPCION DIAGNOSTICO', d.fechaDiag AS 'FECHA DIAGNOSTICO', d.idPaciente AS 'ID PACIENTE',  
+            p.nombrePaciente AS 'NOMBRE PACIENTE' FROM Diagnosticos d INNER JOIN Pacientes p ON d.idPaciente = p.idPaciente WHERE d.idPaciente = @idPaciente"
+
+            Dim conn As New SqlConnection(strConn)
+            Dim cmd As New SqlCommand(tsql, conn)
+            cmd.Parameters.AddWithValue("@idPaciente", idPaciente)
+            conn.Open()
+            Dim da As New SqlDataAdapter(cmd)
+            da.Fill(ds)
+        Catch ex As Exception
+            ' Manejar la excepción adecuadamente
+        End Try
+
+        Return ds
+    End Function
+
 
 End Class
