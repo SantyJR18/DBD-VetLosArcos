@@ -80,4 +80,18 @@ Public Class MarcasVacunasDao
         Return ds
     End Function
 
+    Public Function MostrarMarcasVacunas() As DataSet
+        Dim ds As New DataSet
+        Try
+            Dim tsql As String = "SELECT nombreMarcaVac FROM MarcasVacunas "
+            Dim conn As New SqlConnection(strConn)
+            Dim da As New SqlDataAdapter(tsql, conn)
+            da.Fill(ds)
+        Catch ex As Exception
+
+        End Try
+        Return ds
+    End Function
+
+
 End Class

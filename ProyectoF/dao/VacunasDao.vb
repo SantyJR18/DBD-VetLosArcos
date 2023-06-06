@@ -25,7 +25,6 @@ Public Class VacunasDao
         Return resp
     End Function
 
-
     Public Function EditarRegistro(ByVal vacuna As VacunasEntity) As Boolean
         Dim resp As Boolean = False
         Try
@@ -49,7 +48,7 @@ Public Class VacunasDao
     End Function
 
     Public Function EliminarRegistro(ByVal idVacuna As Integer) As Boolean
-        Dim resp As Boolean = True
+        Dim resp As Boolean = False
         Try
             Dim tsql As String = "DELETE FROM Vacunas WHERE idVacuna = @idVacuna"
             Dim conn As New SqlConnection(strConn)
@@ -81,4 +80,17 @@ Public Class VacunasDao
         End Try
         Return ds
     End Function
+
+    Public Function MostrarVacunas() As DataSet
+        Dim ds As New DataSet
+        Try
+            Dim tsql As String = "SELECT nombreVacuna FROM Vacunas"
+            Dim conn As New SqlConnection(strConn)
+            Dim da As New SqlDataAdapter(tsql, conn)
+            da.Fill(ds)
+        Catch ex As Exception
+        End Try
+        Return ds
+    End Function
+
 End Class

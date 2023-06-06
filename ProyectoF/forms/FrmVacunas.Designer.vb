@@ -31,6 +31,8 @@ Partial Class FrmVacunas
         Me.Label17 = New System.Windows.Forms.Label()
         Me.txtBusqueda = New System.Windows.Forms.TextBox()
         Me.TPDetPac = New System.Windows.Forms.TabPage()
+        Me.CmbMarcaVac = New System.Windows.Forms.ComboBox()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -41,11 +43,10 @@ Partial Class FrmVacunas
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TxtPeso = New System.Windows.Forms.TextBox()
-        Me.BtnEliminar = New System.Windows.Forms.Button()
         Me.BtnEditar = New System.Windows.Forms.Button()
         Me.BtnLimpiar = New System.Windows.Forms.Button()
         Me.BtnGuardar = New System.Windows.Forms.Button()
-        Me.TxtBIdPac = New System.Windows.Forms.TextBox()
+        Me.TxtIdPac = New System.Windows.Forms.TextBox()
         Me.CmbRazaPac = New System.Windows.Forms.ComboBox()
         Me.CmbEspeciePac = New System.Windows.Forms.ComboBox()
         Me.DtPac = New System.Windows.Forms.DateTimePicker()
@@ -53,7 +54,7 @@ Partial Class FrmVacunas
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.TBSexoPac = New System.Windows.Forms.ComboBox()
+        Me.CmbSexoPac = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -168,6 +169,8 @@ Partial Class FrmVacunas
         'TPDetPac
         '
         Me.TPDetPac.BackColor = System.Drawing.Color.SeaShell
+        Me.TPDetPac.Controls.Add(Me.CmbMarcaVac)
+        Me.TPDetPac.Controls.Add(Me.Label12)
         Me.TPDetPac.Controls.Add(Me.PictureBox1)
         Me.TPDetPac.Controls.Add(Me.PictureBox4)
         Me.TPDetPac.Controls.Add(Me.Label2)
@@ -178,11 +181,10 @@ Partial Class FrmVacunas
         Me.TPDetPac.Controls.Add(Me.Label18)
         Me.TPDetPac.Controls.Add(Me.Label3)
         Me.TPDetPac.Controls.Add(Me.TxtPeso)
-        Me.TPDetPac.Controls.Add(Me.BtnEliminar)
         Me.TPDetPac.Controls.Add(Me.BtnEditar)
         Me.TPDetPac.Controls.Add(Me.BtnLimpiar)
         Me.TPDetPac.Controls.Add(Me.BtnGuardar)
-        Me.TPDetPac.Controls.Add(Me.TxtBIdPac)
+        Me.TPDetPac.Controls.Add(Me.TxtIdPac)
         Me.TPDetPac.Controls.Add(Me.CmbRazaPac)
         Me.TPDetPac.Controls.Add(Me.CmbEspeciePac)
         Me.TPDetPac.Controls.Add(Me.DtPac)
@@ -190,7 +192,7 @@ Partial Class FrmVacunas
         Me.TPDetPac.Controls.Add(Me.Label10)
         Me.TPDetPac.Controls.Add(Me.Label9)
         Me.TPDetPac.Controls.Add(Me.Label7)
-        Me.TPDetPac.Controls.Add(Me.TBSexoPac)
+        Me.TPDetPac.Controls.Add(Me.CmbSexoPac)
         Me.TPDetPac.Controls.Add(Me.Label5)
         Me.TPDetPac.Controls.Add(Me.Label4)
         Me.TPDetPac.Controls.Add(Me.Label11)
@@ -200,6 +202,25 @@ Partial Class FrmVacunas
         Me.TPDetPac.Size = New System.Drawing.Size(835, 507)
         Me.TPDetPac.TabIndex = 1
         Me.TPDetPac.Text = "Detalles"
+        '
+        'CmbMarcaVac
+        '
+        Me.CmbMarcaVac.FormattingEnabled = True
+        Me.CmbMarcaVac.Location = New System.Drawing.Point(610, 276)
+        Me.CmbMarcaVac.Name = "CmbMarcaVac"
+        Me.CmbMarcaVac.Size = New System.Drawing.Size(200, 21)
+        Me.CmbMarcaVac.TabIndex = 20
+        '
+        'Label12
+        '
+        Me.Label12.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(443, 275)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(57, 20)
+        Me.Label12.TabIndex = 19
+        Me.Label12.Text = "Marca:"
         '
         'PictureBox1
         '
@@ -256,20 +277,20 @@ Partial Class FrmVacunas
         '
         'DtApliVac
         '
-        Me.DtApliVac.Location = New System.Drawing.Point(610, 277)
+        Me.DtApliVac.Location = New System.Drawing.Point(610, 312)
         Me.DtApliVac.Name = "DtApliVac"
         Me.DtApliVac.Size = New System.Drawing.Size(200, 20)
-        Me.DtApliVac.TabIndex = 20
+        Me.DtApliVac.TabIndex = 22
         '
         'Label6
         '
         Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(443, 277)
+        Me.Label6.Location = New System.Drawing.Point(443, 312)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(156, 20)
-        Me.Label6.TabIndex = 19
+        Me.Label6.TabIndex = 21
         Me.Label6.Text = "Fecha de Aplicación:"
         '
         'Label18
@@ -299,21 +320,9 @@ Partial Class FrmVacunas
         Me.TxtPeso.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.TxtPeso.Location = New System.Drawing.Point(610, 210)
         Me.TxtPeso.Name = "TxtPeso"
+        Me.TxtPeso.ReadOnly = True
         Me.TxtPeso.Size = New System.Drawing.Size(105, 20)
         Me.TxtPeso.TabIndex = 15
-        '
-        'BtnEliminar
-        '
-        Me.BtnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnEliminar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.BtnEliminar.Image = Global.ProyectoF.My.Resources.Resources.delete
-        Me.BtnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnEliminar.Location = New System.Drawing.Point(584, 400)
-        Me.BtnEliminar.Name = "BtnEliminar"
-        Me.BtnEliminar.Size = New System.Drawing.Size(146, 37)
-        Me.BtnEliminar.TabIndex = 24
-        Me.BtnEliminar.Text = "   Eliminar"
-        Me.BtnEliminar.UseVisualStyleBackColor = True
         '
         'BtnEditar
         '
@@ -321,10 +330,10 @@ Partial Class FrmVacunas
         Me.BtnEditar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnEditar.Image = Global.ProyectoF.My.Resources.Resources.edit
         Me.BtnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnEditar.Location = New System.Drawing.Point(263, 400)
+        Me.BtnEditar.Location = New System.Drawing.Point(343, 400)
         Me.BtnEditar.Name = "BtnEditar"
         Me.BtnEditar.Size = New System.Drawing.Size(146, 37)
-        Me.BtnEditar.TabIndex = 22
+        Me.BtnEditar.TabIndex = 24
         Me.BtnEditar.Text = "   Editar"
         Me.BtnEditar.UseVisualStyleBackColor = True
         '
@@ -334,10 +343,10 @@ Partial Class FrmVacunas
         Me.BtnLimpiar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnLimpiar.Image = Global.ProyectoF.My.Resources.Resources.limpiar
         Me.BtnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnLimpiar.Location = New System.Drawing.Point(425, 400)
+        Me.BtnLimpiar.Location = New System.Drawing.Point(505, 400)
         Me.BtnLimpiar.Name = "BtnLimpiar"
         Me.BtnLimpiar.Size = New System.Drawing.Size(146, 37)
-        Me.BtnLimpiar.TabIndex = 23
+        Me.BtnLimpiar.TabIndex = 25
         Me.BtnLimpiar.Text = "   Limpiar"
         Me.BtnLimpiar.UseVisualStyleBackColor = True
         '
@@ -348,22 +357,25 @@ Partial Class FrmVacunas
         Me.BtnGuardar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnGuardar.Image = Global.ProyectoF.My.Resources.Resources.verify
         Me.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnGuardar.Location = New System.Drawing.Point(104, 400)
+        Me.BtnGuardar.Location = New System.Drawing.Point(184, 400)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Size = New System.Drawing.Size(146, 37)
-        Me.BtnGuardar.TabIndex = 21
+        Me.BtnGuardar.TabIndex = 23
         Me.BtnGuardar.Text = "   Guardar"
         Me.BtnGuardar.UseVisualStyleBackColor = True
         '
-        'TxtBIdPac
+        'TxtIdPac
         '
-        Me.TxtBIdPac.Location = New System.Drawing.Point(193, 177)
-        Me.TxtBIdPac.Name = "TxtBIdPac"
-        Me.TxtBIdPac.Size = New System.Drawing.Size(98, 20)
-        Me.TxtBIdPac.TabIndex = 3
+        Me.TxtIdPac.Location = New System.Drawing.Point(193, 177)
+        Me.TxtIdPac.Name = "TxtIdPac"
+        Me.TxtIdPac.ReadOnly = True
+        Me.TxtIdPac.Size = New System.Drawing.Size(98, 20)
+        Me.TxtIdPac.TabIndex = 3
         '
         'CmbRazaPac
         '
+        Me.CmbRazaPac.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CmbRazaPac.Enabled = False
         Me.CmbRazaPac.FormattingEnabled = True
         Me.CmbRazaPac.Location = New System.Drawing.Point(610, 176)
         Me.CmbRazaPac.Name = "CmbRazaPac"
@@ -372,6 +384,8 @@ Partial Class FrmVacunas
         '
         'CmbEspeciePac
         '
+        Me.CmbEspeciePac.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CmbEspeciePac.Enabled = False
         Me.CmbEspeciePac.FormattingEnabled = True
         Me.CmbEspeciePac.Location = New System.Drawing.Point(192, 276)
         Me.CmbEspeciePac.Name = "CmbEspeciePac"
@@ -380,6 +394,7 @@ Partial Class FrmVacunas
         '
         'DtPac
         '
+        Me.DtPac.Enabled = False
         Me.DtPac.Location = New System.Drawing.Point(192, 246)
         Me.DtPac.Name = "DtPac"
         Me.DtPac.Size = New System.Drawing.Size(200, 20)
@@ -390,6 +405,7 @@ Partial Class FrmVacunas
         Me.TxtNombrePac.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.TxtNombrePac.Location = New System.Drawing.Point(192, 212)
         Me.TxtNombrePac.Name = "TxtNombrePac"
+        Me.TxtNombrePac.ReadOnly = True
         Me.TxtNombrePac.Size = New System.Drawing.Size(201, 20)
         Me.TxtNombrePac.TabIndex = 5
         '
@@ -426,14 +442,16 @@ Partial Class FrmVacunas
         Me.Label7.TabIndex = 12
         Me.Label7.Text = "Raza:"
         '
-        'TBSexoPac
+        'CmbSexoPac
         '
-        Me.TBSexoPac.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TBSexoPac.FormattingEnabled = True
-        Me.TBSexoPac.Location = New System.Drawing.Point(192, 311)
-        Me.TBSexoPac.Name = "TBSexoPac"
-        Me.TBSexoPac.Size = New System.Drawing.Size(200, 21)
-        Me.TBSexoPac.TabIndex = 11
+        Me.CmbSexoPac.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.CmbSexoPac.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CmbSexoPac.Enabled = False
+        Me.CmbSexoPac.FormattingEnabled = True
+        Me.CmbSexoPac.Location = New System.Drawing.Point(192, 311)
+        Me.CmbSexoPac.Name = "CmbSexoPac"
+        Me.CmbSexoPac.Size = New System.Drawing.Size(200, 21)
+        Me.CmbSexoPac.TabIndex = 11
         '
         'Label5
         '
@@ -539,7 +557,7 @@ Partial Class FrmVacunas
     Friend WithEvents Label18 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents TxtPeso As TextBox
-    Friend WithEvents TxtBIdPac As TextBox
+    Friend WithEvents TxtIdPac As TextBox
     Friend WithEvents CmbRazaPac As ComboBox
     Friend WithEvents CmbEspeciePac As ComboBox
     Friend WithEvents DtPac As DateTimePicker
@@ -547,7 +565,7 @@ Partial Class FrmVacunas
     Friend WithEvents Label10 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents TBSexoPac As ComboBox
+    Friend WithEvents CmbSexoPac As ComboBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label11 As Label
@@ -561,11 +579,12 @@ Partial Class FrmVacunas
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label17 As Label
     Friend WithEvents txtBusqueda As TextBox
-    Friend WithEvents BtnEliminar As Button
     Friend WithEvents BtnEditar As Button
     Friend WithEvents BtnLimpiar As Button
     Friend WithEvents BtnGuardar As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents CmbMarcaVac As ComboBox
+    Friend WithEvents Label12 As Label
 End Class

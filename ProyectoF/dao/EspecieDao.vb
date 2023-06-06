@@ -57,6 +57,21 @@ Public Class EspecieDao
         End Try
         Return ds
     End Function
+
+
+    Public Function MostrarNombre() As DataSet
+        Dim ds As New DataSet
+        Try
+            Dim tsql As String = "SELECT nombreEspecie FROM Especies"
+            Dim conn As New SqlConnection(strConn)
+            Dim da As New SqlDataAdapter(tsql, conn)
+            da.Fill(ds)
+        Catch ex As Exception
+            Console.WriteLine("An error has ocurred")
+        End Try
+        Return ds
+    End Function
+
     Public Function EliminarRegistro(ByVal idEspecie As Integer) As Boolean
         Dim resp As Boolean = False
         Try

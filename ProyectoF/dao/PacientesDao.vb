@@ -46,6 +46,18 @@ Public Class PacientesDao
         Return ds
     End Function
 
+    Public Function MostrarSexo() As DataSet
+        Dim ds As New DataSet
+        Try
+            Dim tsql As String = "SELECT sexoPaciente FROM Pacientes"
+            Dim conn As New SqlConnection(strConn)
+            Dim da As New SqlDataAdapter(tsql, conn)
+            da.Fill(ds)
+        Catch ex As Exception
+        End Try
+        Return ds
+    End Function
+
     Public Function EditarRegistro(ByVal paciente As PacientesEntity) As Boolean
         Try
             Dim tsql As String = "UPDATE Pacientes SET nombrePaciente = @nombrePaciente, sexoPaciente = @sexoPaciente, fechaNac = @fechaNac, peso = @peso, color = @color, senPart = @senPart, idCliente = @idCliente, idEspecie = @idEspecie, idRaza = @idRaza WHERE idPaciente = @idPaciente"

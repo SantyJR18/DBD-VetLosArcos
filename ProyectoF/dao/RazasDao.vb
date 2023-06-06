@@ -37,6 +37,19 @@ Public Class RazasDao
         Return ds
     End Function
 
+    Public Function MostrarRaza() As DataSet
+        Dim ds As New DataSet
+        Try
+            Dim tsql As String = "SELECT nombreRaza FROM Razas"
+            Dim conn As New SqlConnection(strConn)
+            Dim da As New SqlDataAdapter(tsql, conn)
+            da.Fill(ds)
+        Catch ex As Exception
+            Console.WriteLine("Ha ocurrido un error al consultar los registros")
+        End Try
+        Return ds
+    End Function
+
     Public Function EliminarRegistro(ByVal idRaza As Integer) As Boolean
         Dim resp As Boolean = False
         Try

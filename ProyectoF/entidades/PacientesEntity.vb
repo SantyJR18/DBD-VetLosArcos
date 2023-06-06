@@ -12,7 +12,6 @@
     Private _Raza As New RazasEntity
 
     Public Sub New()
-
     End Sub
 
     Public Sub New(idPaciente As Integer, nombrePaciente As String, sexoPaciente As Boolean, fechaNac As Date, peso As Decimal, color As String, senPart As String, cliente As ClienteEntity, especie As EspeciesEntity, raza As RazasEntity)

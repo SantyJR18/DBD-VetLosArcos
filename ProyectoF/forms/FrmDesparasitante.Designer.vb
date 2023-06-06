@@ -27,10 +27,6 @@ Partial Class FrmDesparasitante
         Me.BtnCerrar = New System.Windows.Forms.PictureBox()
         Me.TCPacientes = New System.Windows.Forms.TabControl()
         Me.TPPaciente = New System.Windows.Forms.TabPage()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.GbRegistros = New System.Windows.Forms.GroupBox()
-        Me.dgvRegistrosAlmacenados = New System.Windows.Forms.DataGridView()
-        Me.txtBusqueda = New System.Windows.Forms.TextBox()
         Me.TPDetPac = New System.Windows.Forms.TabPage()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
@@ -43,13 +39,25 @@ Partial Class FrmDesparasitante
         Me.CmbDesparacitante = New System.Windows.Forms.ComboBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.GbRegistros = New System.Windows.Forms.GroupBox()
+        Me.dgvRegistrosAlmacenados = New System.Windows.Forms.DataGridView()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.txtBusqueda = New System.Windows.Forms.TextBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PnlTitle.SuspendLayout()
         CType(Me.BtnCerrar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TCPacientes.SuspendLayout()
         Me.TPPaciente.SuspendLayout()
+        Me.TPDetPac.SuspendLayout()
         Me.GbRegistros.SuspendLayout()
         CType(Me.dgvRegistrosAlmacenados, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TPDetPac.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PnlTitle
@@ -100,63 +108,23 @@ Partial Class FrmDesparasitante
         'TPPaciente
         '
         Me.TPPaciente.BackColor = System.Drawing.Color.SeaShell
-        Me.TPPaciente.Controls.Add(Me.Label2)
         Me.TPPaciente.Controls.Add(Me.GbRegistros)
+        Me.TPPaciente.Controls.Add(Me.PictureBox3)
+        Me.TPPaciente.Controls.Add(Me.PictureBox2)
+        Me.TPPaciente.Controls.Add(Me.Label17)
         Me.TPPaciente.Controls.Add(Me.txtBusqueda)
         Me.TPPaciente.Location = New System.Drawing.Point(4, 22)
         Me.TPPaciente.Name = "TPPaciente"
-        Me.TPPaciente.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.TPPaciente.Padding = New System.Windows.Forms.Padding(3)
         Me.TPPaciente.Size = New System.Drawing.Size(835, 507)
         Me.TPPaciente.TabIndex = 0
         Me.TPPaciente.Text = "Pacientes"
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.DodgerBlue
-        Me.Label2.Location = New System.Drawing.Point(269, 13)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(325, 26)
-        Me.Label2.TabIndex = 9
-        Me.Label2.Text = "Registros de Desparasitantes"
-        '
-        'GbRegistros
-        '
-        Me.GbRegistros.Controls.Add(Me.dgvRegistrosAlmacenados)
-        Me.GbRegistros.Location = New System.Drawing.Point(27, 121)
-        Me.GbRegistros.Name = "GbRegistros"
-        Me.GbRegistros.Size = New System.Drawing.Size(794, 366)
-        Me.GbRegistros.TabIndex = 8
-        Me.GbRegistros.TabStop = False
-        '
-        'dgvRegistrosAlmacenados
-        '
-        Me.dgvRegistrosAlmacenados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvRegistrosAlmacenados.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvRegistrosAlmacenados.Location = New System.Drawing.Point(3, 16)
-        Me.dgvRegistrosAlmacenados.Name = "dgvRegistrosAlmacenados"
-        Me.dgvRegistrosAlmacenados.RowHeadersWidth = 51
-        Me.dgvRegistrosAlmacenados.Size = New System.Drawing.Size(788, 347)
-        Me.dgvRegistrosAlmacenados.TabIndex = 6
-        '
-        'txtBusqueda
-        '
-        Me.txtBusqueda.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.txtBusqueda.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtBusqueda.ForeColor = System.Drawing.Color.DimGray
-        Me.txtBusqueda.Location = New System.Drawing.Point(27, 72)
-        Me.txtBusqueda.Multiline = True
-        Me.txtBusqueda.Name = "txtBusqueda"
-        Me.txtBusqueda.Size = New System.Drawing.Size(792, 28)
-        Me.txtBusqueda.TabIndex = 7
-        Me.txtBusqueda.Text = "Buscar Desparasitante por Nombre"
-        Me.txtBusqueda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
         'TPDetPac
         '
         Me.TPDetPac.BackColor = System.Drawing.Color.SeaShell
+        Me.TPDetPac.Controls.Add(Me.PictureBox1)
+        Me.TPDetPac.Controls.Add(Me.PictureBox4)
         Me.TPDetPac.Controls.Add(Me.Label3)
         Me.TPDetPac.Controls.Add(Me.ComboBox1)
         Me.TPDetPac.Controls.Add(Me.Button3)
@@ -170,7 +138,7 @@ Partial Class FrmDesparasitante
         Me.TPDetPac.Controls.Add(Me.Label9)
         Me.TPDetPac.Location = New System.Drawing.Point(4, 22)
         Me.TPDetPac.Name = "TPDetPac"
-        Me.TPDetPac.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.TPDetPac.Padding = New System.Windows.Forms.Padding(3)
         Me.TPDetPac.Size = New System.Drawing.Size(835, 507)
         Me.TPDetPac.TabIndex = 1
         Me.TPDetPac.Text = "Detalles"
@@ -191,7 +159,7 @@ Partial Class FrmDesparasitante
         '
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Location = New System.Drawing.Point(381, 163)
-        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(200, 21)
         Me.ComboBox1.TabIndex = 25
@@ -294,6 +262,94 @@ Partial Class FrmDesparasitante
         Me.Label9.TabIndex = 15
         Me.Label9.Text = "ID Expediente:"
         '
+        'GbRegistros
+        '
+        Me.GbRegistros.Controls.Add(Me.dgvRegistrosAlmacenados)
+        Me.GbRegistros.Location = New System.Drawing.Point(25, 128)
+        Me.GbRegistros.Name = "GbRegistros"
+        Me.GbRegistros.Size = New System.Drawing.Size(785, 366)
+        Me.GbRegistros.TabIndex = 3
+        Me.GbRegistros.TabStop = False
+        '
+        'dgvRegistrosAlmacenados
+        '
+        Me.dgvRegistrosAlmacenados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvRegistrosAlmacenados.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvRegistrosAlmacenados.Location = New System.Drawing.Point(3, 16)
+        Me.dgvRegistrosAlmacenados.Name = "dgvRegistrosAlmacenados"
+        Me.dgvRegistrosAlmacenados.RowHeadersWidth = 51
+        Me.dgvRegistrosAlmacenados.Size = New System.Drawing.Size(779, 347)
+        Me.dgvRegistrosAlmacenados.TabIndex = 4
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = Global.ProyectoF.My.Resources.Resources.deworming
+        Me.PictureBox3.Location = New System.Drawing.Point(249, 13)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(48, 49)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 35
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.ProyectoF.My.Resources.Resources.deworming
+        Me.PictureBox2.Location = New System.Drawing.Point(538, 12)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(48, 49)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 34
+        Me.PictureBox2.TabStop = False
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.Label17.Location = New System.Drawing.Point(301, 35)
+        Me.Label17.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(233, 26)
+        Me.Label17.TabIndex = 1
+        Me.Label17.Text = "Registro de Vacunas"
+        '
+        'txtBusqueda
+        '
+        Me.txtBusqueda.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txtBusqueda.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBusqueda.ForeColor = System.Drawing.Color.DimGray
+        Me.txtBusqueda.Location = New System.Drawing.Point(25, 84)
+        Me.txtBusqueda.Multiline = True
+        Me.txtBusqueda.Name = "txtBusqueda"
+        Me.txtBusqueda.Size = New System.Drawing.Size(785, 28)
+        Me.txtBusqueda.TabIndex = 2
+        Me.txtBusqueda.Text = "Buscar Registro de Desparasitantes por ID CLIENTE"
+        Me.txtBusqueda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.ProyectoF.My.Resources.Resources.deworming
+        Me.PictureBox1.Location = New System.Drawing.Point(223, 48)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(48, 49)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 37
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Image = Global.ProyectoF.My.Resources.Resources.deworming
+        Me.PictureBox4.Location = New System.Drawing.Point(564, 48)
+        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(48, 49)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox4.TabIndex = 36
+        Me.PictureBox4.TabStop = False
+        '
         'FrmDesparasitante
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -310,10 +366,14 @@ Partial Class FrmDesparasitante
         Me.TCPacientes.ResumeLayout(False)
         Me.TPPaciente.ResumeLayout(False)
         Me.TPPaciente.PerformLayout()
-        Me.GbRegistros.ResumeLayout(False)
-        CType(Me.dgvRegistrosAlmacenados, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TPDetPac.ResumeLayout(False)
         Me.TPDetPac.PerformLayout()
+        Me.GbRegistros.ResumeLayout(False)
+        CType(Me.dgvRegistrosAlmacenados, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -323,10 +383,6 @@ Partial Class FrmDesparasitante
     Friend WithEvents BtnCerrar As PictureBox
     Friend WithEvents TCPacientes As TabControl
     Friend WithEvents TPPaciente As TabPage
-    Friend WithEvents dgvRegistrosAlmacenados As DataGridView
-    Friend WithEvents txtBusqueda As TextBox
-    Friend WithEvents GbRegistros As GroupBox
-    Friend WithEvents Label2 As Label
     Friend WithEvents TPDetPac As TabPage
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Button3 As Button
@@ -339,4 +395,12 @@ Partial Class FrmDesparasitante
     Friend WithEvents Label11 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents GbRegistros As GroupBox
+    Friend WithEvents dgvRegistrosAlmacenados As DataGridView
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents Label17 As Label
+    Friend WithEvents txtBusqueda As TextBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox4 As PictureBox
 End Class
