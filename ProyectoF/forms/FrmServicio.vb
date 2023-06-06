@@ -116,8 +116,8 @@
     Sub LlenarCliente()
         Try
             cmbIdCliente.DataSource = dCliente.MostrarRegistros.Tables(0)
-            cmbIdCliente.DisplayMember = "idCliente"
-            cmbIdCliente.ValueMember = "idCliente"
+            cmbIdCliente.DisplayMember = "PRIMER NOMNBRE"
+            cmbIdCliente.ValueMember = "ID CLIENTE"
             cmbIdCliente.Refresh()
         Catch ex As Exception
             MsgBox("Error al mostrar ID Cliente", MsgBoxStyle.Critical, "Cliente")
