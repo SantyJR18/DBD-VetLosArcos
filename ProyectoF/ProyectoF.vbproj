@@ -96,16 +96,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DBLosArcosDs.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DBLosArcosDs.vb">
-      <DependentUpon>DBLosArcosDs.xsd</DependentUpon>
-    </Compile>
     <Compile Include="entidades\ClienteEntity.vb" />
     <Compile Include="entidades\DesparasitantesEntity.vb" />
     <Compile Include="entidades\DiagnosticosEntity.vb" />
     <Compile Include="entidades\EmpleadosEntity.vb" />
     <Compile Include="entidades\EmpresaEntity.vb" />
     <Compile Include="entidades\EspeciesEntity.vb" />
-    <Compile Include="entidades\ExpedientesEntity.vb" />
     <Compile Include="entidades\MarcasDesparasitantesEntity.vb" />
     <Compile Include="entidades\MarcasVacunasEntity.vb" />
     <Compile Include="entidades\PacientesEntity.vb" />

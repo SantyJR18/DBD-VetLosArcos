@@ -6,14 +6,14 @@ Public Class DiagnosticosDao
     Public Function AgregarRegistro(ByVal diagnostico As DiagnosticosEntity) As Boolean
         Dim resp As String = False
         Try
-            Dim tsql As String = "INSERT INTO Diagnosticos(descripcionDiag, fechaDiag, idExp) VALUES(@descripcionDiag, @fechaDiag, @idExp)"
+            Dim tsql As String = "INSERT INTO Diagnosticos(descripcionDiag, fechaDiag, idExp) VALUES(@descripcionDiag, @fechaDiag, @idPaciente)"
             Dim conn As New SqlConnection(strConn)
             Dim cmd As New SqlCommand()
             cmd.CommandType = CommandType.Text
             cmd.CommandText = tsql
             cmd.Parameters.AddWithValue("@descripcionDiag", diagnostico.DescripcionDiag)
             cmd.Parameters.AddWithValue("@fechaDiag", diagnostico.FechaDiag)
-            cmd.Parameters.AddWithValue("@idExp", diagnostico.Exp.IdExp)
+            cmd.Parameters.AddWithValue("@idPaciente", diagnostico.Paciente.IdPaciente)
             cmd.Connection = conn
             cmd.Connection.Open()
             If cmd.ExecuteNonQuery <> 0 Then
@@ -42,14 +42,14 @@ Public Class DiagnosticosDao
     Public Function EditarRegistro(ByVal diagnostico As DiagnosticosEntity) As Boolean
         Dim resp As Boolean = False
         Try
-            Dim tsql As String = "UPDATE Diagnosticos SET descripcionDiag = @descripcionDiag, fechaDiag = @fechaDiag, idExp = @idExp WHERE idDiag = @idDiag"
+            Dim tsql As String = "UPDATE Diagnosticos SET descripcionDiag = @descripcionDiag, fechaDiag = @fechaDiag, idPaciente = @idPaciente WHERE idDiag = @idDiag"
             Dim conn As New SqlConnection(strConn)
             Dim cmd As New SqlCommand()
             cmd.CommandType = CommandType.Text
             cmd.CommandText = tsql
             cmd.Parameters.AddWithValue("@descripcionDiag", diagnostico.DescripcionDiag)
             cmd.Parameters.AddWithValue("@fechaDiag", diagnostico.FechaDiag)
-            cmd.Parameters.AddWithValue("@idExp", diagnostico.Exp.IdExp)
+            cmd.Parameters.AddWithValue("@idPaciente", diagnostico.Paciente.IdPaciente)
             cmd.Parameters.AddWithValue("@idDiag", diagnostico.IdDiag)
             cmd.Connection = conn
             cmd.Connection.Open()

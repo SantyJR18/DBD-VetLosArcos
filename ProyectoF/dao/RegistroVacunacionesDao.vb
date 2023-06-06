@@ -6,13 +6,13 @@ Public Class RegistroVacunacionesDao
     Public Function AgregarRegistro(ByVal registroVacuna As RegistroVacunacionesEntity) As Boolean
         Dim resp As String = False
         Try
-            Dim tsql As String = "INSERT INTO RegistroVacunaciones(fechaVacunacion, idExp, idVacuna) VALUES(@fechaVacunacion, idExp, idVacuna)"
+            Dim tsql As String = "INSERT INTO RegistroVacunaciones(fechaVacunacion, idPaciente, idVacuna) VALUES(@fechaVacunacion, idPaciente, idVacuna)"
             Dim conn As New SqlConnection(strConn)
             Dim cmd As New SqlCommand()
             cmd.CommandType = CommandType.Text
             cmd.CommandText = tsql
             cmd.Parameters.AddWithValue("@fechaVacunacion", registroVacuna.FechaVacunacion)
-            cmd.Parameters.AddWithValue("@idExp", registroVacuna.Exp.IdExp)
+            cmd.Parameters.AddWithValue("@idPaciente", registroVacuna.Paciente.IdPaciente)
             cmd.Parameters.AddWithValue("@idVacuna", registroVacuna.Vacuna.IdVacuna)
             cmd.Connection = conn
             cmd.Connection.Open()
@@ -41,13 +41,13 @@ Public Class RegistroVacunacionesDao
     Public Function EditarRegistro(ByVal registroVacuna As RegistroVacunacionesEntity) As Boolean
         Dim resp As Boolean = False
         Try
-            Dim tsql As String = "UPDATE Diagnosticos SET fechaVacunacion = @fechaVacunacion, idExp = @idExp, idVacuna = @idVacuna WHERE idVacunacion = @idVacunacion"
+            Dim tsql As String = "UPDATE Diagnosticos SET fechaVacunacion = @fechaVacunacion, idPaciente = @idPaciente, idVacuna = @idVacuna WHERE idVacunacion = @idVacunacion"
             Dim conn As New SqlConnection(strConn)
             Dim cmd As New SqlCommand()
             cmd.CommandType = CommandType.Text
             cmd.CommandText = tsql
             cmd.Parameters.AddWithValue("@fechaVacunacion", registroVacuna.FechaVacunacion)
-            cmd.Parameters.AddWithValue("@idExp", registroVacuna.Exp.IdExp)
+            cmd.Parameters.AddWithValue("@idPaciente", registroVacuna.Paciente.IdPaciente)
             cmd.Parameters.AddWithValue("@idVacuna", registroVacuna.Vacuna.IdVacuna)
             cmd.Connection = conn
             cmd.Connection.Open()
