@@ -48,7 +48,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
@@ -264,9 +266,11 @@
     <None Include="Resources\add-file.png" />
     <None Include="Resources\addUser.png" />
     <None Include="Resources\close.png" />
+    <None Include="Resources\deworming.png" />
     <Content Include="Resources\diagnostico.png" />
     <Content Include="Resources\diagnostico24.png" />
     <None Include="Resources\editar.png" />
+    <None Include="Resources\dropper.png" />
     <Content Include="Resources\garras.ico" />
     <Content Include="Resources\la-tienda-de-animales.png" />
     <None Include="Resources\log-out.png" />
@@ -290,6 +294,7 @@
     <None Include="Resources\search.png" />
     <None Include="Resources\searchUser.png" />
     <None Include="Resources\save.png" />
+    <None Include="Resources\pets.png" />
     <Content Include="Resources\syringe.png" />
     <None Include="Resources\trash.png" />
     <Content Include="Resources\vac.png" />
