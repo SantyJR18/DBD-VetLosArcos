@@ -307,11 +307,6 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:ProyectoF.DBLosArcosDs.ExpedientesDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
 <member name="T:ProyectoF.DBLosArcosDs.MarcasDesparasitantesDataTable">
 <summary>
 Represents the strongly named DataTable class.
@@ -393,11 +388,6 @@ Represents strongly named DataRow class.
 </summary>
 </member>
 <member name="T:ProyectoF.DBLosArcosDs.EspeciesRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:ProyectoF.DBLosArcosDs.ExpedientesRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -487,11 +477,6 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
-<member name="T:ProyectoF.DBLosArcosDs.ExpedientesRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
 <member name="T:ProyectoF.DBLosArcosDs.MarcasDesparasitantesRowChangeEvent">
 <summary>
 Row event argument class
@@ -573,11 +558,6 @@ Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
 <member name="T:ProyectoF.DBLosArcosDsTableAdapters.EspeciesTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:ProyectoF.DBLosArcosDsTableAdapters.ExpedientesTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

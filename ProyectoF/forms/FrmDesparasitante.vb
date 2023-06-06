@@ -2,6 +2,7 @@
     Private dRegistroDesparasitaciones As New RegistroDesparasitacionesDao
     Private dDesparasitantes As New DesparasitantesDao
     Private dMarcaDes As New MarcasDesparasitantesDao
+    ''Private dExpedientes As New ExpedientesDao
 
 #Region "Botones del Formulario"
     Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
@@ -46,5 +47,17 @@
 
     Private Sub FrmDesparasitante_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MostrarRegistros()
+    End Sub
+
+    Private Sub TCPacientes_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TCPacientes.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+
+    End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+
     End Sub
 End Class

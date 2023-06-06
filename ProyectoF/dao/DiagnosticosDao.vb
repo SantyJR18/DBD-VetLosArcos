@@ -29,7 +29,10 @@ Public Class DiagnosticosDao
     Public Function MostrarRegistros() As DataSet
         Dim ds As New DataSet
         Try
-            Dim tsql As String = "SELECT * FROM Diagnosticos"
+            Dim tsql As String = "SELECT * FROM Diagnosticos" ''"SELECT d.idDiag AS 'ID DIAGNOSTICO', d.descripcionDiag AS 'DESCRIPCION DIAGNOSTICO', d.fechaDiag AS 'FECHA DIAGNOSTICO', d.idPaciente AS 'ID PACIENTE',  
+            ''p.nombrePaciente AS 'NOMBRE PACIENTE' FROM Diagnosticos d
+            ''INNER JOIN Pacientes p ON d.idPaciente = p.idPaciente"
+
             Dim conn As New SqlConnection(strConn)
             Dim da As New SqlDataAdapter(tsql, conn)
             da.Fill(ds)
@@ -84,4 +87,33 @@ Public Class DiagnosticosDao
         End Try
         Return resp
     End Function
+
+    Public Function ObtenerRegistro(ByVal idDiag As Integer) As DiagnosticosEntity
+        Dim diagnostico As New DiagnosticosEntity()
+        Try
+            Dim tsql As String = "SELECT * FROM Diagnosticos WHERE idDiag = @idDiag" ''"SELECT D.idDiag, D.descripcionDiag, D.fechaDiag, D.idPaciente, P.nombrePaciente " &
+            ''"FROM Diagnosticos D INNER JOIN Pacientes P ON D.idPaciente = P.idPaciente " &
+            ''"WHERE D.idDiag = @idDiag"
+            Using conn As New SqlConnection(strConn)
+                conn.Open()
+                Using cmd As New SqlCommand(tsql, conn)
+                    cmd.Parameters.AddWithValue("@idDiag", idDiag)
+                    Dim reader As SqlDataReader = cmd.ExecuteReader()
+                    If reader.HasRows Then
+                        reader.Read()
+                        diagnostico.IdDiag = reader.GetInt32(reader.GetOrdinal("idDiag"))
+                        diagnostico.DescripcionDiag = reader.GetString(reader.GetOrdinal("descripcionDiag"))
+                        diagnostico.FechaDiag = reader.GetDateTime(reader.GetOrdinal("fechaDiag"))
+                        diagnostico.Paciente.IdPaciente = reader.GetInt32(reader.GetOrdinal("idPaciente"))
+                    End If
+                    reader.Close()
+                End Using
+            End Using
+        Catch ex As Exception
+            diagnostico = Nothing
+            Console.WriteLine("An error has occurred")
+        End Try
+        Return diagnostico
+    End Function
+
 End Class

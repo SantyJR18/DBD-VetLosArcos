@@ -456,7 +456,6 @@ Partial Class FrmServicio
         Me.TableAdapterManager.EmpleadosTableAdapter = Nothing
         Me.TableAdapterManager.EmpresaTableAdapter = Nothing
         Me.TableAdapterManager.EspeciesTableAdapter = Nothing
-        Me.TableAdapterManager.ExpedientesTableAdapter = Nothing
         Me.TableAdapterManager.MarcasDesparasitantesTableAdapter = Nothing
         Me.TableAdapterManager.MarcasVacunasTableAdapter = Nothing
         Me.TableAdapterManager.PacientesTableAdapter = Nothing
