@@ -24,11 +24,6 @@ Partial Class FrmDiagnostico
     Private Sub InitializeComponent()
         Me.TCClientes = New System.Windows.Forms.TabControl()
         Me.TPClt = New System.Windows.Forms.TabPage()
-        Me.dgvRegistrosAlmacenados = New System.Windows.Forms.DataGridView()
-        Me.txtBusqueda = New System.Windows.Forms.TextBox()
-        Me.BtnEliminarRegClt = New System.Windows.Forms.Button()
-        Me.BtnEditarClt = New System.Windows.Forms.Button()
-        Me.BtnNuevoClt = New System.Windows.Forms.Button()
         Me.TPDetClt = New System.Windows.Forms.TabPage()
         Me.TBapellidoClt = New System.Windows.Forms.TextBox()
         Me.TBtelClt = New System.Windows.Forms.TextBox()
@@ -48,8 +43,6 @@ Partial Class FrmDiagnostico
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BtnCerrar = New System.Windows.Forms.PictureBox()
         Me.TCClientes.SuspendLayout()
-        Me.TPClt.SuspendLayout()
-        CType(Me.dgvRegistrosAlmacenados, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TPDetClt.SuspendLayout()
         Me.PnlTitle.SuspendLayout()
         CType(Me.BtnCerrar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -69,79 +62,12 @@ Partial Class FrmDiagnostico
         'TPClt
         '
         Me.TPClt.BackColor = System.Drawing.Color.SeaShell
-        Me.TPClt.Controls.Add(Me.dgvRegistrosAlmacenados)
-        Me.TPClt.Controls.Add(Me.txtBusqueda)
-        Me.TPClt.Controls.Add(Me.BtnEliminarRegClt)
-        Me.TPClt.Controls.Add(Me.BtnEditarClt)
-        Me.TPClt.Controls.Add(Me.BtnNuevoClt)
         Me.TPClt.Location = New System.Drawing.Point(4, 22)
         Me.TPClt.Name = "TPClt"
         Me.TPClt.Padding = New System.Windows.Forms.Padding(3)
         Me.TPClt.Size = New System.Drawing.Size(819, 468)
         Me.TPClt.TabIndex = 0
         Me.TPClt.Text = "Clientes"
-        '
-        'dgvRegistrosAlmacenados
-        '
-        Me.dgvRegistrosAlmacenados.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.dgvRegistrosAlmacenados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvRegistrosAlmacenados.Location = New System.Drawing.Point(19, 103)
-        Me.dgvRegistrosAlmacenados.Name = "dgvRegistrosAlmacenados"
-        Me.dgvRegistrosAlmacenados.RowHeadersWidth = 51
-        Me.dgvRegistrosAlmacenados.Size = New System.Drawing.Size(666, 326)
-        Me.dgvRegistrosAlmacenados.TabIndex = 5
-        '
-        'txtBusqueda
-        '
-        Me.txtBusqueda.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.txtBusqueda.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtBusqueda.ForeColor = System.Drawing.Color.DimGray
-        Me.txtBusqueda.Location = New System.Drawing.Point(19, 69)
-        Me.txtBusqueda.Multiline = True
-        Me.txtBusqueda.Name = "txtBusqueda"
-        Me.txtBusqueda.Size = New System.Drawing.Size(666, 28)
-        Me.txtBusqueda.TabIndex = 1
-        Me.txtBusqueda.Text = "Buscar Cliente por Nombre"
-        Me.txtBusqueda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'BtnEliminarRegClt
-        '
-        Me.BtnEliminarRegClt.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.BtnEliminarRegClt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnEliminarRegClt.Image = Global.ProyectoF.My.Resources.Resources.trash
-        Me.BtnEliminarRegClt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnEliminarRegClt.Location = New System.Drawing.Point(691, 211)
-        Me.BtnEliminarRegClt.Name = "BtnEliminarRegClt"
-        Me.BtnEliminarRegClt.Size = New System.Drawing.Size(108, 36)
-        Me.BtnEliminarRegClt.TabIndex = 4
-        Me.BtnEliminarRegClt.Text = "Eliminar"
-        Me.BtnEliminarRegClt.UseVisualStyleBackColor = True
-        '
-        'BtnEditarClt
-        '
-        Me.BtnEditarClt.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.BtnEditarClt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnEditarClt.Image = Global.ProyectoF.My.Resources.Resources.editar
-        Me.BtnEditarClt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnEditarClt.Location = New System.Drawing.Point(691, 157)
-        Me.BtnEditarClt.Name = "BtnEditarClt"
-        Me.BtnEditarClt.Size = New System.Drawing.Size(111, 37)
-        Me.BtnEditarClt.TabIndex = 3
-        Me.BtnEditarClt.Text = "Editar"
-        Me.BtnEditarClt.UseVisualStyleBackColor = True
-        '
-        'BtnNuevoClt
-        '
-        Me.BtnNuevoClt.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.BtnNuevoClt.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnNuevoClt.Image = Global.ProyectoF.My.Resources.Resources.addUser
-        Me.BtnNuevoClt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnNuevoClt.Location = New System.Drawing.Point(691, 103)
-        Me.BtnNuevoClt.Name = "BtnNuevoClt"
-        Me.BtnNuevoClt.Size = New System.Drawing.Size(111, 37)
-        Me.BtnNuevoClt.TabIndex = 2
-        Me.BtnNuevoClt.Text = "Nuevo"
-        Me.BtnNuevoClt.UseVisualStyleBackColor = True
         '
         'TPDetClt
         '
@@ -351,9 +277,6 @@ Partial Class FrmDiagnostico
         Me.Name = "FrmDiagnostico"
         Me.Text = "FrmDiagnostico"
         Me.TCClientes.ResumeLayout(False)
-        Me.TPClt.ResumeLayout(False)
-        Me.TPClt.PerformLayout()
-        CType(Me.dgvRegistrosAlmacenados, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TPDetClt.ResumeLayout(False)
         Me.TPDetClt.PerformLayout()
         Me.PnlTitle.ResumeLayout(False)
@@ -365,11 +288,6 @@ Partial Class FrmDiagnostico
 
     Friend WithEvents TCClientes As TabControl
     Friend WithEvents TPClt As TabPage
-    Friend WithEvents dgvRegistrosAlmacenados As DataGridView
-    Friend WithEvents txtBusqueda As TextBox
-    Friend WithEvents BtnEliminarRegClt As Button
-    Friend WithEvents BtnEditarClt As Button
-    Friend WithEvents BtnNuevoClt As Button
     Friend WithEvents TPDetClt As TabPage
     Friend WithEvents TBapellidoClt As TextBox
     Friend WithEvents TBtelClt As TextBox

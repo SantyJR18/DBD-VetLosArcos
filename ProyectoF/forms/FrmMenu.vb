@@ -30,11 +30,20 @@ Public Class FrmMenu
     End Sub
 
     Private Sub BtnServicio_Click(sender As Object, e As EventArgs) Handles BtnServicio.Click
-        OpenChildForm(New FrmServicio)
+        OpenChildForm(New FrmServicio())
     End Sub
 
     Private Sub BtnDesparasitacion_Click(sender As Object, e As EventArgs) Handles BtnDesparasitacion.Click
         OpenChildForm(New FrmDesparasitante())
+    End Sub
+
+
+    Private Sub BtnVacunas_Click(sender As Object, e As EventArgs) Handles BtnVacunas.Click
+        OpenChildForm(New FrmVacunas())
+    End Sub
+
+    Private Sub BtnDiagnostico_Click(sender As Object, e As EventArgs) Handles BtnDiagnostico.Click
+        OpenChildForm(New FrmDiagnostico())
     End Sub
 
     Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles BtnClose.Click
@@ -61,8 +70,11 @@ Public Class FrmMenu
     End Sub
 
     Private Sub BtnCerrarSes_Click(sender As Object, e As EventArgs) Handles BtnCerrarSes.Click
-        Me.Close()
-        FrmLogin.Show()
+        Dim resp As DialogResult = MsgBox("¿Estás seguro que quieres salir?", MsgBoxStyle.Question Or MsgBoxStyle.YesNo, "Confirmación")
+        If (resp = DialogResult.Yes) Then
+            Me.Close()
+            FrmLogin.Show()
+        End If
     End Sub
 
 #End Region
@@ -79,7 +91,6 @@ Public Class FrmMenu
         ReleaseCapture()
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
-
 #End Region
 
 End Class

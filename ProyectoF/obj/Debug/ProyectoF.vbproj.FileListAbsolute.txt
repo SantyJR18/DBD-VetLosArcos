@@ -126,3 +126,6 @@ C:\Users\Santiago\Documents\SDLL\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.F
 C:\Users\Diego\Desktop\BDFinalFolder\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.FrmDiagnostico.resources
 C:\Users\Diego\Desktop\BDFinalFolder\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.FrmServicio.resources
 C:\Users\Diego\Desktop\BDFinalFolder\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.FrmVacunas.resources
+C:\Users\DELL\Desktop\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.FrmDiagnostico.resources
+C:\Users\DELL\Desktop\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.FrmServicio.resources
+C:\Users\DELL\Desktop\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.FrmVacunas.resources
