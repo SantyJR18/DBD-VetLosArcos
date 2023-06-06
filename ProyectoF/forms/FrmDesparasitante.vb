@@ -2,7 +2,7 @@
     Private dRegistroDesparasitaciones As New RegistroDesparasitacionesDao
     Private dDesparasitantes As New DesparasitantesDao
     Private dMarcaDes As New MarcasDesparasitantesDao
-    Private dExpedientes As New ExpedientesDao
+    ''Private dExpedientes As New ExpedientesDao
 
 #Region "Botones del Formulario"
     Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click

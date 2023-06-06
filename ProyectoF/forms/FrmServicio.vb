@@ -61,7 +61,6 @@
 
     Private Sub BtnEditar_Click(sender As Object, e As EventArgs) Handles BtnEditar.Click
         Try
-            'Dim servicio As New RegistroServicios
             Dim RegistroServicio As New RegistroServiciosEntity
             RegistroServicio.IdRegServicio = idRegServicio
             RegistroServicio.FechaConsulta = dtFechaConsulta.Value
@@ -84,26 +83,18 @@
     End Sub
 
     Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
-        'If dgvRegistrosAlmacenados.SelectedRows.Count > 0 Then
-        ' Obtener el ID del registro seleccionado
-        ' Dim idRegServicio As Integer = Convert.ToInt32(dgvRegistrosAlmacenados.SelectedRows(0).Cells("ID REGISTRO"))
-
-        ' Confirmar la eliminación del registro
         Dim respuesta As DialogResult = MessageBox.Show("¿Está seguro de eliminar este registro?", "Eliminar Registro", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-            If respuesta = DialogResult.Yes Then
-                ' Llamar al método EliminarRegistro del RegistroServiciosDao
-                Dim resultado As Boolean = dRegistroServicio.EliminarRegistro(idRegServicio)
-                If resultado Then
-                    MessageBox.Show("Registro eliminado exitosamente", "Eliminar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    Limpiar()
-                    MostrarRegistros()
-                Else
-                    MessageBox.Show("Error al eliminar el registro", "Eliminar Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                End If
+        If respuesta = DialogResult.Yes Then
+            ' Llamar al método EliminarRegistro del RegistroServiciosDao
+            Dim resultado As Boolean = dRegistroServicio.EliminarRegistro(idRegServicio)
+            If resultado Then
+                MessageBox.Show("Registro eliminado exitosamente", "Eliminar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Limpiar()
+                MostrarRegistros()
+            Else
+                MessageBox.Show("Error al eliminar el registro", "Eliminar Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
-        'Else
-        '    MessageBox.Show("Debe seleccionar un registro para eliminar", "Eliminar Registro", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-        'End If
+        End If
     End Sub
 
 

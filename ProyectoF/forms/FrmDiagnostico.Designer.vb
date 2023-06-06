@@ -22,6 +22,11 @@ Partial Class FrmDiagnostico
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim DescripcionDiagLabel As System.Windows.Forms.Label
+        Dim FechaDiagLabel As System.Windows.Forms.Label
+        Dim IdPacienteLabel As System.Windows.Forms.Label
+        Dim Label3 As System.Windows.Forms.Label
         Me.TCClientes = New System.Windows.Forms.TabControl()
         Me.TPClt = New System.Windows.Forms.TabPage()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -29,6 +34,11 @@ Partial Class FrmDiagnostico
         Me.dgvRegistrosAlmacenados = New System.Windows.Forms.DataGridView()
         Me.txtBusqueda = New System.Windows.Forms.TextBox()
         Me.TPDetClt = New System.Windows.Forms.TabPage()
+        Me.txtNombrePac = New System.Windows.Forms.TextBox()
+        Me.DiagnosticosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DBLosArcosDs = New ProyectoF.DBLosArcosDs()
+        Me.dtFechaDiag = New System.Windows.Forms.DateTimePicker()
+        Me.txtDesDiag = New System.Windows.Forms.TextBox()
         Me.BtnLimpiar = New System.Windows.Forms.Button()
         Me.BtnEditar = New System.Windows.Forms.Button()
         Me.BtnGuardar = New System.Windows.Forms.Button()
@@ -36,14 +46,59 @@ Partial Class FrmDiagnostico
         Me.PnlTitle = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BtnCerrar = New System.Windows.Forms.PictureBox()
+        Me.DiagnosticosTableAdapter = New ProyectoF.DBLosArcosDsTableAdapters.DiagnosticosTableAdapter()
+        Me.TableAdapterManager = New ProyectoF.DBLosArcosDsTableAdapters.TableAdapterManager()
+        Me.cmbIdPac = New System.Windows.Forms.ComboBox()
+        DescripcionDiagLabel = New System.Windows.Forms.Label()
+        FechaDiagLabel = New System.Windows.Forms.Label()
+        IdPacienteLabel = New System.Windows.Forms.Label()
+        Label3 = New System.Windows.Forms.Label()
         Me.TCClientes.SuspendLayout()
         Me.TPClt.SuspendLayout()
         Me.GbRegistros.SuspendLayout()
         CType(Me.dgvRegistrosAlmacenados, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TPDetClt.SuspendLayout()
+        CType(Me.DiagnosticosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DBLosArcosDs, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PnlTitle.SuspendLayout()
         CType(Me.BtnCerrar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'DescripcionDiagLabel
+        '
+        DescripcionDiagLabel.AutoSize = True
+        DescripcionDiagLabel.Location = New System.Drawing.Point(258, 127)
+        DescripcionDiagLabel.Name = "DescripcionDiagLabel"
+        DescripcionDiagLabel.Size = New System.Drawing.Size(164, 17)
+        DescripcionDiagLabel.TabIndex = 16
+        DescripcionDiagLabel.Text = "Descripción Diagnóstico:"
+        '
+        'FechaDiagLabel
+        '
+        FechaDiagLabel.AutoSize = True
+        FechaDiagLabel.Location = New System.Drawing.Point(305, 251)
+        FechaDiagLabel.Name = "FechaDiagLabel"
+        FechaDiagLabel.Size = New System.Drawing.Size(129, 17)
+        FechaDiagLabel.TabIndex = 17
+        FechaDiagLabel.Text = "Fecha Diagnóstico:"
+        '
+        'IdPacienteLabel
+        '
+        IdPacienteLabel.AutoSize = True
+        IdPacienteLabel.Location = New System.Drawing.Point(350, 316)
+        IdPacienteLabel.Name = "IdPacienteLabel"
+        IdPacienteLabel.Size = New System.Drawing.Size(84, 17)
+        IdPacienteLabel.TabIndex = 18
+        IdPacienteLabel.Text = "ID Paciente:"
+        '
+        'Label3
+        '
+        Label3.AutoSize = True
+        Label3.Location = New System.Drawing.Point(313, 372)
+        Label3.Name = "Label3"
+        Label3.Size = New System.Drawing.Size(121, 17)
+        Label3.TabIndex = 20
+        Label3.Text = "Nombre Paciente:"
         '
         'TCClientes
         '
@@ -119,6 +174,14 @@ Partial Class FrmDiagnostico
         'TPDetClt
         '
         Me.TPDetClt.BackColor = System.Drawing.Color.SeaShell
+        Me.TPDetClt.Controls.Add(Me.cmbIdPac)
+        Me.TPDetClt.Controls.Add(Label3)
+        Me.TPDetClt.Controls.Add(Me.txtNombrePac)
+        Me.TPDetClt.Controls.Add(IdPacienteLabel)
+        Me.TPDetClt.Controls.Add(FechaDiagLabel)
+        Me.TPDetClt.Controls.Add(Me.dtFechaDiag)
+        Me.TPDetClt.Controls.Add(DescripcionDiagLabel)
+        Me.TPDetClt.Controls.Add(Me.txtDesDiag)
         Me.TPDetClt.Controls.Add(Me.BtnLimpiar)
         Me.TPDetClt.Controls.Add(Me.BtnEditar)
         Me.TPDetClt.Controls.Add(Me.BtnGuardar)
@@ -130,6 +193,42 @@ Partial Class FrmDiagnostico
         Me.TPDetClt.Size = New System.Drawing.Size(1095, 579)
         Me.TPDetClt.TabIndex = 1
         Me.TPDetClt.Text = "Datos "
+        '
+        'txtNombrePac
+        '
+        Me.txtNombrePac.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DiagnosticosBindingSource, "idPaciente", True))
+        Me.txtNombrePac.Location = New System.Drawing.Point(440, 372)
+        Me.txtNombrePac.Name = "txtNombrePac"
+        Me.txtNombrePac.ReadOnly = True
+        Me.txtNombrePac.Size = New System.Drawing.Size(167, 22)
+        Me.txtNombrePac.TabIndex = 21
+        '
+        'DiagnosticosBindingSource
+        '
+        Me.DiagnosticosBindingSource.DataMember = "Diagnosticos"
+        Me.DiagnosticosBindingSource.DataSource = Me.DBLosArcosDs
+        '
+        'DBLosArcosDs
+        '
+        Me.DBLosArcosDs.DataSetName = "DBLosArcosDs"
+        Me.DBLosArcosDs.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'dtFechaDiag
+        '
+        Me.dtFechaDiag.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.DiagnosticosBindingSource, "fechaDiag", True))
+        Me.dtFechaDiag.Location = New System.Drawing.Point(440, 251)
+        Me.dtFechaDiag.Name = "dtFechaDiag"
+        Me.dtFechaDiag.Size = New System.Drawing.Size(270, 22)
+        Me.dtFechaDiag.TabIndex = 18
+        '
+        'txtDesDiag
+        '
+        Me.txtDesDiag.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DiagnosticosBindingSource, "descripcionDiag", True))
+        Me.txtDesDiag.Location = New System.Drawing.Point(440, 127)
+        Me.txtDesDiag.Multiline = True
+        Me.txtDesDiag.Name = "txtDesDiag"
+        Me.txtDesDiag.Size = New System.Drawing.Size(396, 92)
+        Me.txtDesDiag.TabIndex = 17
         '
         'BtnLimpiar
         '
@@ -223,6 +322,40 @@ Partial Class FrmDiagnostico
         Me.BtnCerrar.TabIndex = 0
         Me.BtnCerrar.TabStop = False
         '
+        'DiagnosticosTableAdapter
+        '
+        Me.DiagnosticosTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.ClienteTableAdapter = Nothing
+        Me.TableAdapterManager.DesparasitantesTableAdapter = Nothing
+        Me.TableAdapterManager.DiagnosticosTableAdapter = Me.DiagnosticosTableAdapter
+        Me.TableAdapterManager.EmpleadosTableAdapter = Nothing
+        Me.TableAdapterManager.EmpresaTableAdapter = Nothing
+        Me.TableAdapterManager.EspeciesTableAdapter = Nothing
+        Me.TableAdapterManager.MarcasDesparasitantesTableAdapter = Nothing
+        Me.TableAdapterManager.MarcasVacunasTableAdapter = Nothing
+        Me.TableAdapterManager.PacientesTableAdapter = Nothing
+        Me.TableAdapterManager.RazasTableAdapter = Nothing
+        Me.TableAdapterManager.RegistroDesparasitacionesTableAdapter = Nothing
+        Me.TableAdapterManager.RegistroFacturasTableAdapter = Nothing
+        Me.TableAdapterManager.RegistroServiciosTableAdapter = Nothing
+        Me.TableAdapterManager.RegistroVacunacionesTableAdapter = Nothing
+        Me.TableAdapterManager.RolesTableAdapter = Nothing
+        Me.TableAdapterManager.ServiciosTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = ProyectoF.DBLosArcosDsTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.VacunasTableAdapter = Nothing
+        '
+        'cmbIdPac
+        '
+        Me.cmbIdPac.FormattingEnabled = True
+        Me.cmbIdPac.Location = New System.Drawing.Point(441, 316)
+        Me.cmbIdPac.Name = "cmbIdPac"
+        Me.cmbIdPac.Size = New System.Drawing.Size(166, 24)
+        Me.cmbIdPac.TabIndex = 22
+        '
         'FrmDiagnostico
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -240,6 +373,9 @@ Partial Class FrmDiagnostico
         Me.GbRegistros.ResumeLayout(False)
         CType(Me.dgvRegistrosAlmacenados, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TPDetClt.ResumeLayout(False)
+        Me.TPDetClt.PerformLayout()
+        CType(Me.DiagnosticosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DBLosArcosDs, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PnlTitle.ResumeLayout(False)
         Me.PnlTitle.PerformLayout()
         CType(Me.BtnCerrar, System.ComponentModel.ISupportInitialize).EndInit()
@@ -261,4 +397,12 @@ Partial Class FrmDiagnostico
     Friend WithEvents Label2 As Label
     Friend WithEvents BtnLimpiar As Button
     Friend WithEvents BtnEditar As Button
+    Friend WithEvents DBLosArcosDs As DBLosArcosDs
+    Friend WithEvents DiagnosticosBindingSource As BindingSource
+    Friend WithEvents DiagnosticosTableAdapter As DBLosArcosDsTableAdapters.DiagnosticosTableAdapter
+    Friend WithEvents TableAdapterManager As DBLosArcosDsTableAdapters.TableAdapterManager
+    Friend WithEvents dtFechaDiag As DateTimePicker
+    Friend WithEvents txtDesDiag As TextBox
+    Friend WithEvents txtNombrePac As TextBox
+    Friend WithEvents cmbIdPac As ComboBox
 End Class
