@@ -81,7 +81,6 @@
     <Compile Include="dao\EmpleadosDao.vb" />
     <Compile Include="dao\EmpresaDao.vb" />
     <Compile Include="dao\EspecieDao.vb" />
-    <Compile Include="dao\ExpedientesDao.vb" />
     <Compile Include="dao\MarcasDesparasitantesDao.vb" />
     <Compile Include="dao\MarcasVacunasDao.vb" />
     <Compile Include="dao\PacientesDao.vb" />

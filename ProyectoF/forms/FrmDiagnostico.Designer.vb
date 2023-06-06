@@ -29,13 +29,13 @@ Partial Class FrmDiagnostico
         Me.dgvRegistrosAlmacenados = New System.Windows.Forms.DataGridView()
         Me.txtBusqueda = New System.Windows.Forms.TextBox()
         Me.TPDetClt = New System.Windows.Forms.TabPage()
+        Me.BtnLimpiar = New System.Windows.Forms.Button()
+        Me.BtnEditar = New System.Windows.Forms.Button()
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.BtnEliminar = New System.Windows.Forms.Button()
         Me.PnlTitle = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BtnCerrar = New System.Windows.Forms.PictureBox()
-        Me.BtnEditar = New System.Windows.Forms.Button()
-        Me.BtnLimpiar = New System.Windows.Forms.Button()
         Me.TCClientes.SuspendLayout()
         Me.TPClt.SuspendLayout()
         Me.GbRegistros.SuspendLayout()
@@ -131,16 +131,44 @@ Partial Class FrmDiagnostico
         Me.TPDetClt.TabIndex = 1
         Me.TPDetClt.Text = "Datos "
         '
+        'BtnLimpiar
+        '
+        Me.BtnLimpiar.AccessibleRole = System.Windows.Forms.AccessibleRole.None
+        Me.BtnLimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnLimpiar.Image = Global.ProyectoF.My.Resources.Resources.limpiar
+        Me.BtnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnLimpiar.Location = New System.Drawing.Point(553, 447)
+        Me.BtnLimpiar.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnLimpiar.Name = "BtnLimpiar"
+        Me.BtnLimpiar.Size = New System.Drawing.Size(203, 46)
+        Me.BtnLimpiar.TabIndex = 16
+        Me.BtnLimpiar.Text = "Limpiar"
+        Me.BtnLimpiar.UseVisualStyleBackColor = True
+        '
+        'BtnEditar
+        '
+        Me.BtnEditar.AccessibleRole = System.Windows.Forms.AccessibleRole.None
+        Me.BtnEditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnEditar.Image = Global.ProyectoF.My.Resources.Resources.edit
+        Me.BtnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnEditar.Location = New System.Drawing.Point(320, 447)
+        Me.BtnEditar.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnEditar.Name = "BtnEditar"
+        Me.BtnEditar.Size = New System.Drawing.Size(203, 46)
+        Me.BtnEditar.TabIndex = 15
+        Me.BtnEditar.Text = "Editar"
+        Me.BtnEditar.UseVisualStyleBackColor = True
+        '
         'BtnGuardar
         '
         Me.BtnGuardar.AccessibleRole = System.Windows.Forms.AccessibleRole.None
         Me.BtnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnGuardar.Image = Global.ProyectoF.My.Resources.Resources.save
+        Me.BtnGuardar.Image = Global.ProyectoF.My.Resources.Resources.verify
         Me.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnGuardar.Location = New System.Drawing.Point(197, 447)
+        Me.BtnGuardar.Location = New System.Drawing.Point(76, 447)
         Me.BtnGuardar.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnGuardar.Name = "BtnGuardar"
-        Me.BtnGuardar.Size = New System.Drawing.Size(133, 46)
+        Me.BtnGuardar.Size = New System.Drawing.Size(203, 46)
         Me.BtnGuardar.TabIndex = 13
         Me.BtnGuardar.Text = "Guardar"
         Me.BtnGuardar.UseVisualStyleBackColor = True
@@ -148,12 +176,12 @@ Partial Class FrmDiagnostico
         'BtnEliminar
         '
         Me.BtnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnEliminar.Image = Global.ProyectoF.My.Resources.Resources.close
+        Me.BtnEliminar.Image = Global.ProyectoF.My.Resources.Resources.delete
         Me.BtnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnEliminar.Location = New System.Drawing.Point(737, 447)
+        Me.BtnEliminar.Location = New System.Drawing.Point(781, 447)
         Me.BtnEliminar.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnEliminar.Name = "BtnEliminar"
-        Me.BtnEliminar.Size = New System.Drawing.Size(133, 46)
+        Me.BtnEliminar.Size = New System.Drawing.Size(203, 46)
         Me.BtnEliminar.TabIndex = 14
         Me.BtnEliminar.Text = "Eliminar"
         Me.BtnEliminar.UseVisualStyleBackColor = True
@@ -194,34 +222,6 @@ Partial Class FrmDiagnostico
         Me.BtnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.BtnCerrar.TabIndex = 0
         Me.BtnCerrar.TabStop = False
-        '
-        'BtnEditar
-        '
-        Me.BtnEditar.AccessibleRole = System.Windows.Forms.AccessibleRole.None
-        Me.BtnEditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnEditar.Image = Global.ProyectoF.My.Resources.Resources.save
-        Me.BtnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnEditar.Location = New System.Drawing.Point(378, 447)
-        Me.BtnEditar.Margin = New System.Windows.Forms.Padding(4)
-        Me.BtnEditar.Name = "BtnEditar"
-        Me.BtnEditar.Size = New System.Drawing.Size(133, 46)
-        Me.BtnEditar.TabIndex = 15
-        Me.BtnEditar.Text = "Editar"
-        Me.BtnEditar.UseVisualStyleBackColor = True
-        '
-        'BtnLimpiar
-        '
-        Me.BtnLimpiar.AccessibleRole = System.Windows.Forms.AccessibleRole.None
-        Me.BtnLimpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnLimpiar.Image = Global.ProyectoF.My.Resources.Resources.save
-        Me.BtnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnLimpiar.Location = New System.Drawing.Point(564, 447)
-        Me.BtnLimpiar.Margin = New System.Windows.Forms.Padding(4)
-        Me.BtnLimpiar.Name = "BtnLimpiar"
-        Me.BtnLimpiar.Size = New System.Drawing.Size(133, 46)
-        Me.BtnLimpiar.TabIndex = 16
-        Me.BtnLimpiar.Text = "Limpiar"
-        Me.BtnLimpiar.UseVisualStyleBackColor = True
         '
         'FrmDiagnostico
         '
