@@ -4,6 +4,7 @@
     Private _nombrePaciente As String
     Private _sexoPaciente As Boolean
     Private _fechaNac As DateTime
+    Private _peso As Decimal
     Private _color As String
     Private _senPart As String
     Private _Cliente As New ClienteEntity
@@ -14,11 +15,12 @@
 
     End Sub
 
-    Public Sub New(idPaciente As Integer, nombrePaciente As String, sexoPaciente As Boolean, fechaNac As Date, color As String, senPart As String, cliente As ClienteEntity, especie As EspeciesEntity, raza As RazasEntity)
+    Public Sub New(idPaciente As Integer, nombrePaciente As String, sexoPaciente As Boolean, fechaNac As Date, peso As Decimal, color As String, senPart As String, cliente As ClienteEntity, especie As EspeciesEntity, raza As RazasEntity)
         _idPaciente = idPaciente
         _nombrePaciente = nombrePaciente
         _sexoPaciente = sexoPaciente
         _fechaNac = fechaNac
+        _peso = peso
         _color = color
         _senPart = senPart
         _Cliente = cliente
@@ -59,6 +61,15 @@
         End Get
         Set(value As Date)
             _fechaNac = value
+        End Set
+    End Property
+
+    Public Property Peso As Decimal
+        Get
+            Return _peso
+        End Get
+        Set(value As Decimal)
+            _peso = value
         End Set
     End Property
 

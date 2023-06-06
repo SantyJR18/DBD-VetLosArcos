@@ -6,7 +6,7 @@ Public Class PacientesDao
     Public Function AgregarRegistro(ByVal paciente As PacientesEntity) As Boolean
         Dim resp As Boolean = False
         Try
-            Dim tsql As String = "INSERT INTO Pacientes(nombrePaciente, sexoPaciente, fechaNac, color, senPart, idCliente, idEspecie, idRaza) VALUES(@nombrePaciente, @sexoPaciente, @fechaNac, @color, @senPart, @idCliente, @idEspecie, @idRaza)"
+            Dim tsql As String = "INSERT INTO Pacientes(nombrePaciente, sexoPaciente, fechaNac, peso, color, senPart, idCliente, idEspecie, idRaza) VALUES(@nombrePaciente, @sexoPaciente, @fechaNac, @peso, @color, @senPart, @idCliente, @idEspecie, @idRaza)"
             Dim conn As New SqlConnection(strConn)
             Dim cmd As New SqlCommand()
             cmd.CommandType = CommandType.Text
@@ -14,6 +14,7 @@ Public Class PacientesDao
             cmd.Parameters.AddWithValue("@nombrePaciente", paciente.NombrePaciente)
             cmd.Parameters.AddWithValue("@sexoPaciente", paciente.SexoPaciente)
             cmd.Parameters.AddWithValue("@fechaNac", paciente.FechaNac)
+            cmd.Parameters.AddWithValue("@peso", paciente.Peso)
             cmd.Parameters.AddWithValue("@color", paciente.Color)
             cmd.Parameters.AddWithValue("@senPart", paciente.SenPart)
             cmd.Parameters.AddWithValue("@idCliente", paciente.Cliente.IdCliente)
@@ -47,7 +48,7 @@ Public Class PacientesDao
 
     Public Function EditarRegistro(ByVal paciente As PacientesEntity) As Boolean
         Try
-            Dim tsql As String = "UPDATE Pacientes SET nombrePaciente = @nombrePaciente, sexoPaciente = @sexoPaciente, fechaNac = @fechaNac, color = @color, senPart = @senPart, idCliente = @idCliente, idEspecie = @idEspecie, idRaza = @idRaza WHERE idPaciente = @idPaciente"
+            Dim tsql As String = "UPDATE Pacientes SET nombrePaciente = @nombrePaciente, sexoPaciente = @sexoPaciente, fechaNac = @fechaNac, peso = @peso, color = @color, senPart = @senPart, idCliente = @idCliente, idEspecie = @idEspecie, idRaza = @idRaza WHERE idPaciente = @idPaciente"
             Dim conn As New SqlConnection(strConn)
             Dim cmd As New SqlCommand()
             cmd.Connection = conn
@@ -55,6 +56,7 @@ Public Class PacientesDao
             cmd.Parameters.AddWithValue("@nombrePaciente", paciente.NombrePaciente)
             cmd.Parameters.AddWithValue("@sexoPaciente", paciente.SexoPaciente)
             cmd.Parameters.AddWithValue("@fechaNac", paciente.FechaNac)
+            cmd.Parameters.AddWithValue("@peso", paciente.Peso)
             cmd.Parameters.AddWithValue("@color", paciente.Color)
             cmd.Parameters.AddWithValue("@senPart", paciente.SenPart)
             cmd.Parameters.AddWithValue("@idCliente", paciente.Cliente.IdCliente)

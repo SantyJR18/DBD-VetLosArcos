@@ -6,13 +6,13 @@ Public Class RegistroDesparasitacionesDao
     Public Function AgregarRegistro(ByVal registroDesparasitaciones As RegistroDesparasitacionesEntity) As Boolean
         Dim resp As Boolean = False
         Try
-            Dim tsql As String = "INSERT INTO RegistroDesparasitaciones(fechaDesparasitacion, idExp, idDesparasitante) VALUES (@fechaDesparasitacion, @idExp, @idDesparasitante)"
+            Dim tsql As String = "INSERT INTO RegistroDesparasitaciones(fechaDesparasitacion, idPaciente, idDesparasitante) VALUES (@fechaDesparasitacion, @idPaciente, @idDesparasitante)"
             Dim conn As New SqlConnection(strConn)
             Dim cmd As New SqlCommand()
             cmd.CommandType = CommandType.Text
             cmd.CommandText = tsql
             cmd.Parameters.AddWithValue("@fechaDesparasitacion", registroDesparasitaciones.FechaDesparasitaciones)
-            cmd.Parameters.AddWithValue("@idExp", registroDesparasitaciones.Exp.IdExp)
+            cmd.Parameters.AddWithValue("@idPaciente", registroDesparasitaciones.Paciente.IdPaciente)
             cmd.Parameters.AddWithValue("@idDesparasitante", registroDesparasitaciones.Desparasitante.IdDesparasitante)
             cmd.Connection = conn
             cmd.Connection.Open()
@@ -45,9 +45,9 @@ Public Class RegistroDesparasitacionesDao
             Dim cmd As New SqlCommand()
             cmd.Connection = conn
 
-            cmd.CommandText = "UPDATE RegistroDesparasitaciones SET fechaDesparasitacion = @fechaDesparasitacion, idExp = @idExp, idDesparasitante = @idDesparasitante WHERE  idDesparasitacion = @idDesparasitacion"
+            cmd.CommandText = "UPDATE RegistroDesparasitaciones SET fechaDesparasitacion = @fechaDesparasitacion, idPaciente = @idPaciente, idDesparasitante = @idDesparasitante WHERE  idDesparasitacion = @idDesparasitacion"
             cmd.Parameters.AddWithValue("@fechaDesparasitacion", registroDesparasitaciones.FechaDesparasitaciones)
-            cmd.Parameters.AddWithValue("@idExp", registroDesparasitaciones.Exp.IdExp)
+            cmd.Parameters.AddWithValue("@idPaciente", registroDesparasitaciones.Paciente.IdPaciente)
             cmd.Parameters.AddWithValue("@idDesparasitante", registroDesparasitaciones.Desparasitante.IdDesparasitante)
             conn.Open()
             Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
