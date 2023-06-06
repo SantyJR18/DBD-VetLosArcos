@@ -78,7 +78,6 @@
         Catch ex As Exception
             MsgBox("Error al guardar registro: " & ex.Message, MsgBoxStyle.Critical, "Empleados")
         End Try
-
         MostrarRegistros()
     End Sub
 

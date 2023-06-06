@@ -99,18 +99,59 @@ Public Class FrmClientes
     End Sub
 
     Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
+        Try
+            Dim registroCliente As New ClienteEntity With {
+                .IdCliente = txtIdCliente.Text,
+                .PrimerNombre = txtPrimerNombre.Text,
+                .SegundoNombre = txtSegundoNombre.Text,
+                .PrimerApellido = txtPrimerApe.Text,
+                .SegundoApellido = txtSegundoApe.Text,
+                .DireccionCliente = txtDireccionClt.Text,
+                .CorreoCliente = txtCorreoClt.Text,
+                .TelefonoCliente = txtTelClt.Text
+        }
 
+            If dCliente.AgregarRegistro(registroCliente) Then
+                MessageBox.Show("Registro agregado exitosamente", "Agregar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Limpiar()
+                MostrarRegistros()
+            Else
+                MessageBox.Show("Error al agregar el registro", "Agregar Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+        Catch ex As Exception
+            MsgBox("Error al guardar registro: " & ex.Message, MsgBoxStyle.Critical, "Clientes")
+        End Try
+        MostrarRegistros()
     End Sub
 
     Private Sub BtnEditar_Click(sender As Object, e As EventArgs) Handles BtnEditar.Click
-
+        Try
+            Dim registroCliente As New ClienteEntity With {
+                .IdCliente = txtIdCliente.Text,
+                .PrimerNombre = txtPrimerNombre.Text,
+                .SegundoNombre = txtSegundoNombre.Text,
+                .PrimerApellido = txtPrimerApe.Text,
+                .SegundoApellido = txtSegundoApe.Text,
+                .DireccionCliente = txtDireccionClt.Text,
+                .CorreoCliente = txtCorreoClt.Text,
+                .TelefonoCliente = txtTelClt.Text
+            }
+            If dCliente.EditarRegistro(registroCliente) Then
+                MsgBox("Regtro modificado satisfactoriamente.", MsgBoxStyle.Information, "Empleados")
+            Else
+                MsgBox("No se pudo modificar el registro...", MsgBoxStyle.Exclamation, "Empleados")
+            End If
+        Catch ex As Exception
+            MsgBox("Error al guardar registro: " & ex.Message, MsgBoxStyle.Critical, "Clientes")
+        End Try
+        MostrarRegistros()
     End Sub
 
     Private Sub BtnLimpiar_Click(sender As Object, e As EventArgs) Handles BtnLimpiar.Click
         Limpiar()
     End Sub
 
-    Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
+    Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) 
         Dim idCliente As String = txtIdCliente.Text
 
         ' Verificar si se ha ingresado un ID de cliente válido

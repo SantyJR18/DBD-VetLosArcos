@@ -3,6 +3,33 @@
 Public Class ClienteDao
     Dim strConn As String = My.Settings.cStrDBLosArcos
 
+    'Public Function AgregarRegistro(ByVal cliente As ClienteEntity) As Boolean
+    '    Dim resp As Boolean = False
+    '    Try
+    '        Dim tsql As String = "INSERT INTO Cliente(idCliente, primerNombre, segundoNombre, primerApellido, segundoApellido, direccionCliente, correoCliente, telefonoCliente) VALUES(@idCliente, @primerNombre, @segundoNombre, @primerApellido, @segundoApellido, @direccionCliente, @correoCliente, @telefonoCliente)"
+    '        Dim conn As New SqlConnection(strConn)
+    '        Dim cmb As New SqlCommand()
+    '        cmb.CommandType = CommandType.Text
+    '        cmb.CommandText = tsql
+    '        cmb.Parameters.AddWithValue("@idCliente", cliente.IdCliente)
+    '        cmb.Parameters.AddWithValue("@primerNombre", cliente.PrimerNombre)
+    '        cmb.Parameters.AddWithValue("@segundoNombre", cliente.SegundoNombre)
+    '        cmb.Parameters.AddWithValue("@primerApellido", cliente.PrimerApellido)
+    '        cmb.Parameters.AddWithValue("@segundoApellido", cliente.SegundoApellido)
+    '        cmb.Parameters.AddWithValue("@direccionCliente", cliente.DireccionCliente)
+    '        cmb.Parameters.AddWithValue("@correoCliente", cliente.CorreoCliente)
+    '        cmb.Parameters.AddWithValue("@telefonoCliente", cliente.TelefonoCliente)
+    '        cmb.Connection.Open()
+    '        If (cmb.ExecuteNonQuery <> 0) Then
+    '            resp = True
+    '        End If
+    '        cmb.Connection.Close()
+    '    Catch ex As Exception
+    '        resp = False
+    '    End Try
+    '    Return resp
+    'End Function
+
     Public Function AgregarRegistro(ByVal cliente As ClienteEntity) As Boolean
         Dim resp As Boolean = False
 
@@ -11,26 +38,28 @@ Public Class ClienteDao
                               segundoApellido, direccionCliente, correoCliente, telefonoCliente)
                               VALUES(@idCliente, @primerNombre, @segundoNombre, @primerApellido, 
                               @segundoApellido, @direccionCliente, @correoCliente, @telefonoCliente)"
-            Dim conn As New SqlConnection(strConn)
-            Dim cmb As New SqlCommand()
-            cmb.CommandType = CommandType.Text
-            cmb.CommandText = tsql
-            cmb.Parameters.AddWithValue("@idCliente", cliente.IdCliente)
-            cmb.Parameters.AddWithValue("@primerNombre", cliente.PrimerNombre)
-            cmb.Parameters.AddWithValue("@segundoNombre", cliente.SegundoNombre)
-            cmb.Parameters.AddWithValue("@primerApellido", cliente.PrimerApellido)
-            cmb.Parameters.AddWithValue("@segundoApellido", cliente.SegundoApellido)
-            cmb.Parameters.AddWithValue("@direccionCliente", cliente.DireccionCliente)
-            cmb.Parameters.AddWithValue("@correoCliente", cliente.CorreoCliente)
-            cmb.Parameters.AddWithValue("@telefonoCliente", cliente.TelefonoCliente)
-            cmb.Connection.Open()
-            If (cmb.ExecuteNonQuery <> 0) Then
-                resp = False
-            End If
-            cmb.Connection.Close()
+            Using conn As New SqlConnection(strConn),
+              cmd As New SqlCommand(tsql, conn)
+
+                cmd.CommandType = CommandType.Text
+                cmd.Parameters.AddWithValue("@idCliente", cliente.IdCliente)
+                cmd.Parameters.AddWithValue("@primerNombre", cliente.PrimerNombre)
+                cmd.Parameters.AddWithValue("@segundoNombre", cliente.SegundoNombre)
+                cmd.Parameters.AddWithValue("@primerApellido", cliente.PrimerApellido)
+                cmd.Parameters.AddWithValue("@segundoApellido", cliente.SegundoApellido)
+                cmd.Parameters.AddWithValue("@direccionCliente", cliente.DireccionCliente)
+                cmd.Parameters.AddWithValue("@correoCliente", cliente.CorreoCliente)
+                cmd.Parameters.AddWithValue("@telefonoCliente", cliente.TelefonoCliente)
+
+                conn.Open()
+                If (cmd.ExecuteNonQuery() > 0) Then
+                    resp = True
+                End If
+            End Using
         Catch ex As Exception
             resp = False
         End Try
+
         Return resp
     End Function
 
@@ -39,23 +68,24 @@ Public Class ClienteDao
         Try
             Dim tsql As String = "UPDATE Cliente SET primerNombre = @primerNombre, 
                               segundoNombre = @segundoNombre, primerApellido = @primerApellido,
-                              segundoApellido = @segundoApellido, direccionCliente = @direccionClinte, 
+                              segundoApellido = @segundoApellido, direccionCliente = @direccionCliente, 
                               correoCliente = @correoCliente, telefonoCliente = @telefonoCliente WHERE idCliente = @idCliente"
             Dim conn As New SqlConnection(strConn)
             Dim cmb As New SqlCommand()
             cmb.CommandType = CommandType.Text
             cmb.CommandText = tsql
             cmb.Parameters.AddWithValue("@primerNombre", cliente.PrimerNombre)
-            cmb.Parameters.AddWithValue(" @segundoNombre", cliente.SegundoNombre)
-            cmb.Parameters.AddWithValue(" @primerApellido", cliente.PrimerApellido)
-            cmb.Parameters.AddWithValue(" @segundoApellido", cliente.SegundoApellido)
-            cmb.Parameters.AddWithValue(" @direccionCliente", cliente.DireccionCliente)
-            cmb.Parameters.AddWithValue(" @correoCliente", cliente.CorreoCliente)
-            cmb.Parameters.AddWithValue(" @telefonoCliente", cliente.TelefonoCliente)
+            cmb.Parameters.AddWithValue("@segundoNombre", cliente.SegundoNombre)
+            cmb.Parameters.AddWithValue("@primerApellido", cliente.PrimerApellido)
+            cmb.Parameters.AddWithValue("@segundoApellido", cliente.SegundoApellido)
+            cmb.Parameters.AddWithValue("@direccionCliente", cliente.DireccionCliente)
+            cmb.Parameters.AddWithValue("@correoCliente", cliente.CorreoCliente)
+            cmb.Parameters.AddWithValue("@telefonoCliente", cliente.TelefonoCliente)
+            cmb.Parameters.AddWithValue("@idCliente", cliente.IdCliente)
             cmb.Connection = conn
             cmb.Connection.Open()
             If (cmb.ExecuteNonQuery <> 0) Then
-                resp = False
+                resp = True
             End If
             cmb.Connection.Close()
         Catch ex As Exception
