@@ -33,10 +33,6 @@ Public Class FrmMenuR
         OpenChildForm(New FrmServicio())
     End Sub
 
-    Private Sub BtnReportes_Click(sender As Object, e As EventArgs) Handles BtnReportes.Click
-        OpenChildForm(New FrmVistaPrevia)
-    End Sub
-
     Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles BtnClose.Click
         Application.Exit()
     End Sub
@@ -83,4 +79,12 @@ Public Class FrmMenuR
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
 #End Region
+
+#Region "Botón de Reportes"
+    Private Sub BtnReportes_Click(sender As Object, e As EventArgs) Handles BtnReportes.Click
+        OpenChildForm(New FrmReportes)
+    End Sub
+#End Region
+
+
 End Class

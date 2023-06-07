@@ -117,26 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="BtnCerrarSes.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        rgAAAK4B+ff3XQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAIaSURBVFhHYwCB
-        /xMZtj/t5P/elOP9Pzw+BS+2dfX6b2Rpjxc7uHlvABtMLAA64D0Q/wfhs01y/7NTI7BaDsLEOMDa0eMZ
-        1GjiALIDQPhHP8v/1RVG/2MSEgfGATD8rJP/f1uux8A5AIaRo2VAHADC3/pZ/y8uNf9v5zZADoDhwigz
-        rJYiY5o6oCrGGKulyHjUAegOmHeLQ2nOHZaahdcZhKFCqABoME0dMOcOW/ecu6z/gfgR0CHWUGEEABpM
-        tgNiqzX+Vy6TQMF1a6S+Ay1bhYRvATHIASD8G+iIsv//GRih1lPmgCkXuWAGk4Rn32VZB7WeMgcUHmT6
-        X3iIkWRccoTxZ8MqBjaKHZC7k+1/2m4GknDeAcZvdadYnMGWgwDQYLIdYGxt/9/G2xwFu4TYvao5yaAI
-        w6VHGK/CLC87ynil4TyDANRqCAAajNUB/yYyYoihOwAbRs8F1aeYunP3M/4C0v1QIVQANBjDAU87Bf4n
-        JMX/31enjiJOjgMIAqDBGA742MvxvzPP7f/NNnEUcbo5ABcedcCoA4atA56gW4QLE+UAF4/bUKOJA/8n
-        MJgDDb+Ibhk2PCNbb7ODh+9iXNje3W+ug6+vBtRo4sH/BgYmoEPigJa8QbcUBfczBEC10Ab8n8IgDHTI
-        RKBlfzEsp4cDYADoCFOghacGzAEggDVa6OkAGPg/lUECaPkCIH4NdJA6VJgKgIEBAAk/gy0Te7F5AAAA
-        AElFTkSuQmCC
-</value>
-  </data>
   <metadata name="MenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAAAAAAAEAIABYQwAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAEAAAABAAgGAAAAXHKoZgAAAAFv

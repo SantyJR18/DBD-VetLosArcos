@@ -83,7 +83,7 @@ Partial Class FrmMenuR
         Me.BtnCerrarSes.ForeColor = System.Drawing.Color.White
         Me.BtnCerrarSes.Image = Global.ProyectoF.My.Resources.Resources.log_out
         Me.BtnCerrarSes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnCerrarSes.Location = New System.Drawing.Point(0, 320)
+        Me.BtnCerrarSes.Location = New System.Drawing.Point(0, 413)
         Me.BtnCerrarSes.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnCerrarSes.Name = "BtnCerrarSes"
         Me.BtnCerrarSes.Size = New System.Drawing.Size(251, 46)
@@ -94,10 +94,10 @@ Partial Class FrmMenuR
         'FlowLayoutPanel4
         '
         Me.FlowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.FlowLayoutPanel4.Location = New System.Drawing.Point(0, 286)
+        Me.FlowLayoutPanel4.Location = New System.Drawing.Point(0, 355)
         Me.FlowLayoutPanel4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.FlowLayoutPanel4.Name = "FlowLayoutPanel4"
-        Me.FlowLayoutPanel4.Size = New System.Drawing.Size(251, 34)
+        Me.FlowLayoutPanel4.Size = New System.Drawing.Size(251, 58)
         Me.FlowLayoutPanel4.TabIndex = 23
         '
         'BtnReportes
@@ -109,7 +109,7 @@ Partial Class FrmMenuR
         Me.BtnReportes.ForeColor = System.Drawing.Color.White
         Me.BtnReportes.Image = Global.ProyectoF.My.Resources.Resources.MenuInforme
         Me.BtnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnReportes.Location = New System.Drawing.Point(0, 240)
+        Me.BtnReportes.Location = New System.Drawing.Point(0, 309)
         Me.BtnReportes.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnReportes.Name = "BtnReportes"
         Me.BtnReportes.Size = New System.Drawing.Size(251, 46)
@@ -120,10 +120,10 @@ Partial Class FrmMenuR
         'FlowLayoutPanel3
         '
         Me.FlowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top
-        Me.FlowLayoutPanel3.Location = New System.Drawing.Point(0, 206)
+        Me.FlowLayoutPanel3.Location = New System.Drawing.Point(0, 252)
         Me.FlowLayoutPanel3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.FlowLayoutPanel3.Name = "FlowLayoutPanel3"
-        Me.FlowLayoutPanel3.Size = New System.Drawing.Size(251, 34)
+        Me.FlowLayoutPanel3.Size = New System.Drawing.Size(251, 57)
         Me.FlowLayoutPanel3.TabIndex = 8
         '
         'BtnServicio
@@ -135,7 +135,7 @@ Partial Class FrmMenuR
         Me.BtnServicio.ForeColor = System.Drawing.Color.White
         Me.BtnServicio.Image = Global.ProyectoF.My.Resources.Resources.MenuServicio
         Me.BtnServicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnServicio.Location = New System.Drawing.Point(0, 160)
+        Me.BtnServicio.Location = New System.Drawing.Point(0, 206)
         Me.BtnServicio.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnServicio.Name = "BtnServicio"
         Me.BtnServicio.Size = New System.Drawing.Size(251, 46)
@@ -146,10 +146,10 @@ Partial Class FrmMenuR
         'FlowLayoutPanel2
         '
         Me.FlowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.FlowLayoutPanel2.Location = New System.Drawing.Point(0, 126)
+        Me.FlowLayoutPanel2.Location = New System.Drawing.Point(0, 149)
         Me.FlowLayoutPanel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.FlowLayoutPanel2.Name = "FlowLayoutPanel2"
-        Me.FlowLayoutPanel2.Size = New System.Drawing.Size(251, 34)
+        Me.FlowLayoutPanel2.Size = New System.Drawing.Size(251, 57)
         Me.FlowLayoutPanel2.TabIndex = 6
         '
         'BtnPaciente
@@ -161,7 +161,7 @@ Partial Class FrmMenuR
         Me.BtnPaciente.ForeColor = System.Drawing.Color.White
         Me.BtnPaciente.Image = Global.ProyectoF.My.Resources.Resources.MenuPaciente
         Me.BtnPaciente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnPaciente.Location = New System.Drawing.Point(0, 80)
+        Me.BtnPaciente.Location = New System.Drawing.Point(0, 103)
         Me.BtnPaciente.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnPaciente.Name = "BtnPaciente"
         Me.BtnPaciente.Size = New System.Drawing.Size(251, 46)
@@ -175,7 +175,7 @@ Partial Class FrmMenuR
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 46)
         Me.FlowLayoutPanel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(251, 34)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(251, 57)
         Me.FlowLayoutPanel1.TabIndex = 4
         '
         'BtnCliente
@@ -243,7 +243,7 @@ Partial Class FrmMenuR
         Me.BtnMinimize.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnMinimize.Image = Global.ProyectoF.My.Resources.Resources.minicon
         Me.BtnMinimize.Location = New System.Drawing.Point(1280, 9)
-        Me.BtnMinimize.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnMinimize.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnMinimize.Name = "BtnMinimize"
         Me.BtnMinimize.Size = New System.Drawing.Size(33, 31)
         Me.BtnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -256,7 +256,7 @@ Partial Class FrmMenuR
         Me.BtnClose.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnClose.Image = Global.ProyectoF.My.Resources.Resources.reject
         Me.BtnClose.Location = New System.Drawing.Point(1321, 9)
-        Me.BtnClose.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnClose.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnClose.Name = "BtnClose"
         Me.BtnClose.Size = New System.Drawing.Size(33, 31)
         Me.BtnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -272,7 +272,7 @@ Partial Class FrmMenuR
         Me.TitleBar.Controls.Add(Me.BtnCerrar)
         Me.TitleBar.Dock = System.Windows.Forms.DockStyle.Top
         Me.TitleBar.Location = New System.Drawing.Point(0, 0)
-        Me.TitleBar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TitleBar.Margin = New System.Windows.Forms.Padding(4)
         Me.TitleBar.Name = "TitleBar"
         Me.TitleBar.Size = New System.Drawing.Size(1371, 47)
         Me.TitleBar.TabIndex = 8
@@ -282,7 +282,7 @@ Partial Class FrmMenuR
         Me.Panel1.BackColor = System.Drawing.Color.Azure
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(251, 47)
         Me.Panel1.TabIndex = 1
@@ -304,7 +304,7 @@ Partial Class FrmMenuR
         Me.BtnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnCerrar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnCerrar.Location = New System.Drawing.Point(1568, 7)
-        Me.BtnCerrar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnCerrar.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnCerrar.Name = "BtnCerrar"
         Me.BtnCerrar.Size = New System.Drawing.Size(33, 31)
         Me.BtnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -321,7 +321,7 @@ Partial Class FrmMenuR
         Me.Controls.Add(Me.TitleBar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FrmMenuR"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmMenuR"

@@ -90,21 +90,18 @@ Public Class FrmMenu
     End Sub
 #End Region
 
-#Region "Formularios"
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
+#Region "Botón de Reportes"
 
-    End Sub
-
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
-        Try
-            Dim tbl As New DataTable
-            Dim reporte As New DBLosArcosDsTableAdapters.EmpleadoRolTableAdapter
-            tbl = reporte.GetData
-            VerReporte(tbl, "DataSet1", "reportes\RptEmpleadoRol.rdlc")
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error al mostrar el reporte")
-        End Try
-    End Sub
+    'Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+    '    Try
+    '        Dim tbl As New DataTable
+    '        Dim reporte As New DBLosArcosDsTableAdapters.EmpleadoRolTableAdapter
+    '        tbl = reporte.GetData
+    '        VerReporte(tbl, "DataSet1", "reportes\RptEmpleadoRol.rdlc")
+    '    Catch ex As Exception
+    '        MsgBox(ex.Message, MsgBoxStyle.Critical, "Error al mostrar el reporte")
+    '    End Try
+    'End Sub
 #End Region
 
 End Class
