@@ -26,6 +26,7 @@ Partial Class FrmDiagnostico
         Dim DescripcionDiagLabel As System.Windows.Forms.Label
         Dim FechaDiagLabel As System.Windows.Forms.Label
         Dim IdPacienteLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmDiagnostico))
         Me.tcDiagnosticos = New System.Windows.Forms.TabControl()
         Me.TPClt = New System.Windows.Forms.TabPage()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -41,12 +42,12 @@ Partial Class FrmDiagnostico
         Me.BtnLimpiar = New System.Windows.Forms.Button()
         Me.BtnEditar = New System.Windows.Forms.Button()
         Me.BtnGuardar = New System.Windows.Forms.Button()
+        Me.BtnEliminar = New System.Windows.Forms.Button()
         Me.PnlTitle = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BtnCerrar = New System.Windows.Forms.PictureBox()
         Me.DiagnosticosTableAdapter = New ProyectoF.DBLosArcosDsTableAdapters.DiagnosticosTableAdapter()
         Me.TableAdapterManager = New ProyectoF.DBLosArcosDsTableAdapters.TableAdapterManager()
-        Me.BtnEliminar = New System.Windows.Forms.Button()
         DescripcionDiagLabel = New System.Windows.Forms.Label()
         FechaDiagLabel = New System.Windows.Forms.Label()
         IdPacienteLabel = New System.Windows.Forms.Label()
@@ -130,11 +131,12 @@ Partial Class FrmDiagnostico
         'GbRegistros
         '
         Me.GbRegistros.Controls.Add(Me.dgvRegistrosAlmacenados)
-        Me.GbRegistros.Location = New System.Drawing.Point(25, 144)
+        Me.GbRegistros.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GbRegistros.Location = New System.Drawing.Point(22, 167)
         Me.GbRegistros.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GbRegistros.Name = "GbRegistros"
         Me.GbRegistros.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.GbRegistros.Size = New System.Drawing.Size(1048, 406)
+        Me.GbRegistros.Size = New System.Drawing.Size(1051, 406)
         Me.GbRegistros.TabIndex = 6
         Me.GbRegistros.TabStop = False
         '
@@ -147,7 +149,7 @@ Partial Class FrmDiagnostico
         Me.dgvRegistrosAlmacenados.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvRegistrosAlmacenados.Name = "dgvRegistrosAlmacenados"
         Me.dgvRegistrosAlmacenados.RowHeadersWidth = 51
-        Me.dgvRegistrosAlmacenados.Size = New System.Drawing.Size(1042, 387)
+        Me.dgvRegistrosAlmacenados.Size = New System.Drawing.Size(1045, 387)
         Me.dgvRegistrosAlmacenados.TabIndex = 5
         '
         'txtBusqueda
@@ -155,11 +157,11 @@ Partial Class FrmDiagnostico
         Me.txtBusqueda.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txtBusqueda.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtBusqueda.ForeColor = System.Drawing.Color.DimGray
-        Me.txtBusqueda.Location = New System.Drawing.Point(25, 89)
+        Me.txtBusqueda.Location = New System.Drawing.Point(22, 89)
         Me.txtBusqueda.Margin = New System.Windows.Forms.Padding(4)
         Me.txtBusqueda.Multiline = True
         Me.txtBusqueda.Name = "txtBusqueda"
-        Me.txtBusqueda.Size = New System.Drawing.Size(1045, 34)
+        Me.txtBusqueda.Size = New System.Drawing.Size(1035, 34)
         Me.txtBusqueda.TabIndex = 1
         Me.txtBusqueda.Text = "Buscar Diagnósticos Por ID Paciente"
         Me.txtBusqueda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -265,6 +267,19 @@ Partial Class FrmDiagnostico
         Me.BtnGuardar.Text = "Guardar"
         Me.BtnGuardar.UseVisualStyleBackColor = True
         '
+        'BtnEliminar
+        '
+        Me.BtnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnEliminar.Image = Global.ProyectoF.My.Resources.Resources.delete
+        Me.BtnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnEliminar.Location = New System.Drawing.Point(781, 447)
+        Me.BtnEliminar.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnEliminar.Name = "BtnEliminar"
+        Me.BtnEliminar.Size = New System.Drawing.Size(203, 46)
+        Me.BtnEliminar.TabIndex = 14
+        Me.BtnEliminar.Text = "Eliminar"
+        Me.BtnEliminar.UseVisualStyleBackColor = True
+        '
         'PnlTitle
         '
         Me.PnlTitle.BackColor = System.Drawing.Color.DodgerBlue
@@ -328,19 +343,6 @@ Partial Class FrmDiagnostico
         Me.TableAdapterManager.UpdateOrder = ProyectoF.DBLosArcosDsTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.VacunasTableAdapter = Nothing
         '
-        'BtnEliminar
-        '
-        Me.BtnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnEliminar.Image = Global.ProyectoF.My.Resources.Resources.delete
-        Me.BtnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnEliminar.Location = New System.Drawing.Point(781, 447)
-        Me.BtnEliminar.Margin = New System.Windows.Forms.Padding(4)
-        Me.BtnEliminar.Name = "BtnEliminar"
-        Me.BtnEliminar.Size = New System.Drawing.Size(203, 46)
-        Me.BtnEliminar.TabIndex = 14
-        Me.BtnEliminar.Text = "Eliminar"
-        Me.BtnEliminar.UseVisualStyleBackColor = True
-        '
         'FrmDiagnostico
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -349,6 +351,7 @@ Partial Class FrmDiagnostico
         Me.Controls.Add(Me.tcDiagnosticos)
         Me.Controls.Add(Me.PnlTitle)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FrmDiagnostico"
         Me.Text = "FrmDiagnostico"
