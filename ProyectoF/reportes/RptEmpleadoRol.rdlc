@@ -368,7 +368,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DataSet1</DataSetName>
+        <DataSetName>DsEmpleadoRol</DataSetName>
         <Top>0.19667in</Top>
         <Left>0.16076in</Left>
         <Height>0.83333in</Height>
@@ -627,7 +627,7 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSet1">
+    <DataSet Name="DsEmpleadoRol">
       <Query>
         <DataSourceName>DBLosArcosDs</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -658,7 +658,7 @@
         <rd:DataSetName>DBLosArcosDs</rd:DataSetName>
         <rd:SchemaPath>C:\Users\Diego\Desktop\BDFinalFolder\DBD-VetLosArcos\ProyectoF\DBLosArcosDs.xsd</rd:SchemaPath>
         <rd:TableName>EmpleadoRol</rd:TableName>
-        <rd:TableAdapterFillMethod>FillEmpleadoRol</rd:TableAdapterFillMethod>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
         <rd:TableAdapterName>EmpleadoRolTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>

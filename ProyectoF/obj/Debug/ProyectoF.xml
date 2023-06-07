@@ -367,6 +367,51 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:ProyectoF.DBLosArcosDs.PacienteClienteDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.VacunaMarcasDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.DesparasitantesMarcasDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.ServiciosPorRazaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.RazasVacunasDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.RazasDesparasitantesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.ServicioCostoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.EspeciesVacunasDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.EspeciesDesparasitantesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:ProyectoF.DBLosArcosDs.ClienteRow">
 <summary>
 Represents strongly named DataRow class.
@@ -453,6 +498,51 @@ Represents strongly named DataRow class.
 </summary>
 </member>
 <member name="T:ProyectoF.DBLosArcosDs.EmpleadoRolRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.PacienteClienteRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.VacunaMarcasRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.DesparasitantesMarcasRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.ServiciosPorRazaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.RazasVacunasRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.RazasDesparasitantesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.ServicioCostoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.EspeciesVacunasRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.EspeciesDesparasitantesRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -547,6 +637,51 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
+<member name="T:ProyectoF.DBLosArcosDs.PacienteClienteRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.VacunaMarcasRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.DesparasitantesMarcasRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.ServiciosPorRazaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.RazasVacunasRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.RazasDesparasitantesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.ServicioCostoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.EspeciesVacunasRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDs.EspeciesDesparasitantesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 <member name="T:ProyectoF.DBLosArcosDsTableAdapters.ClienteTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
@@ -633,6 +768,51 @@ Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
 <member name="T:ProyectoF.DBLosArcosDsTableAdapters.EmpleadoRolTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDsTableAdapters.ClientePacienteTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDsTableAdapters.VacunaMarcasTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDsTableAdapters.DesparasitantesMarcasTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDsTableAdapters.ServiciosPorRazaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDsTableAdapters.RazasVacunasTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDsTableAdapters.RazasDesparasitantesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDsTableAdapters.ServicioCostoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDsTableAdapters.EspeciesVacunasTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ProyectoF.DBLosArcosDsTableAdapters.EspeciesDesparasitantesTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

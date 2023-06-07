@@ -10,10 +10,8 @@
  * TABLE: Cliente 
  */
 
- /*
  CREATE DATABASE DBLosArcos
  USE DBLosArcos
- */
 
 CREATE TABLE Cliente(
     idCliente           char(16)         NOT NULL,
@@ -62,7 +60,7 @@ go
 
 CREATE TABLE Diagnosticos(
     idDiag             int              IDENTITY(1,1),
-    descripcionDiag    nvarchar(100)    NOT NULL,
+    descripcionDiag    nvarchar(500)    NOT NULL,
     fechaDiag          datetime         NOT NULL,
     idPaciente         int              NOT NULL,
     CONSTRAINT PK9 PRIMARY KEY NONCLUSTERED (idDiag)
@@ -110,7 +108,7 @@ go
 CREATE TABLE Empresa(
     idEmp           int             IDENTITY(1,1),
     nombreEmp       nvarchar(50)    NOT NULL,
-    direccionEmp    nvarchar(10)    NOT NULL,
+    direccionEmp    nvarchar(500)    NOT NULL,
     telEmp          char(8)         NOT NULL,
     rucEmp          char(20)        NOT NULL,
     CONSTRAINT PK21 PRIMARY KEY NONCLUSTERED (idEmp)
