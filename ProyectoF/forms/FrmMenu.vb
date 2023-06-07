@@ -1,4 +1,5 @@
 ﻿Imports System.Runtime.InteropServices
+Imports Microsoft.Reporting.WinForms
 
 Public Class FrmMenu
 
@@ -86,6 +87,19 @@ Public Class FrmMenu
     Private Sub titleBar_MouseDown(sender As Object, e As MouseEventArgs) Handles TitleBar.MouseDown
         ReleaseCapture()
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
+    End Sub
+#End Region
+
+#Region "Formularios"
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Try
+            Dim tbl As New DataTable
+            Dim reporte As New DBLosArcosDsTableAdapters.EmpleadoRolTableAdapter
+            tbl = reporte.GetData
+            VerReporte(tbl, "DataSet1", "reportes\RptEmpleadoRol.rdlc")
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error al mostrar el reporte")
+        End Try
     End Sub
 #End Region
 

@@ -95,8 +95,8 @@
     Sub LlenarVacuna()
         Try
             CmbVacuna.DataSource = dVacuna.MostrarVacunas.Tables(0)
-            CmbVacuna.DisplayMember = "vacuna"
-            CmbVacuna.ValueMember = "nombreVacuna"
+            CmbVacuna.DisplayMember = "nombreVacuna"
+            CmbVacuna.ValueMember = "idVacuna"
             CmbVacuna.Refresh()
         Catch ex As Exception
             MsgBox("Error al mostrar el nombre de la vacuna", MsgBoxStyle.Critical, "Vacuna")
@@ -134,17 +134,11 @@
     Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
         Try
             Dim regVac As New RegistroVacunacionesEntity()
-            regVac.Paciente = New PacientesEntity()
-            regVac.Vacuna = New VacunasEntity()
-            regVac.Vacuna.MarcaVac = New MarcasVacunasEntity()
-            regVac.Paciente.Especie = New EspeciesEntity()
-            regVac.Paciente.Raza = New RazasEntity()
+            regVac.Vacuna.IdVacuna = Convert.ToInt32(CmbVacuna.SelectedValue)
+            regVac.Paciente.IdPaciente = TxtNombrePac.Text
+            regVac.FechaVacunacion = DtApliVac.Text
 
-            regVac.Paciente.IdPaciente = Convert.ToInt32(TxtIdPac.Text)
-            regVac.Vacuna.NombreVacuna = CmbVacuna.SelectedValue
-            regVac.Vacuna.MarcaVac.NombreMarcaVac = CmbMarcaVac.SelectedValue
-            regVac.FechaVacunacion = DtApliVac.Value
-            If (dRegistroVacuna.AgregarRegistro(regVac) = True) Then
+            If dRegistroVacuna.AgregarRegistro(regVac) Then
                 MsgBox("Registro guardado satisfactoriamente.", MsgBoxStyle.Information, "Registro de Vacunaciones")
             Else
                 MsgBox("No se pudo guardar el registro...", MsgBoxStyle.Exclamation, "Registro de Vacunaciones")

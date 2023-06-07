@@ -1,4 +1,5 @@
 ﻿Imports System.Runtime.InteropServices
+Imports Microsoft.Reporting.WinForms
 
 Public Class FrmMenuR
 #Region "Call Child Forms"
@@ -30,6 +31,10 @@ Public Class FrmMenuR
 
     Private Sub BtnServicio_Click(sender As Object, e As EventArgs) Handles BtnServicio.Click
         OpenChildForm(New FrmServicio())
+    End Sub
+
+    Private Sub BtnReportes_Click(sender As Object, e As EventArgs) Handles BtnReportes.Click
+        OpenChildForm(New FrmVistaPrevia)
     End Sub
 
     Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles BtnClose.Click
