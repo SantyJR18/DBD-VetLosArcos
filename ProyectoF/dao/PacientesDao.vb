@@ -46,6 +46,65 @@ Public Class PacientesDao
         Return ds
     End Function
 
+    Public Function MostrarRegistrosPacientesR() As DataSet
+        Dim ds As New DataSet
+        Try
+            Dim tsql As String = "SELECT
+                                        Pacientes.idCliente,
+                                        Pacientes.idPaciente,
+                                        Pacientes.nombrePaciente,
+                                        Pacientes.fechaNac,
+                                        Especies.nombreEspecie,
+                                        Pacientes.sexoPaciente,
+                                        Razas.nombreRaza,
+                                        Pacientes.peso,
+                                        Pacientes.color,
+                                        Pacientes.senPart
+                                        FROM
+                                        ((Pacientes
+                                        INNER JOIN Especies ON Pacientes.idEspecie = Especies.idEspecie)
+                                        INNER JOIN Razas ON Pacientes.idRaza = Razas.idRaza)"
+
+            Dim conn As New SqlConnection(strConn)
+            Dim da As New SqlDataAdapter(tsql, conn)
+            da.Fill(ds)
+        Catch ex As Exception
+            Console.WriteLine("Error...")
+        End Try
+        Return ds
+    End Function
+
+    Public Function MostrarRegistrosPacientesM() As DataSet
+        Dim ds As New DataSet
+        Try
+            Dim tsql As String = "SELECT Cliente.idCliente, Pacientes.idPaciente,Pacientes.nombrePaciente,
+                                    Pacientes.fechaNac,
+                                    Especies.nombreEspecie,
+                                    Pacientes.sexoPaciente,
+                                    Razas.nombreRaza,
+                                    Pacientes.peso,
+                                    Pacientes.color,
+                                    Pacientes.senPart,
+                                    Cliente.primerNombre,
+                                    Cliente.primerApellido,
+                                    Cliente.correoCliente,
+                                    Cliente.telefonoCliente,
+                                    Cliente.direccionCliente
+                                    FROM
+                                    (((Pacientes
+                                    INNER JOIN Cliente ON Pacientes.idCliente = Cliente.idCliente)
+                                    INNER JOIN Especies ON Pacientes.idEspecie = Especies.idEspecie)
+                                    INNER JOIN Razas ON Pacientes.idRaza = Razas.idRaza)
+"
+            Dim conn As New SqlConnection(strConn)
+            Dim da As New SqlDataAdapter(tsql, conn)
+            da.Fill(ds)
+        Catch ex As Exception
+            Console.WriteLine("Error...")
+        End Try
+        Return ds
+    End Function
+
     Public Function MostrarSexo() As DataSet
         Dim ds As New DataSet
         Try
@@ -57,6 +116,34 @@ Public Class PacientesDao
         End Try
         Return ds
     End Function
+
+    'Public Function ObtenerRegistro(ByVal idPaciente As Integer) As RegistroServiciosEntity
+    '    Dim paciente As New PacientesEntity()
+    '    Try
+    '        'MessageBox.Show("ID de registro de servicio: " & idRegServicio)
+    '        Dim tsql As String = "SELECT * FROM Pacientes WHERE idPaciente = @idPaciente"
+    '        Dim conn As New SqlConnection(strConn)
+    '        Dim cmd As New SqlCommand(tsql, conn)
+    '        cmd.Parameters.AddWithValue("@idPaciente", idPaciente)
+    '        conn.Open()
+    '        Dim reader As SqlDataReader = cmd.ExecuteReader()
+    '        If reader.HasRows Then
+    '            reader.Read()
+    '            paciente.IdPaciente = reader.GetInt32(reader.GetOrdinal("idPaciente"))
+    '            paciente.NombrePaciente = reader.GetDateTime(reader.GetOrdinal("fechaConsulta"))
+    '            registroServicio.Cliente.IdCliente = reader.GetString(reader.GetOrdinal("idCliente"))
+    '            registroServicio.Paciente.IdPaciente = reader.GetInt32(reader.GetOrdinal("idPaciente"))
+    '            registroServicio.Servicio.IdServicio = reader.GetInt32(reader.GetOrdinal("idServicio"))
+    '            registroServicio.Factura.IdFactura = reader.GetInt32(reader.GetOrdinal("idFactura"))
+    '            ' Asigna los demás campos del objeto RegistroServiciosEntity de manera similar
+    '        End If
+    '        reader.Close()
+    '        conn.Close()
+    '    Catch ex As Exception
+    '        registroServicio = Nothing
+    '    End Try
+    '    Return registroServicio
+    'End Function
 
     Public Function EditarRegistro(ByVal paciente As PacientesEntity) As Boolean
         Try

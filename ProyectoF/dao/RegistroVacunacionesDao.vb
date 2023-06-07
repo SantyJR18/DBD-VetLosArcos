@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports System.IO
 
 Public Class RegistroVacunacionesDao
     Private strConn As String = My.Settings.cStrDBLosArcos
@@ -6,8 +7,8 @@ Public Class RegistroVacunacionesDao
     Public Function AgregarRegistro(ByVal registroVacuna As RegistroVacunacionesEntity) As Boolean
         Dim resp As Boolean = False
         Try
-            Dim tsql As String = "INSERT INTO RegistroVacunaciones (fechaVacunacion, idVacuna, idPaciente) 
-                                VALUES (@fechaVacunacion, @idVacuna, @idPaciente)"
+            Dim tsql As String = "INSERT INTO RegistroVacunaciones (idPaciente, idVacuna, fechaVacunacion) 
+                                VALUES (@idPaciente, @idVacuna, @fechaVacunacion)"
 
             Dim conn As New SqlConnection(strConn)
             Dim cmd As New SqlCommand()
@@ -18,7 +19,7 @@ Public Class RegistroVacunacionesDao
             cmd.Parameters.AddWithValue("@fechaVacunacion", registroVacuna.FechaVacunacion)
             cmd.Connection = conn
             cmd.Connection.Open()
-            If cmd.ExecuteNonQuery <> 0 Then
+            If (cmd.ExecuteNonQuery <> 0) Then
                 resp = True
             End If
         Catch ex As Exception
@@ -57,7 +58,7 @@ Public Class RegistroVacunacionesDao
             Dim da As New SqlDataAdapter(tsql, conn)
             da.Fill(ds)
         Catch ex As Exception
-            Console.WriteLine("An error has ocurred")
+            Console.WriteLine("Error...")
         End Try
         Return ds
     End Function
@@ -65,23 +66,28 @@ Public Class RegistroVacunacionesDao
     Public Function EditarRegistro(ByVal registroVacuna As RegistroVacunacionesEntity) As Boolean
         Dim resp As Boolean = False
         Try
-            Dim tsql As String = "UPDATE Diagnosticos SET fechaVacunacion = @fechaVacunacion, idPaciente = @idPaciente, idVacuna = @idVacuna WHERE idVacunacion = @idVacunacion"
+            Dim tsql As String = "UPDATE RegistroVacunaciones SET idPaciente = @idPaciente, idVacuna =  @idVacuna, 
+                                    fechaVacunacion = @fechaVacunacion  WHERE idVacunacion = @idVacunacion"
             Dim conn As New SqlConnection(strConn)
             Dim cmd As New SqlCommand()
             cmd.CommandType = CommandType.Text
             cmd.CommandText = tsql
-            cmd.Parameters.AddWithValue("@fechaVacunacion", registroVacuna.FechaVacunacion)
             cmd.Parameters.AddWithValue("@idPaciente", registroVacuna.Paciente.IdPaciente)
             cmd.Parameters.AddWithValue("@idVacuna", registroVacuna.Vacuna.IdVacuna)
+            cmd.Parameters.AddWithValue("@fechaVacunacion", registroVacuna.FechaVacunacion)
+            cmd.Parameters.AddWithValue("@idVacunacion", registroVacuna.IdVacunacion)
             cmd.Connection = conn
             cmd.Connection.Open()
-            If cmd.ExecuteNonQuery <> 0 Then
+            If (cmd.ExecuteNonQuery <> 0) Then
                 resp = True
             End If
             cmd.Connection.Close()
         Catch ex As Exception
             resp = False
+            Console.WriteLine(ex.Message)
         End Try
         Return resp
     End Function
 End Class
+
+

@@ -94,9 +94,9 @@
 
     Sub LlenarVacuna()
         Try
-            CmbVacuna.DataSource = dVacuna.MostrarVacunas.Tables(0)
+            CmbVacuna.DataSource = dVacuna.MostrarRegistros.Tables(0)
             CmbVacuna.DisplayMember = "vacuna"
-            CmbVacuna.ValueMember = "nombreVacuna"
+            CmbVacuna.ValueMember = "idVacuna"
             CmbVacuna.Refresh()
         Catch ex As Exception
             MsgBox("Error al mostrar el nombre de la vacuna", MsgBoxStyle.Critical, "Vacuna")
@@ -133,17 +133,15 @@
 
     Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
         Try
-            Dim regVac As New RegistroVacunacionesEntity()
+            Dim regVac As New RegistroVacunacionesEntity
             regVac.Paciente = New PacientesEntity()
             regVac.Vacuna = New VacunasEntity()
-            regVac.Vacuna.MarcaVac = New MarcasVacunasEntity()
-            regVac.Paciente.Especie = New EspeciesEntity()
-            regVac.Paciente.Raza = New RazasEntity()
 
-            regVac.Paciente.IdPaciente = Convert.ToInt32(TxtIdPac.Text)
-            regVac.Vacuna.NombreVacuna = CmbVacuna.SelectedValue
-            regVac.Vacuna.MarcaVac.NombreMarcaVac = CmbMarcaVac.SelectedValue
+            regVac.Paciente.IdPaciente = Integer.Parse(TxtIdPac.Text)
+            regVac.Vacuna.IdVacuna = CmbVacuna.SelectedValue
+            regVac.Vacuna.NombreVacuna = CmbVacuna.Text
             regVac.FechaVacunacion = DtApliVac.Value
+
             If (dRegistroVacuna.AgregarRegistro(regVac) = True) Then
                 MsgBox("Registro guardado satisfactoriamente.", MsgBoxStyle.Information, "Registro de Vacunaciones")
             Else
@@ -157,12 +155,20 @@
 
     Private Sub BtnEditar_Click(sender As Object, e As EventArgs) Handles BtnEditar.Click
         Try
-            regActual.Paciente.IdPaciente = TxtIdPac.Text
+            Dim regVac As New RegistroVacunacionesEntity
+            Dim selectedRow As DataGridViewRow = dgvRegistrosAlmacenados.CurrentRow
+            regVac.Paciente = New PacientesEntity()
+            regVac.Vacuna = New VacunasEntity()
 
-            If dRegistroVacuna.EditarRegistro(regActual) Then
-                MsgBox("Regtro modificado satisfactoriamente.", MsgBoxStyle.Information, "Registro de Vacunaciones")
+            regVac.Paciente.IdPaciente = Integer.Parse(TxtIdPac.Text)
+            regVac.Vacuna.IdVacuna = CmbVacuna.SelectedValue
+            regVac.Vacuna.NombreVacuna = CmbVacuna.Text
+            regVac.FechaVacunacion = DtApliVac.Value
+            regVac.IdVacunacion = Integer.Parse(selectedRow.Cells(0).Value.ToString())
+
+            If (dRegistroVacuna.EditarRegistro(regVac) = True) Then
+                MsgBox("Registro modificado satisfactoriamente.", MsgBoxStyle.Information, "Registro de Vacunaciones")
                 Limpiar()
-                MostrarRegistros()
             Else
                 MsgBox("No se pudo modificar el registro...", MsgBoxStyle.Exclamation, "Registro de Vacunaciones")
             End If
@@ -172,6 +178,7 @@
 
         MostrarRegistros()
     End Sub
+
 
     Sub DiseñoGrid()
         dgvRegistrosAlmacenados.Columns(0).HeaderText = "ID del Paciente"
@@ -213,9 +220,15 @@
         regActual.Paciente.SexoPaciente = dgvRegistrosAlmacenados.Rows(fila).Cells(4).Value
         regActual.Paciente.Raza.NombreRaza = dgvRegistrosAlmacenados.Rows(fila).Cells(5).Value
         regActual.Paciente.Peso = dgvRegistrosAlmacenados.Rows(fila).Cells(6).Value
-        regActual.Vacuna.NombreVacuna = dgvRegistrosAlmacenados.Rows(fila).Cells(7).Value
+        Dim vacunaValue As Integer
+        regActual.Vacuna.NombreVacuna = Integer.TryParse(dgvRegistrosAlmacenados.Rows(fila).Cells(7).Value.ToString(), vacunaValue)
         regActual.Vacuna.MarcaVac.NombreMarcaVac = dgvRegistrosAlmacenados.Rows(fila).Cells(8).Value
         regActual.FechaVacunacion = dgvRegistrosAlmacenados.Rows(fila).Cells(9).Value
+
+        'Dim despId As Integer = Integer.TryParse(dgvRegistrosAlmacenados.Rows(fila).Cells(7).Value, despId)
+        'Dim despNombre As String = dgvRegistrosAlmacenados.Rows(fila).Cells(7).Value.ToString()
+        'CmbDesp.SelectedValue = despId
+        'CmbDesp.Text = despNombre
 
         TxtIdPac.Text = regActual.Paciente.IdPaciente
         TxtNombrePac.Text = regActual.Paciente.NombrePaciente
@@ -224,7 +237,6 @@
         CmbSexoPac.SelectedValue = regActual.Paciente.SexoPaciente
         CmbRazaPac.SelectedValue = regActual.Paciente.Raza.NombreRaza
         TxtPeso.Text = regActual.Paciente.Peso
-        CmbVacuna.SelectedValue = regActual.Vacuna.NombreVacuna
         CmbMarcaVac.SelectedValue = regActual.Vacuna.MarcaVac.NombreMarcaVac
         DtApliVac.Value = regActual.FechaVacunacion
 

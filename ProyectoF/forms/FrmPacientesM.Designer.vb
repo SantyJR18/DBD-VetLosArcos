@@ -36,7 +36,7 @@ Partial Class FrmPacientesM
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.Label19 = New System.Windows.Forms.Label()
-        Me.TxtBIdPac = New System.Windows.Forms.TextBox()
+        Me.TxtIdPac = New System.Windows.Forms.TextBox()
         Me.TxtNombrePac = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -48,26 +48,26 @@ Partial Class FrmPacientesM
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.CmbRazaPac = New System.Windows.Forms.ComboBox()
         Me.CmbEspeciePac = New System.Windows.Forms.ComboBox()
-        Me.DtPac = New System.Windows.Forms.DateTimePicker()
+        Me.DtFechaNac = New System.Windows.Forms.DateTimePicker()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.TxtSenPar = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TxtColorPac = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TBSexoPac = New System.Windows.Forms.ComboBox()
+        Me.CmbSexoPac = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TPExpDuenio = New System.Windows.Forms.TabPage()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.Label20 = New System.Windows.Forms.Label()
-        Me.TBapellidoClt = New System.Windows.Forms.TextBox()
-        Me.TBtelClt = New System.Windows.Forms.TextBox()
-        Me.TBdireccionClt = New System.Windows.Forms.TextBox()
-        Me.TBcorreoClt = New System.Windows.Forms.TextBox()
-        Me.TBnombreClt = New System.Windows.Forms.TextBox()
-        Me.TBcedulaClt = New System.Windows.Forms.TextBox()
+        Me.TxtapellidoClt = New System.Windows.Forms.TextBox()
+        Me.TxttelClt = New System.Windows.Forms.TextBox()
+        Me.TxtdireccionClt = New System.Windows.Forms.TextBox()
+        Me.TxtcorreoClt = New System.Windows.Forms.TextBox()
+        Me.TxtnombreClt = New System.Windows.Forms.TextBox()
+        Me.TxtIdClt = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -215,7 +215,7 @@ Partial Class FrmPacientesM
         Me.TPPaciente.Controls.Add(Me.PictureBox1)
         Me.TPPaciente.Controls.Add(Me.PictureBox4)
         Me.TPPaciente.Controls.Add(Me.Label19)
-        Me.TPPaciente.Controls.Add(Me.TxtBIdPac)
+        Me.TPPaciente.Controls.Add(Me.TxtIdPac)
         Me.TPPaciente.Controls.Add(Me.TxtNombrePac)
         Me.TPPaciente.Controls.Add(Me.Label9)
         Me.TPPaciente.Controls.Add(Me.Label4)
@@ -227,14 +227,14 @@ Partial Class FrmPacientesM
         Me.TPPaciente.Controls.Add(Me.BtnGuardar)
         Me.TPPaciente.Controls.Add(Me.CmbRazaPac)
         Me.TPPaciente.Controls.Add(Me.CmbEspeciePac)
-        Me.TPPaciente.Controls.Add(Me.DtPac)
+        Me.TPPaciente.Controls.Add(Me.DtFechaNac)
         Me.TPPaciente.Controls.Add(Me.Label10)
         Me.TPPaciente.Controls.Add(Me.TxtSenPar)
         Me.TPPaciente.Controls.Add(Me.Label8)
         Me.TPPaciente.Controls.Add(Me.TxtColorPac)
         Me.TPPaciente.Controls.Add(Me.Label7)
         Me.TPPaciente.Controls.Add(Me.Label6)
-        Me.TPPaciente.Controls.Add(Me.TBSexoPac)
+        Me.TPPaciente.Controls.Add(Me.CmbSexoPac)
         Me.TPPaciente.Controls.Add(Me.Label5)
         Me.TPPaciente.Controls.Add(Me.Label3)
         Me.TPPaciente.Location = New System.Drawing.Point(4, 22)
@@ -278,12 +278,13 @@ Partial Class FrmPacientesM
         Me.Label19.TabIndex = 1
         Me.Label19.Text = "Detalles de Pacientes"
         '
-        'TxtBIdPac
+        'TxtIdPac
         '
-        Me.TxtBIdPac.Location = New System.Drawing.Point(185, 155)
-        Me.TxtBIdPac.Name = "TxtBIdPac"
-        Me.TxtBIdPac.Size = New System.Drawing.Size(98, 20)
-        Me.TxtBIdPac.TabIndex = 3
+        Me.TxtIdPac.Enabled = False
+        Me.TxtIdPac.Location = New System.Drawing.Point(185, 155)
+        Me.TxtIdPac.Name = "TxtIdPac"
+        Me.TxtIdPac.Size = New System.Drawing.Size(98, 20)
+        Me.TxtIdPac.TabIndex = 3
         '
         'TxtNombrePac
         '
@@ -401,12 +402,12 @@ Partial Class FrmPacientesM
         Me.CmbEspeciePac.Size = New System.Drawing.Size(200, 21)
         Me.CmbEspeciePac.TabIndex = 9
         '
-        'DtPac
+        'DtFechaNac
         '
-        Me.DtPac.Location = New System.Drawing.Point(185, 227)
-        Me.DtPac.Name = "DtPac"
-        Me.DtPac.Size = New System.Drawing.Size(200, 20)
-        Me.DtPac.TabIndex = 7
+        Me.DtFechaNac.Location = New System.Drawing.Point(185, 227)
+        Me.DtFechaNac.Name = "DtFechaNac"
+        Me.DtFechaNac.Size = New System.Drawing.Size(200, 20)
+        Me.DtFechaNac.TabIndex = 7
         '
         'Label10
         '
@@ -469,14 +470,14 @@ Partial Class FrmPacientesM
         Me.Label6.TabIndex = 19
         Me.Label6.Text = "Señas particulares:"
         '
-        'TBSexoPac
+        'CmbSexoPac
         '
-        Me.TBSexoPac.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TBSexoPac.FormattingEnabled = True
-        Me.TBSexoPac.Location = New System.Drawing.Point(185, 292)
-        Me.TBSexoPac.Name = "TBSexoPac"
-        Me.TBSexoPac.Size = New System.Drawing.Size(200, 21)
-        Me.TBSexoPac.TabIndex = 11
+        Me.CmbSexoPac.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.CmbSexoPac.FormattingEnabled = True
+        Me.CmbSexoPac.Location = New System.Drawing.Point(185, 292)
+        Me.CmbSexoPac.Name = "CmbSexoPac"
+        Me.CmbSexoPac.Size = New System.Drawing.Size(200, 21)
+        Me.CmbSexoPac.TabIndex = 11
         '
         'Label5
         '
@@ -506,12 +507,12 @@ Partial Class FrmPacientesM
         Me.TPExpDuenio.Controls.Add(Me.PictureBox5)
         Me.TPExpDuenio.Controls.Add(Me.PictureBox6)
         Me.TPExpDuenio.Controls.Add(Me.Label20)
-        Me.TPExpDuenio.Controls.Add(Me.TBapellidoClt)
-        Me.TPExpDuenio.Controls.Add(Me.TBtelClt)
-        Me.TPExpDuenio.Controls.Add(Me.TBdireccionClt)
-        Me.TPExpDuenio.Controls.Add(Me.TBcorreoClt)
-        Me.TPExpDuenio.Controls.Add(Me.TBnombreClt)
-        Me.TPExpDuenio.Controls.Add(Me.TBcedulaClt)
+        Me.TPExpDuenio.Controls.Add(Me.TxtapellidoClt)
+        Me.TPExpDuenio.Controls.Add(Me.TxttelClt)
+        Me.TPExpDuenio.Controls.Add(Me.TxtdireccionClt)
+        Me.TPExpDuenio.Controls.Add(Me.TxtcorreoClt)
+        Me.TPExpDuenio.Controls.Add(Me.TxtnombreClt)
+        Me.TPExpDuenio.Controls.Add(Me.TxtIdClt)
         Me.TPExpDuenio.Controls.Add(Me.Label11)
         Me.TPExpDuenio.Controls.Add(Me.Label12)
         Me.TPExpDuenio.Controls.Add(Me.Label13)
@@ -559,53 +560,59 @@ Partial Class FrmPacientesM
         Me.Label20.TabIndex = 1
         Me.Label20.Text = "Detalles del Dueño"
         '
-        'TBapellidoClt
+        'TxtapellidoClt
         '
-        Me.TBapellidoClt.Location = New System.Drawing.Point(179, 236)
-        Me.TBapellidoClt.Name = "TBapellidoClt"
-        Me.TBapellidoClt.Size = New System.Drawing.Size(200, 20)
-        Me.TBapellidoClt.TabIndex = 6
+        Me.TxtapellidoClt.Enabled = False
+        Me.TxtapellidoClt.Location = New System.Drawing.Point(179, 236)
+        Me.TxtapellidoClt.Name = "TxtapellidoClt"
+        Me.TxtapellidoClt.Size = New System.Drawing.Size(200, 20)
+        Me.TxtapellidoClt.TabIndex = 6
         '
-        'TBtelClt
+        'TxttelClt
         '
-        Me.TBtelClt.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TBtelClt.Location = New System.Drawing.Point(608, 202)
-        Me.TBtelClt.Name = "TBtelClt"
-        Me.TBtelClt.Size = New System.Drawing.Size(200, 20)
-        Me.TBtelClt.TabIndex = 10
+        Me.TxttelClt.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.TxttelClt.Enabled = False
+        Me.TxttelClt.Location = New System.Drawing.Point(608, 202)
+        Me.TxttelClt.Name = "TxttelClt"
+        Me.TxttelClt.Size = New System.Drawing.Size(200, 20)
+        Me.TxttelClt.TabIndex = 10
         '
-        'TBdireccionClt
+        'TxtdireccionClt
         '
-        Me.TBdireccionClt.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TBdireccionClt.Location = New System.Drawing.Point(609, 241)
-        Me.TBdireccionClt.Multiline = True
-        Me.TBdireccionClt.Name = "TBdireccionClt"
-        Me.TBdireccionClt.Size = New System.Drawing.Size(199, 65)
-        Me.TBdireccionClt.TabIndex = 12
+        Me.TxtdireccionClt.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.TxtdireccionClt.Enabled = False
+        Me.TxtdireccionClt.Location = New System.Drawing.Point(609, 241)
+        Me.TxtdireccionClt.Multiline = True
+        Me.TxtdireccionClt.Name = "TxtdireccionClt"
+        Me.TxtdireccionClt.Size = New System.Drawing.Size(199, 65)
+        Me.TxtdireccionClt.TabIndex = 12
         '
-        'TBcorreoClt
+        'TxtcorreoClt
         '
-        Me.TBcorreoClt.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TBcorreoClt.Location = New System.Drawing.Point(608, 169)
-        Me.TBcorreoClt.Name = "TBcorreoClt"
-        Me.TBcorreoClt.Size = New System.Drawing.Size(200, 20)
-        Me.TBcorreoClt.TabIndex = 8
+        Me.TxtcorreoClt.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.TxtcorreoClt.Enabled = False
+        Me.TxtcorreoClt.Location = New System.Drawing.Point(608, 169)
+        Me.TxtcorreoClt.Name = "TxtcorreoClt"
+        Me.TxtcorreoClt.Size = New System.Drawing.Size(200, 20)
+        Me.TxtcorreoClt.TabIndex = 8
         '
-        'TBnombreClt
+        'TxtnombreClt
         '
-        Me.TBnombreClt.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TBnombreClt.Location = New System.Drawing.Point(179, 201)
-        Me.TBnombreClt.Name = "TBnombreClt"
-        Me.TBnombreClt.Size = New System.Drawing.Size(200, 20)
-        Me.TBnombreClt.TabIndex = 5
+        Me.TxtnombreClt.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.TxtnombreClt.Enabled = False
+        Me.TxtnombreClt.Location = New System.Drawing.Point(179, 201)
+        Me.TxtnombreClt.Name = "TxtnombreClt"
+        Me.TxtnombreClt.Size = New System.Drawing.Size(200, 20)
+        Me.TxtnombreClt.TabIndex = 5
         '
-        'TBcedulaClt
+        'TxtIdClt
         '
-        Me.TBcedulaClt.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TBcedulaClt.Location = New System.Drawing.Point(179, 168)
-        Me.TBcedulaClt.Name = "TBcedulaClt"
-        Me.TBcedulaClt.Size = New System.Drawing.Size(200, 20)
-        Me.TBcedulaClt.TabIndex = 3
+        Me.TxtIdClt.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.TxtIdClt.Enabled = False
+        Me.TxtIdClt.Location = New System.Drawing.Point(179, 168)
+        Me.TxtIdClt.Name = "TxtIdClt"
+        Me.TxtIdClt.Size = New System.Drawing.Size(200, 20)
+        Me.TxtIdClt.TabIndex = 3
         '
         'Label11
         '
@@ -749,23 +756,23 @@ Partial Class FrmPacientesM
     Friend WithEvents Label1 As Label
     Friend WithEvents TPPacientesMed As TabControl
     Friend WithEvents TPPaciente As TabPage
-    Friend WithEvents DtPac As DateTimePicker
+    Friend WithEvents DtFechaNac As DateTimePicker
     Friend WithEvents Label10 As Label
     Friend WithEvents TxtSenPar As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents TxtColorPac As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents TBSexoPac As ComboBox
+    Friend WithEvents CmbSexoPac As ComboBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents TPExpDuenio As TabPage
-    Friend WithEvents TBapellidoClt As TextBox
-    Friend WithEvents TBtelClt As TextBox
-    Friend WithEvents TBdireccionClt As TextBox
-    Friend WithEvents TBcorreoClt As TextBox
-    Friend WithEvents TBnombreClt As TextBox
-    Friend WithEvents TBcedulaClt As TextBox
+    Friend WithEvents TxtapellidoClt As TextBox
+    Friend WithEvents TxttelClt As TextBox
+    Friend WithEvents TxtdireccionClt As TextBox
+    Friend WithEvents TxtcorreoClt As TextBox
+    Friend WithEvents TxtnombreClt As TextBox
+    Friend WithEvents TxtIdClt As TextBox
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
@@ -784,7 +791,7 @@ Partial Class FrmPacientesM
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label17 As Label
     Friend WithEvents txtBusqueda As TextBox
-    Friend WithEvents TxtBIdPac As TextBox
+    Friend WithEvents TxtIdPac As TextBox
     Friend WithEvents TxtNombrePac As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents Label4 As Label

@@ -67,7 +67,7 @@ Public Class EspecieDao
             Dim da As New SqlDataAdapter(tsql, conn)
             da.Fill(ds)
         Catch ex As Exception
-            Console.WriteLine("An error has ocurred")
+            Console.WriteLine("An error has ocurred" & ex.Message)
         End Try
         Return ds
     End Function

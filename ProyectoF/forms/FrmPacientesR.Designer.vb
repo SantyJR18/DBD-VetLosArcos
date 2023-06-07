@@ -34,32 +34,34 @@ Partial Class FrmPacientesR
         Me.Label17 = New System.Windows.Forms.Label()
         Me.txtBusqueda = New System.Windows.Forms.TextBox()
         Me.TPDetPacRec = New System.Windows.Forms.TabPage()
+        Me.TxtIdClt = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TxtBIdPac = New System.Windows.Forms.TextBox()
+        Me.TxtIdPac = New System.Windows.Forms.TextBox()
         Me.TxtNombrePac = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TxtPeso = New System.Windows.Forms.TextBox()
-        Me.BtnEliminar = New System.Windows.Forms.Button()
         Me.BtnEditar = New System.Windows.Forms.Button()
         Me.BtnLimpiar = New System.Windows.Forms.Button()
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.CmbRazaPac = New System.Windows.Forms.ComboBox()
         Me.CmbEspeciePac = New System.Windows.Forms.ComboBox()
-        Me.DtPac = New System.Windows.Forms.DateTimePicker()
+        Me.DtFechaNac = New System.Windows.Forms.DateTimePicker()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.TxtSenPar = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TxtColorPac = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TBSexoPac = New System.Windows.Forms.ComboBox()
+        Me.CmbSexoPac = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
+        Me.BtnNuevo = New System.Windows.Forms.Button()
         Me.PnlTitle.SuspendLayout()
         CType(Me.BtnCerrar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TCPacientesRec.SuspendLayout()
@@ -205,30 +207,32 @@ Partial Class FrmPacientesR
         'TPDetPacRec
         '
         Me.TPDetPacRec.BackColor = System.Drawing.Color.SeaShell
+        Me.TPDetPacRec.Controls.Add(Me.BtnNuevo)
+        Me.TPDetPacRec.Controls.Add(Me.TxtIdClt)
+        Me.TPDetPacRec.Controls.Add(Me.Label12)
         Me.TPDetPacRec.Controls.Add(Me.PictureBox1)
         Me.TPDetPacRec.Controls.Add(Me.PictureBox4)
         Me.TPDetPacRec.Controls.Add(Me.Label2)
-        Me.TPDetPacRec.Controls.Add(Me.TxtBIdPac)
+        Me.TPDetPacRec.Controls.Add(Me.TxtIdPac)
         Me.TPDetPacRec.Controls.Add(Me.TxtNombrePac)
         Me.TPDetPacRec.Controls.Add(Me.Label9)
         Me.TPDetPacRec.Controls.Add(Me.Label4)
         Me.TPDetPacRec.Controls.Add(Me.Label18)
         Me.TPDetPacRec.Controls.Add(Me.Label3)
         Me.TPDetPacRec.Controls.Add(Me.TxtPeso)
-        Me.TPDetPacRec.Controls.Add(Me.BtnEliminar)
         Me.TPDetPacRec.Controls.Add(Me.BtnEditar)
         Me.TPDetPacRec.Controls.Add(Me.BtnLimpiar)
         Me.TPDetPacRec.Controls.Add(Me.BtnGuardar)
         Me.TPDetPacRec.Controls.Add(Me.CmbRazaPac)
         Me.TPDetPacRec.Controls.Add(Me.CmbEspeciePac)
-        Me.TPDetPacRec.Controls.Add(Me.DtPac)
+        Me.TPDetPacRec.Controls.Add(Me.DtFechaNac)
         Me.TPDetPacRec.Controls.Add(Me.Label10)
         Me.TPDetPacRec.Controls.Add(Me.TxtSenPar)
         Me.TPDetPacRec.Controls.Add(Me.Label8)
         Me.TPDetPacRec.Controls.Add(Me.TxtColorPac)
         Me.TPDetPacRec.Controls.Add(Me.Label7)
         Me.TPDetPacRec.Controls.Add(Me.Label6)
-        Me.TPDetPacRec.Controls.Add(Me.TBSexoPac)
+        Me.TPDetPacRec.Controls.Add(Me.CmbSexoPac)
         Me.TPDetPacRec.Controls.Add(Me.Label5)
         Me.TPDetPacRec.Controls.Add(Me.Label11)
         Me.TPDetPacRec.Location = New System.Drawing.Point(4, 22)
@@ -237,6 +241,24 @@ Partial Class FrmPacientesR
         Me.TPDetPacRec.Size = New System.Drawing.Size(835, 507)
         Me.TPDetPacRec.TabIndex = 1
         Me.TPDetPacRec.Text = "Detalles"
+        '
+        'TxtIdClt
+        '
+        Me.TxtIdClt.Location = New System.Drawing.Point(192, 145)
+        Me.TxtIdClt.Name = "TxtIdClt"
+        Me.TxtIdClt.Size = New System.Drawing.Size(98, 20)
+        Me.TxtIdClt.TabIndex = 3
+        '
+        'Label12
+        '
+        Me.Label12.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(25, 145)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(105, 20)
+        Me.Label12.TabIndex = 2
+        Me.Label12.Text = "ID del cliente:"
         '
         'PictureBox1
         '
@@ -272,30 +294,30 @@ Partial Class FrmPacientesR
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Registro de Pacientes"
         '
-        'TxtBIdPac
+        'TxtIdPac
         '
-        Me.TxtBIdPac.Location = New System.Drawing.Point(192, 171)
-        Me.TxtBIdPac.Name = "TxtBIdPac"
-        Me.TxtBIdPac.Size = New System.Drawing.Size(98, 20)
-        Me.TxtBIdPac.TabIndex = 3
+        Me.TxtIdPac.Location = New System.Drawing.Point(192, 177)
+        Me.TxtIdPac.Name = "TxtIdPac"
+        Me.TxtIdPac.Size = New System.Drawing.Size(98, 20)
+        Me.TxtIdPac.TabIndex = 5
         '
         'TxtNombrePac
         '
         Me.TxtNombrePac.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TxtNombrePac.Location = New System.Drawing.Point(191, 206)
+        Me.TxtNombrePac.Location = New System.Drawing.Point(191, 212)
         Me.TxtNombrePac.Name = "TxtNombrePac"
         Me.TxtNombrePac.Size = New System.Drawing.Size(201, 20)
-        Me.TxtNombrePac.TabIndex = 5
+        Me.TxtNombrePac.TabIndex = 7
         '
         'Label9
         '
         Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(25, 205)
+        Me.Label9.Location = New System.Drawing.Point(25, 211)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(69, 20)
-        Me.Label9.TabIndex = 4
+        Me.Label9.TabIndex = 6
         Me.Label9.Text = "Nombre:"
         '
         'Label4
@@ -303,10 +325,10 @@ Partial Class FrmPacientesR
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(25, 171)
+        Me.Label4.Location = New System.Drawing.Point(25, 177)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(120, 20)
-        Me.Label4.TabIndex = 2
+        Me.Label4.TabIndex = 4
         Me.Label4.Text = "ID del paciente:"
         '
         'Label18
@@ -317,7 +339,7 @@ Partial Class FrmPacientesR
         Me.Label18.Location = New System.Drawing.Point(721, 207)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(28, 20)
-        Me.Label18.TabIndex = 16
+        Me.Label18.TabIndex = 17
         Me.Label18.Text = "Kg"
         '
         'Label3
@@ -328,7 +350,7 @@ Partial Class FrmPacientesR
         Me.Label3.Location = New System.Drawing.Point(443, 208)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(49, 20)
-        Me.Label3.TabIndex = 14
+        Me.Label3.TabIndex = 16
         Me.Label3.Text = "Peso:"
         '
         'TxtPeso
@@ -337,20 +359,7 @@ Partial Class FrmPacientesR
         Me.TxtPeso.Location = New System.Drawing.Point(610, 207)
         Me.TxtPeso.Name = "TxtPeso"
         Me.TxtPeso.Size = New System.Drawing.Size(105, 20)
-        Me.TxtPeso.TabIndex = 15
-        '
-        'BtnEliminar
-        '
-        Me.BtnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnEliminar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.BtnEliminar.Image = Global.ProyectoF.My.Resources.Resources.delete
-        Me.BtnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnEliminar.Location = New System.Drawing.Point(584, 403)
-        Me.BtnEliminar.Name = "BtnEliminar"
-        Me.BtnEliminar.Size = New System.Drawing.Size(146, 37)
-        Me.BtnEliminar.TabIndex = 24
-        Me.BtnEliminar.Text = "   Eliminar"
-        Me.BtnEliminar.UseVisualStyleBackColor = True
+        Me.TxtPeso.TabIndex = 17
         '
         'BtnEditar
         '
@@ -358,10 +367,10 @@ Partial Class FrmPacientesR
         Me.BtnEditar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnEditar.Image = Global.ProyectoF.My.Resources.Resources.edit
         Me.BtnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnEditar.Location = New System.Drawing.Point(263, 403)
+        Me.BtnEditar.Location = New System.Drawing.Point(420, 403)
         Me.BtnEditar.Name = "BtnEditar"
         Me.BtnEditar.Size = New System.Drawing.Size(146, 37)
-        Me.BtnEditar.TabIndex = 22
+        Me.BtnEditar.TabIndex = 24
         Me.BtnEditar.Text = "   Editar"
         Me.BtnEditar.UseVisualStyleBackColor = True
         '
@@ -371,10 +380,10 @@ Partial Class FrmPacientesR
         Me.BtnLimpiar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnLimpiar.Image = Global.ProyectoF.My.Resources.Resources.limpiar
         Me.BtnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnLimpiar.Location = New System.Drawing.Point(425, 403)
+        Me.BtnLimpiar.Location = New System.Drawing.Point(582, 403)
         Me.BtnLimpiar.Name = "BtnLimpiar"
         Me.BtnLimpiar.Size = New System.Drawing.Size(146, 37)
-        Me.BtnLimpiar.TabIndex = 23
+        Me.BtnLimpiar.TabIndex = 25
         Me.BtnLimpiar.Text = "   Limpiar"
         Me.BtnLimpiar.UseVisualStyleBackColor = True
         '
@@ -385,10 +394,10 @@ Partial Class FrmPacientesR
         Me.BtnGuardar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnGuardar.Image = Global.ProyectoF.My.Resources.Resources.verify
         Me.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnGuardar.Location = New System.Drawing.Point(104, 403)
+        Me.BtnGuardar.Location = New System.Drawing.Point(261, 403)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Size = New System.Drawing.Size(146, 37)
-        Me.BtnGuardar.TabIndex = 21
+        Me.BtnGuardar.TabIndex = 23
         Me.BtnGuardar.Text = "   Guardar"
         Me.BtnGuardar.UseVisualStyleBackColor = True
         '
@@ -398,32 +407,32 @@ Partial Class FrmPacientesR
         Me.CmbRazaPac.Location = New System.Drawing.Point(610, 170)
         Me.CmbRazaPac.Name = "CmbRazaPac"
         Me.CmbRazaPac.Size = New System.Drawing.Size(200, 21)
-        Me.CmbRazaPac.TabIndex = 13
+        Me.CmbRazaPac.TabIndex = 15
         '
         'CmbEspeciePac
         '
         Me.CmbEspeciePac.FormattingEnabled = True
-        Me.CmbEspeciePac.Location = New System.Drawing.Point(192, 273)
+        Me.CmbEspeciePac.Location = New System.Drawing.Point(192, 279)
         Me.CmbEspeciePac.Name = "CmbEspeciePac"
         Me.CmbEspeciePac.Size = New System.Drawing.Size(200, 21)
-        Me.CmbEspeciePac.TabIndex = 9
+        Me.CmbEspeciePac.TabIndex = 11
         '
-        'DtPac
+        'DtFechaNac
         '
-        Me.DtPac.Location = New System.Drawing.Point(192, 243)
-        Me.DtPac.Name = "DtPac"
-        Me.DtPac.Size = New System.Drawing.Size(200, 20)
-        Me.DtPac.TabIndex = 7
+        Me.DtFechaNac.Location = New System.Drawing.Point(192, 249)
+        Me.DtFechaNac.Name = "DtFechaNac"
+        Me.DtFechaNac.Size = New System.Drawing.Size(200, 20)
+        Me.DtFechaNac.TabIndex = 9
         '
         'Label10
         '
         Me.Label10.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(25, 240)
+        Me.Label10.Location = New System.Drawing.Point(25, 246)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(141, 20)
-        Me.Label10.TabIndex = 6
+        Me.Label10.TabIndex = 8
         Me.Label10.Text = "Fecha Nacimiento:"
         '
         'TxtSenPar
@@ -433,7 +442,7 @@ Partial Class FrmPacientesR
         Me.TxtSenPar.Multiline = True
         Me.TxtSenPar.Name = "TxtSenPar"
         Me.TxtSenPar.Size = New System.Drawing.Size(200, 65)
-        Me.TxtSenPar.TabIndex = 20
+        Me.TxtSenPar.TabIndex = 21
         '
         'Label8
         '
@@ -443,7 +452,7 @@ Partial Class FrmPacientesR
         Me.Label8.Location = New System.Drawing.Point(443, 243)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(50, 20)
-        Me.Label8.TabIndex = 17
+        Me.Label8.TabIndex = 18
         Me.Label8.Text = "Color:"
         '
         'TxtColorPac
@@ -452,7 +461,7 @@ Partial Class FrmPacientesR
         Me.TxtColorPac.Location = New System.Drawing.Point(610, 242)
         Me.TxtColorPac.Name = "TxtColorPac"
         Me.TxtColorPac.Size = New System.Drawing.Size(200, 20)
-        Me.TxtColorPac.TabIndex = 18
+        Me.TxtColorPac.TabIndex = 19
         '
         'Label7
         '
@@ -462,7 +471,7 @@ Partial Class FrmPacientesR
         Me.Label7.Location = New System.Drawing.Point(443, 169)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(51, 20)
-        Me.Label7.TabIndex = 12
+        Me.Label7.TabIndex = 14
         Me.Label7.Text = "Raza:"
         '
         'Label6
@@ -473,27 +482,27 @@ Partial Class FrmPacientesR
         Me.Label6.Location = New System.Drawing.Point(443, 273)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(145, 20)
-        Me.Label6.TabIndex = 19
+        Me.Label6.TabIndex = 20
         Me.Label6.Text = "Señas particulares:"
         '
-        'TBSexoPac
+        'CmbSexoPac
         '
-        Me.TBSexoPac.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TBSexoPac.FormattingEnabled = True
-        Me.TBSexoPac.Location = New System.Drawing.Point(192, 308)
-        Me.TBSexoPac.Name = "TBSexoPac"
-        Me.TBSexoPac.Size = New System.Drawing.Size(200, 21)
-        Me.TBSexoPac.TabIndex = 11
+        Me.CmbSexoPac.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.CmbSexoPac.FormattingEnabled = True
+        Me.CmbSexoPac.Location = New System.Drawing.Point(192, 314)
+        Me.CmbSexoPac.Name = "CmbSexoPac"
+        Me.CmbSexoPac.Size = New System.Drawing.Size(200, 21)
+        Me.CmbSexoPac.TabIndex = 13
         '
         'Label5
         '
         Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(25, 309)
+        Me.Label5.Location = New System.Drawing.Point(25, 315)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(49, 20)
-        Me.Label5.TabIndex = 10
+        Me.Label5.TabIndex = 12
         Me.Label5.Text = "Sexo:"
         '
         'Label11
@@ -501,11 +510,25 @@ Partial Class FrmPacientesR
         Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(25, 271)
+        Me.Label11.Location = New System.Drawing.Point(25, 277)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(70, 20)
-        Me.Label11.TabIndex = 8
+        Me.Label11.TabIndex = 10
         Me.Label11.Text = "Especie:"
+        '
+        'BtnNuevo
+        '
+        Me.BtnNuevo.AccessibleRole = System.Windows.Forms.AccessibleRole.None
+        Me.BtnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnNuevo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BtnNuevo.Image = Global.ProyectoF.My.Resources.Resources.pet_care__1_
+        Me.BtnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnNuevo.Location = New System.Drawing.Point(106, 403)
+        Me.BtnNuevo.Name = "BtnNuevo"
+        Me.BtnNuevo.Size = New System.Drawing.Size(146, 37)
+        Me.BtnNuevo.TabIndex = 22
+        Me.BtnNuevo.Text = "Nuevo"
+        Me.BtnNuevo.UseVisualStyleBackColor = True
         '
         'FrmPacientesR
         '
@@ -543,27 +566,26 @@ Partial Class FrmPacientesR
     Friend WithEvents TPPacienteRec As TabPage
     Friend WithEvents Label1 As Label
     Friend WithEvents TPDetPacRec As TabPage
-    Friend WithEvents TxtBIdPac As TextBox
+    Friend WithEvents TxtIdPac As TextBox
     Friend WithEvents TxtNombrePac As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label18 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents TxtPeso As TextBox
-    Friend WithEvents BtnEliminar As Button
     Friend WithEvents BtnEditar As Button
     Friend WithEvents BtnLimpiar As Button
     Friend WithEvents BtnGuardar As Button
     Friend WithEvents CmbRazaPac As ComboBox
     Friend WithEvents CmbEspeciePac As ComboBox
-    Friend WithEvents DtPac As DateTimePicker
+    Friend WithEvents DtFechaNac As DateTimePicker
     Friend WithEvents Label10 As Label
     Friend WithEvents TxtSenPar As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents TxtColorPac As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents TBSexoPac As ComboBox
+    Friend WithEvents CmbSexoPac As ComboBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents GbRegistros As GroupBox
@@ -575,4 +597,7 @@ Partial Class FrmPacientesR
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents TxtIdClt As TextBox
+    Friend WithEvents Label12 As Label
+    Friend WithEvents BtnNuevo As Button
 End Class
