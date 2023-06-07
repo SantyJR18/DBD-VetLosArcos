@@ -77,7 +77,7 @@ Partial Class FrmClientes
         Me.TCClientes.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TCClientes.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TCClientes.Location = New System.Drawing.Point(0, 47)
-        Me.TCClientes.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TCClientes.Margin = New System.Windows.Forms.Padding(4)
         Me.TCClientes.Name = "TCClientes"
         Me.TCClientes.SelectedIndex = 0
         Me.TCClientes.Size = New System.Drawing.Size(1124, 656)
@@ -93,9 +93,9 @@ Partial Class FrmClientes
         Me.TPClt.Controls.Add(Me.txtBusqueda)
         Me.TPClt.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TPClt.Location = New System.Drawing.Point(4, 25)
-        Me.TPClt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TPClt.Margin = New System.Windows.Forms.Padding(4)
         Me.TPClt.Name = "TPClt"
-        Me.TPClt.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TPClt.Padding = New System.Windows.Forms.Padding(4)
         Me.TPClt.Size = New System.Drawing.Size(1116, 627)
         Me.TPClt.TabIndex = 0
         Me.TPClt.Text = "Clientes"
@@ -104,19 +104,21 @@ Partial Class FrmClientes
         '
         Me.GbRegistros.Controls.Add(Me.dgvRegistrosAlmacenados)
         Me.GbRegistros.Location = New System.Drawing.Point(32, 166)
-        Me.GbRegistros.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GbRegistros.Margin = New System.Windows.Forms.Padding(4)
         Me.GbRegistros.Name = "GbRegistros"
-        Me.GbRegistros.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GbRegistros.Padding = New System.Windows.Forms.Padding(4)
         Me.GbRegistros.Size = New System.Drawing.Size(1047, 450)
         Me.GbRegistros.TabIndex = 31
         Me.GbRegistros.TabStop = False
         '
         'dgvRegistrosAlmacenados
         '
+        Me.dgvRegistrosAlmacenados.AllowUserToAddRows = False
+        Me.dgvRegistrosAlmacenados.BackgroundColor = System.Drawing.Color.White
         Me.dgvRegistrosAlmacenados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRegistrosAlmacenados.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvRegistrosAlmacenados.Location = New System.Drawing.Point(4, 19)
-        Me.dgvRegistrosAlmacenados.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dgvRegistrosAlmacenados.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvRegistrosAlmacenados.Name = "dgvRegistrosAlmacenados"
         Me.dgvRegistrosAlmacenados.RowHeadersWidth = 51
         Me.dgvRegistrosAlmacenados.Size = New System.Drawing.Size(1039, 427)
@@ -161,7 +163,7 @@ Partial Class FrmClientes
         Me.txtBusqueda.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtBusqueda.ForeColor = System.Drawing.Color.DimGray
         Me.txtBusqueda.Location = New System.Drawing.Point(32, 116)
-        Me.txtBusqueda.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtBusqueda.Margin = New System.Windows.Forms.Padding(4)
         Me.txtBusqueda.Multiline = True
         Me.txtBusqueda.Name = "txtBusqueda"
         Me.txtBusqueda.Size = New System.Drawing.Size(1045, 34)
@@ -195,9 +197,9 @@ Partial Class FrmClientes
         Me.TPDetClt.Controls.Add(Me.Label15)
         Me.TPDetClt.Controls.Add(Me.Label16)
         Me.TPDetClt.Location = New System.Drawing.Point(4, 25)
-        Me.TPDetClt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TPDetClt.Margin = New System.Windows.Forms.Padding(4)
         Me.TPDetClt.Name = "TPDetClt"
-        Me.TPDetClt.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TPDetClt.Padding = New System.Windows.Forms.Padding(4)
         Me.TPDetClt.Size = New System.Drawing.Size(1116, 627)
         Me.TPDetClt.TabIndex = 1
         Me.TPDetClt.Text = "Detalles"
@@ -232,7 +234,7 @@ Partial Class FrmClientes
         '
         Me.txtSegundoApe.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txtSegundoApe.Location = New System.Drawing.Point(248, 414)
-        Me.txtSegundoApe.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtSegundoApe.Margin = New System.Windows.Forms.Padding(4)
         Me.txtSegundoApe.Name = "txtSegundoApe"
         Me.txtSegundoApe.Size = New System.Drawing.Size(265, 22)
         Me.txtSegundoApe.TabIndex = 63
@@ -241,7 +243,7 @@ Partial Class FrmClientes
         '
         Me.txtPrimerApe.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txtPrimerApe.Location = New System.Drawing.Point(248, 359)
-        Me.txtPrimerApe.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtPrimerApe.Margin = New System.Windows.Forms.Padding(4)
         Me.txtPrimerApe.Name = "txtPrimerApe"
         Me.txtPrimerApe.Size = New System.Drawing.Size(265, 22)
         Me.txtPrimerApe.TabIndex = 62
@@ -253,7 +255,7 @@ Partial Class FrmClientes
         Me.BtnEditar.Image = Global.ProyectoF.My.Resources.Resources.edit
         Me.BtnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnEditar.Location = New System.Drawing.Point(457, 529)
-        Me.BtnEditar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnEditar.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnEditar.Name = "BtnEditar"
         Me.BtnEditar.Size = New System.Drawing.Size(195, 46)
         Me.BtnEditar.TabIndex = 60
@@ -267,7 +269,7 @@ Partial Class FrmClientes
         Me.BtnLimpiar.Image = Global.ProyectoF.My.Resources.Resources.limpiar
         Me.BtnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnLimpiar.Location = New System.Drawing.Point(673, 529)
-        Me.BtnLimpiar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnLimpiar.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnLimpiar.Name = "BtnLimpiar"
         Me.BtnLimpiar.Size = New System.Drawing.Size(195, 46)
         Me.BtnLimpiar.TabIndex = 59
@@ -282,7 +284,7 @@ Partial Class FrmClientes
         Me.BtnGuardar.Image = Global.ProyectoF.My.Resources.Resources.verify
         Me.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnGuardar.Location = New System.Drawing.Point(245, 529)
-        Me.BtnGuardar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnGuardar.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Size = New System.Drawing.Size(195, 46)
         Me.BtnGuardar.TabIndex = 58
@@ -325,7 +327,7 @@ Partial Class FrmClientes
         'txtSegundoNombre
         '
         Me.txtSegundoNombre.Location = New System.Drawing.Point(248, 310)
-        Me.txtSegundoNombre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtSegundoNombre.Margin = New System.Windows.Forms.Padding(4)
         Me.txtSegundoNombre.Name = "txtSegundoNombre"
         Me.txtSegundoNombre.Size = New System.Drawing.Size(265, 22)
         Me.txtSegundoNombre.TabIndex = 6
@@ -334,7 +336,7 @@ Partial Class FrmClientes
         '
         Me.txtTelClt.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txtTelClt.Location = New System.Drawing.Point(820, 268)
-        Me.txtTelClt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtTelClt.Margin = New System.Windows.Forms.Padding(4)
         Me.txtTelClt.Name = "txtTelClt"
         Me.txtTelClt.Size = New System.Drawing.Size(265, 22)
         Me.txtTelClt.TabIndex = 10
@@ -343,7 +345,7 @@ Partial Class FrmClientes
         '
         Me.txtDireccionClt.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txtDireccionClt.Location = New System.Drawing.Point(821, 316)
-        Me.txtDireccionClt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtDireccionClt.Margin = New System.Windows.Forms.Padding(4)
         Me.txtDireccionClt.Multiline = True
         Me.txtDireccionClt.Name = "txtDireccionClt"
         Me.txtDireccionClt.Size = New System.Drawing.Size(264, 120)
@@ -353,7 +355,7 @@ Partial Class FrmClientes
         '
         Me.txtCorreoClt.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txtCorreoClt.Location = New System.Drawing.Point(820, 228)
-        Me.txtCorreoClt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtCorreoClt.Margin = New System.Windows.Forms.Padding(4)
         Me.txtCorreoClt.Name = "txtCorreoClt"
         Me.txtCorreoClt.Size = New System.Drawing.Size(265, 22)
         Me.txtCorreoClt.TabIndex = 8
@@ -362,7 +364,7 @@ Partial Class FrmClientes
         '
         Me.txtPrimerNombre.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txtPrimerNombre.Location = New System.Drawing.Point(248, 267)
-        Me.txtPrimerNombre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtPrimerNombre.Margin = New System.Windows.Forms.Padding(4)
         Me.txtPrimerNombre.Name = "txtPrimerNombre"
         Me.txtPrimerNombre.Size = New System.Drawing.Size(265, 22)
         Me.txtPrimerNombre.TabIndex = 4
@@ -371,7 +373,7 @@ Partial Class FrmClientes
         '
         Me.txtIdCliente.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txtIdCliente.Location = New System.Drawing.Point(248, 226)
-        Me.txtIdCliente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtIdCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.txtIdCliente.Name = "txtIdCliente"
         Me.txtIdCliente.Size = New System.Drawing.Size(265, 22)
         Me.txtIdCliente.TabIndex = 2
@@ -461,7 +463,7 @@ Partial Class FrmClientes
         Me.PnlTitle.Controls.Add(Me.BtnCerrar)
         Me.PnlTitle.Dock = System.Windows.Forms.DockStyle.Top
         Me.PnlTitle.Location = New System.Drawing.Point(0, 0)
-        Me.PnlTitle.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PnlTitle.Margin = New System.Windows.Forms.Padding(4)
         Me.PnlTitle.Name = "PnlTitle"
         Me.PnlTitle.Size = New System.Drawing.Size(1124, 47)
         Me.PnlTitle.TabIndex = 4
@@ -484,7 +486,7 @@ Partial Class FrmClientes
         Me.BtnCerrar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnCerrar.Image = Global.ProyectoF.My.Resources.Resources.reject
         Me.BtnCerrar.Location = New System.Drawing.Point(1065, 7)
-        Me.BtnCerrar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnCerrar.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnCerrar.Name = "BtnCerrar"
         Me.BtnCerrar.Size = New System.Drawing.Size(33, 31)
         Me.BtnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -500,7 +502,7 @@ Partial Class FrmClientes
         Me.Controls.Add(Me.PnlTitle)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FrmClientes"
         Me.Text = "FrmClientes"
         Me.TCClientes.ResumeLayout(False)

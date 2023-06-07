@@ -120,6 +120,7 @@ Partial Class FrmVacunas
         '
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dgvRegistrosAlmacenados.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvRegistrosAlmacenados.BackgroundColor = System.Drawing.Color.White
         Me.dgvRegistrosAlmacenados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRegistrosAlmacenados.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvRegistrosAlmacenados.Location = New System.Drawing.Point(4, 19)

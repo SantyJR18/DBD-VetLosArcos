@@ -143,6 +143,7 @@ Partial Class FrmDiagnostico
         'dgvRegistrosAlmacenados
         '
         Me.dgvRegistrosAlmacenados.AllowUserToAddRows = False
+        Me.dgvRegistrosAlmacenados.BackgroundColor = System.Drawing.Color.White
         Me.dgvRegistrosAlmacenados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRegistrosAlmacenados.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvRegistrosAlmacenados.Location = New System.Drawing.Point(3, 17)

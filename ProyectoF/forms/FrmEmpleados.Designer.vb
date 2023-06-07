@@ -524,6 +524,7 @@ Partial Class FrmEmpleados
         '
         'dgvRegistrosAlmacenados
         '
+        Me.dgvRegistrosAlmacenados.AllowUserToAddRows = False
         Me.dgvRegistrosAlmacenados.BackgroundColor = System.Drawing.Color.White
         Me.dgvRegistrosAlmacenados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRegistrosAlmacenados.Dock = System.Windows.Forms.DockStyle.Fill

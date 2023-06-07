@@ -102,7 +102,7 @@ Partial Class FrmPacientesM
         Me.TCPacientesMed.Controls.Add(Me.TPDetPacMed)
         Me.TCPacientesMed.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TCPacientesMed.Location = New System.Drawing.Point(0, 47)
-        Me.TCPacientesMed.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TCPacientesMed.Margin = New System.Windows.Forms.Padding(4)
         Me.TCPacientesMed.Name = "TCPacientesMed"
         Me.TCPacientesMed.SelectedIndex = 0
         Me.TCPacientesMed.Size = New System.Drawing.Size(1124, 656)
@@ -117,9 +117,9 @@ Partial Class FrmPacientesM
         Me.TPPacMedico.Controls.Add(Me.Label17)
         Me.TPPacMedico.Controls.Add(Me.txtBusqueda)
         Me.TPPacMedico.Location = New System.Drawing.Point(4, 25)
-        Me.TPPacMedico.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TPPacMedico.Margin = New System.Windows.Forms.Padding(4)
         Me.TPPacMedico.Name = "TPPacMedico"
-        Me.TPPacMedico.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TPPacMedico.Padding = New System.Windows.Forms.Padding(4)
         Me.TPPacMedico.Size = New System.Drawing.Size(1116, 627)
         Me.TPPacMedico.TabIndex = 0
         Me.TPPacMedico.Text = "Pacientes"
@@ -128,19 +128,20 @@ Partial Class FrmPacientesM
         '
         Me.GbRegistros.Controls.Add(Me.dgvRegistrosAlmacenados)
         Me.GbRegistros.Location = New System.Drawing.Point(32, 164)
-        Me.GbRegistros.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GbRegistros.Margin = New System.Windows.Forms.Padding(4)
         Me.GbRegistros.Name = "GbRegistros"
-        Me.GbRegistros.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GbRegistros.Padding = New System.Windows.Forms.Padding(4)
         Me.GbRegistros.Size = New System.Drawing.Size(1047, 450)
         Me.GbRegistros.TabIndex = 3
         Me.GbRegistros.TabStop = False
         '
         'dgvRegistrosAlmacenados
         '
+        Me.dgvRegistrosAlmacenados.BackgroundColor = System.Drawing.Color.White
         Me.dgvRegistrosAlmacenados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRegistrosAlmacenados.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvRegistrosAlmacenados.Location = New System.Drawing.Point(4, 19)
-        Me.dgvRegistrosAlmacenados.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dgvRegistrosAlmacenados.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvRegistrosAlmacenados.Name = "dgvRegistrosAlmacenados"
         Me.dgvRegistrosAlmacenados.RowHeadersWidth = 51
         Me.dgvRegistrosAlmacenados.Size = New System.Drawing.Size(1039, 427)
@@ -185,7 +186,7 @@ Partial Class FrmPacientesM
         Me.txtBusqueda.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtBusqueda.ForeColor = System.Drawing.Color.DimGray
         Me.txtBusqueda.Location = New System.Drawing.Point(32, 116)
-        Me.txtBusqueda.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtBusqueda.Margin = New System.Windows.Forms.Padding(4)
         Me.txtBusqueda.Multiline = True
         Me.txtBusqueda.Name = "txtBusqueda"
         Me.txtBusqueda.Size = New System.Drawing.Size(1045, 34)
@@ -197,9 +198,9 @@ Partial Class FrmPacientesM
         '
         Me.TPDetPacMed.Controls.Add(Me.TPPacientesMed)
         Me.TPDetPacMed.Location = New System.Drawing.Point(4, 25)
-        Me.TPDetPacMed.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TPDetPacMed.Margin = New System.Windows.Forms.Padding(4)
         Me.TPDetPacMed.Name = "TPDetPacMed"
-        Me.TPDetPacMed.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TPDetPacMed.Padding = New System.Windows.Forms.Padding(4)
         Me.TPDetPacMed.Size = New System.Drawing.Size(1116, 627)
         Me.TPDetPacMed.TabIndex = 1
         Me.TPDetPacMed.Text = "Detalles"
@@ -211,7 +212,7 @@ Partial Class FrmPacientesM
         Me.TPPacientesMed.Controls.Add(Me.TPExpDuenio)
         Me.TPPacientesMed.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TPPacientesMed.Location = New System.Drawing.Point(4, 4)
-        Me.TPPacientesMed.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TPPacientesMed.Margin = New System.Windows.Forms.Padding(4)
         Me.TPPacientesMed.Name = "TPPacientesMed"
         Me.TPPacientesMed.SelectedIndex = 0
         Me.TPPacientesMed.Size = New System.Drawing.Size(1108, 619)
@@ -246,9 +247,9 @@ Partial Class FrmPacientesM
         Me.TPPaciente.Controls.Add(Me.Label5)
         Me.TPPaciente.Controls.Add(Me.Label3)
         Me.TPPaciente.Location = New System.Drawing.Point(4, 25)
-        Me.TPPaciente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TPPaciente.Margin = New System.Windows.Forms.Padding(4)
         Me.TPPaciente.Name = "TPPaciente"
-        Me.TPPaciente.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TPPaciente.Padding = New System.Windows.Forms.Padding(4)
         Me.TPPaciente.Size = New System.Drawing.Size(1100, 590)
         Me.TPPaciente.TabIndex = 0
         Me.TPPaciente.Text = "Paciente"
@@ -289,7 +290,7 @@ Partial Class FrmPacientesM
         'TxtBIdPac
         '
         Me.TxtBIdPac.Location = New System.Drawing.Point(247, 191)
-        Me.TxtBIdPac.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtBIdPac.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtBIdPac.Name = "TxtBIdPac"
         Me.TxtBIdPac.Size = New System.Drawing.Size(129, 22)
         Me.TxtBIdPac.TabIndex = 3
@@ -298,7 +299,7 @@ Partial Class FrmPacientesM
         '
         Me.TxtNombrePac.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.TxtNombrePac.Location = New System.Drawing.Point(247, 234)
-        Me.TxtNombrePac.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtNombrePac.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtNombrePac.Name = "TxtNombrePac"
         Me.TxtNombrePac.Size = New System.Drawing.Size(267, 22)
         Me.TxtNombrePac.TabIndex = 5
@@ -355,7 +356,7 @@ Partial Class FrmPacientesM
         '
         Me.TxtPeso.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.TxtPeso.Location = New System.Drawing.Point(806, 235)
-        Me.TxtPeso.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtPeso.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtPeso.Name = "TxtPeso"
         Me.TxtPeso.Size = New System.Drawing.Size(139, 22)
         Me.TxtPeso.TabIndex = 15
@@ -367,7 +368,7 @@ Partial Class FrmPacientesM
         Me.BtnEditar.Image = Global.ProyectoF.My.Resources.Resources.edit
         Me.BtnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnEditar.Location = New System.Drawing.Point(448, 470)
-        Me.BtnEditar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnEditar.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnEditar.Name = "BtnEditar"
         Me.BtnEditar.Size = New System.Drawing.Size(195, 46)
         Me.BtnEditar.TabIndex = 22
@@ -381,7 +382,7 @@ Partial Class FrmPacientesM
         Me.BtnLimpiar.Image = Global.ProyectoF.My.Resources.Resources.limpiar
         Me.BtnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnLimpiar.Location = New System.Drawing.Point(664, 470)
-        Me.BtnLimpiar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnLimpiar.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnLimpiar.Name = "BtnLimpiar"
         Me.BtnLimpiar.Size = New System.Drawing.Size(195, 46)
         Me.BtnLimpiar.TabIndex = 23
@@ -396,7 +397,7 @@ Partial Class FrmPacientesM
         Me.BtnGuardar.Image = Global.ProyectoF.My.Resources.Resources.verify
         Me.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnGuardar.Location = New System.Drawing.Point(236, 470)
-        Me.BtnGuardar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnGuardar.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Size = New System.Drawing.Size(195, 46)
         Me.BtnGuardar.TabIndex = 21
@@ -407,7 +408,7 @@ Partial Class FrmPacientesM
         '
         Me.CmbRazaPac.FormattingEnabled = True
         Me.CmbRazaPac.Location = New System.Drawing.Point(804, 190)
-        Me.CmbRazaPac.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CmbRazaPac.Margin = New System.Windows.Forms.Padding(4)
         Me.CmbRazaPac.Name = "CmbRazaPac"
         Me.CmbRazaPac.Size = New System.Drawing.Size(265, 24)
         Me.CmbRazaPac.TabIndex = 13
@@ -416,7 +417,7 @@ Partial Class FrmPacientesM
         '
         Me.CmbEspeciePac.FormattingEnabled = True
         Me.CmbEspeciePac.Location = New System.Drawing.Point(247, 316)
-        Me.CmbEspeciePac.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CmbEspeciePac.Margin = New System.Windows.Forms.Padding(4)
         Me.CmbEspeciePac.Name = "CmbEspeciePac"
         Me.CmbEspeciePac.Size = New System.Drawing.Size(265, 24)
         Me.CmbEspeciePac.TabIndex = 9
@@ -424,7 +425,7 @@ Partial Class FrmPacientesM
         'DtPac
         '
         Me.DtPac.Location = New System.Drawing.Point(247, 279)
-        Me.DtPac.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DtPac.Margin = New System.Windows.Forms.Padding(4)
         Me.DtPac.Name = "DtPac"
         Me.DtPac.Size = New System.Drawing.Size(265, 22)
         Me.DtPac.TabIndex = 7
@@ -445,7 +446,7 @@ Partial Class FrmPacientesM
         '
         Me.TxtSenPar.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.TxtSenPar.Location = New System.Drawing.Point(806, 316)
-        Me.TxtSenPar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtSenPar.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtSenPar.Multiline = True
         Me.TxtSenPar.Name = "TxtSenPar"
         Me.TxtSenPar.Size = New System.Drawing.Size(265, 79)
@@ -467,7 +468,7 @@ Partial Class FrmPacientesM
         '
         Me.TxtColorPac.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.TxtColorPac.Location = New System.Drawing.Point(806, 278)
-        Me.TxtColorPac.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtColorPac.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtColorPac.Name = "TxtColorPac"
         Me.TxtColorPac.Size = New System.Drawing.Size(265, 22)
         Me.TxtColorPac.TabIndex = 18
@@ -501,7 +502,7 @@ Partial Class FrmPacientesM
         Me.TBSexoPac.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.TBSexoPac.FormattingEnabled = True
         Me.TBSexoPac.Location = New System.Drawing.Point(249, 359)
-        Me.TBSexoPac.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TBSexoPac.Margin = New System.Windows.Forms.Padding(4)
         Me.TBSexoPac.Name = "TBSexoPac"
         Me.TBSexoPac.Size = New System.Drawing.Size(265, 24)
         Me.TBSexoPac.TabIndex = 11
@@ -549,9 +550,9 @@ Partial Class FrmPacientesM
         Me.TPExpDuenio.Controls.Add(Me.Label15)
         Me.TPExpDuenio.Controls.Add(Me.Label16)
         Me.TPExpDuenio.Location = New System.Drawing.Point(4, 25)
-        Me.TPExpDuenio.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TPExpDuenio.Margin = New System.Windows.Forms.Padding(4)
         Me.TPExpDuenio.Name = "TPExpDuenio"
-        Me.TPExpDuenio.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TPExpDuenio.Padding = New System.Windows.Forms.Padding(4)
         Me.TPExpDuenio.Size = New System.Drawing.Size(1100, 590)
         Me.TPExpDuenio.TabIndex = 1
         Me.TPExpDuenio.Text = "Dueño"
@@ -592,7 +593,7 @@ Partial Class FrmPacientesM
         'TBapellidoClt
         '
         Me.TBapellidoClt.Location = New System.Drawing.Point(239, 290)
-        Me.TBapellidoClt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TBapellidoClt.Margin = New System.Windows.Forms.Padding(4)
         Me.TBapellidoClt.Name = "TBapellidoClt"
         Me.TBapellidoClt.Size = New System.Drawing.Size(265, 22)
         Me.TBapellidoClt.TabIndex = 6
@@ -601,7 +602,7 @@ Partial Class FrmPacientesM
         '
         Me.TBtelClt.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.TBtelClt.Location = New System.Drawing.Point(813, 248)
-        Me.TBtelClt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TBtelClt.Margin = New System.Windows.Forms.Padding(4)
         Me.TBtelClt.Name = "TBtelClt"
         Me.TBtelClt.Size = New System.Drawing.Size(265, 22)
         Me.TBtelClt.TabIndex = 10
@@ -610,7 +611,7 @@ Partial Class FrmPacientesM
         '
         Me.TBdireccionClt.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.TBdireccionClt.Location = New System.Drawing.Point(814, 296)
-        Me.TBdireccionClt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TBdireccionClt.Margin = New System.Windows.Forms.Padding(4)
         Me.TBdireccionClt.Multiline = True
         Me.TBdireccionClt.Name = "TBdireccionClt"
         Me.TBdireccionClt.Size = New System.Drawing.Size(264, 79)
@@ -620,7 +621,7 @@ Partial Class FrmPacientesM
         '
         Me.TBcorreoClt.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.TBcorreoClt.Location = New System.Drawing.Point(813, 208)
-        Me.TBcorreoClt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TBcorreoClt.Margin = New System.Windows.Forms.Padding(4)
         Me.TBcorreoClt.Name = "TBcorreoClt"
         Me.TBcorreoClt.Size = New System.Drawing.Size(265, 22)
         Me.TBcorreoClt.TabIndex = 8
@@ -629,7 +630,7 @@ Partial Class FrmPacientesM
         '
         Me.TBnombreClt.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.TBnombreClt.Location = New System.Drawing.Point(241, 247)
-        Me.TBnombreClt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TBnombreClt.Margin = New System.Windows.Forms.Padding(4)
         Me.TBnombreClt.Name = "TBnombreClt"
         Me.TBnombreClt.Size = New System.Drawing.Size(265, 22)
         Me.TBnombreClt.TabIndex = 5
@@ -638,7 +639,7 @@ Partial Class FrmPacientesM
         '
         Me.TBcedulaClt.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.TBcedulaClt.Location = New System.Drawing.Point(241, 207)
-        Me.TBcedulaClt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TBcedulaClt.Margin = New System.Windows.Forms.Padding(4)
         Me.TBcedulaClt.Name = "TBcedulaClt"
         Me.TBcedulaClt.Size = New System.Drawing.Size(265, 22)
         Me.TBcedulaClt.TabIndex = 3
@@ -722,7 +723,7 @@ Partial Class FrmPacientesM
         Me.PnlTitle.Controls.Add(Me.BtnCerrar)
         Me.PnlTitle.Dock = System.Windows.Forms.DockStyle.Top
         Me.PnlTitle.Location = New System.Drawing.Point(0, 0)
-        Me.PnlTitle.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PnlTitle.Margin = New System.Windows.Forms.Padding(4)
         Me.PnlTitle.Name = "PnlTitle"
         Me.PnlTitle.Size = New System.Drawing.Size(1124, 47)
         Me.PnlTitle.TabIndex = 4
@@ -745,7 +746,7 @@ Partial Class FrmPacientesM
         Me.BtnCerrar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnCerrar.Image = Global.ProyectoF.My.Resources.Resources.reject
         Me.BtnCerrar.Location = New System.Drawing.Point(1071, 7)
-        Me.BtnCerrar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnCerrar.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnCerrar.Name = "BtnCerrar"
         Me.BtnCerrar.Size = New System.Drawing.Size(33, 31)
         Me.BtnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -761,7 +762,7 @@ Partial Class FrmPacientesM
         Me.Controls.Add(Me.PnlTitle)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FrmPacientesM"
         Me.Text = "FrmExpedientePacientes"
         Me.TCPacientesMed.ResumeLayout(False)

@@ -144,6 +144,7 @@ Partial Class FrmDesparasitante
         '
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dgvRegistrosAlmacenados.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvRegistrosAlmacenados.BackgroundColor = System.Drawing.Color.White
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -175,7 +176,7 @@ Partial Class FrmDesparasitante
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.ProyectoF.My.Resources.Resources.deworming
-        Me.PictureBox2.Location = New System.Drawing.Point(754, 15)
+        Me.PictureBox2.Location = New System.Drawing.Point(765, 15)
         Me.PictureBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(64, 60)
