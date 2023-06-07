@@ -117,11 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="MenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="BtnCerrarSes.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        rwAAAK8BK7AVuQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAIaSURBVFhHYwCB
+        rgAAAK4B+ff3XQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAIaSURBVFhHYwCB
         /xMZtj/t5P/elOP9Pzw+BS+2dfX6b2Rpjxc7uHlvABtMLAA64D0Q/wfhs01y/7NTI7BaDsLEOMDa0eMZ
         1GjiALIDQPhHP8v/1RVG/2MSEgfGATD8rJP/f1uux8A5AIaRo2VAHADC3/pZ/y8uNf9v5zZADoDhwigz
         rJYiY5o6oCrGGKulyHjUAegOmHeLQ2nOHZaahdcZhKFCqABoME0dMOcOW/ecu6z/gfgR0CHWUGEEABpM

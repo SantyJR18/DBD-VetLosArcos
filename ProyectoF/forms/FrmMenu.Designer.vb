@@ -24,7 +24,6 @@ Partial Class FrmMenu
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMenu))
         Me.PanelChildForm = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.LblVet = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.TitleBar = New System.Windows.Forms.Panel()
@@ -49,6 +48,7 @@ Partial Class FrmMenu
         Me.BtnPaciente = New System.Windows.Forms.Button()
         Me.BtnCliente = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.PanelChildForm.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TitleBar.SuspendLayout()
@@ -73,15 +73,6 @@ Partial Class FrmMenu
         Me.PanelChildForm.Name = "PanelChildForm"
         Me.PanelChildForm.Size = New System.Drawing.Size(843, 571)
         Me.PanelChildForm.TabIndex = 1
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(86, 69)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Show"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'LblVet
         '
@@ -389,6 +380,15 @@ Partial Class FrmMenu
         Me.MenuStrip1.TabIndex = 22
         Me.MenuStrip1.Text = "MenuStrip1"
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(118, 97)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 2
+        Me.Button1.Text = "show"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'FrmMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -442,6 +442,6 @@ Partial Class FrmMenu
     Friend WithEvents BtnCerrarSes As Button
     Friend WithEvents LblVet As Label
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents Button1 As Button
     Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents Button1 As Button
 End Class

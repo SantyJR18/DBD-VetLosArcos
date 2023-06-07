@@ -91,7 +91,11 @@ Public Class FrmMenu
 #End Region
 
 #Region "Formularios"
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
         Try
             Dim tbl As New DataTable
             Dim reporte As New DBLosArcosDsTableAdapters.EmpleadoRolTableAdapter
