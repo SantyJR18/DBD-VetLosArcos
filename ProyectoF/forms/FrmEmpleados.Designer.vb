@@ -524,6 +524,7 @@ Partial Class FrmEmpleados
         '
         'dgvRegistrosAlmacenados
         '
+        Me.dgvRegistrosAlmacenados.AllowUserToAddRows = False
         Me.dgvRegistrosAlmacenados.BackgroundColor = System.Drawing.Color.White
         Me.dgvRegistrosAlmacenados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRegistrosAlmacenados.Dock = System.Windows.Forms.DockStyle.Fill
@@ -544,6 +545,7 @@ Partial Class FrmEmpleados
         Me.Controls.Add(Me.BottomPanel)
         Me.Controls.Add(Me.TitleBar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmEmpleados"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmEmpleados"

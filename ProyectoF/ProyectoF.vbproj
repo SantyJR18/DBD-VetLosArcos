@@ -48,6 +48,24 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1576.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1576.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1576.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1576.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1576.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System">
       <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
@@ -172,6 +190,12 @@
     <Compile Include="forms\FrmDesparasitante.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="forms\FrmReportes.Designer.vb">
+      <DependentUpon>FrmReportes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FrmReportes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="forms\FrmServicio.Designer.vb">
       <DependentUpon>FrmServicio.vb</DependentUpon>
     </Compile>
@@ -184,6 +208,67 @@
     <Compile Include="forms\FrmVacunas.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="forms\FrmVistaPrevia.Designer.vb">
+      <DependentUpon>FrmVistaPrevia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FrmVistaPrevia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FrmVistaPrevia10.Designer.vb">
+      <DependentUpon>FrmVistaPrevia10.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FrmVistaPrevia10.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FrmVistaPrevia2.Designer.vb">
+      <DependentUpon>FrmVistaPrevia2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FrmVistaPrevia2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FrmVistaPrevia3.Designer.vb">
+      <DependentUpon>FrmVistaPrevia3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FrmVistaPrevia3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FrmVistaPrevia4.Designer.vb">
+      <DependentUpon>FrmVistaPrevia4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FrmVistaPrevia4.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FrmVistaPrevia5.Designer.vb">
+      <DependentUpon>FrmVistaPrevia5.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FrmVistaPrevia5.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FrmVistaPrevia6.Designer.vb">
+      <DependentUpon>FrmVistaPrevia6.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FrmVistaPrevia6.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FrmVistaPrevia7.Designer.vb">
+      <DependentUpon>FrmVistaPrevia7.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FrmVistaPrevia7.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FrmVistaPrevia8.Designer.vb">
+      <DependentUpon>FrmVistaPrevia8.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FrmVistaPrevia8.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\FrmVistaPrevia9.Designer.vb">
+      <DependentUpon>FrmVistaPrevia9.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\FrmVistaPrevia9.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modulos\MdlReportes.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -229,11 +314,44 @@
     <EmbeddedResource Include="forms\FrmDesparasitante.resx">
       <DependentUpon>FrmDesparasitante.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\FrmReportes.resx">
+      <DependentUpon>FrmReportes.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\FrmServicio.resx">
       <DependentUpon>FrmServicio.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\FrmVacunas.resx">
       <DependentUpon>FrmVacunas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FrmVistaPrevia.resx">
+      <DependentUpon>FrmVistaPrevia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FrmVistaPrevia10.resx">
+      <DependentUpon>FrmVistaPrevia10.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FrmVistaPrevia2.resx">
+      <DependentUpon>FrmVistaPrevia2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FrmVistaPrevia3.resx">
+      <DependentUpon>FrmVistaPrevia3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FrmVistaPrevia4.resx">
+      <DependentUpon>FrmVistaPrevia4.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FrmVistaPrevia5.resx">
+      <DependentUpon>FrmVistaPrevia5.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FrmVistaPrevia6.resx">
+      <DependentUpon>FrmVistaPrevia6.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FrmVistaPrevia7.resx">
+      <DependentUpon>FrmVistaPrevia7.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FrmVistaPrevia8.resx">
+      <DependentUpon>FrmVistaPrevia8.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FrmVistaPrevia9.resx">
+      <DependentUpon>FrmVistaPrevia9.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -241,6 +359,16 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="reportes\RptDesparasitantesMarcas.rdlc" />
+    <EmbeddedResource Include="reportes\RptClientePaciente.rdlc" />
+    <EmbeddedResource Include="reportes\RptDesparasitantesRaza.rdlc" />
+    <EmbeddedResource Include="reportes\RptEmpleadoRol.rdlc" />
+    <EmbeddedResource Include="reportes\RptEspeciesDesparasitantes.rdlc" />
+    <EmbeddedResource Include="reportes\RptEspeciesVacunas.rdlc" />
+    <EmbeddedResource Include="reportes\RptServicioCosto.rdlc" />
+    <EmbeddedResource Include="reportes\RptServiciosPorRaza.rdlc" />
+    <EmbeddedResource Include="reportes\RptVacunasMarcas.rdlc" />
+    <EmbeddedResource Include="reportes\RptVacunasRaza.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="DBLosArcosDs.xsc">
@@ -266,6 +394,22 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="scriptBD\VetLosArcos.sql" />
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config" />
     <None Include="Resources\add-file.png" />
     <None Include="Resources\addUser.png" />
     <None Include="Resources\close.png" />
@@ -322,8 +466,6 @@
     <None Include="Resources\HuellaAnimal.png" />
     <None Include="Resources\closeIcon.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="scriptBD\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

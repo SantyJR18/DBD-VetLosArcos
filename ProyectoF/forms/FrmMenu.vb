@@ -1,4 +1,5 @@
 ﻿Imports System.Runtime.InteropServices
+Imports Microsoft.Reporting.WinForms
 
 Public Class FrmMenu
 

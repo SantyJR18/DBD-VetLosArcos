@@ -1,10 +1,8 @@
 ﻿
 
-Partial Class DBLosArcosDs
-    Partial Public Class MarcasDesparasitantesDataTable
-        Private Sub MarcasDesparasitantesDataTable_MarcasDesparasitantesRowChanging(sender As Object, e As MarcasDesparasitantesRowChangeEvent) Handles Me.MarcasDesparasitantesRowChanging
+Partial Public Class DBLosArcosDs
+End Class
 
-        End Sub
 
-    End Class
+Partial Public Class DBLosArcosDs
 End Class

@@ -35,6 +35,42 @@ Public Class FrmLogin
         FrmEmpleados.Show()
     End Sub
 
+#End Region
+
+#Region "Componentes de personalización del Form"
+
+    Public Sub New()
+        ' Esta llamada es exigida por el diseñador.
+        InitializeComponent()
+
+        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
+    End Sub
+
+#End Region
+
+#Region "Arrastrar/Drag Form"
+
+    <DllImport("user32.DLL", EntryPoint:="ReleaseCapture")>
+    Private Shared Sub ReleaseCapture()
+    End Sub
+    <DllImport("user32.DLL", EntryPoint:="SendMessage")>
+    Private Shared Sub SendMessage(hWnd As IntPtr, wMsg As Integer, wParam As Integer, lParam As Integer)
+    End Sub
+    Private Sub titleBar_MouseDown(sender As Object, e As MouseEventArgs) Handles TitleBar.MouseDown
+        ReleaseCapture()
+        SendMessage(Me.Handle, &H112&, &HF012&, 0)
+    End Sub
+
+#End Region
+
+#Region "Funciones"
+
+    Sub Limpiar()
+        txtUsuario.Clear()
+        txtPwd.Clear()
+        txtUsuario.Focus()
+    End Sub
+
     Private Sub BtnLogin_Click(sender As Object, e As EventArgs) Handles BtnLogin.Click
         Dim usuario As String = txtUsuario.Text
         Dim contrasenia As String = txtPwd.Text
@@ -70,40 +106,34 @@ Public Class FrmLogin
         Limpiar()
     End Sub
 
-#End Region
-
-#Region "Componentes de personalización del Form"
-
-    Public Sub New()
-        ' Esta llamada es exigida por el diseñador.
-        InitializeComponent()
-
-        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
+    Private Sub txtUsername_GotFocus(sender As Object, e As EventArgs) Handles txtUsuario.GotFocus
+        If txtUsuario.Text = "Usuario" Then
+            txtUsuario.Text = ""
+            txtUsuario.ForeColor = Color.Black
+        End If
     End Sub
 
-#End Region
-
-#Region "Arrastrar/Drag Form"
-
-    <DllImport("user32.DLL", EntryPoint:="ReleaseCapture")>
-    Private Shared Sub ReleaseCapture()
-    End Sub
-    <DllImport("user32.DLL", EntryPoint:="SendMessage")>
-    Private Shared Sub SendMessage(hWnd As IntPtr, wMsg As Integer, wParam As Integer, lParam As Integer)
-    End Sub
-    Private Sub titleBar_MouseDown(sender As Object, e As MouseEventArgs) Handles TitleBar.MouseDown
-        ReleaseCapture()
-        SendMessage(Me.Handle, &H112&, &HF012&, 0)
+    Private Sub txtUsername_LostFocus(sender As Object, e As EventArgs) Handles txtUsuario.LostFocus
+        If txtUsuario.Text = "" Then
+            txtUsuario.Text = "Usuario"
+            txtUsuario.ForeColor = Color.DimGray
+        End If
     End Sub
 
-#End Region
+    Private Sub txtPassword_GotFocus(sender As Object, e As EventArgs) Handles txtPwd.GotFocus
+        If txtPwd.Text = "Password" Then
+            txtPwd.Text = ""
+            txtPwd.ForeColor = Color.Black
+            txtPwd.PasswordChar = "*"
+        End If
+    End Sub
 
-#Region "Funciones"
-
-    Sub Limpiar()
-        txtUsuario.Clear()
-        txtPwd.Clear()
-        txtUsuario.Focus()
+    Private Sub txtPassword_LostFocus(sender As Object, e As EventArgs) Handles txtPwd.LostFocus
+        If txtPwd.Text = "" Then
+            txtPwd.Text = "Password"
+            txtPwd.ForeColor = Color.DimGray
+            txtPwd.PasswordChar = ControlChars.NullChar
+        End If
     End Sub
 
 #End Region

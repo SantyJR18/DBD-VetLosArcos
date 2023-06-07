@@ -54,6 +54,7 @@
             Dim diagnosticoR As DiagnosticosEntity = dDiagnostico.ObtenerRegistro(idDiag)
             If diagnosticoR IsNot Nothing Then
                 ' Mostrar los datos del registro en los controles del formulario
+                txtIdDiag.Text = diagnosticoR.IdDiag
                 txtDesDiag.Text = diagnosticoR.DescripcionDiag
                 dtFechaDiag.Value = diagnosticoR.FechaDiag
                 cmbIdPac.SelectedValue = diagnosticoR.Paciente
@@ -97,7 +98,7 @@
     Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
         Try
             Dim diagnosticoAdd As New DiagnosticosEntity With {
-                .DescripcionDiag = txtDesDiag.Text,
+                .DescripcionDiag = Convert.ToInt32(txtDesDiag.Text),
                 .FechaDiag = dtFechaDiag.Text,
                 .Paciente = cmbIdPac.SelectedValue
              }
@@ -119,6 +120,7 @@
     Private Sub BtnEditar_Click(sender As Object, e As EventArgs) Handles BtnEditar.Click
         Try
             Dim diagnosticoEdit As New DiagnosticosEntity With {
+                .IdDiag = txtIdDiag.Text,
                 .DescripcionDiag = txtDesDiag.Text,
                 .FechaDiag = dtFechaDiag.Text,
                 .Paciente = cmbIdPac.SelectedValue
