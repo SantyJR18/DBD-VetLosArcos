@@ -255,3 +255,12 @@ C:\Users\Diego\Desktop\BDFinalFolder\DBD-VetLosArcos\ProyectoF\obj\Debug\Proyect
 C:\Users\Diego\Desktop\BDFinalFolder\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.exe
 C:\Users\Diego\Desktop\BDFinalFolder\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.xml
 C:\Users\Diego\Desktop\BDFinalFolder\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.pdb
+C:\Users\Santiago\Documents\SDLL\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.FrmVistaPrevia10.resources
+C:\Users\Santiago\Documents\SDLL\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.FrmVistaPrevia2.resources
+C:\Users\Santiago\Documents\SDLL\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.FrmVistaPrevia3.resources
+C:\Users\Santiago\Documents\SDLL\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.FrmVistaPrevia4.resources
+C:\Users\Santiago\Documents\SDLL\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.FrmVistaPrevia5.resources
+C:\Users\Santiago\Documents\SDLL\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.FrmVistaPrevia6.resources
+C:\Users\Santiago\Documents\SDLL\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.FrmVistaPrevia7.resources
+C:\Users\Santiago\Documents\SDLL\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.FrmVistaPrevia8.resources
+C:\Users\Santiago\Documents\SDLL\DBD-VetLosArcos\ProyectoF\obj\Debug\ProyectoF.FrmVistaPrevia9.resources
