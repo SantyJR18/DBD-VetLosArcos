@@ -2,7 +2,7 @@
 
 # DISEÑO DE BASE DE DATOS
 
-# Especificiones del Proyecto
+# DETALLES del Proyecto
 
 - Logins: Exec, Durb (Veterinarios), Avishanga9, Csolis (recepcionistas). La contraseña para todos es la misma, es decir 12345.
 
