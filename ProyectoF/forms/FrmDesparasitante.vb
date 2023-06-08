@@ -52,9 +52,20 @@
     End Sub
 
 
+    Sub LlenarSexo()
+        Try
+            CmbSexoPac.DataSource = dPaciente.MostrarSexo.Tables(0)
+            CmbSexoPac.DisplayMember = "sexoPaciente"
+            CmbSexoPac.ValueMember = "sexoPaciente"
+            CmbSexoPac.Refresh()
+        Catch ex As Exception
+            MsgBox("Error al mostrar el sexo del paciente", MsgBoxStyle.Critical, "Sexo")
+        End Try
+    End Sub
+
     Sub LlenarEspecie()
         Try
-            CmbEspeciePac.DataSource = dEspecie.MostrarNombre.Tables(0)
+            CmbEspeciePac.DataSource = dEspecie.MostrarRegistros.Tables(0)
             CmbEspeciePac.DisplayMember = "nombreEspecie"
             CmbEspeciePac.ValueMember = "idEspecie"
             CmbEspeciePac.Refresh()
@@ -63,22 +74,11 @@
         End Try
     End Sub
 
-    Sub LlenarSexo()
-        Try
-            CmbSexoPac.DisplayMember = "sexoPaciente"
-            CmbSexoPac.ValueMember = "sexoPaciente"
-            CmbSexoPac.DataSource = dPaciente.MostrarSexo.Tables(0)
-            CmbSexoPac.Refresh()
-        Catch ex As Exception
-            MsgBox("Error al mostrar el sexo del paciente", MsgBoxStyle.Critical, "Sexo")
-        End Try
-    End Sub
-
     Sub LlenarRaza()
         Try
+            CmbRazaPac.DataSource = dRaza.MostrarRegistros.Tables(0)
             CmbRazaPac.DisplayMember = "nombreRaza"
             CmbRazaPac.ValueMember = "idRaza"
-            CmbRazaPac.DataSource = dRaza.MostrarRaza.Tables(0)
             CmbRazaPac.Refresh()
         Catch ex As Exception
             MsgBox("Error al mostrar el nombre de la raza", MsgBoxStyle.Critical, "Raza")
@@ -124,14 +124,14 @@
         Limpiar()
     End Sub
 
-    Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
+    Private Sub BtnGuardar_Click(sender As Object, e As EventArgs)
         Try
             Dim regDesp As New RegistroDesparasitacionesEntity
             regDesp.Paciente = New PacientesEntity()
             regDesp.Desparasitante = New DesparasitantesEntity()
 
             regDesp.Paciente.IdPaciente = Integer.Parse(TxtIdPac.Text)
-            regDesp.Desparasitante.IdDesparasitante = CmbDesp.SelectedValue
+            regDesp.Desparasitante.IdDesparasitante = Integer.Parse(CmbDesp.SelectedValue)
             regDesp.FechaDesparasitaciones = DtApliDesp.Value
 
             If (dRegistroDesparasitaciones.AgregarRegistro(regDesp) = True) Then
@@ -145,32 +145,6 @@
         MostrarRegistros()
     End Sub
 
-
-    Private Sub BtnEditar_Click(sender As Object, e As EventArgs) Handles BtnEditar.Click
-        Try
-            Dim selectedRow As DataGridViewRow = dgvRegistrosAlmacenados.CurrentRow
-            Dim regDesp As New RegistroDesparasitacionesEntity
-            regDesp.Paciente = New PacientesEntity()
-            regDesp.Desparasitante = New DesparasitantesEntity()
-
-            regDesp.Paciente.IdPaciente = Integer.Parse(TxtIdPac.Text)
-            regDesp.Desparasitante.IdDesparasitante = CmbDesp.SelectedValue
-            regDesp.FechaDesparasitaciones = DtApliDesp.Value
-            regDesp.IdDesparasitacion = Integer.Parse(selectedRow.Cells(0).Value.ToString())
-
-            If (dRegistroDesparasitaciones.EditarRegistro(regDesp) = True) Then
-                MsgBox("Regitro modificado satisfactoriamente.", MsgBoxStyle.Information, "Registro de Desparasitaciones")
-                Limpiar()
-                MostrarRegistros()
-            Else
-                MsgBox("No se pudo modificar el registro...", MsgBoxStyle.Exclamation, "Registro de Desparasitaciones")
-            End If
-        Catch ex As Exception
-            MsgBox("Error al guardar registro: " & ex.Message, MsgBoxStyle.Critical, "Registro de Desparasitaciones")
-        End Try
-
-        MostrarRegistros()
-    End Sub
 
     Sub DiseñoGrid()
         dgvRegistrosAlmacenados.Columns(0).HeaderText = "ID del Paciente"
@@ -212,41 +186,22 @@
         regActDesp.Paciente.SexoPaciente = dgvRegistrosAlmacenados.Rows(fila).Cells(4).Value
         regActDesp.Paciente.Raza.NombreRaza = dgvRegistrosAlmacenados.Rows(fila).Cells(5).Value
         regActDesp.Paciente.Peso = dgvRegistrosAlmacenados.Rows(fila).Cells(6).Value
-        Dim desp As Integer
-        regActDesp.Desparasitante.NombreDes = Integer.TryParse(dgvRegistrosAlmacenados.Rows(fila).Cells(7).Value.ToString(), desp)
+        regActDesp.Desparasitante.NombreDes = dgvRegistrosAlmacenados.Rows(fila).Cells(7).Value
         regActDesp.Desparasitante.MarcaDes.NombreMarcaDes = dgvRegistrosAlmacenados.Rows(fila).Cells(8).Value
         regActDesp.FechaDesparasitaciones = dgvRegistrosAlmacenados.Rows(fila).Cells(9).Value
-
-        'Dim despId As Integer = Integer.TryParse(dgvRegistrosAlmacenados.Rows(fila).Cells(7).Value, despId)
-        'Dim despNombre As String = dgvRegistrosAlmacenados.Rows(fila).Cells(7).Value.ToString()
-        'CmbDesp.SelectedValue = despId
-        'CmbDesp.Text = despNombre
 
         TxtIdPac.Text = regActDesp.Paciente.IdPaciente
         TxtNombrePac.Text = regActDesp.Paciente.NombrePaciente
         DtPac.Value = regActDesp.Paciente.FechaNac
-        CmbEspeciePac.SelectedValue = regActDesp.Paciente.Especie.NombreEspecie
-        CmbSexoPac.SelectedValue = regActDesp.Paciente.SexoPaciente
-        CmbRazaPac.SelectedValue = regActDesp.Paciente.Raza.NombreRaza
+        CmbEspeciePac.Text = regActDesp.Paciente.Especie.NombreEspecie
+        CmbSexoPac.Text = regActDesp.Paciente.SexoPaciente
+        CmbRazaPac.Text = regActDesp.Paciente.Raza.NombreRaza
         TxtPeso.Text = regActDesp.Paciente.Peso
-        Dim idMarcaDesp As Integer
-        CmbMarcaDesp.SelectedValue = Integer.TryParse(regActDesp.Desparasitante.MarcaDes.NombreMarcaDes, idMarcaDesp)
+        CmbMarcaDesp.Text = regActDesp.Desparasitante.MarcaDes.NombreMarcaDes
         DtApliDesp.Value = regActDesp.FechaDesparasitaciones
 
         TCPacientes.SelectedIndex = 1
 
     End Sub
-
-    'Private Sub BtnNuevo_Click(sender As Object, e As EventArgs)
-    '    Limpiar()
-    '    TxtIdPac.Enabled = True
-    '    TxtNombrePac.Enabled = True
-    '    TxtPeso.Enabled = True
-    '    CmbEspeciePac.Enabled = True
-    '    CmbSexoPac.Enabled = True
-    '    CmbRazaPac.Enabled = True
-    '    DtApliDesp.Enabled = True
-    'End Sub
-
 #End Region
 End Class

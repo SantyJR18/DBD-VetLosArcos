@@ -1,12 +1,11 @@
 ﻿Public Class FrmVacunas
 
     Private dVacuna As New VacunasDao
-    Private dRegistroVacuna As New RegistroVacunacionesDao
     Private dPaciente As New PacientesDao
+    Private dRegistroVacuna As New RegistroVacunacionesDao
     Private dEspecie As New EspecieDao
     Private dRaza As New RazasDao
     Private dMarcasVac As New MarcasVacunasDao
-    'Dim idRegVacuna As Integer = -1
     Dim regActual As New RegistroVacunacionesEntity
 
 #Region "Botonoes de form"
@@ -59,21 +58,10 @@
         dgvRegistrosAlmacenados.AllowUserToAddRows = False
     End Sub
 
-    Sub LlenarEspecie()
-        Try
-            CmbEspeciePac.DataSource = dEspecie.MostrarNombre.Tables(0)
-            CmbEspeciePac.DisplayMember = "especie"
-            CmbEspeciePac.ValueMember = "nombreEspecie"
-            CmbEspeciePac.Refresh()
-        Catch ex As Exception
-            MsgBox("Error al mostrar ID Especie", MsgBoxStyle.Critical, "Especie")
-        End Try
-    End Sub
-
     Sub LlenarSexo()
         Try
             CmbSexoPac.DataSource = dPaciente.MostrarSexo.Tables(0)
-            CmbSexoPac.DisplayMember = "sexo"
+            CmbSexoPac.DisplayMember = "sexoPaciente"
             CmbSexoPac.ValueMember = "sexoPaciente"
             CmbSexoPac.Refresh()
         Catch ex As Exception
@@ -81,11 +69,22 @@
         End Try
     End Sub
 
+    Sub LlenarEspecie()
+        Try
+            CmbEspeciePac.DataSource = dEspecie.MostrarRegistros.Tables(0)
+            CmbEspeciePac.DisplayMember = "nombreEspecie"
+            CmbEspeciePac.ValueMember = "idEspecie"
+            CmbEspeciePac.Refresh()
+        Catch ex As Exception
+            MsgBox("Error al mostrar ID Especie", MsgBoxStyle.Critical, "Especie")
+        End Try
+    End Sub
+
     Sub LlenarRaza()
         Try
-            CmbRazaPac.DataSource = dRaza.MostrarRaza.Tables(0)
-            CmbRazaPac.DisplayMember = "raza"
-            CmbRazaPac.ValueMember = "nombreRaza"
+            CmbRazaPac.DataSource = dRaza.MostrarRegistros.Tables(0)
+            CmbRazaPac.DisplayMember = "nombreRaza"
+            CmbRazaPac.ValueMember = "idRaza"
             CmbRazaPac.Refresh()
         Catch ex As Exception
             MsgBox("Error al mostrar el nombre de la raza", MsgBoxStyle.Critical, "Raza")
@@ -94,7 +93,7 @@
 
     Sub LlenarVacuna()
         Try
-            CmbVacuna.DataSource = dVacuna.MostrarVacunas.Tables(0)
+            CmbVacuna.DataSource = dVacuna.MostrarRegistros.Tables(0)
             CmbVacuna.DisplayMember = "nombreVacuna"
             CmbVacuna.ValueMember = "idVacuna"
             CmbVacuna.Refresh()
@@ -105,9 +104,9 @@
 
     Sub LlenarMarcaVacuna()
         Try
-            CmbMarcaVac.DataSource = dMarcasVac.MostrarMarcasVacunas.Tables(0)
-            CmbMarcaVac.DisplayMember = "marca"
-            CmbMarcaVac.ValueMember = "nombreMarcaVac"
+            CmbMarcaVac.DataSource = dMarcasVac.MostrarRegistros.Tables(0)
+            CmbMarcaVac.DisplayMember = "nombreMarcaVac"
+            CmbMarcaVac.ValueMember = "idMarcaVac"
             CmbMarcaVac.Refresh()
         Catch ex As Exception
             MsgBox("Error al mostrar el nombre de la marca de la vacuna", MsgBoxStyle.Critical, "Marca")
@@ -134,7 +133,8 @@
     Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
         Try
             Dim regVac As New RegistroVacunacionesEntity()
-            regVac.Vacuna.IdVacuna = Convert.ToInt32(CmbVacuna.SelectedValue)
+            'Dim idVac As Integer
+            regVac.Vacuna.IdVacuna = Integer.Parse(CmbVacuna.Text)
             regVac.Paciente.IdPaciente = TxtNombrePac.Text
             regVac.FechaVacunacion = DtApliVac.Text
 
@@ -151,9 +151,13 @@
 
     Private Sub BtnEditar_Click(sender As Object, e As EventArgs) Handles BtnEditar.Click
         Try
-            regActual.Paciente.IdPaciente = TxtIdPac.Text
+            Dim regVac As New RegistroVacunacionesEntity()
+            regVac.Vacuna.IdVacuna = Integer.Parse(CmbVacuna.Text)
+            regVac.Paciente.IdPaciente = TxtNombrePac.Text
+            regVac.FechaVacunacion = DtApliVac.Text
+            'regVac.Paciente.IdPaciente = Integer.Parse(TxtIdPac.Text)
 
-            If dRegistroVacuna.EditarRegistro(regActual) Then
+            If dRegistroVacuna.EditarRegistro(regVac) Then
                 MsgBox("Regtro modificado satisfactoriamente.", MsgBoxStyle.Information, "Registro de Vacunaciones")
                 Limpiar()
                 MostrarRegistros()
@@ -214,12 +218,12 @@
         TxtIdPac.Text = regActual.Paciente.IdPaciente
         TxtNombrePac.Text = regActual.Paciente.NombrePaciente
         DtPac.Value = regActual.Paciente.FechaNac
-        CmbEspeciePac.SelectedValue = regActual.Paciente.Especie.NombreEspecie
+        CmbEspeciePac.Text = regActual.Paciente.Especie.NombreEspecie
         CmbSexoPac.SelectedValue = regActual.Paciente.SexoPaciente
-        CmbRazaPac.SelectedValue = regActual.Paciente.Raza.NombreRaza
+        CmbRazaPac.Text = regActual.Paciente.Raza.NombreRaza
         TxtPeso.Text = regActual.Paciente.Peso
-        CmbVacuna.SelectedValue = regActual.Vacuna.NombreVacuna
-        CmbMarcaVac.SelectedValue = regActual.Vacuna.MarcaVac.NombreMarcaVac
+        CmbVacuna.Text = regActual.Vacuna.NombreVacuna
+        CmbMarcaVac.Text = regActual.Vacuna.MarcaVac.NombreMarcaVac
         DtApliVac.Value = regActual.FechaVacunacion
 
         TCPacientes.SelectedIndex = 1
@@ -227,5 +231,4 @@
     End Sub
 
 #End Region
-
 End Class

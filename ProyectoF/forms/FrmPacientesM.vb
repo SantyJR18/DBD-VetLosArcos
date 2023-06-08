@@ -38,16 +38,28 @@
 #Region "CRUD"
     Private Sub FrmPacientesM_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LlenarEspecie()
+        LlenarSexo()
         LlenarRaza()
         MostrarRegistros()
         dgvRegistrosAlmacenados.AllowUserToAddRows = False
     End Sub
 
+    Sub LlenarSexo()
+        Try
+            CmbSexoPac.DataSource = dPaciente.MostrarSexo.Tables(0)
+            CmbSexoPac.DisplayMember = "sexoPaciente"
+            CmbSexoPac.ValueMember = "sexoPaciente"
+            CmbSexoPac.Refresh()
+        Catch ex As Exception
+            MsgBox("Error al mostrar el sexo del paciente", MsgBoxStyle.Critical, "Sexo")
+        End Try
+    End Sub
+
     Sub LlenarEspecie()
         Try
-            CmbEspeciePac.DisplayMember = "especie"
-            CmbEspeciePac.ValueMember = "idEspecie"
             CmbEspeciePac.DataSource = dEspecie.MostrarRegistros.Tables(0)
+            CmbEspeciePac.DisplayMember = "nombreEspecie"
+            CmbEspeciePac.ValueMember = "idEspecie"
             CmbEspeciePac.Refresh()
         Catch ex As Exception
             MsgBox("Error al mostrar ID Especie", MsgBoxStyle.Critical, "Especie")
@@ -56,9 +68,9 @@
 
     Sub LlenarRaza()
         Try
-            CmbRazaPac.DisplayMember = "raza"
+            CmbRazaPac.DataSource = dRaza.MostrarRegistros.Tables(0)
+            CmbRazaPac.DisplayMember = "nombreRaza"
             CmbRazaPac.ValueMember = "idRaza"
-            CmbRazaPac.DataSource = dEspecie.MostrarRegistros.Tables(0)
             CmbRazaPac.Refresh()
         Catch ex As Exception
             MsgBox("Error al mostrar el nombre de la raza", MsgBoxStyle.Critical, "Raza")
@@ -75,7 +87,6 @@
         TxtnombreClt.Clear()
         TxtapellidoClt.Clear()
         TxtcorreoClt.Clear()
-        TxtdireccionClt.Clear()
         TxttelClt.Clear()
         CmbEspeciePac.SelectedIndex = -1
         CmbSexoPac.SelectedIndex = -1
@@ -94,7 +105,7 @@
             pac.Especie = New EspeciesEntity()
             pac.Raza = New RazasEntity()
 
-            pac.IdPaciente = Integer.Parse(TxtIdPac.Text)
+            pac.IdPaciente = Integer.Parse(TCPac.Text)
             pac.NombrePaciente = TxtNombrePac.Text
             pac.SexoPaciente = CmbSexoPac.SelectedValue
             pac.FechaNac = DtFechaNac.Value
@@ -126,7 +137,7 @@
             pac.Especie = New EspeciesEntity()
             pac.Raza = New RazasEntity()
 
-            pac.IdPaciente = TxtIdPac.Text
+            pac.IdPaciente = TCPac.Text
             pac.NombrePaciente = TxtNombrePac.Text
             pac.SexoPaciente = CmbSexoPac.SelectedValue
             pac.FechaNac = DtFechaNac.Value
@@ -207,18 +218,8 @@
         pacAct.Cliente.TelefonoCliente = dgvRegistrosAlmacenados.Rows(fila).Cells(13).Value
         pacAct.Cliente.DireccionCliente = dgvRegistrosAlmacenados.Rows(fila).Cells(14).Value
 
-        'Dim espId As Integer = Integer.TryParse(dgvRegistrosAlmacenados.Rows(fila).Cells(4).Value, espId)
-        'Dim espNombre As String = dgvRegistrosAlmacenados.Rows(fila).Cells(4).Value.ToString()
-        'CmbEspeciePac.SelectedValue = espId
-        'CmbEspeciePac.Text = espNombre
-
-        'Dim razaId As Integer = Integer.TryParse(dgvRegistrosAlmacenados.Rows(fila).Cells(6).Value, razaId)
-        ''Dim razaNombre As String = dgvRegistrosAlmacenados.Rows(fila).Cells(6).Value.ToString()
-        'CmbRazaPac.SelectedValue = razaId
-        'CmbRazaPac.Text = razaNombre
-
         TxtIdClt.Text = pacAct.Cliente.IdCliente
-        TxtIdPac.Text = pacAct.IdPaciente
+        TCPac.Text = pacAct.IdPaciente
         TxtNombrePac.Text = pacAct.NombrePaciente
         DtFechaNac.Value = pacAct.FechaNac
         CmbEspeciePac.Text = pacAct.Especie.NombreEspecie
@@ -231,9 +232,13 @@
         TxtapellidoClt.Text = pacAct.Cliente.PrimerApellido
         TxtcorreoClt.Text = pacAct.Cliente.CorreoCliente
         TxttelClt.Text = pacAct.Cliente.TelefonoCliente
-        TxtdireccionClt.Text = pacAct.Cliente.DireccionCliente
+        TxttelClt.Text = pacAct.Cliente.DireccionCliente
 
         TCPacientesMed.SelectedIndex = 1
+    End Sub
+
+    Private Sub BtnNuevo_Click(sender As Object, e As EventArgs) Handles BtnNuevo.Click
+        Limpiar()
     End Sub
 #End Region
 
