@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.33423.256
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ProyectoF", "ProyectoF\ProyectoF.vbproj", "{A96C3333-7000-40CB-BA91-05797ADED630}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Veterinaria Los Arcos", "Veterinaria Los Arcos\Veterinaria Los Arcos.vdproj", "{C36006D2-AF9B-486B-A980-A0A75005F062}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{A96C3333-7000-40CB-BA91-05797ADED630}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A96C3333-7000-40CB-BA91-05797ADED630}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A96C3333-7000-40CB-BA91-05797ADED630}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C36006D2-AF9B-486B-A980-A0A75005F062}.Debug|Any CPU.ActiveCfg = Debug
+		{C36006D2-AF9B-486B-A980-A0A75005F062}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
